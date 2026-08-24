@@ -1,12 +1,10 @@
 # Technical design docs
 
-Every technical design for the Polkadot Products Platform lives here, in one place.
+This is where we keep the technical design docs for the Polkadot Products Platform.
 
-This holds designs that have settled. A doc lands here once it has stopped moving - if it's still changing week to week, keep it in the PR. Corrections and superseding are fine, but a doc that needs constant editing is tracking work rather than recording a design, and belongs somewhere else.
+Only finished designs go in here. If one is still changing every week, keep it in the PR. You can fix a design later or replace it with a new one.
 
-One folder per topic - the thing you'd name if someone asked what you're working on. Topic names outlast the teams that own them, and the designs that matter usually cut across the stack, so filing by topic keeps everything about one thing in one place.
-
-## Where things go
+One folder per topic, named after the topic. Even designs that affect several parts of the stack go under one topic.
 
 ```
 designs/
@@ -15,9 +13,9 @@ designs/
 └── etc..
 ```
 
-That's what exists today, not a fixed taxonomy. Add a folder when your design doesn't fit one.
+These are the current topics. If your design doesn't fit, add a folder.
 
-A design is one file when one file is enough. When it needs diagrams, sub-documents or worked examples, give it its own folder inside the topic. The `README.md` there is the design, carrying the header table and the sections below, and the supporting files sit beside it.
+Keep a design in one file when one file is enough. With diagrams, extra files, or examples, give it a folder inside the topic. The `README.md` in that folder is then the design, with the header table and the template sections; the other files go in the same folder.
 
 ```
 designs/storage/
@@ -28,30 +26,26 @@ designs/storage/
     └── lifecycle.svg
 ```
 
-A design that spans topics goes in the one it changes most and names the others in the doc.
-
-A topic can also have a `README.md` of its own, listing what's in the folder - keep live state out of it.
+If a design covers several topics, put it under the topic it changes most and mention the rest in the document. A topic can also have its own `README.md` that lists the folder contents; just don't put status updates in it.
 
 ## What a design looks like
 
 Copy [`TEMPLATE.md`](TEMPLATE.md) to `designs/<topic>/<name>.md`, or to `README.md` inside the design's own folder, and fill it in.
 
-It's the same shape as a Fellowship RFC, so a design can be promoted to one without a rewrite. Keep the headings even when a section has nothing in it and say so, rather than deleting it.
+The template follows the Fellowship RFC structure, so you don't have to rewrite a design to make it an RFC. Keep every heading even when a section stays empty, and mark it as empty instead of removing it.
 
-Unresolved Questions carries the most weight here. Merging reads as settled, so if the design rests on numbers nobody has checked, name them.
+Unresolved Questions is the most important section, because a design is final once merged. Anything you're still unsure about — unverified numbers, for example — has to go in that section.
 
-When a later design replaces this one, add a **Superseded by** row to the header table pointing at it. That's the only edit an old doc should normally need.
+When a new design replaces an old one, add a **Superseded by** row to the header table pointing at the new design. That's usually all the old document needs afterwards.
 
 ## Review
 
-Open a PR. Iterate there as long as you need, that's what the PR is for. An approval and a merge is the whole process.
-
-Merging means it's settled, so don't merge something you expect to rewrite next week.
+Open a PR, keep updating the design until it's ready, get it approved, and merge it. Once merged, a design is final, so don't merge something you expect to rewrite next week.
 
 ## Publishing elsewhere
 
-A design often gets published somewhere else as well: a Fellowship RFC when the ecosystem has to accept it, a spec in the repo of the codebase it describes like chat-spec, reference docs that ship with the code. That's publication, not a second home. The design still lands here and links out to wherever it went.
+A design may also be published elsewhere — as a Fellowship RFC, as a spec in the code's own repo, or as reference docs. The design stays here and links out to them.
 
-Because the structure matches, promoting a design to a Fellowship RFC is a copy into that repo's `text/` folder plus a PR, not a rewrite. The Fellowship numbers an RFC after its PR, so designs here stay unnumbered.
+To publish a design as a Fellowship RFC, copy it into that repo's `text/` folder and open a PR. The RFC is numbered after the PR, so the designs here don't have an RFC number.
 
-Two things aren't designs and don't belong here at all. Reference documentation describing the code as it currently stands belongs next to the code, so it moves with it. Plans and progress belong in issues and PRs.
+Two kinds of files don't go in this repo. Reference docs describe the code as it is now, so they go in the code's own repository; plans and progress reports go in issues and PRs.

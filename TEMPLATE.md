@@ -8,50 +8,50 @@
 
 ## Summary
 
-One paragraph covering what this proposes, and what it deliberately does not do.
+Briefly describe what the design does and what it deliberately doesn't do.
 
 ## Motivation
 
-The problem, and the requirements a solution has to meet. Both halves matter - a problem statement without requirements gives reviewers nothing to argue against.
+Describe the problem the design solves and the requirements a solution has to meet.
 
 ## Stakeholders
 
-Who is affected by this, and who you have already talked to about it.
+List who this affects and who you've already talked to about it.
 
 ## Explanation
 
-The design itself, in enough detail for someone else to implement it. Address the corner cases, justify the decisions you made, and show how the design meets the requirements from Motivation.
+Describe the design in enough detail for someone else to implement it. Cover edge cases, explain your choices, and show how it meets the requirements from Motivation.
 
 ## Drawbacks
 
-What this approach costs. Non-exhaustively: performance, ergonomics, user experience, security, privacy.
+List what the design costs. Consider performance, ergonomics, user experience, security, and privacy.
 
 ## Testing, Security, and Privacy
 
-How an implementation can be checked against this design, what the design changes about security and privacy, and any implementation pitfalls worth calling out.
+Describe how to check an implementation against the design, how it affects security and privacy, and any pitfalls to watch for.
 
 ## Performance, Ergonomics, and Compatibility
 
 ### Performance
 
-Is this an optimisation or a necessary pessimisation? What was done to keep the overhead down?
+State whether the design is faster or slower and why. If it costs performance, describe what was done to limit the cost.
 
 ### Ergonomics
 
-If this changes interfaces exposed to developers or end users, which usage patterns were optimised for?
+If the design changes what developers or users see, say which usage patterns it optimises for.
 
 ### Compatibility
 
-Does this break existing interfaces or older implementations? Summarise any migration or upgrade strategy.
+State whether the design breaks anything that already works. If so, describe how to migrate.
 
 ## Prior Art and References
 
-What already exists, here or elsewhere, and any research the design leans on.
+List what already exists, here or elsewhere, and what the design builds on.
 
 ## Unresolved Questions
 
-What is still open, and anything the design assumes but nobody has measured. Merging reads as settled, so if the design rests on a number nobody has checked, name it here.
+List what is still open, and anything the design assumes without evidence.
 
 ## Future Directions and Related Material
 
-What this enables later, and related designs. A place to explore possibilities that may become designs of their own.
+Describe what the design makes possible later, and what it relates to.

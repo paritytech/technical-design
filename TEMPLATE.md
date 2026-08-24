@@ -1,5 +1,7 @@
 # Design title
 
+<!-- The sections below are a proposed structure, not a strict requirement. Remove what you don't need, add what you do, and delete this comment. -->
+
 |                 |                          |
 | --------------- | ------------------------ |
 | **Start Date**  | Date you started writing |
@@ -8,33 +10,33 @@
 
 ## Summary
 
-Briefly describe what the design does and what it deliberately doesn't do.
+Describe what the design does, and what it deliberately does not do.
 
 ## Motivation
 
-Describe the problem the design solves and the requirements a solution has to meet.
+Describe the problem the design solves, and the requirements any solution has to meet.
 
 ## Stakeholders
 
-List who this affects and who you've already talked to about it.
+List who the design affects, and who you have already talked to about it.
 
 ## Explanation
 
-Describe the design in enough detail for someone else to implement it. Cover edge cases, explain your choices, and show how it meets the requirements from Motivation.
+Describe the design in enough detail for someone else to implement it. Cover the edge cases, explain the choices you made, and show how the design meets the requirements from Motivation.
 
 ## Drawbacks
 
-List what the design costs. Consider performance, ergonomics, user experience, security, and privacy.
+List what the design costs, including its effect on performance, ergonomics, user experience, security, and privacy.
 
 ## Testing, Security, and Privacy
 
-Describe how to check an implementation against the design, how it affects security and privacy, and any pitfalls to watch for.
+Describe how to check an implementation against the design, how the design affects security and privacy, and which pitfalls to watch out for.
 
 ## Performance, Ergonomics, and Compatibility
 
 ### Performance
 
-State whether the design is faster or slower and why. If it costs performance, describe what was done to limit the cost.
+State whether the design makes things faster or slower, and why. If it costs performance, describe what you did to limit the cost.
 
 ### Ergonomics
 
@@ -42,7 +44,7 @@ If the design changes what developers or users see, say which usage patterns it 
 
 ### Compatibility
 
-State whether the design breaks anything that already works. If so, describe how to migrate.
+State whether the design breaks anything that works today. If it does, describe how to migrate.
 
 ## Prior Art and References
 

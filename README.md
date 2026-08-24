@@ -1,195 +1,57 @@
-# Parity internal tech-design repo
+# Technical design docs
 
-**For:** engineering across Node, Runtime, Platform, Product Prototypes.  
-**Purpose:** one place where all teams contribute technical designs for the Polkadot Products Platform.  
-**Organisated by area,** mirroring the Polkadot Products Platform's own layered architecture. Developer surface, access layer, capability suite, infrastructure services, operator layer are generic layers that outlive project names, team names or internal org.
+Every technical design for the Polkadot Products Platform lives here, in one place.
 
-## Structure
+This holds designs that have settled. A doc lands here once it has stopped moving - if it's still changing week to week, keep it in the PR. Corrections and superseding are fine, but a doc that needs constant editing is tracking work rather than recording a design, and belongs somewhere else.
 
-```
-tech-designs/
-├── README.md                      what this repo is, what goes elsewhere
-├── CONTRIBUTING.md                how to add a design, how review works
-├── TEMPLATE.md                    required template
-├── INDEX.md                       all designs, status, owner, area
-│
-├── decisions/                     cross-team decisions
-│   └── 2026-08-18-products-test-platform.md
-│
-└── designs/
-    ├── 00-platform/               whole-platform, cross-layer
-    ├── 10-developer-surface/      SDK, playground, docs, AI dev tooling
-    ├── 20-access/                 TrUAPI, triangle hosts, light client
-    ├── 30-capabilities/           the capability suite
-    │   ├── humanity/              personhood, DIMs
-    │   ├── privity/               aliases, unlinkability
-    │   ├── celerity/              statement store, messaging
-    │   ├── levity/                Bulletin, ephemeral storage, HOP
-    │   ├── capacity/              durable Web3 storage
-    │   ├── fungibility/           coinage, payments, dotUSD
-    │   └── ...
-    ├── 40-infrastructure/         consensus, collation, networking, storage nodes,
-    │                              light-client serving, JAM compute
-    ├── 50-operators/              metanode, QoS, rewards, deployment, autoupdate
-    └── 90-cross-cutting/          security, privacy, economics, testing, observability
-```
+One folder per topic - the thing you'd name if someone asked what you're working on. Topic names outlast the teams that own them, and the designs that matter usually cut across the stack, so filing by topic keeps everything about one thing in one place.
 
-**Number prefixes** keep the folders in stack order, so a new joiner can read 10 → 50 top-down and understand the platform.
-
-**Two levels maximum under `designs/`.**
-
-### Programmes: hub and spoke
-
-Some work is not one design in one layer. A programme like Metanode touches access, capabilities, infrastructure, operators and economics at once.
-
-Do **not** put a whole programme in one layer folder, also do **not** scatter it with no hub.
-
-**Hub and spoke:**
-
-- The **programme doc is the hub**, in `00-platform/<programme>/`.
-- **Component designs live in their true layers.**
-- The hub links them. `affected:` makes them findable from both directions.
+## Where things go
 
 ```
-designs/00-platform/metanode/PPP-0001-metanode-programme.md   hub
-designs/00-platform/metanode/STATUS.md                        live state
-designs/20-access/PPP-0005-user-agent-metering-and-hopping.md spoke
-designs/30-capabilities/fungibility/PPP-0004-allowances.md    spoke
-designs/40-infrastructure/PPP-0003-sizing-and-capacity.md     spoke
-designs/50-operators/PPP-0002-node-architecture.md            spoke
+designs/
+├── jam/            JAM
+├── storage/        Everything storage related, e.g. Web3 storage, Bulletin etc.
+└── etc..
 ```
 
-## Rules
+That's what exists today, not a fixed taxonomy. Add a folder when your design doesn't fit one.
 
-### 1. Status is mandatory metadata
+A design is one file when one file is enough. When it needs diagrams, sub-documents or worked examples, give it its own folder inside the topic. The `README.md` there is the design, carrying the header table and the sections below, and the supporting files sit beside it.
 
-One needs to **find** the doc but also know its **status.**
-
-Every design starts with required frontmatter:
-
-```yaml
----
-id: PPP-0042
-title: Bulletin data renewal
-type: design | programme | decision
-area: 30-capabilities/levity
-status: draft | in-review | accepted | implemented | superseded | abandoned
-owner: <name>
-affected: [levity, access, capabilities/humanity]   # discovery and filtering
-sign-off: [levity, access]                          # who must approve, a subset
-blocked-on: [PPP-0038, measurement:lc-serving-capacity]   # optional
-supersedes: PPP-0031
-last-reviewed: 2026-08-20
-review-cadence: 6 months                            # shorten for volatile areas
----
+```
+designs/storage/
+├── bulletin-data-renewal.md      one file is enough
+└── web3-storage/                 needs more
+    ├── README.md                 the design
+    ├── encoding.md
+    └── lifecycle.svg
 ```
 
-- **Status lives in the file, not in the folder path.** Moving files to reflect status breaks every link and every PR reference.
-- **`INDEX.md` is the single view** of what exists, its status and its owner. Generate it if you can, maintain it by hand if you cannot.
-- **`last-reviewed` is the anti-rot field.** Anything untouched for 6 months gets swept and either re-confirmed or marked superseded.
-- **Stable IDs (`PPP-0042`)** give people something to cite in PRs and chat that survives a title change.
-- **`review-cadence` defaults to 6 months, and the owner can shorten it.** Six months is too slow for volatile areas. Metanode's direction changed materially twice in three months; a six-month sweep would have let a stale design sit for half a year.
+A design that spans topics goes in the one it changes most and names the others in the doc.
 
-### 1a. `type` is mandatory too
+A topic can also have a `README.md` of its own, listing what's in the folder - keep live state out of it.
 
-- **`design`** - how one thing works or should work. Lives in a layer folder. Uses the design template.
-- **`programme`** - cross-layer work with phases, gates and its own ownership map. Lives in `00-platform/`. Uses the programme template.
-- **`decision`** - a choice, its alternatives, and why. Lives in `decisions/`. Short, dated, never revised.
+## What a design looks like
 
-### 1b. `blocked-on` and unproven inputs
+Copy [`TEMPLATE.md`](TEMPLATE.md) to `designs/<topic>/<name>.md`, or to `README.md` inside the design's own folder, and fill it in.
 
-`accepted` reads as settled. A design can be `accepted` while resting entirely on numbers nobody has measured.
+It's the same shape as a Fellowship RFC, so a design can be promoted to one without a rewrite. Keep the headings even when a section has nothing in it and say so, rather than deleting it.
 
-- Use **`blocked-on:`** for a hard dependency, whether another design or a pending measurement.
-- **`INDEX.md` must surface `blocked-on` and a flag for a non-empty `Unproven assumptions` section.**
+Unresolved Questions carries the most weight here. Merging reads as settled, so if the design rests on numbers nobody has checked, name them.
 
-### 2. Quickly filter cross-team/cross-stack/cross-functional topics/designs
+When a later design replaces this one, add a **Superseded by** row to the header table pointing at it. That's the only edit an old doc should normally need.
 
-**`affected:`** - the list of areas and teams a design touches. Use keywords e.g. `affected: [economics]`. For **discovery and filtering**.
+## Review
 
-**`sign-off:`** - the subset of those areas that must actually approve. For **review**.
+Open a PR. Iterate there as long as you need, that's what the PR is for. An approval and a merge is the whole process.
 
-**Both mandatory. Reviewers should check both.**
+Merging means it's settled, so don't merge something you expect to rewrite next week.
 
-**Why two fields.** "One reviewer per affected area" does not scale with breadth. A cross-layer programme is affected across most of the stack, so that rule turns into a six-person veto pool. Keep `affected` wide so people can find the work. Keep `sign-off` narrow so the work can move.
+## Publishing elsewhere
 
-### 3. Designs and decisions are different documents
+A design often gets published somewhere else as well: a Fellowship RFC when the ecosystem has to accept it, a spec in the repo of the codebase it describes like chat-spec, reference docs that ship with the code. That's publication, not a second home. The design still lands here and links out to wherever it went.
 
-- A **design** says how something works or should work. It is long-lived and gets revised.
-- A **decision** captures a choice, the alternatives, and why. It is short, dated, and never revised, you supersede it instead.
+Because the structure matches, promoting a design to a Fellowship RFC is a copy into that repo's `text/` folder plus a PR, not a rewrite. The Fellowship numbers an RFC after its PR, so designs here stay unnumbered.
 
-Keeping them apart stops design docs from becoming archaeology. It also gives leads a single place to read "what did we actually commit to" without reading twenty designs.
-
-- *Design-internal decisions* go in a `Decision log` section **inside** the design or programme doc. One row each: decision, one-line reasoning, date.
-- **`decisions/` is reserved for cross-team commitments** - things another team has to plan around.
-
-**Rule of thumb:** if only your own doc changes as a result, log it in the doc. If someone else has to change their plan, it is a `decisions/` file.
-
-## Template formats
-
-### Design template
-
-Minimum sections:
-
-1. **Problem** - what's not working today, for whom
-2. **Non-goals** - what this deliberately does not do
-3. **Design** - the actual proposal
-4. **Alternatives considered** - and why not
-5. **Dependencies and affected areas** - who/what else must change
-6. **Open questions** - with owners
-7. **Unproven assumptions** - anything load-bearing and unmeasured
-8. **Decision log** - design-internal calls, dated, with one-line reasoning
-
-### Programme template
-
-Minimum sections:
-
-1. **Problem** - what's not working today, for whom
-2. **Non-goals** - what this deliberately does not do
-3. **End state** - what it looks like when done, and what we get
-4. **Why phased** - why this cannot ship as one change
-5. **Phases** - each with deliverables and **a named, measurable gate**
-6. **Component designs** - the spokes, with IDs and status
-7. **Ownership** - per area, with **unowned areas named explicitly**
-8. **Risks** - accepted risks we are carrying, distinct from assumptions
-9. **Open questions** - with owners
-10. **Unproven assumptions** - anything load-bearing and unmeasured
-11. **Decision log** - or a link to the programme's `STATUS.md`
-
-Gates are what make a programme reviewable.
-
-Name the owned *and* the unowned areas.
-
-### Programmes get a `STATUS.md`
-
-`INDEX.md` says what exists. It does not say what changed this week, what is decided, or what is owed. For a programme that is the most-read artifact.
-
-`00-platform/<programme>/STATUS.md`: current phase, decisions owed with owners, decision log, recent changes. Revised constantly - unlike the programme doc, which should stay stable.
-
-## Review - keep it light or it dies
-
-- **One named owner per top-level area.** Not a team, a person. They keep their area's index honest.
-- **To move `draft` → `accepted`:** owner approval, plus one reviewer from each area listed in **`sign-off`**.
-- **Anyone can open a draft.** No gate on contributing.
-- **No review SLA, but a visible queue.** Our review capacity is already the known bottleneck across the org; pretending otherwise won't help anyone.
-
-## What goes here, and what does not
-
-**This is the part most likely to fail.** We already have several places designs live. Without a clear boundary this becomes a fifth place nobody reads.
-
-| Venue | What belongs there |
-|---|---|
-| **This repo** | Internal designs for the Polkadot Products Platform, and cross-team decisions |
-| **Fellowship RFCs** | Public protocol changes needing ecosystem or governance buy-in |
-| **Rust docs in polkadot-sdk** | API and component reference docs that ship with the code |
-| **Component repos** (e.g. chat-spec) | Specs tightly coupled to one codebase |
-| **Google Docs** | Drafting and live collaboration - but the accepted version lands here |
-
-**Suggested rule:** *if two teams need to agree on it, it belongs here. If one team owns it and it ships with the code, it belongs next to the code. If the ecosystem must accept it, it becomes an RFC.*
-
-## How this tech-design source-of-truth dies (and how to prevent it)
-
-- **It becomes a graveyard.** Mitigation: `last-reviewed` plus a scheduled sweep, and named area owners.
-- **Nobody uses it because Google Docs is easier to write in.** Mitigation: allow drafting anywhere, require the accepted version to land here.
-- **Review becomes the bottleneck.** Already our known constraint. Keep the _formal mandatory_ bar at one reviewer per affected area, no more.
-- **The structure fights reality.** If designs keep landing awkwardly in one folder, the structure is wrong; change it at the 3-month sweep.
+Two things aren't designs and don't belong here at all. Reference documentation describing the code as it currently stands belongs next to the code, so it moves with it. Plans and progress belong in issues and PRs.

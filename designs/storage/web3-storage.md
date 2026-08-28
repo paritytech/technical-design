@@ -38,3 +38,9 @@ Changes go through PRs in `web3-storage`, reviewed by the design owners there.
 Once individual decisions stabilize (for example the checkpoint/challenge
 protocol), they are candidates for promotion into standalone designs in this
 folder.
+
+## Designs promoted here
+
+- [Client-side encryption and key management](web3-storage-encryption/) — per-drive key
+  hierarchy, deterministic per-chunk encryption that keeps content-defined chunking
+  useful on ciphertext, and drive sharing via an on-chain key registry and HPKE.

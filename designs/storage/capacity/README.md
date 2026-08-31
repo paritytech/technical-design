@@ -1,10 +1,11 @@
-# Scalable Web3 Storage
+# Capacity
 
 |                        |                                                                                                                                                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Start Date**         | 2026-01-16                                                                                                                                                                                   |
 | **Description**        | Decentralized storage with game-theoretic guarantees: providers lock stake and face slashing for data loss, while reads and writes stay off-chain and the chain handles setup, checkpoints, and disputes. |
 | **Authors**            | eskimor                                                                                                                                                                                      |
+| **Also known as**      | Web3 Storage — the name of the implementation repository and of the design docs kept there                                                                                                    |
 | **Canonical location** | [`paritytech/web3-storage` → `docs/design/`](https://github.com/paritytech/web3-storage/tree/dev/docs/design)                                                                                |
 
 ## Summary
@@ -22,10 +23,11 @@ normal operation touches it only for setup, checkpoints, and disputes.
 The design is maintained next to its implementation in
 [`paritytech/web3-storage`](https://github.com/paritytech/web3-storage), where
 `docs/design/` is the review-gated source of truth (enforced via that repo's
-`CODEOWNERS`). It still evolves with the implementation, so per this
-repository's rule that unfinished designs stay in their PR — and finished
-reference material stays with the code — this file is the `storage` topic's
-index entry rather than a copy:
+`CODEOWNERS`). That repository and the documents below predate the name
+Capacity and still say Web3 Storage; both names refer to the same project. The
+design still evolves with the implementation, so per this repository's rule that
+unfinished designs stay in their PR — and finished reference material stays with
+the code — this file is the `storage` topic's index entry rather than a copy:
 
 - [Architecture & economics](https://github.com/paritytech/web3-storage/blob/dev/docs/design/scalable-web3-storage.md)
   — the design proper: model, incentives, challenge game, comparisons with

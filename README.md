@@ -9,7 +9,7 @@ Designs are grouped into topics, one folder per topic. A design that touches sev
 ```
 designs/
 ├── jam/        JAM
-├── storage/    Everything storage related: Web3 Storage, Bulletin, and so on
+├── storage/    Everything storage related: Capacity, Bulletin, and so on
 └── ...
 ```
 
@@ -20,7 +20,7 @@ Keep a design in a single file when that is enough. If it needs diagrams or othe
 ```
 designs/storage/
 ├── bulletin-data-renewal.md    a single file is enough
-└── web3-storage/               needs more
+└── capacity/                   needs more
     ├── README.md               the design
     ├── encoding.md
     └── lifecycle.svg

@@ -4,7 +4,6 @@
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Start Date**         | 2026-01-16                                                                                                                                                                                   |
 | **Description**        | Decentralized storage with game-theoretic guarantees: providers lock stake and face slashing for data loss, while reads and writes stay off-chain and the chain handles setup, checkpoints, and disputes. |
-| **Authors**            | eskimor                                                                                                                                                                                      |
 | **Also known as**      | Web3 Storage — the name of the implementation repository and of the design docs kept there                                                                                                    |
 | **Canonical location** | [`paritytech/web3-storage` → `docs/design/`](https://github.com/paritytech/web3-storage/tree/dev/docs/design)                                                                                |
 

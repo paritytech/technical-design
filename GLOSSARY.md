@@ -11,7 +11,7 @@ Entries are alphabetical.
 
 ---
 
-**Bulletin** — The Polkadot Bulletin chain
+**Levity** (a.k.a Bulletin) — The Polkadot Bulletin chain
 ([polkadot-bulletin-chain](https://github.com/paritytech/polkadot-bulletin-chain)):
 a *system chain* that provides storage. Calls are feeless; instead they are
 gated by an authorization model —
@@ -19,8 +19,7 @@ an account is authorized in advance to upload, and authorizations expire.
 Data is uploaded by submitting extrinsics; the uploaded data itself is kept
 in off-chain storage, not in the runtime state, and has a retention period.
 
-**Fellowship runtimes** — The production runtimes of Polkadot, Kusama and
-their *system chains*, maintained by the Polkadot Technical Fellowship in
+**Fellowship runtimes** — The production runtimes of Polkadot and Kusama, maintained by the Polkadot Technical Fellowship in
 [polkadot-fellows/runtimes](https://github.com/polkadot-fellows/runtimes) and
 enacted via on-chain referenda. The runtimes developed there are based on a
 specific *SDK release* and released on their own cycle.

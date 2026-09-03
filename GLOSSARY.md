@@ -11,15 +11,8 @@ Entries are alphabetical.
 
 ---
 
-**Levity** (a.k.a Bulletin) — The Polkadot Bulletin chain
-([polkadot-bulletin-chain](https://github.com/paritytech/polkadot-bulletin-chain)):
-a *system chain* that provides storage. Calls are feeless; instead they are
-gated by an authorization model —
-an account is authorized in advance to upload, and authorizations expire.
-Data is uploaded by submitting extrinsics; the uploaded data itself is kept
-in off-chain storage, not in the runtime state, and has a retention period.
-
-**Fellowship runtimes** — The production runtimes of Polkadot and Kusama, maintained by the Polkadot Technical Fellowship in
+**Fellowship runtimes** — The production runtimes of Polkadot and Kusama,
+maintained by the Polkadot Technical Fellowship in
 [polkadot-fellows/runtimes](https://github.com/polkadot-fellows/runtimes) and
 enacted via on-chain referenda. The runtimes developed there are based on a
 specific *SDK release* and released on their own cycle.
@@ -30,24 +23,29 @@ on that one collator node only, addressed to one or more recipients (one-time
 public keys) who claim it. Data not claimed within a configurable retention
 period is promoted best-effort: submitted to *Bulletin* as an extrinsic.
 
+**Levity** (a.k.a. Bulletin) — The Polkadot Bulletin chain
+([polkadot-bulletin-chain](https://github.com/paritytech/polkadot-bulletin-chain)):
+a *system chain* that provides storage. Calls are feeless; instead they are
+gated by an authorization model — an account is authorized in advance to
+upload, and authorizations expire. Data is uploaded by submitting extrinsics;
+the uploaded data itself is kept by every collator in off-chain storage, not
+in the runtime state, and has a retention period.
+
 **Node** — The binary running a chain: networking, database, consensus, RPC.
-Runtime state is opaque data to it; a chain spec defines what it runs —
-genesis state, including the runtime, chain id and bootnodes. It exposes
-JSON-RPC on one port for external clients and the P2P protocols on another
-for other nodes. It can run in different modes — collator/validator, bootnode,
-or a regular RPC node; whether it prunes block history and runtime state, or
-keeps all of it (archive node), is an orthogonal choice.
+Runtime state is opaque data to it; a chain spec defines what it runs.
 
 **Pallet** — A FRAME module implementing one domain of runtime logic — its
 storage, calls, events and errors. A runtime is composed of pallets
 (`pallet-balances`, `pallet-staking`, …).
 
-**Runtime API** — A versioned interface (`sp-api`) the Wasm runtime exposes
+**Runtime API** — A versioned interface ([`sp-api`](https://docs.rs/sp-api))
+the Wasm runtime exposes
 to the node, invoked on a specific block's state (block building, transaction
 validation, metadata, …). Not the node's JSON-RPC: RPC is served by the node
 to external clients, a runtime API is called by the node into the runtime.
 
-**SDK release** — A versioned release (`stableYYMM`) of
+**SDK release** — A versioned release (`stableYYMM`, patched as
+`stableYYMM-N`) of
 [polkadot-sdk](https://github.com/paritytech/polkadot-sdk), the crate set that
 node and runtime implementations build against. Ships on a regular cadence,
 independent of *Fellowship runtimes* releases.
@@ -55,4 +53,5 @@ independent of *Fellowship runtimes* releases.
 **System chain** — A parachain that is part of the network's protocol itself.
 Runs on behalf of the network; its runtime lives in the *Fellowship
 runtimes*. Uses a para ID below 2000 — the range that is not publicly
-registrable (`LOWEST_PUBLIC_ID` in polkadot-sdk).
+registrable (`LOWEST_PUBLIC_ID` in
+[`polkadot-parachain-primitives`](https://docs.rs/polkadot-parachain-primitives)).

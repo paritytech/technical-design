@@ -4,7 +4,7 @@
 | --------------- | ----------------- |
 | **Start Date**  | 2026-09-18        |
 | **Description** | _To be filled._   |
-| **Authors**     | Andrzej Sulkowski |
+| **Authors**     | Agustinus Theodorus, Maxim Skorikov, Andrzej Sułkowski |
 
 ## Summary
 

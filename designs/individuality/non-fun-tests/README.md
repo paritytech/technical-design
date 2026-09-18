@@ -1,12 +1,33 @@
-# Prelude
+# Non-Functional Tests
+
+|                 |                   |
+| --------------- | ----------------- |
+| **Start Date**  | 2026-09-18        |
+| **Description** | _To be filled._   |
+| **Authors**     | Andrzej Sulkowski |
+
+## Summary
+
+_To be filled._
+
+## Motivation
+
+_To be filled._
+
+## Stakeholders
+
+_To be filled._
+
+## Explanation
+
+### Prelude
 
 We have tests which run via `cargo test`, some e2e tests and runtime upgrade tests. All of them cover correctness. With this PRD we do the initial step towards coverage of non-functional tests. We want to map out which components break under which load? What kind of breakage do we see? Is it graceful, hard or silent? 
 
 Other quality attributes like availability under faults, privacy or modifiability are deferred
 
-# Non-Functional Tests
 
-## Test Types
+### Test Types
 
 We will be focusing on two test types: _Performance Tests_ and _Stress Tests_.
 
@@ -18,7 +39,8 @@ We will be focusing on two test types: _Performance Tests_ and _Stress Tests_.
 | **Done when**   | The run completes                                    | The artifact fails; that is the point                                                        |
 | **Deliverable** | A number against a budget, and a regression gate<br> | 1) Breaking point (with component location)<br>2) Detect failure mode<br>3) Measure recovery |
 
-> [!warning] A stress test that ends without failure is a performance test with a generous budget
+> [!WARNING]
+> A stress test that ends without failure is a performance test with a generous budget
 
 
 Failure modes from acceptable to unacceptable: 
@@ -44,7 +66,7 @@ Measured over the run, per profile:
 After the load, once the system settles:
 - Idle state and operations, compared to before
 
-### Scenario
+#### Scenario
 
 Every scenario, of either kind, has six parts.
 
@@ -59,13 +81,14 @@ Every scenario, of either kind, has six parts.
 
 A performance and a stress scenario for the same artifact share five parts. They differ only in the **Environment** (planned load versus a ramp) and the **Response measure** (a budget versus a breaking point).
 
-## Profiles
+### Profiles
 
 The input into every test scenario is a scale of consumption profiles: who pays, how often, what
 amounts, and how regular is their purchasing profile. 
 With power-of-two denominations, a payment may cost one coin or several, and splitting grinds large coins into small ones over time.
 
-> [!info]  Hypothesis: variance may matter more than focus. A tight cluster lets the wallet hold a few well-fitted denominations. A wide spread forces splits in both directions and grinds the inventory faster. 
+> [!NOTE]
+> Hypothesis: variance may matter more than focus. A tight cluster lets the wallet hold a few well-fitted denominations. A wide spread forces splits in both directions and grinds the inventory faster. 
 
 Profile parameters to vary:
 - param_1: Payment frequency - how often someone pays
@@ -86,9 +109,10 @@ One rule to follow up: recycle takes precedence. offboard is the fallback when q
 
 The deliverable is a set of curves per profile, plus which profile degrades worst. That profile sets k for S8
 
-> [!info] personhood = none + budget = 0 is a combination which renders the recycler unusable
+> [!NOTE]
+> personhood = none + budget = 0 is a combination which renders the recycler unusable
 
-### Profile Axes
+#### Profile Axes
 
 The 13 parameters group into five axes. An actor profile is a point in this
 space.
@@ -111,16 +135,48 @@ real world.** An actor buying high-value goods will hold large denominations.
 They stay separate so the mismatch can be tested deliberately an actor holding
 small change while spending large, grinds through `MaximumAge` fastest.
 
-### Scale Model
+#### Scale Model
 This defines "planned load" for performance tests and the starting point of every stress ramp. Coinage has no server of its own in this repository. Users load three things: a payer's device, with that user's history; a merchant's device, with how many customers pay it; the chain and its RPC endpoints, with the whole population.
 
 To determine the mix of our profiles we need to orientate ourselves to the real world and heuristically determine types of profiles:
 We have two parties involved in a transaction. A sender and a recipient. Either one of them can be a Payer or a Merchant. However, the merchant will in the majority of cases be the recipient.
-### Payer Profile
-see [[PRD_Concrete_Profiles]]
-### Merchant Profile
-see [[PRD_Concrete_Profiles]]
+#### Payer Profile
+see [[concrete-profiles]]
+#### Merchant Profile
+see [[concrete-profiles]]
 
 ## Scale Model
 
+## Drawbacks
 
+_To be filled._
+
+## Testing, Security, and Privacy
+
+_To be filled._
+
+## Performance, Ergonomics, and Compatibility
+
+### Performance
+
+_To be filled._
+
+### Ergonomics
+
+_To be filled._
+
+### Compatibility
+
+_To be filled._
+
+## Prior Art and References
+
+_To be filled._
+
+## Unresolved Questions
+
+_To be filled._
+
+## Future Directions and Related Material
+
+_To be filled._

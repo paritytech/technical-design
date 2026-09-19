@@ -19,7 +19,6 @@ _To be filled._
 _To be filled._
 
 ## Explanation
-
 ### Prelude
 
 We have tests which run via `cargo test`, some e2e tests and runtime upgrade tests. All of them cover correctness. With this PRD we do the initial step towards coverage of non-functional tests. We want to map out which components break under which load? What kind of breakage do we see? Is it graceful, hard or silent? 
@@ -39,8 +38,7 @@ We will be focusing on two test types: _Performance Tests_ and _Stress Tests_.
 | **Done when**   | The run completes                                    | The artifact fails; that is the point                                                        |
 | **Deliverable** | A number against a budget, and a regression gate<br> | 1) Breaking point (with component location)<br>2) Detect failure mode<br>3) Measure recovery |
 
-> [!WARNING]
-> A stress test that ends without failure is a performance test with a generous budget
+> [!warning] A stress test that ends without failure is a performance test with a generous budget
 
 
 Failure modes from acceptable to unacceptable: 
@@ -87,13 +85,84 @@ The input into every test scenario is a scale of consumption profiles: who pays,
 amounts, and how regular is their purchasing profile. 
 With power-of-two denominations, a payment may cost one coin or several, and splitting grinds large coins into small ones over time.
 
-> [!NOTE]
-> Hypothesis: variance may matter more than focus. A tight cluster lets the wallet hold a few well-fitted denominations. A wide spread forces splits in both directions and grinds the inventory faster. 
+> [!info]  Hypothesis: variance may matter more than focus. A tight cluster lets the wallet hold a few well-fitted denominations. A wide spread forces splits in both directions and grinds the inventory faster. 
 
-Profile parameters to vary:
+#### Profile Parameter Definitions
+
+These definitions describe what each parameter controls without prescribing the values or relationships used by a particular profile model.
+
+##### Payment demand
+
+- **param_1: Payment frequency** — how often the actor makes a payment.
+- **param_2: Typical payment amount** — the value around which the actor's purchases are concentrated.
+- **param_3: Payment amount variability** — how widely purchase values vary around `param_2`.
+
+##### Inventory and wallet strategy
+
+- **param_4: Target inventory value** — the total asset value the wallet aims to hold.
+- **param_5: Top-up amount** — the asset value loaded into the wallet when the top-up condition defined by `param_7` is met.
+- **param_6: Top-up composition** — the rule the wallet uses to decompose the top-up value into the denominations requested from Coinage.
+- **param_7: Top-up threshold** — the wallet condition that triggers a top-up.
+- **param_8: Payment construction strategy** — the rule the wallet uses to construct an exact payment from its current coin inventory:
+  - **efficient** — minimizes the number of coin operations and outputs required to complete the payment;
+  - **fragmenting** — maximizes the number of valid coin operations and outputs, subject to the payment value and protocol limits.
+
+##### Privacy strategy
+
+- **param_9: Recycle age threshold** — the coin age at which the wallet attempts to recycle a coin.
+- **param_10: Privacy budget** — the maximum fee the actor accepts for recycling when free recycling is unavailable.
+- **param_11: Recycle output composition** — how recycled value is divided into new Coinage denominations.
+- **param_12: Personhood status** — the actor's personhood class, used to determine its free-recycling allowance.
+
+##### Exit strategy
+
+- **param_13: Offboard threshold** — the condition under which the wallet converts coins back into the underlying asset.
+- **param_14: Offboard selection** — the rule used to choose which eligible coins to offboard.
+
+##### Initial inventory
+
+- **param_15: Initial inventory value** — the total asset value held when the wallet is created.
+- **param_16: Initial inventory composition** — how the initial value is divided into Coinage denominations.
+
+#### Baseline parameterization
+
+The detailed parameter levels and population shares are defined in [[concrete-profiles]]. The current baseline additionally applies the following representations, relationships, and policies.
+
+##### Payment demand
+
+- Payment amounts are denominated in dotUSD.
+- `param_2` is represented by a Coinage denomination level `d` and its corresponding dotUSD value. It describes the value of the purchase, not a preference for spending coins of that denomination.
+- For the production dotUSD Coinage instance, `asset_unit = 0.01 dotUSD`, so `coin_value(d) = 0.01 × 2^d dotUSD`.
+- `param_3` is measured in denomination-level offsets around `param_2`, with resulting levels clamped to the runtime's supported range.
+
+##### Inventory and wallet strategy
+
+- `param_5` is derived rather than sampled: `param_5 = param_4 - current inventory value`. Each top-up therefore restores the wallet to its target inventory value.
+- `param_7` is expressed as the percentage of `param_4` remaining in the wallet.
+- `param_8` has two strategies:
+  - **efficient** — minimizes the number of coin operations, inputs, and outputs;
+  - **fragmenting** — maximizes valid coin operations and outputs. It produces splitting when inventory is coarse and many transfers when inventory is already fine.
+
+##### Privacy and exit policy
+
+- The current `param_9` levels range from age `1` for aggressive recycling to age `16` for recycling only when forced.
+- The current `param_10` levels include `0`, bounded fee limits, and `∞`.
+- The current `param_12` levels are `none`, `lite`, and `person`. Their effective free quotas depend on the current recycle fee.
+- Recycling takes precedence over offboarding. `param_13` and `param_14` apply only when free recycling is unavailable and `param_10` will not cover the fee.
+
+##### Initial inventory
+
+- `param_15 = param_4`: the initial inventory value equals the target inventory value.
+- `param_16 = param_6`: the initial inventory composition equals the top-up composition.
+
+`param_15` and `param_16` remain separately named so future profiles can initialize wallets differently from their ongoing inventory strategy. Under the current links, they are not sampled independently and do not increase the profile-space size.
+
+
+---
+
 - param_1: Payment frequency - how often someone pays
-- param_2: Value focus - low, mid or high value goods
-- param_3: Variance - how tightly amounts cluster around that focus
+- param_2: Typical payment amount - low, mid or high value spend per payment
+- param_3: Payment amount variability - how tightly amounts cluster around `param_2`
 - param_4: Top-Up amount - the amount to top up
 - param_5: Top-Up split - the runtime lets us pick the split
 - param_6: Top-Up threshold - when the top-up amount get triggered
@@ -109,8 +178,7 @@ One rule to follow up: recycle takes precedence. offboard is the fallback when q
 
 The deliverable is a set of curves per profile, plus which profile degrades worst. That profile sets k for S8
 
-> [!NOTE]
-> personhood = none + budget = 0 is a combination which renders the recycler unusable
+> [!info] personhood = none + budget = 0 is a combination which renders the recycler unusable
 
 #### Profile Axes
 

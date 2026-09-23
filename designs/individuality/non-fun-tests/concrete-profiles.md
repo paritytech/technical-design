@@ -150,7 +150,7 @@ We model one exception:
 - personhood status is `param_12 = none`; and
 - privacy budget is `param_10 = 0`.
 
-Under this policy, a coin that reaches `MaximumAge` cannot be recycled: the actor has neither a free unload quota nor permission to pay for an unload. Direct offboarding is therefore the fallback.
+Under this policy, a coin that reaches `MaximumAge` can be loaded into the recycler, but not unloaded: the actor has neither a free unload quota nor permission to pay for an unload. Direct offboarding is therefore the fallback.
 
 
 ### Payer Population Spec

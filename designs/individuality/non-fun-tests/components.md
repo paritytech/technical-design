@@ -30,6 +30,19 @@ The traces use Android Community `f875be3` and iOS Community `b960f77`, also cit
 
 Onboarding and claim entry points are linked beside their diagrams in [load paths](load-paths.md). Platform policy differences remain in [production policies](production-policies.md).
 
+## Isolation boundaries
+
+Keep the component being measured real. Replace only dependencies outside its boundary.
+
+| Component | Keep real | Supply or replace |
+| --------- | --------- | ----------------- |
+| C1 Wallet state | State updates, balance calculation and the storage backend when storage is measured | Seeded holdings, controlled time and scripted chain/operation observations. An in-memory store cannot establish native database performance. |
+| C2 Planner | Selected native policy or a named adversarial override | Fixed inventory, runtime bounds, allowance and time. Control internal clock reads where present. |
+| C3 Transaction builder | Encoding, signing and proof generation | Test keys, deterministic index allocation, fixed metadata, valid ring snapshots and token counters. |
+| C4 Submitter | Registration, RPC client and result tracking | A local node for real pool/RPC limits; scripted RPC only for isolated client behaviour. |
+
+For a whole-path chain test, retain real transaction construction, proofs, submission and the local chain. Seed each agent's funding and eligibility before measurement. For component tests, a chain adapter can return fixed observations; that result says nothing about chain capacity. Scenarios and budgets are specified separately.
+
 [ios-state]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/Services/CoinageBalanceService.swift
 [ios-submit]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/CoinageTx/Engine/CoinageTxService.swift
 [ios-planner]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/Transfer/CoinSelection/CoinSelector.swift

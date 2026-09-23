@@ -129,6 +129,8 @@ An override does not affect other policy keys unless it says so. It is scenario 
 
 Derive scenarios by walking one verified operation from its source to completion and listing every artifact through which its load passes. Each artifact receives a performance scenario at planned load and a stress scenario that ramps the relevant environment until its response measure is violated or the artifact fails.
 
+Verified operation paths, their component and artifact catalogue, stress surfaces and policy-to-artifact mapping are maintained in [[load-paths]].
+
 A system-level scenario may ramp the complete path and report which verified artifact breaks first. Coinage paths, artifacts and limits must be established from the current implementations before scenarios are added.
 
 ## Utility Tree [TODO]

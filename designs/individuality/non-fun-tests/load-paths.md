@@ -17,24 +17,32 @@ A **component** is an implementation unit, such as a wallet planner, RPC client 
 
 ## Component and artifact catalogue
 
-The four wallet components, native source references and isolation boundaries are in [components](components.md). The chain is the system under test; these components generate its load.
+The four wallet components and their isolation boundaries are in [components](components.md). Artifact IDs below use those component IDs where applicable. Runtime and node artifacts belong to the system under test.
 
-| ID | Component | Artifacts reached by these paths |
-| -- | --------- | -------------------------------- |
-| C1 | Wallet state | Coin/voucher records, balances, reservations and operation records |
-| C2 | Planner | Denomination breakdown, coin/voucher selection and recycling decisions |
-| C3 | Transaction builder | Output-key allocation, signatures, recycler proofs, calls and memo encoding |
-| C4 | Submitter | Registration, RPC submission, status watches and chain observations |
+| ID | Layer | Artifact | Responsibility | Authoritative implementation |
+| -- | ----- | -------- | -------------- | ---------------------------- |
+| C1.records | Wallet | Asset and operation records | Track inventory, reservations and outcomes | [Native state/engine map](components.md#native-implementation-map) |
+| C2.topup | Wallet | Denomination breakdown | Convert top-up value into voucher denominations | [Top-up composition](production-policies.md#top-up-composition) |
+| C2.payment | Wallet | Payment selection plan | Choose exact coins, split or unload | [Payment construction](production-policies.md#payment-construction) |
+| C2.recycle | Wallet | Recycling verdicts | Select coins under the active policy | [iOS evaluator][ios-recycle-policy], [Android policy][android-recycle-policy] |
+| C2.offboard | Wallet | External-payment plan | Select vouchers and any coins to recycle | [Offboarding selection](production-policies.md#offboarding-inventory-selection) |
+| C3.extrinsics | Wallet | Encoded calls and proofs | Construct valid transaction requests | [Native builder map](components.md#native-implementation-map) |
+| C4.requests | Wallet | Registered transaction requests | Submit and track each outcome | [Native submitter map](components.md#native-implementation-map) |
+| R1.calls | Runtime | Coinage dispatchables | Apply the calls named in each path | [Coinage pallet][runtime-coinage] |
+| R2.origins | Runtime | Coinage transaction extensions | Validate coin and unload-token origins | [Coinage extensions][runtime-extensions] |
+| R3.rings | Runtime | Member-ring builds | Incorporate voucher members into ring revisions | [Members pallet][runtime-members] |
+| R4.cleanup | Runtime | Cleanup calls submitted by the OCW | Remove expired recycler and token state as time advances | [Coinage offchain worker][runtime-cleanup] |
+| N1.pool | Node | Transaction pool | Admit, queue and report transactions before inclusion | Test node implementation; pin its SDK revision in the run configuration |
 
 ## Operation paths
 
 Each path must identify its ordered artifacts, the applicable production-policy variants and the runtime calls it reaches.
 
-The four diagrams cover onboarding, send, claim and recycling. Send and claim together trace one payment from intent to recipient ownership. Offboarding remains a separate path below.
-
-The driver seeds agents and supplies intents. It is outside the four components. The diagrams show the test boundary around native behaviour, not an implemented harness. Arrows group native methods by responsibility. Time, runtime configuration and the selected [production policy](production-policies.md) are inputs to each run.
-
 Distinguish registration, submission, inclusion, successful dispatch and finality. The diagrams show successful paths; retain each call's failure or partial result in C1. Measure completion at successful finality, even where the app reports progress earlier. Count actual calls; do not assume a fixed number of extrinsics per payment.
+
+The five diagrams cover onboarding, send, claim, recycling and offboarding. Send and claim together trace one payment from intent to recipient ownership.
+
+The driver seeds agents, supplies intents and stands in for app orchestration, chat persistence and scheduling. Memo delivery can use a controlled transport. C1–C4 group native responsibilities; these diagrams do not describe an implemented harness. Time, runtime configuration and the selected [production policy](production-policies.md) are inputs to each run.
 
 ### Top-up / Onboarding
 
@@ -68,7 +76,9 @@ sequenceDiagram
 
 iOS uses `load_recycler_with_external_asset_unpaid_batch`, chunked by the runtime batch limit. Android uses one `load_recycler_with_external_asset_unpaid` per voucher. Both use the asset holder's unpaid signed origin and include the instance ID. A local submission group is not an atomic chain batch. Load finality and voucher readiness are separate observations; ring construction can overlap load processing.
 
-Source: [iOS loader][ios-onboard]; [Android onboarding][android-onboard] and [load construction][android-onboard-build]. Readiness follows the selected policy, not a universal six-hour lock.
+Readiness follows the privacy preset: immediate use in a recycler, or a ring-fill threshold, or minimum membership plus time since recycler entry. This is not a universal six-hour lock. iOS still [allocates a random `readyAt`][ios-voucher-allocation], but its active policy uses [recycler-entry time][ios-readiness-time] instead. See [iOS readiness][ios-readiness] and [Android readiness][android-readiness].
+
+Source: [iOS loader][ios-onboard]; [Android onboarding][android-onboard] and [load construction][android-onboard-build].
 
 ### Payment
 #### Send
@@ -89,25 +99,40 @@ sequenceDiagram
     W-->>P: Inventory and policy inputs
     P->>B: Exact, split or unload plan
     B->>W: Allocate and persist output keys if needed
-    Note over W,S: Registration order differs by platform. See below.
-    par Preparation, if required
+    alt iOS
         opt Split or voucher unload
             B->>S: Register preparation requests
             S->>W: Record input locks and outputs
-            S->>C: Submit split or unload_recycler_into_coins
+            S-)C: Start background preparation
+        end
+        B->>W: Reserve payment coins for handoff
+        B-->>D: Build and return memo
+        D->>W: Make handoff durable with memo
+    else Android chat
+        B->>W: Reserve payment coins for handoff
+        B-->>D: Build and return memo
+        D->>W: Save chat message and commit handoff
+        opt Split or voucher unload
+            D->>S: Register preparation in the same local transaction
+            S->>W: Record input locks and outputs
+            S-)C: Start background preparation after commit
+        end
+    end
+    Note over S,C: Background arrows do not wait for broadcast or inclusion.
+    par Track preparation, if required
+        opt Split or voucher unload
             C-->>S: Individual outcomes and finality
             S->>W: Reconcile consumed inputs and change
         end
-    and Memo handoff
-        B->>W: Reserve payment coins for handoff
-        B-->>D: Memo with payment coin secrets
-        D->>W: Make handoff durable with memo
+    and Deliver memo
         D->>M: Deliver memo to recipient
         M-->>D: Start recipient Claim flow
     end
 ```
 
-At these commits, iOS registers preparation before returning the memo. Android's chat path saves the memo and registers scheduled preparation through the handoff commit. Broadcast and memo delivery can overlap; neither chat path waits for preparation finality. The Android external-submitter path has a separate submission wait. A delivered memo is not a completed payment.
+At these commits, iOS registers preparation before reserving the handoff and returning the memo. Android builds the memo first, then registers preparation in the transaction that saves the chat message. Background preparation submits `split` or `unload_recycler_into_coins`; broadcast and memo delivery can overlap. Neither chat path waits for preparation finality. A delivered memo is not a completed payment.
+
+Android's external-submitter path waits up to two minutes for every request to leave `PENDING_SUBMISSION`, and fails the send on timeout or a failed request. This waits for submission, not inclusion; a timeout does not cancel scheduled work. Android enables preparation retries with a six-hour deadline for chat and five minutes for merchant sends. These are [submission-policy inputs][android-retry-policy], not settlement guarantees; do not discard outstanding operations when a deadline passes.
 
 `split` uses the input coin's `AsCoin` origin. `unload_recycler_into_coins` uses an unload-token origin with the required ownership proofs, one call per planned batch. Free-token availability, ring revisions and runtime input/output bounds constrain the plan. See [platform differences](production-policies.md#payment-construction).
 
@@ -142,6 +167,8 @@ sequenceDiagram
 ```
 
 Both apps issue one `transfer` per claimed coin, using that coin's `AsCoin` origin. Claims can run concurrently and be registered as a group; the diagram does not require serial finality waits. Keep partial progress and detect the remaining coins on later passes. Record full completion only when all required claims have succeeded and finalised.
+
+Both claim services wait up to 30 seconds per detection pass, then claim the coins already visible. Missing coins do not block those claims. iOS chat supplies a six-hour retry deadline when processing starts ([caller][ios-receive], [constant][ios-constants]); this is not a hard six-hour finality timeout. The loop can continue while coins remain claimable. Keep sender-preparation and recipient-claim retries separate in the load model.
 
 Source: [iOS chat receiver][ios-receive] and [claim service][ios-claim]; [Android detection][android-detect] and [claim construction][android-claim].
 
@@ -182,7 +209,46 @@ Source: [iOS evaluation][ios-recycle-policy] and [submission][ios-recycle]; [And
 
 ### Offboarding
 
-_To be traced._
+C2 applies [offboarding inventory selection](production-policies.md#offboarding-inventory-selection): use vouchers first; if they cannot cover the amount, recycle enough coins to fill the deficit, then select vouchers again. Both apps exit through recycler unloads, not `direct_offboard_coin_into_external_asset`.
+
+```mermaid
+sequenceDiagram
+    actor D as Test driver
+    participant W as C1 Wallet state
+    participant P as C2 Planner
+    participant B as C3 Tx builder
+    participant S as C4 Submitter
+    participant C as Chain
+    D->>P: Offboard amount to external account
+    P->>W: Read free vouchers and settled coins
+    W-->>P: Inventory and policy inputs
+    opt Vouchers cannot cover the amount
+        P->>B: Coins selected for recycling
+        B->>W: Allocate voucher keys
+        B->>S: Register one load per selected coin
+        S->>W: Lock coins and record outputs
+        S->>C: Submit load_recycler_with_coin
+        C-->>S: Load results and voucher locations
+        S->>W: Update recycling progress
+        W-->>P: All selected coins reached recyclers
+        P->>P: Select vouchers again
+    end
+    P->>B: Selected vouchers, surplus and destination
+    B->>W: Allocate surplus voucher keys, if needed
+    B->>B: Group inputs and build unload proofs and calls
+    B->>S: Register unload requests under payment ID
+    S->>W: Lock vouchers and record surplus outputs
+    S->>C: Submit external-asset unloads
+    C-->>S: Per-call dispatch results and finality
+    S->>W: Record settled value and remaining assets
+    W-->>D: Complete, partial or failed payment
+```
+
+The calls are `unload_recycler_into_external_asset` and, for the call returning surplus vouchers, `unload_recycler_into_external_asset_and_loaded_coins`. Each uses an unload-token origin with a free token and `max_fee = 0`. iOS chunks recycler groups by `MaxConsolidation`; Android's offboarding path does not. An oversized Android group can fail before dispatch; see the linked policy for the runtime bound.
+
+Both apps can start unloading after the selected coins reach recyclers in the best block, without waiting for recycling finality or the normal privacy delay. Incomplete recycling stops the payment. Unload calls settle separately, so record partial value delivered to the external account. There is no payment memo or recipient Coinage claim.
+
+Source: [iOS recycling transition][ios-offboard-recycle] and [unload service][ios-offboard]; [Android recycling transition][android-offboard-recycle] and [unload service][android-offboard].
 
 ## Stress surfaces
 
@@ -213,3 +279,17 @@ Concrete adversarial overrides are defined only after this mapping identifies th
 [ios-recycle]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/Recycling/CoinageRecyclingService.swift
 [android-recycle-policy]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/recycling/RecyclingStrategyProvider.kt
 [android-recycle]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/usecase/RealCoinageRecyclingUseCase.kt
+[ios-voucher-allocation]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/Allocators/VoucherAllocator.swift
+[ios-readiness-time]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/Recycling/Strategy/RecyclingParams.swift#L44-L51
+[ios-readiness]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/Recycling/Strategy/ParametricRecyclingStrategy.swift
+[android-readiness]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/recycling/ParametricRecyclingStrategy.kt
+[ios-constants]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/CoinageConstants.swift#L10-L12
+[android-retry-policy]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/transaction/submission/CoinageSubmissionParams.kt#L20-L28
+[ios-offboard-recycle]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/ExternalPayment/StateMachine/States/OnboardCoinsPaymentState.swift
+[ios-offboard]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/ExternalPayment/Service/OffboardVouchersForPaymentService.swift
+[android-offboard-recycle]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/externalPayment/state/AwaitRecyclingPaymentState.kt
+[android-offboard]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/externalPayment/usecase/UnloadRecyclerIntoExternalAssetUseCase.kt
+[runtime-coinage]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/coinage/src/lib.rs
+[runtime-extensions]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/coinage/src/extension.rs
+[runtime-members]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/members/src/lib.rs#L881
+[runtime-cleanup]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/coinage/src/lib.rs#L2047

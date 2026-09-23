@@ -4,6 +4,8 @@ This file documents the production implementation of each Wallet policy listed i
 
 Each entry must describe the implementation and provide a commit-pinned reference to its policy logic.
 
+For execution order and the chain calls these policies produce, see [load paths](load-paths.md#operation-paths).
+
 Production-policy investigation treats the following repos as the authoritative production implementations:
 - [Android Community](https://github.com/paritytech/polkadot-android-community)
 - [iOS Community](https://github.com/paritytech/polkadot-ios-community)
@@ -24,13 +26,13 @@ Valid profile-generated top-ups are whole-cent values and are expected to be rep
 | Implementation | Agreement | Proof |
 |---|---|---|
 | Android Community | Production implementation; greedy largest-first decomposition with round-down support. | [policy](https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/common/RealCoinAmountBreakdownContext.kt#L17-L43) |
-| iOS Community | Production implementation; same composition, with any remainder omitted from the result. | [policy](https://github.com/paritytech/polkadot-ios-community/blob/9d1210b4f3d7450fc27615c52dab8e37a622cf6b/Packages/Coinage/Sources/Denomination/Denomination.swift#L57-L72) |
+| iOS Community | Production implementation; same composition, with any remainder omitted from the result. | [policy](https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/Denomination/Denomination.swift#L57-L72) |
 | Brevity | Supporting implementation; matches the production policy and exposes the remainder explicitly. | [policy](https://github.com/paritytech/brevity-dozer/blob/0fb3fa214c8abeb7a33a7db0db60c257ea069c8e/core/crates/brevity-coinage/src/denomination.rs#L68-L89) |
 
 **Verified against:**
 
 - Android Community commit `f875be37451f5282a92dec2aa9bf764ac5e64f43`;
-- iOS Community commit `9d1210b4f3d7450fc27615c52dab8e37a622cf6b`;
+- iOS Community commit `b960f771049c07819de1f201b901b037613d42e9`;
 - Brevity commit `0fb3fa214c8abeb7a33a7db0db60c257ea069c8e`.
 
 ## Payment Construction

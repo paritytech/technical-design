@@ -131,6 +131,8 @@ Derive scenarios by walking one verified operation from its source to completion
 
 Verified operation paths, their component and artifact catalogue, stress surfaces and policy-to-artifact mapping are maintained in [[load-paths]].
 
+Wallet responsibilities, native source references and dependency replacements for isolated tests are in [components](components.md).
+
 A system-level scenario may ramp the complete path and report which verified artifact breaks first. Coinage paths, artifacts and limits must be established from the current implementations before scenarios are added.
 
 ## Utility Tree [TODO]

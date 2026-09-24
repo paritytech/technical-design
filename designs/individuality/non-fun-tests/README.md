@@ -18,6 +18,16 @@ Existing `cargo test`, end-to-end tests and runtime-upgrade tests cover correctn
 
 Availability under faults, privacy, modifiability and other quality attributes are deferred.
 
+### Runtime and node failure hypotheses
+
+Coinage executes as a state transition function in a Substrate runtime. Kian Paimani's feedback identifies three areas to investigate alongside the [wallet load paths](load-paths.md). These are hypotheses, not confirmed bottlenecks or an exhaustive list.
+
+- **Weights and block production.** Underestimated weights can admit more work than fits the execution budget; overestimated weights can leave capacity unused. Block authoring also has a wall-clock deadline. Compare declared weight, actual execution time, block utilisation and why authoring stopped. See the [SDK proposer](https://docs.rs/sc-basic-authorship/latest/src/sc_basic_authorship/basic_authorship.rs.html).
+- **Parachain validation.** Relay-chain validators re-execute candidates through the parachain validation function (PVF). Record execution times, validation failures and disputes under load. Use the tested network's deadlines for each validation stage; do not assume a universal 500 ms limit or that every timeout causes a dispute. This needs a parachain/relay-chain environment; a standalone runtime test cannot establish it. See [approval checking](https://paritytech.github.io/polkadot-sdk/book/node/approval/approval-voting.html) and [disputes](https://paritytech.github.io/polkadot-sdk/book/node/disputes/dispute-coordinator.html).
+- **Transaction-pool saturation and recovery.** Even with accurate weights and successful validation, arrivals can exceed throughput. Check whether a finite burst queues and drains after arrivals fall below capacity. Record queue size, inclusion/finality latency, rejected or dropped transactions and time to drain. If forks occur, inspect revalidation and re-inclusion. A bounded pool cannot absorb sustained overload indefinitely.
+
+Successful buffering is a result to demonstrate, not an assumption. Agree the load target, budgets and responsible teams through the [open questions](#open-questions) before turning these hypotheses into scenarios.
+
 ## Test Types
 
 This work uses two test types: **performance tests** and **stress tests**.
@@ -173,6 +183,10 @@ Execution environments and test levels must be assigned after the scenario artif
 
 Availability under faults, recoverability, privacy, energy use and modifiability are deferred and can be added later using the same scenario form.
 
+Kian also suggested a separate exercise for chat with image uploads, covering SSS and BC. That needs its own owners and load paths; their relative fragility is not an established finding of this Coinage work.
+
 ## Open Questions
 
-_To be filled._
+- Which population and workload are we targeting: 10k users, 1M users, or another tier? Specify active users, operation mix, arrival rates and burst concurrency; a user count alone does not define load.
+- Which throughput, latency and post-burst recovery budgets should we agree with the runtime, transaction-pool and parachain-validation leads?
+- Which owned test environment and instrumentation can exercise block production and relay-chain validation together, and who owns the resulting findings?

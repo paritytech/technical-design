@@ -29,6 +29,7 @@ The files fall into two groups. The first describes Coinage as it works today. T
 1. [This overview](#purpose) — purpose, test types, scenario form and rules.
 2. [Wallet module test components](test-design/wallet-module-components.md) — the four pieces of the load generator and what each depends on.
 3. [Profile schema](test-design/profile-schema.md) — the inputs that describe each simulated user.
+4. [Scenarios](test-design/scenarios/) — one draft file per scenario, listed in the [scenarios table](#scenarios).
 
 ## Purpose
 
@@ -138,7 +139,7 @@ Detailed behaviour, platform differences and commit-pinned evidence are in [prod
 
 ### Named Runtime Conditions
 
-A named runtime condition is a boolean fact derived from profile inputs, wallet state and runtime state. It does not prescribe a response; the resolved wallet policy determines that response. Definitions are in [production policies](coinage/production-policies.md#named-runtime-conditions), next to the policy that reacts to them.
+A named runtime condition is a boolean fact derived from profile inputs, wallet state and runtime state. It does not prescribe a response; the resolved wallet policy determines that response. Definitions are in [named runtime conditions](coinage/production-policies.md#named-runtime-conditions), inside production policies next to the policy that reacts to them.
 
 ### Adversarial Policy Overrides
 
@@ -178,17 +179,17 @@ A scenario resolves the source profile or population, behaviour policies, test t
 
 Scenarios follow the [user flows](coinage/user-flows.md). Each candidate below names the flow it loads, the stimulus and the artifacts it reaches, using the IDs from the [artifact catalogue](coinage/user-flows.md#component-and-artifact-catalogue). Every candidate has a performance variant at planned load and a stress variant that ramps the stimulus until the response measure fails.
 
-These are candidates, not complete scenarios. Scale, budgets and the platform variant for each policy are set once the [open questions](#open-questions) are answered.
+These are candidates, not complete scenarios. Each has its own draft file in [`test-design/scenarios/`](test-design/scenarios/). Scale, budgets and the platform variant for each policy are set once the [open questions](#open-questions) are answered.
 
 | User flow | Scenario | Stimulus | Artifacts | Response measure |
 | --------- | -------- | -------- | --------- | ---------------- |
-| Onboarding | Top-up burst | Many actors top up at the same time | C2.topup, C4.requests, R1.calls, R3.rings, N1.pool | Loads included and finalised; pool rejections; time until the new vouchers are in a built ring revision |
-| Send and claim | Payment burst | Many actors pay at the same time, with a mix of exact, split and unload plans | C2.payment, C3.extrinsics, C4.requests, R1.calls, R2.origins, N1.pool | Time from payment intent to finalised claim of every coin; partial payments; dropped transactions |
-| Claim | Merchant fan-in | One recipient receives many payments; each coin needs its own claim | C4.requests, R1.calls, N1.pool | Claim latency; claims still unsettled when the burst stops; time to drain |
-| Recycling | Synchronised recycling | Many coins reach the forced recycling age at the same time | C2.recycle, R1.calls, R3.rings, N1.pool | Recycle loads included; ring build lag; vouchers usable again |
-| Recycling | Free-quota exhaustion | Unload demand exceeds the free unload allowance | C2.recycle, R2.origins, R4.cleanup | Wallet behaviour when the quota runs out; failed unloads; recovery in the next period |
-| Offboarding | Offboarding burst | Many actors offboard to the external asset at the same time | C2.offboard, R1.calls, R2.origins, N1.pool | Value delivered to external accounts; partial offboards; unload throughput |
-| All | Full-flow ramp | A population runs every flow and the load is ramped | All artifacts | The first artifact to violate its response measure, how it fails and whether it recovers |
+| Onboarding | [Top-up burst](test-design/scenarios/top-up-burst.md) | Many actors top up at the same time | C2.topup, C4.requests, R1.calls, R3.rings, N1.pool | Loads included and finalised; pool rejections; time until the new vouchers are in a built ring revision |
+| Send and claim | [Payment burst](test-design/scenarios/payment-burst.md) | Many actors pay at the same time, with a mix of exact, split and unload plans | C2.payment, C3.extrinsics, C4.requests, R1.calls, R2.origins, N1.pool | Time from payment intent to finalised claim of every coin; partial payments; dropped transactions |
+| Claim | [Merchant fan-in](test-design/scenarios/merchant-fan-in.md) | One recipient receives many payments; each coin needs its own claim | C4.requests, R1.calls, N1.pool | Claim latency; claims still unsettled when the burst stops; time to drain |
+| Recycling | [Synchronised recycling](test-design/scenarios/synchronised-recycling.md) | Many coins reach the forced recycling age at the same time | C2.recycle, R1.calls, R3.rings, N1.pool | Recycle loads included; ring build lag; vouchers usable again |
+| Recycling | [Free-quota exhaustion](test-design/scenarios/free-quota-exhaustion.md) | Unload demand exceeds the free unload allowance | C2.recycle, R2.origins, R4.cleanup | Wallet behaviour when the quota runs out; failed unloads; recovery in the next period |
+| Offboarding | [Offboarding burst](test-design/scenarios/offboarding-burst.md) | Many actors offboard to the external asset at the same time | C2.offboard, R1.calls, R2.origins, N1.pool | Value delivered to external accounts; partial offboards; unload throughput |
+| All | [Full-flow ramp](test-design/scenarios/full-flow-ramp.md) | A population runs every flow and the load is ramped | All artifacts | The first artifact to violate its response measure, how it fails and whether it recovers |
 
 ## Means [TODO]
 

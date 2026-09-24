@@ -44,7 +44,7 @@ We correlate the target inventory with payment frequency (`param_1`): actors who
 | tolerant    | 5 × UNLOAD_TOKEN_FEE_BASE     | survives moderate congestion, isolates recycler limits             | 20%   |
 | unbounded   | ∞                             | removes fees from the experiment entirely                          | 10%   |
 
-See [[constants#UNLOAD_TOKEN_FEE_BASE]]
+See [constants](../coinage/constants.md#unload_token_fee_base)
 > Under the baseline model, most payers with personhood status are unlikely to exhaust their free quota and therefore will rarely need to use their privacy budget.
 
 **param_12: Personhood status**
@@ -58,7 +58,7 @@ per person, per 24-hour period.
 | `lite`   | 10 DOT             | **61**                | 60%   |
 | `person` | 20 DOT             | **122**               | 30%   |
 
-Free unload counts: see [[constants#FREE_UNLOAD_TOKENS_PER_PERIOD]]
+Free unload counts: see [constants](../coinage/constants.md#free_unload_tokens_per_period)
 
 > [!warning] Free quota falls as the fee rises
 > The quota calculation divides the allowance by `current_fee`. As a result, congestion that raises the fee multiplier reduces the number of free unloads available in a period. This relationship was measured by sweeping `NextFeeMultiplier`:

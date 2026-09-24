@@ -16,12 +16,20 @@ This proposal describes how we will measure Coinage performance at planned load 
 
 ## Reading Order
 
-1. **[This overview](#purpose)** — purpose, test types and open decisions.
-2. **[Components](components.md)** — responsibilities, dependencies and isolation boundaries.
-3. **[Load paths](load-paths.md)** — sequence diagrams from onboarding through payment, recycling and offboarding.
-4. **[Profile schema](profile-schema.md)** — inputs that describe each test actor.
-5. **[Production policies](production-policies.md)** — how Android and iOS turn those inputs into operations.
-6. **[Runtime conditions](runtime-conditions.md) and [constants](constants.md)** — supporting definitions and constraints.
+The files fall into two groups. The first describes Coinage as it works today. The second describes how we build the tests. This overview ties them together.
+
+**How Coinage works today** ([`coinage/`](coinage/))
+
+1. [Load paths](coinage/load-paths.md) — what the apps and the chain do for onboarding, payment, recycling and offboarding, step by step.
+2. [Production policies](coinage/production-policies.md) — how Android and iOS decide what to do, and where they differ. The [examples](coinage/examples/) show the hardest decisions.
+3. [Runtime conditions](coinage/runtime-conditions.md) — named situations the wallet has to react to.
+4. [Constants](coinage/constants.md) — measured fee and quota values.
+
+**How we build the tests** ([`test-design/`](test-design/))
+
+1. [This overview](#purpose) — purpose, test types, scenario form and rules.
+2. [Components](test-design/components.md) — the four pieces of the load generator and what each depends on.
+3. [Profile schema](test-design/profile-schema.md) — the inputs that describe each simulated user.
 
 ## Purpose
 
@@ -31,7 +39,7 @@ Availability under faults, privacy, modifiability and other quality attributes a
 
 ### Runtime and node failure hypotheses
 
-Coinage executes as a state transition function in a Substrate runtime. Kian Paimani's feedback identifies three areas to investigate alongside the [wallet load paths](load-paths.md). These are hypotheses, not confirmed bottlenecks or an exhaustive list.
+Coinage executes as a state transition function in a Substrate runtime. Kian Paimani's feedback identifies three areas to investigate alongside the [wallet load paths](coinage/load-paths.md). These are hypotheses, not confirmed bottlenecks or an exhaustive list.
 
 - **Weights and block production.** Underestimated weights can admit more work than fits the execution budget; overestimated weights can leave capacity unused. Block authoring also has a wall-clock deadline. Compare declared weight, actual execution time, block utilisation and why authoring stopped. See the [SDK proposer](https://docs.rs/sc-basic-authorship/latest/src/sc_basic_authorship/basic_authorship.rs.html).
 - **Parachain validation.** Relay-chain validators re-execute candidates through the parachain validation function (PVF). Record execution times, validation failures and disputes under load. Use the tested network's deadlines for each validation stage; do not assume a universal 500 ms limit or that every timeout causes a dispute. This needs a parachain/relay-chain environment; a standalone runtime test cannot establish it. See [approval checking](https://paritytech.github.io/polkadot-sdk/book/node/approval/approval-voting.html) and [disputes](https://paritytech.github.io/polkadot-sdk/book/node/disputes/dispute-coordinator.html).
@@ -103,9 +111,9 @@ A profile describes one actor's demand, preferences and provisioned state. Every
 - **Exit preferences** — when and how much the actor offboards, and which inventory it uses;
 - **Initial inventory** — the coins held at the start of the test.
 
-Each parameter is a profile input, a wallet policy or provisioned state. Definitions and the complete parameter index are in [[profile-schema]].
+Each parameter is a profile input, a wallet policy or provisioned state. Definitions and the complete parameter index are in [profile schema](test-design/profile-schema.md).
 
-Payer and merchant are longer-lived business archetypes, not fixed transaction roles. Either can be a sender or recipient. A concrete profile assigns schema values, ranges and relationships without introducing new parameters; concrete payer and merchant work is in [[concrete-profiles]]. Population shares belong to the scale model.
+Payer and merchant are longer-lived business archetypes, not fixed transaction roles. Either can be a sender or recipient. A concrete profile assigns schema values, ranges and relationships without introducing new parameters; earlier payer and merchant work is kept in the deprecated [concrete profiles](test-design/concrete-profiles-deprecated.md). Population shares belong to the scale model.
 
 ## Behaviour Policies
 
@@ -119,7 +127,7 @@ Performance and endurance tests use production policies. A stress test also uses
 
 ### Production Policies
 
-Detailed behaviour, platform differences and commit-pinned evidence are in [[production-policies]].
+Detailed behaviour, platform differences and commit-pinned evidence are in [production policies](coinage/production-policies.md).
 
 | Policy key                               | Android versus iOS                                                                  | Scenario must select a variant                                             |
 | ---------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -131,7 +139,7 @@ Detailed behaviour, platform differences and commit-pinned evidence are in [[pro
 
 ### Named Runtime Conditions
 
-A named runtime condition is a boolean fact derived from profile inputs, wallet state and runtime state. It does not prescribe a response; the resolved wallet policy determines that response. Definitions are in [[runtime-conditions]].
+A named runtime condition is a boolean fact derived from profile inputs, wallet state and runtime state. It does not prescribe a response; the resolved wallet policy determines that response. Definitions are in [runtime conditions](coinage/runtime-conditions.md).
 
 ### Adversarial Policy Overrides
 
@@ -150,9 +158,9 @@ An override does not affect other policy keys unless it says so. It is scenario 
 
 Derive scenarios by walking one verified operation from its source to completion and listing every artifact through which its load passes. Each artifact receives a performance scenario at planned load and a stress scenario that ramps the relevant environment until its response measure is violated or the artifact fails.
 
-Verified operation paths, their component and artifact catalogue, stress surfaces and policy-to-artifact mapping are maintained in [[load-paths]].
+Verified operation paths, their component and artifact catalogue, stress surfaces and policy-to-artifact mapping are maintained in [load paths](coinage/load-paths.md).
 
-Wallet responsibilities, native source references and dependency replacements for isolated tests are in [components](components.md).
+Wallet responsibilities, native source references and dependency replacements for isolated tests are in [components](test-design/components.md).
 
 A system-level scenario may ramp the complete path and report which verified artifact breaks first. Coinage paths, artifacts and limits must be established from the current implementations before scenarios are added.
 

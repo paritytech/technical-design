@@ -115,9 +115,9 @@ Reaching this age makes the coin a candidate for recycling. It does not require 
 A positive integer number of transfers between `1` and `MaximumAge - 1`.
 
 > [!info]
-> If neither free allowance nor an acceptable paid-unload method is available when this age is reached, the [Preferred Recycling Unavailable](runtime-conditions.md#preferred-recycling-unavailable) runtime condition applies.
+> If neither free allowance nor an acceptable paid-unload method is available when this age is reached, the [Preferred Recycling Unavailable](../coinage/runtime-conditions.md#preferred-recycling-unavailable) runtime condition applies.
 >
-> In the verified production wallets, a preferred age above the wallet's forced-recycling threshold cannot affect behaviour: the outer age guard recycles the coin first. Android derives the threshold as runtime `MaximumAge - 2`; iOS hard-codes `16 - 2 = 14`. The wider range remains available to custom policy implementations because the runtime itself permits recycler loading at later ages. See [Preferred age versus forced recycling](examples/recycling-unavailable-handling.md#preferred-age-versus-forced-recycling).
+> In the verified production wallets, a preferred age above the wallet's forced-recycling threshold cannot affect behaviour: the outer age guard recycles the coin first. Android derives the threshold as runtime `MaximumAge - 2`; iOS hard-codes `16 - 2 = 14`. The wider range remains available to custom policy implementations because the runtime itself permits recycler loading at later ages. See [Preferred age versus forced recycling](../coinage/examples/recycling-unavailable-handling.md#preferred-age-versus-forced-recycling).
 
 ### Paid Recycling Fee Limit
 

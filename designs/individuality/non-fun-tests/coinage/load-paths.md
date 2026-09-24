@@ -17,17 +17,17 @@ A **component** is an implementation unit, such as a wallet planner, RPC client 
 
 ## Component and artifact catalogue
 
-The four wallet components and their isolation boundaries are in [components](components.md). Artifact IDs below use those component IDs where applicable. Runtime and node artifacts belong to the system under test.
+The four wallet components and their isolation boundaries are in [components](../test-design/components.md). Artifact IDs below use those component IDs where applicable. Runtime and node artifacts belong to the system under test.
 
 | ID | Layer | Artifact | Responsibility | Authoritative implementation |
 | -- | ----- | -------- | -------------- | ---------------------------- |
-| C1.records | Wallet | Asset and operation records | Track inventory, reservations and outcomes | [Native state/engine map](components.md#native-implementation-map) |
+| C1.records | Wallet | Asset and operation records | Track inventory, reservations and outcomes | [Native state/engine map](../test-design/components.md#native-implementation-map) |
 | C2.topup | Wallet | Denomination breakdown | Convert top-up value into voucher denominations | [Top-up composition](production-policies.md#top-up-composition) |
 | C2.payment | Wallet | Payment selection plan | Choose exact coins, split or unload | [Payment construction](production-policies.md#payment-construction) |
 | C2.recycle | Wallet | Recycling verdicts | Select coins under the active policy | [iOS evaluator][ios-recycle-policy], [Android policy][android-recycle-policy] |
 | C2.offboard | Wallet | External-payment plan | Select vouchers and any coins to recycle | [Offboarding selection](production-policies.md#offboarding-inventory-selection) |
-| C3.extrinsics | Wallet | Encoded calls and proofs | Construct valid transaction requests | [Native builder map](components.md#native-implementation-map) |
-| C4.requests | Wallet | Registered transaction requests | Submit and track each outcome | [Native submitter map](components.md#native-implementation-map) |
+| C3.extrinsics | Wallet | Encoded calls and proofs | Construct valid transaction requests | [Native builder map](../test-design/components.md#native-implementation-map) |
+| C4.requests | Wallet | Registered transaction requests | Submit and track each outcome | [Native submitter map](../test-design/components.md#native-implementation-map) |
 | R1.calls | Runtime | Coinage dispatchables | Apply the calls named in each path | [Coinage pallet][runtime-coinage] |
 | R2.origins | Runtime | Coinage transaction extensions | Validate coin and unload-token origins | [Coinage extensions][runtime-extensions] |
 | R3.rings | Runtime | Member-ring builds | Incorporate voucher members into ring revisions | [Members pallet][runtime-members] |

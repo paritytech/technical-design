@@ -2,7 +2,7 @@
 
 A **component** is an implementation unit, such as a wallet planner, RPC client or runtime pallet, with a responsibility, inputs, outputs and dependencies. A **flow** shows how components interact during one operation. A **scenario** defines the load and measures the response.
 
-The load generator uses four wallet-side components. These are test boundaries across native modules, not four existing packages or a shared mobile library. Runtime components belong to the system under test and are listed separately in the [artifact catalogue](load-paths.md#component-and-artifact-catalogue).
+The load generator uses four wallet-side components. These are test boundaries across native modules, not four existing packages or a shared mobile library. Runtime components belong to the system under test and are listed separately in the [artifact catalogue](../coinage/load-paths.md#component-and-artifact-catalogue).
 
 ## Responsibilities and dependencies
 
@@ -19,7 +19,7 @@ The **chain is the system under test**: the Coinage pallet and its extensions, m
 
 ## Native implementation map
 
-The traces use Android Community `f875be3` and iOS Community `b960f77`, also cited in [production policies](production-policies.md). These are source snapshots, not deployment claims. Reservations and operation progress live in the native transaction engine and its asset ledger, which span C1 and C4.
+The traces use Android Community `f875be3` and iOS Community `b960f77`, also cited in [production policies](../coinage/production-policies.md). These are source snapshots, not deployment claims. Reservations and operation progress live in the native transaction engine and its asset ledger, which span C1 and C4.
 
 | Component | iOS Community | Android Community |
 | --------- | ------------- | ----------------- |
@@ -28,7 +28,7 @@ The traces use Android Community `f875be3` and iOS Community `b960f77`, also cit
 | C3 Transaction builder | [Split strategy][ios-builder]; [voucher unload strategy][ios-unload] | [Split extrinsic builder][android-builder]; [voucher unload builder][android-unload] |
 | C4 Submitter | [CoinageTxService][ios-submit] | [Transaction service implementation][android-submit-impl] and [contract][android-submit] |
 
-Onboarding and claim entry points are linked beside their diagrams in [load paths](load-paths.md). Platform policy differences remain in [production policies](production-policies.md).
+Onboarding and claim entry points are linked beside their diagrams in [load paths](../coinage/load-paths.md). Platform policy differences remain in [production policies](../coinage/production-policies.md).
 
 ## Isolation boundaries
 

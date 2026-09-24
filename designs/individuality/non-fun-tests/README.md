@@ -12,6 +12,17 @@ Scope: Coinage
 | **Description** | Performance and stress testing for Coinage        |
 | **Authors**     | Agustinus Theodorus, Maxim Skorikov, Andrzej Sułkowski |
 
+This proposal describes how we will measure Coinage performance at planned load and find its limits under stress. It explains the wallet components and transaction paths that generate load, then defines the profiles, policies and runtime conditions needed to build test scenarios; the scenario catalogue and execution setup are still being developed.
+
+## Reading Order
+
+1. **[This overview](#purpose)** — purpose, test types and open decisions.
+2. **[Components](components.md)** — responsibilities, dependencies and isolation boundaries.
+3. **[Load paths](load-paths.md)** — sequence diagrams from onboarding through payment, recycling and offboarding.
+4. **[Profile schema](profile-schema.md)** — inputs that describe each test actor.
+5. **[Production policies](production-policies.md)** — how Android and iOS turn those inputs into operations.
+6. **[Runtime conditions](runtime-conditions.md) and [constants](constants.md)** — supporting definitions and constraints.
+
 ## Purpose
 
 Existing `cargo test`, end-to-end tests and runtime-upgrade tests cover correctness. This document defines the initial approach to non-functional testing: determining which components break under which load, how they fail and whether they recover.

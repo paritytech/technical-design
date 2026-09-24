@@ -1,8 +1,8 @@
-# Coinage load paths
+# Coinage user flows
 
-This document records the verified implementation paths through which profile-generated Coinage operations place load on the system. It is the source for identifying test artifacts, bounded resources and the Wallet policies that can amplify them.
+This document records the verified user flows through which profile-generated Coinage operations place load on the system. It is the source for identifying test artifacts, bounded resources and the Wallet policies that can amplify them.
 
-Only paths confirmed from Android Community, iOS Community, the Coinage runtime and the test harness belong here. Brevity may be recorded as supporting evidence but is not authoritative production behaviour.
+Only flows confirmed from Android Community, iOS Community, the Coinage runtime and the test harness belong here. Brevity may be recorded as supporting evidence but is not authoritative production behaviour.
 
 ## Scope
 
@@ -17,26 +17,26 @@ A **component** is an implementation unit, such as a wallet planner, RPC client 
 
 ## Component and artifact catalogue
 
-The four wallet components and their isolation boundaries are in [components](../test-design/components.md). Artifact IDs below use those component IDs where applicable. Runtime and node artifacts belong to the system under test.
+The four wallet components and their isolation boundaries are in [wallet module test components](../test-design/wallet-module-components.md). Artifact IDs below use those component IDs where applicable. Runtime and node artifacts belong to the system under test.
 
 | ID | Layer | Artifact | Responsibility | Authoritative implementation |
 | -- | ----- | -------- | -------------- | ---------------------------- |
-| C1.records | Wallet | Asset and operation records | Track inventory, reservations and outcomes | [Native state/engine map](../test-design/components.md#native-implementation-map) |
+| C1.records | Wallet | Asset and operation records | Track inventory, reservations and outcomes | [Native state/engine map](../test-design/wallet-module-components.md#native-implementation-map) |
 | C2.topup | Wallet | Denomination breakdown | Convert top-up value into voucher denominations | [Top-up composition](production-policies.md#top-up-composition) |
 | C2.payment | Wallet | Payment selection plan | Choose exact coins, split or unload | [Payment construction](production-policies.md#payment-construction) |
 | C2.recycle | Wallet | Recycling verdicts | Select coins under the active policy | [iOS evaluator][ios-recycle-policy], [Android policy][android-recycle-policy] |
 | C2.offboard | Wallet | External-payment plan | Select vouchers and any coins to recycle | [Offboarding selection](production-policies.md#offboarding-inventory-selection) |
-| C3.extrinsics | Wallet | Encoded calls and proofs | Construct valid transaction requests | [Native builder map](../test-design/components.md#native-implementation-map) |
-| C4.requests | Wallet | Registered transaction requests | Submit and track each outcome | [Native submitter map](../test-design/components.md#native-implementation-map) |
-| R1.calls | Runtime | Coinage dispatchables | Apply the calls named in each path | [Coinage pallet][runtime-coinage] |
+| C3.extrinsics | Wallet | Encoded calls and proofs | Construct valid transaction requests | [Native builder map](../test-design/wallet-module-components.md#native-implementation-map) |
+| C4.requests | Wallet | Registered transaction requests | Submit and track each outcome | [Native submitter map](../test-design/wallet-module-components.md#native-implementation-map) |
+| R1.calls | Runtime | Coinage dispatchables | Apply the calls named in each flow | [Coinage pallet][runtime-coinage] |
 | R2.origins | Runtime | Coinage transaction extensions | Validate coin and unload-token origins | [Coinage extensions][runtime-extensions] |
 | R3.rings | Runtime | Member-ring builds | Incorporate voucher members into ring revisions | [Members pallet][runtime-members] |
 | R4.cleanup | Runtime | Cleanup calls submitted by the OCW | Remove expired recycler and token state as time advances | [Coinage offchain worker][runtime-cleanup] |
 | N1.pool | Node | Transaction pool | Admit, queue and report transactions before inclusion | Test node implementation; pin its SDK revision in the run configuration |
 
-## Operation paths
+## User flows
 
-Each path must identify its ordered artifacts, the applicable production-policy variants and the runtime calls it reaches.
+Each flow must identify its ordered artifacts, the applicable production-policy variants and the runtime calls it reaches.
 
 Distinguish registration, submission, inclusion, successful dispatch and finality. The diagrams show successful paths; retain each call's failure or partial result in C1. Measure completion at successful finality, even where the app reports progress earlier. Count actual calls; do not assume a fixed number of extrinsics per payment.
 
@@ -252,7 +252,7 @@ Source: [iOS recycling transition][ios-offboard-recycle] and [unload service][io
 
 ## Stress surfaces
 
-A stress surface is a resource that can grow, saturate or reach an implementation or runtime bound along a verified path.
+A stress surface is a resource that can grow, saturate or reach an implementation or runtime bound along a verified flow.
 
 | Artifact | Resource under load | Known bound | Influencing Wallet policies |
 | -------- | ------------------- | ----------- | --------------------------- |

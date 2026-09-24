@@ -1,3 +1,8 @@
+# Concrete profiles (deprecated)
+
+> [!warning] Deprecated
+> This is the first draft of the test users: payer and merchant profiles with fixed levels (low, mid, high) and assumed population shares, using the old `param_1` to `param_16` numbering. The [profile schema](profile-schema.md) replaces it and defines each parameter with a stable key. It is kept only as a record of the earlier assumptions and share values, which may be reused when the scale model is written. Do not build scenarios from it.
+
 To define a useful profile mix, we start with real-world usage patterns and turn them into explicit, testable assumptions.
 
 Each transaction has a sender and a recipient. Either party may act as a payer or a merchant, although the merchant will usually be the recipient.

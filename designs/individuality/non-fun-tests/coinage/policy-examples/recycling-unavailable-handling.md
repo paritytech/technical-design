@@ -7,7 +7,7 @@ Recycler loading and recycler unloading consume different resources:
 - loading a coin into a recycler does not consume an unload token;
 - unloading the resulting voucher requires a valid unload origin.
 
-The production wallets therefore manage free-unload capacity before it is completely exhausted. This preventive reserve is related to, but distinct from, the [Preferred Recycling Unavailable](../runtime-conditions.md#preferred-recycling-unavailable) condition.
+The production wallets therefore manage free-unload capacity before it is completely exhausted. This preventive reserve is related to, but distinct from, the [Preferred Recycling Unavailable](../production-policies.md#preferred-recycling-unavailable) condition.
 
 ## Shared production behaviour
 

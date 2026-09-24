@@ -4,7 +4,7 @@ This file documents the production implementation of each Wallet policy listed i
 
 Each entry must describe the implementation and provide a commit-pinned reference to its policy logic.
 
-For execution order and the chain calls these policies produce, see [load paths](load-paths.md#operation-paths).
+For execution order and the chain calls these policies produce, see [user flows](user-flows.md#user-flows).
 
 Production-policy investigation treats the following repos as the authoritative production implementations:
 - [Android Community](https://github.com/paritytech/polkadot-android-community)
@@ -55,8 +55,8 @@ The production implementations diverge as follows:
 
 | Decision                                           | Android Community                                                                                                                       | iOS Community                                                                                                                                                     |
 | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Split coin](examples/split-coin-selection.md)     | Takes a largest-first prefix of whole coins, then splits the smallest unselected coin larger than the remainder.                        | If one coin exceeds the whole payment, splits the smallest such coin alone; otherwise splits the coin at which a largest-first running total reaches the payment. |
-| [Voucher selection](examples/voucher-selection.md) | Groups vouchers by denomination and recycler, orders groups by total value descending, then takes vouchers in that order until covered. | Takes the smallest single voucher that covers the remainder; if none does, takes vouchers largest-first until covered.                                            |
+| [Split coin](policy-examples/split-coin-selection.md)     | Takes a largest-first prefix of whole coins, then splits the smallest unselected coin larger than the remainder.                        | If one coin exceeds the whole payment, splits the smallest such coin alone; otherwise splits the coin at which a largest-first running total reaches the payment. |
+| [Voucher selection](policy-examples/voucher-selection.md) | Groups vouchers by denomination and recycler, orders groups by total value descending, then takes vouchers in that order until covered. | Takes the smallest single voucher that covers the remainder; if none does, takes vouchers largest-first until covered.                                            |
 
 | Implementation | Finding | Proof |
 |---|---|---|
@@ -130,11 +130,27 @@ This can consolidate vouchers into a greater denomination. For example, two `32Â
 
 **Production status:** Confirmed â€” Android Community and iOS Community share the same normal response: retain discretionary recycling candidates as spendable coins and provide no paid-unload fallback. They differ in allowance-read failure, allowance-period accounting, and how they obtain the forced-recycling threshold.
 
+### Named runtime conditions
+
+A named runtime condition is a boolean fact derived from profile inputs, wallet state and runtime state. A condition does not prescribe how the wallet responds.
+
+#### Preferred Recycling Unavailable
+
+This condition is satisfied for a coin when:
+
+- the coin has reached the actor's preferred recycle age;
+- the actor has no remaining free-recycling allowance; and
+- the wallet implementation has no currently executable paid-unload method whose quoted fee is at or below the actor's paid recycling fee limit.
+
+A wallet implementation with no supported paid-unload method satisfies the third clause without assigning a numeric fee to that unavailable method. When a paid method exists, its fee must be quoted in the asset used by `privacy.recycling.paid_fee_limit` before comparison.
+
+The condition does not prescribe an action. The [`wallet.recycling.unavailable_handling`](../test-design/profile-schema.md#recycling-unavailable-handling) policy determines the wallet's response.
+
 **Behaviour:**
 
 The production wallets do not directly evaluate `privacy.recycling.paid_fee_limit`. They construct unloads only with free prepaid tokens and do not implement either paid-token or fee-from-output fallback. Their `max_fee = 0` call argument is part of that prepaid construction and, for unload-into-coins, is required by the runtime; it does not encode an actor fee preference.
 
-Both wallets also apply a preventive quota reserve before the [Preferred Recycling Unavailable](runtime-conditions.md#preferred-recycling-unavailable) condition is satisfied:
+Both wallets also apply a preventive quota reserve before the [Preferred Recycling Unavailable](#preferred-recycling-unavailable) condition is satisfied:
 
 1. When remaining free unloads are at or below 20% of the applicable allowance, discretionary recycling verdicts from the privacy preset are discarded.
 2. A coin below the wallet's forced-recycling threshold is retained as `ALLOW_USE`, remains spendable, and can become a recycling candidate again after a later evaluation observes sufficient allowance. The wallet neither offboards it nor attempts a paid unload.
@@ -159,7 +175,7 @@ Brevity is comparison only. It has no preventive quota valve: it recycles availa
 | Brevity | Comparison only; no reserve valve and no paid fallback. | [policy](https://github.com/paritytech/brevity-dozer/blob/0fb3fa214c8abeb7a33a7db0db60c257ea069c8e/core/crates/brevity-coinage/src/recycling.rs#L130-L146) |
 | Runtime | Loading has no age restriction. Unloading supports free or paid prepaid tokens and fee-from-output; paid tokens can be funded with a coin, native currency, or an underlying asset. | [fee modes](https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/coinage/src/lib.rs#L1310-L1334) |
 
-Detailed worked states and line-level proof: [Recycling-unavailable handling](examples/recycling-unavailable-handling.md).
+Detailed worked states and line-level proof: [Recycling-unavailable handling](policy-examples/recycling-unavailable-handling.md).
 
 **Required selection:** Every scenario resolving this policy must explicitly select either the Android Community or iOS Community production variant. There is no default.
 

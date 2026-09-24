@@ -12,7 +12,7 @@ Scope: Coinage
 | **Description** | Performance and stress testing for Coinage        |
 | **Authors**     | Agustinus Theodorus, Maxim Skorikov, Andrzej Sułkowski |
 
-This proposal describes how we will measure Coinage performance at planned load and find its limits under stress. It explains the wallet components and transaction paths that generate load, then defines the profiles, policies and runtime conditions needed to build test scenarios; the scenario catalogue and execution setup are still being developed.
+This proposal describes how we will measure Coinage performance at planned load and find its limits under stress. It explains the wallet components and user flows that generate load, then defines the profiles, policies and runtime conditions needed to build test scenarios; the scenario catalogue and execution setup are still being developed.
 
 ## Reading Order
 
@@ -20,15 +20,14 @@ The files fall into two groups. The first describes Coinage as it works today. T
 
 **How Coinage works today** ([`coinage/`](coinage/))
 
-1. [Load paths](coinage/load-paths.md) — what the apps and the chain do for onboarding, payment, recycling and offboarding, step by step.
-2. [Production policies](coinage/production-policies.md) — how Android and iOS decide what to do, and where they differ. The [examples](coinage/examples/) show the hardest decisions.
-3. [Runtime conditions](coinage/runtime-conditions.md) — named situations the wallet has to react to.
-4. [Constants](coinage/constants.md) — measured fee and quota values.
+1. [User flows](coinage/user-flows.md) — what the apps and the chain do for onboarding, payment, recycling and offboarding, step by step.
+2. [Production policies](coinage/production-policies.md) — how Android and iOS decide what to do, where they differ, and the named runtime conditions they react to. The [policy examples](coinage/policy-examples/) show the hardest decisions.
+3. [Constants](coinage/constants.md) — measured fee and quota values.
 
 **How we build the tests** ([`test-design/`](test-design/))
 
 1. [This overview](#purpose) — purpose, test types, scenario form and rules.
-2. [Components](test-design/components.md) — the four pieces of the load generator and what each depends on.
+2. [Wallet module test components](test-design/wallet-module-components.md) — the four pieces of the load generator and what each depends on.
 3. [Profile schema](test-design/profile-schema.md) — the inputs that describe each simulated user.
 
 ## Purpose
@@ -39,7 +38,7 @@ Availability under faults, privacy, modifiability and other quality attributes a
 
 ### Runtime and node failure hypotheses
 
-Coinage executes as a state transition function in a Substrate runtime. Kian Paimani's feedback identifies three areas to investigate alongside the [wallet load paths](coinage/load-paths.md). These are hypotheses, not confirmed bottlenecks or an exhaustive list.
+Coinage executes as a state transition function in a Substrate runtime. Kian Paimani's feedback identifies three areas to investigate alongside the [wallet user flows](coinage/user-flows.md). These are hypotheses, not confirmed bottlenecks or an exhaustive list.
 
 - **Weights and block production.** Underestimated weights can admit more work than fits the execution budget; overestimated weights can leave capacity unused. Block authoring also has a wall-clock deadline. Compare declared weight, actual execution time, block utilisation and why authoring stopped. See the [SDK proposer](https://docs.rs/sc-basic-authorship/latest/src/sc_basic_authorship/basic_authorship.rs.html).
 - **Parachain validation.** Relay-chain validators re-execute candidates through the parachain validation function (PVF). Record execution times, validation failures and disputes under load. Use the tested network's deadlines for each validation stage; do not assume a universal 500 ms limit or that every timeout causes a dispute. This needs a parachain/relay-chain environment; a standalone runtime test cannot establish it. See [approval checking](https://paritytech.github.io/polkadot-sdk/book/node/approval/approval-voting.html) and [disputes](https://paritytech.github.io/polkadot-sdk/book/node/disputes/dispute-coordinator.html).
@@ -139,7 +138,7 @@ Detailed behaviour, platform differences and commit-pinned evidence are in [prod
 
 ### Named Runtime Conditions
 
-A named runtime condition is a boolean fact derived from profile inputs, wallet state and runtime state. It does not prescribe a response; the resolved wallet policy determines that response. Definitions are in [runtime conditions](coinage/runtime-conditions.md).
+A named runtime condition is a boolean fact derived from profile inputs, wallet state and runtime state. It does not prescribe a response; the resolved wallet policy determines that response. Definitions are in [production policies](coinage/production-policies.md#named-runtime-conditions), next to the policy that reacts to them.
 
 ### Adversarial Policy Overrides
 
@@ -158,11 +157,11 @@ An override does not affect other policy keys unless it says so. It is scenario 
 
 Derive scenarios by walking one verified operation from its source to completion and listing every artifact through which its load passes. Each artifact receives a performance scenario at planned load and a stress scenario that ramps the relevant environment until its response measure is violated or the artifact fails.
 
-Verified operation paths, their component and artifact catalogue, stress surfaces and policy-to-artifact mapping are maintained in [load paths](coinage/load-paths.md).
+Verified user flows, their component and artifact catalogue, stress surfaces and policy-to-artifact mapping are maintained in [user flows](coinage/user-flows.md).
 
-Wallet responsibilities, native source references and dependency replacements for isolated tests are in [components](test-design/components.md).
+Wallet responsibilities, native source references and dependency replacements for isolated tests are in [wallet module test components](test-design/wallet-module-components.md).
 
-A system-level scenario may ramp the complete path and report which verified artifact breaks first. Coinage paths, artifacts and limits must be established from the current implementations before scenarios are added.
+A system-level scenario may ramp the complete path and report which verified artifact breaks first. Coinage flows, artifacts and limits must be established from the current implementations before scenarios are added.
 
 ## Utility Tree [TODO]
 
@@ -173,9 +172,23 @@ The utility tree organises scenario candidates under one quality attribute, **Pe
 
 Its leaves are scenarios rated for business importance and difficulty to achieve as high, medium or low. Coinage-specific leaves are added only after their paths and artifacts have been verified.
 
-## Scenarios [TODO]
+## Scenarios
 
 A scenario resolves the source profile or population, behaviour policies, test type, scale, artifact, response and response measure using the six-part form above. No scenario is added until its Coinage path and assumptions have been verified.
+
+Scenarios follow the [user flows](coinage/user-flows.md). Each candidate below names the flow it loads, the stimulus and the artifacts it reaches, using the IDs from the [artifact catalogue](coinage/user-flows.md#component-and-artifact-catalogue). Every candidate has a performance variant at planned load and a stress variant that ramps the stimulus until the response measure fails.
+
+These are candidates, not complete scenarios. Scale, budgets and the platform variant for each policy are set once the [open questions](#open-questions) are answered.
+
+| User flow | Scenario | Stimulus | Artifacts | Response measure |
+| --------- | -------- | -------- | --------- | ---------------- |
+| Onboarding | Top-up burst | Many actors top up at the same time | C2.topup, C4.requests, R1.calls, R3.rings, N1.pool | Loads included and finalised; pool rejections; time until the new vouchers are in a built ring revision |
+| Send and claim | Payment burst | Many actors pay at the same time, with a mix of exact, split and unload plans | C2.payment, C3.extrinsics, C4.requests, R1.calls, R2.origins, N1.pool | Time from payment intent to finalised claim of every coin; partial payments; dropped transactions |
+| Claim | Merchant fan-in | One recipient receives many payments; each coin needs its own claim | C4.requests, R1.calls, N1.pool | Claim latency; claims still unsettled when the burst stops; time to drain |
+| Recycling | Synchronised recycling | Many coins reach the forced recycling age at the same time | C2.recycle, R1.calls, R3.rings, N1.pool | Recycle loads included; ring build lag; vouchers usable again |
+| Recycling | Free-quota exhaustion | Unload demand exceeds the free unload allowance | C2.recycle, R2.origins, R4.cleanup | Wallet behaviour when the quota runs out; failed unloads; recovery in the next period |
+| Offboarding | Offboarding burst | Many actors offboard to the external asset at the same time | C2.offboard, R1.calls, R2.origins, N1.pool | Value delivered to external accounts; partial offboards; unload throughput |
+| All | Full-flow ramp | A population runs every flow and the load is ramped | All artifacts | The first artifact to violate its response measure, how it fails and whether it recovers |
 
 ## Means [TODO]
 
@@ -202,7 +215,7 @@ Execution environments and test levels must be assigned after the scenario artif
 
 Availability under faults, recoverability, privacy, energy use and modifiability are deferred and can be added later using the same scenario form.
 
-Kian also suggested a separate exercise for chat with image uploads, covering SSS and BC. That needs its own owners and load paths; their relative fragility is not an established finding of this Coinage work.
+Kian also suggested a separate exercise for chat with image uploads, covering SSS and BC. That needs its own owners and user flows; their relative fragility is not an established finding of this Coinage work.
 
 ## Open Questions
 

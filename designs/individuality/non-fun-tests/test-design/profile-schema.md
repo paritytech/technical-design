@@ -1,4 +1,9 @@
 # Profile parameter schema
+
+A profile describes one simulated user of the wallet module: how often it pays and how much, when it tops up, its privacy and exit preferences, and the coins it starts with. This file defines every profile parameter once, with its key, meaning and unit. It does not assign values; concrete profiles and population shares belong to the scale model.
+
+Each parameter is one of three kinds: an input the profile sets, a wallet decision implemented by a production or test policy, or state the test environment prepares before the run.
+
 ## Parameter kinds
 
 - Profile input — actor behaviour, intent, or preferences configured by the profile.
@@ -115,9 +120,9 @@ Reaching this age makes the coin a candidate for recycling. It does not require 
 A positive integer number of transfers between `1` and `MaximumAge - 1`.
 
 > [!info]
-> If neither free allowance nor an acceptable paid-unload method is available when this age is reached, the [Preferred Recycling Unavailable](../coinage/runtime-conditions.md#preferred-recycling-unavailable) runtime condition applies.
+> If neither free allowance nor an acceptable paid-unload method is available when this age is reached, the [Preferred Recycling Unavailable](../coinage/production-policies.md#preferred-recycling-unavailable) runtime condition applies.
 >
-> In the verified production wallets, a preferred age above the wallet's forced-recycling threshold cannot affect behaviour: the outer age guard recycles the coin first. Android derives the threshold as runtime `MaximumAge - 2`; iOS hard-codes `16 - 2 = 14`. The wider range remains available to custom policy implementations because the runtime itself permits recycler loading at later ages. See [Preferred age versus forced recycling](../coinage/examples/recycling-unavailable-handling.md#preferred-age-versus-forced-recycling).
+> In the verified production wallets, a preferred age above the wallet's forced-recycling threshold cannot affect behaviour: the outer age guard recycles the coin first. Android derives the threshold as runtime `MaximumAge - 2`; iOS hard-codes `16 - 2 = 14`. The wider range remains available to custom policy implementations because the runtime itself permits recycler loading at later ages. See [Preferred age versus forced recycling](../coinage/policy-examples/recycling-unavailable-handling.md#preferred-age-versus-forced-recycling).
 
 ### Paid Recycling Fee Limit
 

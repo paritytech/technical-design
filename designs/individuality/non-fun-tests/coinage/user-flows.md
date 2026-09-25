@@ -33,8 +33,60 @@ The [runtime components and traces](pallet-components.md) expand the chain side:
 | R1.calls | Runtime | Coinage dispatchables | Apply the calls named in each flow | [Coinage pallet][runtime-coinage] |
 | R2.origins | Runtime | Coinage transaction extensions | Validate coin and unload-token origins | [Coinage extensions][runtime-extensions] |
 | R3.rings | Runtime | Member-ring builds | Incorporate voucher members into ring revisions | [Members pallet][runtime-members] |
-| R4.cleanup | Runtime | Cleanup calls submitted by the OCW | Remove expired recycler and token state as time advances | [Coinage offchain worker][runtime-cleanup] |
-| N1.pool | Node | Transaction pool | Admit, queue and report transactions before inclusion | Test node implementation; pin its SDK revision in the run configuration |
+| R4.cleanup | Runtime | Cleanup calls submitted by the OCWs | Remove expired recycler/token state and deferred member-ring data | [Cleanup trace](pallet-components.md#ocw-cleanup-and-archive-recovery), [Coinage worker][runtime-cleanup] |
+| R5.instances | Runtime | Instance registry | Associate assets and coin units with recycler collections | [Instance setup](pallet-components.md#instances-and-sponsored-deposits) |
+| R6.pots | Runtime | Sponsored load-deposit accounting | Reserve collateral on load and settle it on unload or cleanup | [Deposit lifecycle](pallet-components.md#instances-and-sponsored-deposits) |
+| R7.recyclers | Runtime | Recycler member and alias records | Track loaded keys and prevent repeated voucher spends | [Recycler lifecycle](pallet-components.md#recycler-load-ring-readiness-and-unload) |
+| N1.pool | Node | Transaction pool | Admit, queue and report transactions before inclusion | [Node and runtime trace](pallet-components.md#one-coin-transaction-client-to-runtime-and-back) |
+| N2.execution | Node/runtime | Block execution budget | Bound the calls included and executed in a block | [Authoring and execution](pallet-components.md#one-coin-transaction-client-to-runtime-and-back) |
+| N3.storage | Node/runtime | State trie and database | Read, update and persist runtime state | [Storage layout and test boundary](pallet-components.md#storage-and-isolation-boundaries) |
+
+## Flow to runtime and scenario map
+
+The wallet chooses the calls. Wallet submissions enter through RPC and the pool (`N1.pool`); included calls use runtime execution and storage (`N2.execution`, `N3.storage`). OCWs submit locally into the pool. The map below expands the `Chain` box in the user-flow diagrams. Solid arrows show work reached by a flow; dotted arrows show later maintenance, not another wallet call.
+
+```mermaid
+flowchart LR
+    subgraph F[User flows]
+        T[Top-up]
+        S[Send]
+        C[Claim]
+        R[Recycle]
+        O[Offboard]
+    end
+    subgraph K[Runtime work]
+        L[Recycler loads]
+        X[Coin transfer or split]
+        U[Unload authorization and recycler spends]
+        M[Members onboarding and ring builds]
+        D[Expired-state cleanup]
+    end
+    T --> L
+    S -->|split plan| X
+    S -->|unload plan| U
+    C --> X
+    R --> L
+    O -->|coins needed first| L
+    O --> U
+    L -.->|Members OCW calls| M
+    U -.->|if surplus vouchers are created| M
+    M -.->|when a ring is eligible for expiry cleanup| D
+    U -.->|when consumed token state expires| D
+```
+
+Exact-coin send has no sender-side chain call; its recipient still claims each coin. Reading or verifying a ring does not build a new one. The map follows the documented native flows: direct coin offboarding and archived recovery are runtime capabilities, not paths used by these app snapshots.
+
+| Flow or lifecycle work | Runtime components reached | Scenario drafts |
+| ---------------------- | -------------------------- | --------------- |
+| [Top-up](#top-up--onboarding) | Unpaid origin validation (`R2`), asset-backed loads (`R1`, `R7`) and later ring work (`R3`). [Trace](pallet-components.md#recycler-load-ring-readiness-and-unload). | [Top-up burst](../test-design/scenarios/top-up-burst.md) |
+| [Send](#send) | Exact: no preparation call. Split: coin origin and outputs (`R2`, `R1`). Unload: token authorization, recycler proofs and output coins (`R2`, `R7`, `R1`). [Trace](pallet-components.md#recycler-load-ring-readiness-and-unload). | [Payment burst](../test-design/scenarios/payment-burst.md); [free-quota exhaustion](../test-design/scenarios/free-quota-exhaustion.md) for free-token unloads |
+| [Claim](#claim) | Coin authorization and one transfer per received coin (`R2`, `R1`); owner-keyed storage (`N3`). [Trace](pallet-components.md#one-coin-transaction-client-to-runtime-and-back). | [Merchant fan-in](../test-design/scenarios/merchant-fan-in.md); [payment burst](../test-design/scenarios/payment-burst.md) |
+| [Recycling](#recycling) | Consume coins and queue voucher keys (`R2`, `R1`, `R7`), then build rings (`R3`). [Trace](pallet-components.md#recycler-load-ring-readiness-and-unload). | [Synchronised recycling](../test-design/scenarios/synchronised-recycling.md) |
+| [Offboarding](#offboarding) | Recycle first if needed; then authorize unloads, consume vouchers and release external assets (`R2`, `R7`, `R1`). Fresh surplus vouchers add ring work (`R3`). [Trace](pallet-components.md#recycler-load-ring-readiness-and-unload). | [Offboarding burst](../test-design/scenarios/offboarding-burst.md); [free-quota exhaustion](../test-design/scenarios/free-quota-exhaustion.md) |
+| Instance setup and deposits | `R5` is normally seeded before measurement. Sponsored loads reserve `R6` collateral; unload and cleanup settle it. [Trace](pallet-components.md#instances-and-sponsored-deposits). | Relevant setup for load/unload scenarios. Instance creation and pot exhaustion have no dedicated draft yet. |
+| Background cleanup | Coinage and Members OCWs submit `R4` calls through the same pool and block budget. [Trace](pallet-components.md#ocw-cleanup-and-archive-recovery). | [Full-flow ramp](../test-design/scenarios/full-flow-ramp.md) can observe this only if its state and duration reach cleanup conditions. No dedicated cleanup draft yet. |
+
+`R1`–`R7` and `N3` abbreviate the catalogue IDs above. These links describe intended coverage, not completed tests. The [full-flow ramp](../test-design/scenarios/full-flow-ramp.md) combines the user flows; it does not exercise every lifecycle branch automatically.
 
 ## User flows
 
@@ -47,6 +99,8 @@ The five diagrams cover onboarding, send, claim, recycling and offboarding. Send
 The driver seeds agents, supplies intents and stands in for app orchestration, chat persistence and scheduling. Memo delivery can use a controlled transport. C1–C4 group native responsibilities; these diagrams do not describe an implemented harness. Time, runtime configuration and the selected [production policy](production-policies.md) are inputs to each run.
 
 ### Top-up / Onboarding
+
+**Chain path:** [Recycler load and ring construction](pallet-components.md#recycler-load-ring-readiness-and-unload).
 
 Start with a funded external-asset account. C2 applies `inventory.top_up.composition`: largest supported denomination first, repeated as needed. Each selected item becomes a voucher, not a coin. Any sub-denomination remainder stays in the external asset.
 
@@ -84,6 +138,8 @@ Source: [iOS loader][ios-onboard]; [Android onboarding][android-onboard] and [lo
 
 ### Payment
 #### Send
+
+**Chain path:** [Coin operations](pallet-components.md#one-coin-transaction-client-to-runtime-and-back) for a split, or [unload authorization and recycler spends](pallet-components.md#recycler-load-ring-readiness-and-unload). Exact-coin send skips preparation on chain.
 
 C2 applies `wallet.payment_construction`: exact coins, then a split, then voucher unloads. Unload outputs use `wallet.recycling.output_composition`. C1 reserves value before its secrets can leave the wallet. Exact coins need no sender-side chain call.
 
@@ -142,6 +198,8 @@ Source: [iOS sender][ios-send] and [split preparation][ios-split]; [Android prep
 
 #### Claim
 
+**Chain path:** [Coin transfer from the client through the node and runtime](pallet-components.md#one-coin-transaction-client-to-runtime-and-back).
+
 Claim starts from the received memo. It uses fixed per-coin transfers; it does not run the payment selector again. Wait for source coins or reconcile existing claim records. A payment can be partly claimed.
 
 ```mermaid
@@ -175,6 +233,8 @@ Both claim services wait up to 30 seconds per detection pass, then claim the coi
 Source: [iOS chat receiver][ios-receive] and [claim service][ios-claim]; [Android detection][android-detect] and [claim construction][android-claim].
 
 ### Recycling
+
+**Chain path:** [Coin-to-recycler load and later ring construction](pallet-components.md#recycler-load-ring-readiness-and-unload).
 
 C1 supplies coin state; C2 applies the active recycling policy and allowance conditions. This is a separate lifecycle operation. Do not hard-code every run to an age-only sweep: [production policies](production-policies.md#recycling-unavailable-handling) include discretionary decisions, a quota reserve and a forced-age guard.
 
@@ -210,6 +270,8 @@ Both apps use one `load_recycler_with_coin` per selected coin, signed with that 
 Source: [iOS evaluation][ios-recycle-policy] and [submission][ios-recycle]; [Android policy][android-recycle-policy] and [submission][android-recycle].
 
 ### Offboarding
+
+**Chain path:** [Recycler unload to external assets](pallet-components.md#recycler-load-ring-readiness-and-unload), after recycling input coins if needed.
 
 C2 applies [offboarding inventory selection](production-policies.md#offboarding-inventory-selection): use vouchers first; if they cannot cover the amount, recycle enough coins to fill the deficit, then select vouchers again. Both apps exit through recycler unloads, not `direct_offboard_coin_into_external_asset`.
 
@@ -291,7 +353,7 @@ Concrete adversarial overrides are defined only after this mapping identifies th
 [ios-offboard]: https://github.com/paritytech/polkadot-ios-community/blob/b960f771049c07819de1f201b901b037613d42e9/Packages/Coinage/Sources/ExternalPayment/Service/OffboardVouchersForPaymentService.swift
 [android-offboard-recycle]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/externalPayment/state/AwaitRecyclingPaymentState.kt
 [android-offboard]: https://github.com/paritytech/polkadot-android-community/blob/f875be37451f5282a92dec2aa9bf764ac5e64f43/feature/coinage/impl/src/main/java/io/paritytech/polkadotapp/feature_coinage_impl/domain/externalPayment/usecase/UnloadRecyclerIntoExternalAssetUseCase.kt
-[runtime-coinage]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/coinage/src/lib.rs
-[runtime-extensions]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/coinage/src/extension.rs
-[runtime-members]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/members/src/lib.rs#L881
-[runtime-cleanup]: https://github.com/paritytech/individuality-community/blob/b5951a9784bdcc87539b793ed686fa6ae93f99ab/pallets/coinage/src/lib.rs#L2047
+[runtime-coinage]: https://github.com/paritytech/individuality-community/blob/fce93ef38a15c673a8b0b208362bc46ae755c7d7/pallets/coinage/src/lib.rs
+[runtime-extensions]: https://github.com/paritytech/individuality-community/blob/fce93ef38a15c673a8b0b208362bc46ae755c7d7/pallets/coinage/src/extension.rs
+[runtime-members]: https://github.com/paritytech/individuality-community/blob/fce93ef38a15c673a8b0b208362bc46ae755c7d7/pallets/members/src/lib.rs#L881
+[runtime-cleanup]: https://github.com/paritytech/individuality-community/blob/fce93ef38a15c673a8b0b208362bc46ae755c7d7/pallets/coinage/src/lib.rs#L2030

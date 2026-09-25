@@ -2,15 +2,17 @@
 
 Unload demand exceeds the free unload allowance. This tests what the wallet and the chain do when free unloads run out.
 
-**User flow:** [Recycling](../../coinage/user-flows.md#recycling)
+**User flows:** [Send with voucher unloads](../../coinage/user-flows.md#send) and [Offboarding](../../coinage/user-flows.md#offboarding)
+
+**Runtime path:** [Free unload-token validation](../../coinage/pallet-components.md#recycler-load-ring-readiness-and-unload). A recycler load does not consume an unload token. The [recycling policy](../../coinage/production-policies.md#recycling-unavailable-handling) can react to low allowance, but that is a separate wallet decision. Period rollover permits new tokens within the allowance; cleanup only removes old consumed-token records.
 
 | Part | This scenario |
 | ---- | ------------- |
 | **Source** | Actors whose unload demand exceeds their free allowance for the period. |
 | **Stimulus** | Unload requests continue after the free allowance is used up. |
-| **Environment** | Performance: not applicable. Stress: ramp unload demand past the allowance. Policy: [recycling-unavailable handling](../../coinage/production-policies.md#recycling-unavailable-handling). Android and iOS differ, so each run selects one. |
-| **Artifacts** | C2.recycle, R2.origins, R4.cleanup. IDs are defined in the [artifact catalogue](../../coinage/user-flows.md#component-and-artifact-catalogue). |
-| **Response** | The wallet reacts as its policy defines. Unloads fail until a free token is available again. |
-| **Response measure** | Wallet behaviour when the quota runs out; failed unloads; recovery in the next period. |
+| **Environment** | Performance: not applicable. Stress: ramp free-token unload demand past the allowance. Use one platform's [payment construction](../../coinage/production-policies.md#payment-construction) and [offboarding selection](../../coinage/production-policies.md#offboarding-inventory-selection) policies. |
+| **Artifacts** | C2.payment, C2.offboard, R2.origins, N1.pool. IDs are defined in the [artifact catalogue](../../coinage/user-flows.md#component-and-artifact-catalogue). |
+| **Response** | The wallet reacts as its policy defines. Submitted free-token requests outside the allowance are rejected during validation. |
+| **Response measure** | Requests withheld by the wallet versus submitted; validation rejections by reason; recovery with valid tokens in the next period. |
 
 **Still to decide:** scale, budgets and the actor profiles, which follow the [profile schema](../profile-schema.md). These wait on the [open questions](../../README.md#open-questions).

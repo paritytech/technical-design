@@ -19,19 +19,19 @@ These are overlapping parts of one system, not separate services:
 
 ## Components and dependencies
 
-Coinage rows below are logical boundaries inside the same pallet. They do not replace the artifact IDs in [user flows](user-flows.md#component-and-artifact-catalogue). Measurements are proposed observations, not existing telemetry or test scenarios.
+Coinage rows below are logical boundaries inside the same pallet. Artifact IDs refer to the [user-flow catalogue](user-flows.md#component-and-artifact-catalogue). The [flow-to-runtime map](user-flows.md#flow-to-runtime-and-scenario-map) connects these components to user operations and scenario drafts. Measurements are proposed observations, not existing telemetry or test scenarios.
 
-| Component | Responsibility and output | Dependencies | Measure |
-| --------- | ------------------------- | ------------ | ------- |
-| RPC and transaction pool | Decode submissions, obtain validity and queue transactions; report status. | Runtime API, chain heads and pool limits. | Rejection reasons, queue size, revalidation and time to inclusion. |
-| Block authoring and runtime execution | Select transactions, apply extensions, dispatch calls and record results. | Pool, Executive, runtime weights, storage and authoring deadline. | Execution time, weight, proof size and why authoring stops. |
-| Instance and pot accounting | Register asset/unit pairs and reserve or release sponsored load deposits. | Asset balances, Members collections and deposit configuration. | Instance/collection count, pot availability and deposit balance. |
-| Coin operations | Consume one coin and create its outputs, or move its value into a recycler or external asset. | `AsCoinage`, owner-keyed storage, instance and age/output limits. | Calls, outputs, storage accesses and failure locks. |
-| Recycler management | Queue keys, verify unload proofs, track aliases and archive expired rings. | Members, instance configuration, clock and pot accounting. | Loaded/unloaded keys, alias count, proof cost and archives. |
-| Member-ring maintenance | Move queued keys into rings, build roots and delete old state. | Authorized calls, cryptographic chunks, clock and root-change notifier. | Queue-to-root delay, keys included per build and deletion backlog. |
-| Unload authorization | Validate and consume free/paid tokens or reserve an output-funded alias. | People/LitePeople proof validation, Members, periods and fee conversion. | Validation cost, token consumption and failed-dispatch penalties. |
-| OCW scheduling | Scan eligible state and submit bounded maintenance calls. | Imported chain state, local submission and worker configuration. | Scan time, submitted calls, inclusion delay and work left pending. |
-| Runtime storage and node database | Read/write pallet state and persist the selected chain state. | FRAME storage, trie implementation, database and caches. | State size, read/write time, proof size and database growth. |
+| Component | Artifact IDs | Responsibility and output | Dependencies | Measure |
+| --------- | ------------ | ------------------------- | ------------ | ------- |
+| RPC and transaction pool | N1.pool | Decode submissions, obtain validity and queue transactions; report status. | Runtime API, chain heads and pool limits. | Rejection reasons, queue size, revalidation and time to inclusion. |
+| Block authoring and runtime execution | N2.execution | Select transactions, apply extensions, dispatch calls and record results. | Pool, Executive, runtime weights, storage and authoring deadline. | Execution time, weight, proof size and why authoring stops. |
+| Instance and pot accounting | R5.instances, R6.pots | Register asset/unit pairs and reserve or release sponsored load deposits. | Asset balances, Members collections and deposit configuration. | Instance/collection count, pot availability and deposit balance. |
+| Coin operations | R1.calls, R2.origins | Consume one coin and create its outputs, or move its value into a recycler or external asset. | `AsCoinage`, owner-keyed storage, instance and age/output limits. | Calls, outputs, storage accesses and failure locks. |
+| Recycler management | R7.recyclers, R4.cleanup | Queue keys, verify unload proofs, track aliases and archive expired rings. | Members, instance configuration, clock and pot accounting. | Loaded/unloaded keys, alias count, proof cost and archives. |
+| Member-ring maintenance | R3.rings, R4.cleanup | Move queued keys into rings, build roots and delete old state. | Authorized calls, cryptographic chunks, clock and root-change notifier. | Queue-to-root delay, keys included per build and deletion backlog. |
+| Unload authorization | R2.origins | Validate and consume free/paid tokens or reserve an output-funded alias. | People/LitePeople proof validation, Members, periods and fee conversion. | Validation cost, token consumption and failed-dispatch penalties. |
+| OCW scheduling | R3.rings, R4.cleanup | Scan eligible state and submit bounded maintenance calls. | Imported chain state, local submission and worker configuration. | Scan time, submitted calls, inclusion delay and work left pending. |
+| Runtime storage and node database | N3.storage | Read/write pallet state and persist the selected chain state. | FRAME storage, trie implementation, database and caches. | State size, read/write time, proof size and database growth. |
 
 Sources: [runtime wiring][runtime], [Coinage calls and storage][coinage], [extensions][extension], [recyclers][recycler], [pots][pot], [paid tokens][paid-tokens], [Members][members] and [runtime configuration][config].
 

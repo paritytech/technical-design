@@ -19,6 +19,8 @@ A **component** is an implementation unit, such as a wallet planner, RPC client 
 
 The four wallet components and their isolation boundaries are in [wallet module test components](../test-design/wallet-module-components.md). Artifact IDs below use those component IDs where applicable. Runtime and node artifacts belong to the system under test.
 
+The [runtime components and traces](pallet-components.md) expand the chain side: transaction execution, instances, coins, recyclers, member rings and OCW maintenance.
+
 | ID | Layer | Artifact | Responsibility | Authoritative implementation |
 | -- | ----- | -------- | -------------- | ---------------------------- |
 | C1.records | Wallet | Asset and operation records | Track inventory, reservations and outcomes | [Native state/engine map](../test-design/wallet-module-components.md#native-implementation-map) |

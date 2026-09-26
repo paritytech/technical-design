@@ -15,4 +15,6 @@ Many actors pay at the same time. This loads the send and claim flows together, 
 | **Response** | Sender preparation lands, memos are delivered and every paid coin is claimed. |
 | **Response measure** | Time from payment intent to finalised claim of every coin; partial payments; dropped transactions. |
 
+**First implementation:** [Claim burst](claim-burst.md) isolates the recipient transfer step using predefined coins. Split and unload preparation remain later cases.
+
 **Still to decide:** scale, budgets and the actor profiles, which follow the [profile schema](../profile-schema.md). These wait on the [open questions](../../README.md#open-questions).

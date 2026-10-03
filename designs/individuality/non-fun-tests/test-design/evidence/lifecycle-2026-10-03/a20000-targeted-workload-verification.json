@@ -1,0 +1,49 @@
+{
+  "verifiedAt": "2026-10-03T11:58:35.385588+00:00",
+  "artifact": "coinage-split-20000-burst-enlarged-pilot-37116007842-1",
+  "requestedActors": 20000,
+  "requestedExtrinsics": 40000,
+  "receiptVerified": 40000,
+  "waves": [
+    {
+      "kind": "split",
+      "requested": 20000,
+      "submitted": 20000,
+      "receiptVerified": 20000,
+      "statePassed": true,
+      "backing": "80001",
+      "generatorLimited": true,
+      "sendWindowMs": 1099.6425969999982,
+      "launchTargetMs": 1000,
+      "finalityMs": {
+        "count": 20000,
+        "p50": 57640.959684,
+        "p95": 81840.92748099996,
+        "max": 86023.84447300003
+      }
+    },
+    {
+      "kind": "claim",
+      "requested": 20000,
+      "submitted": 20000,
+      "receiptVerified": 20000,
+      "statePassed": true,
+      "backing": "80001",
+      "generatorLimited": false,
+      "sendWindowMs": 949.0219639999559,
+      "launchTargetMs": 1000,
+      "finalityMs": {
+        "count": 20000,
+        "p50": 49999.49497300002,
+        "p95": 73644.53830699995,
+        "max": 73964.477158
+      }
+    }
+  ],
+  "stageDurationMs": 225206.5104690001,
+  "experimentPassed": false,
+  "workloadReceiptsAndStateVerified": true,
+  "recoveryPassed": true,
+  "recoverySeconds": 64.84597320300009,
+  "scope": "Raw signed calls, canonical saved blocks and successful dispatch events checked separately from expected coin states. Scenario launch timing remains failed; no failed criterion is waived."
+}

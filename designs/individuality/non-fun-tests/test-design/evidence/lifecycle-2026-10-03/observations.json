@@ -1,0 +1,1568 @@
+{
+  "recordedAt": "2026-10-03T10:22:00.549532+00:00",
+  "sourceUpdatedAt": "2026-10-03T08:13:07.903847+00:00",
+  "definitions": {
+    "finality": "Per call: client submission to successful finalized receipt lookup; percentiles include finalized watches only",
+    "completion": "First split/load submission to last settled final wave watch; includes split audit and claim signing",
+    "readiness": "Per member: submission to first finalized poll with root coverage; observed-ready population only",
+    "resourceScope": "Node/host samples span fixtures, smoke and pilot. Driver RSS samples are separately labelled by stage.",
+    "limitations": [
+      "No claim of production capacity",
+      "No independent consensus/storage-proof verification",
+      "No measured weight-versus-execution-cost or PVF deadline verification"
+    ]
+  },
+  "cases": [
+    {
+      "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-1",
+      "scenario": "recycle",
+      "actors": 1000,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 128645.793561,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 1000,
+          "submitted": 1000,
+          "receiptVerified": 1000,
+          "auditPassed": true,
+          "sendWindowMs": 41.83667999994941,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 1000,
+            "p50": 37872.43831299996,
+            "p95": 49899.813347999996,
+            "max": 49902.98703700001
+          },
+          "settledMs": 49933.76881899999,
+          "statePassed": true,
+          "backingBefore": "2001",
+          "backingAfter": "2001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 49933.76881899999,
+      "elapsedMs": 105573.47121799999,
+      "ready": 1000,
+      "readinessMs": {
+        "count": 1000,
+        "p50": 75516.09424499999,
+        "p95": 100532.78266900004,
+        "max": 100534.73246900004
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 100571.93286,
+        "at": "0x7be4256dd6acb71078486bee3b26ed4be3d84f7e419f7995d05bab8ad87fe0aa"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 403492864,
+      "driverSampleCount": 21,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790959569.4841726,
+        "lastEpochSeconds": 1790960014.4432964,
+        "samples": 90,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 1003.0,
+          "Collator-1502-2": 1003.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 15487840256,
+          "/sys/fs/cgroup/system.slice/memory.current": 16910286848
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.056968031000000016,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 145.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 2110.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 2110.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.05678220100000001,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 145.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 2266.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 2266.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-2",
+      "scenario": "recycle",
+      "actors": 1000,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 150611.823076,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 1000,
+          "submitted": 1000,
+          "receiptVerified": 1000,
+          "auditPassed": true,
+          "sendWindowMs": 44.21212400001241,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 1000,
+            "p50": 41873.04415899998,
+            "p95": 53894.309591999976,
+            "max": 53915.07435000001
+          },
+          "settledMs": 53939.579677,
+          "statePassed": true,
+          "backingBefore": "2001",
+          "backingAfter": "2001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 53939.579677,
+      "elapsedMs": 110629.21709499997,
+      "ready": 1000,
+      "readinessMs": {
+        "count": 1000,
+        "p50": 80517.04304399999,
+        "p95": 105595.37589299999,
+        "max": 105597.44353300001
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 105626.79960899998,
+        "at": "0xaf0957711a52f2f77c5e9b3c0ad762153c7f51af1db2f8d174164c0e60d5558e"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 409047040,
+      "driverSampleCount": 22,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790990568.4822621,
+        "lastEpochSeconds": 1790991028.4319472,
+        "samples": 93,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 1004.0,
+          "Collator-1502-2": 1005.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 15744602112,
+          "/sys/fs/cgroup/system.slice/memory.current": 16717127680
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.05664312200000001,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 154.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 1881.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 1881.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.05575029100000001,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 154.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 1911.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 1911.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-10000-burst-default-pilot-37029048758-2",
+      "scenario": "recycle",
+      "actors": 10000,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 206564.959107,
+      "summaryPresent": false,
+      "passed": null,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 10000,
+          "submitted": 10000,
+          "receiptVerified": 8479,
+          "auditPassed": false,
+          "sendWindowMs": 382.9111930000363,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8479,
+            "p50": 133680.02700599993,
+            "p95": 217971.12799000007,
+            "max": 229942.26587300003
+          },
+          "settledMs": 230083.61931400007,
+          "statePassed": false,
+          "backingBefore": "20001",
+          "backingAfter": "20001",
+          "auditErrorCount": 1521
+        }
+      ],
+      "ready": 5002,
+      "unresolvedReadiness": 4998,
+      "observationCutoff": {
+        "elapsedMs": 247079.45489500003,
+        "at": "0x287b5d1475abd3cca4cbc6cb7bf1be2ae36b4ba45ab02111ac595496d854499c"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 1076408320,
+      "driverSampleCount": 50,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790991518.4439595,
+        "lastEpochSeconds": 1790992178.419045,
+        "samples": 133,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 9011.0,
+          "Collator-1502-2": 9011.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17494253568,
+          "/sys/fs/cgroup/system.slice/memory.current": 18467205120
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 11.281255956999996,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 217.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 55194.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 55194.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 2.1808407119999997,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 217.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 55301.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 55301.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-1",
+      "scenario": "recycle",
+      "actors": 10000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 11000,
+      "preparationMs": 214756.685159,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 10000,
+          "submitted": 10000,
+          "receiptVerified": 10000,
+          "auditPassed": true,
+          "sendWindowMs": 435.65177699999185,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 10000,
+            "p50": 145557.36550899997,
+            "p95": 241651.87484999996,
+            "max": 253712.97887499997
+          },
+          "settledMs": 253906.62272700004,
+          "statePassed": true,
+          "backingBefore": "20001",
+          "backingAfter": "20001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 253906.62272700004,
+      "elapsedMs": 384134.073951,
+      "ready": 10000,
+      "readinessMs": {
+        "count": 10000,
+        "p50": 226652.101327,
+        "p95": 358617.6852330001,
+        "max": 378835.192415
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 379024.478978,
+        "at": "0x1caa7d1b9c58618c003f4a439555189f92066db2d83550cd727eb5cb024ea407"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 960839680,
+      "driverSampleCount": 76,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790963997.695409,
+        "lastEpochSeconds": 1790964792.6811438,
+        "samples": 160,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 10003.0,
+          "Collator-1502-2": 10004.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17743114240,
+          "/sys/fs/cgroup/system.slice/memory.current": 18877415424
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 14.262273802000001,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 264.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 71078.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 71078.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.8290559569999996,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 264.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 70111.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 70111.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2",
+      "scenario": "recycle",
+      "actors": 10000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 11000,
+      "preparationMs": 184028.927341,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 10000,
+          "submitted": 10000,
+          "receiptVerified": 10000,
+          "auditPassed": true,
+          "sendWindowMs": 393.95819000003394,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 10000,
+            "p50": 137158.344822,
+            "p95": 233400.65941899997,
+            "max": 245434.16971400002
+          },
+          "settledMs": 245656.99881400005,
+          "statePassed": true,
+          "backingBefore": "20001",
+          "backingAfter": "20001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 245656.99881400005,
+      "elapsedMs": 389278.83207899996,
+      "ready": 10000,
+      "readinessMs": {
+        "count": 10000,
+        "p50": 216573.339652,
+        "p95": 353635.76064200007,
+        "max": 384042.847993
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 384264.22635300003,
+        "at": "0x4b6ad5e0a04785ab74740db0cd438e0c825b247890f4235d9f894e1b586ad2d4"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 917254144,
+      "driverSampleCount": 77,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790996437.6266983,
+        "lastEpochSeconds": 1790997182.5128613,
+        "samples": 150,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 10002.0,
+          "Collator-1502-2": 10003.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17509126144,
+          "/sys/fs/cgroup/system.slice/memory.current": 18647003136
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 17.094513830999997,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 248.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 68477.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 68477.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.456018951999999,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 248.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 65801.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 65801.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-10000-paced-default-pilot-37029048758-1",
+      "scenario": "recycle",
+      "actors": 10000,
+      "mode": "paced",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 218637.32004899997,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-wave-1-recycle",
+          "requested": 8000,
+          "submitted": 8000,
+          "receiptVerified": 8000,
+          "auditPassed": true,
+          "sendWindowMs": 317.3958800000255,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8000,
+            "p50": 121757.37452800001,
+            "p95": 197729.583982,
+            "max": 205940.84394200006
+          },
+          "settledMs": 205970.56245199998,
+          "statePassed": true,
+          "backingBefore": "20001",
+          "backingAfter": "20001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "recycle-pilot-wave-2-recycle",
+          "requested": 2000,
+          "submitted": 2000,
+          "receiptVerified": 2000,
+          "auditPassed": true,
+          "sendWindowMs": 71.89673000003677,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 2000,
+            "p50": 53511.891038,
+            "p95": 69529.85922899994,
+            "max": 69549.79938900005
+          },
+          "settledMs": 69577.77633899997,
+          "statePassed": true,
+          "backingBefore": "20001",
+          "backingAfter": "20001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 378114.901157,
+      "elapsedMs": 465339.051001,
+      "ready": 10000,
+      "readinessMs": {
+        "count": 10000,
+        "p50": 166170.109544,
+        "p95": 282932.066137,
+        "max": 308010.452419
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 460325.085604,
+        "at": "0x73c5f8f225c7851489c71b229aa0e725cb467c88a41aa1b6c455f99429e3830c"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 978780160,
+      "driverSampleCount": 92,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790962623.0845149,
+        "lastEpochSeconds": 1790963508.1489694,
+        "samples": 178,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 8003.0,
+          "Collator-1502-2": 8004.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 18977894400,
+          "/sys/fs/cgroup/system.slice/memory.current": 19956518912
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 13.974660957000014,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 292.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 60829.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 60829.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.9512914969999997,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 292.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 57692.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 57692.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-10000-paced-default-pilot-37029048758-2",
+      "scenario": "recycle",
+      "actors": 10000,
+      "mode": "paced",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 206714.11925900003,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-wave-1-recycle",
+          "requested": 8000,
+          "submitted": 8000,
+          "receiptVerified": 8000,
+          "auditPassed": true,
+          "sendWindowMs": 315.8208450000384,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8000,
+            "p50": 121805.708759,
+            "p95": 197826.479313,
+            "max": 205912.90471800003
+          },
+          "settledMs": 205987.51615699998,
+          "statePassed": true,
+          "backingBefore": "20001",
+          "backingAfter": "20001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "recycle-pilot-wave-2-recycle",
+          "requested": 2000,
+          "submitted": 2000,
+          "receiptVerified": 2000,
+          "auditPassed": true,
+          "sendWindowMs": 73.12826999998651,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 2000,
+            "p50": 46643.780611000024,
+            "p95": 66689.588001,
+            "max": 70693.73215199995
+          },
+          "settledMs": 70741.42107200006,
+          "statePassed": true,
+          "backingBefore": "20001",
+          "backingAfter": "20001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 414125.60298900004,
+      "elapsedMs": 480183.38526899996,
+      "ready": 10000,
+      "readinessMs": {
+        "count": 10000,
+        "p50": 165930.23077599995,
+        "p95": 317951.504812,
+        "max": 343236.32803900004
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 475169.037216,
+        "at": "0x668a5c430ad982fb6851d04a38345ca3d1f4e314ccb75b6188641358790a6ea7"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 952446976,
+      "driverSampleCount": 95,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790995064.4704854,
+        "lastEpochSeconds": 1790995949.461533,
+        "samples": 178,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 8003.0,
+          "Collator-1502-2": 8004.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17857777664,
+          "/sys/fs/cgroup/system.slice/memory.current": 18936369152
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 8.504570736,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 292.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 53016.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 53016.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.4543201179999996,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 292.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 52218.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 52218.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-1",
+      "scenario": "recycle",
+      "actors": 20000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 22000,
+      "preparationMs": 273961.519998,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 20000,
+          "submitted": 20000,
+          "receiptVerified": 20000,
+          "auditPassed": true,
+          "sendWindowMs": 763.0164039999945,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 20000,
+            "p50": 299128.451429,
+            "p95": 527182.042777,
+            "max": 547772.142239
+          },
+          "settledMs": 547909.521248,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 547909.521248,
+      "elapsedMs": 801388.77438,
+      "ready": 20000,
+      "readinessMs": {
+        "count": 20000,
+        "p50": 463995.99927699997,
+        "p95": 744976.7069499999,
+        "max": 796208.165035
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 796360.083944,
+        "at": "0x0f0369b63f66f82cb562003b9cacf93eb4b50764a1aacb186ab5c5739ee01e3a"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 1506852864,
+      "driverSampleCount": 158,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790977724.7241514,
+        "lastEpochSeconds": 1790978984.738049,
+        "samples": 253,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 20000.0,
+          "Collator-1502-2": 12478.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 20276736000,
+          "/sys/fs/cgroup/system.slice/memory.current": 21335556096
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 59.957405822999974,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 401.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 192735.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 192735.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 23.573233075000005,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 399.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 176029.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 176029.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2",
+      "scenario": "recycle",
+      "actors": 20000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 22000,
+      "preparationMs": 316670.673965,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 20000,
+          "submitted": 20000,
+          "receiptVerified": 20000,
+          "auditPassed": true,
+          "sendWindowMs": 799.3096249999944,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 20000,
+            "p50": 363694.238726,
+            "p95": 615855.4973310002,
+            "max": 636099.738032
+          },
+          "settledMs": 636323.667198,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 636323.667198,
+      "elapsedMs": 851216.173186,
+      "ready": 20000,
+      "readinessMs": {
+        "count": 20000,
+        "p50": 524207.13527900004,
+        "p95": 809979.0907099999,
+        "max": 845924.6096090002
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 846185.0691810001,
+        "at": "0x1f4e1e05312eb146dc32e61c89d22e30b3334ee65b281d1939e4d6528eed30df"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 1673269248,
+      "driverSampleCount": 168,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1791013196.3446422,
+        "lastEpochSeconds": 1791014566.2933686,
+        "samples": 275,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 20000.0,
+          "Collator-1502-2": 17146.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 20709457920,
+          "/sys/fs/cgroup/system.slice/memory.current": 21707112448
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 62.04387755700003,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 424.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 215673.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 215673.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 24.177974611000003,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 420.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 216218.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 216218.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-100-burst-default-pilot-37029048758-1",
+      "scenario": "split",
+      "actors": 100,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 120242.11249199999,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "split-pilot-claim",
+          "requested": 100,
+          "submitted": 100,
+          "receiptVerified": 100,
+          "auditPassed": true,
+          "sendWindowMs": 3.745028999983333,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 100,
+            "p50": 31709.52616000001,
+            "p95": 31712.494940999954,
+            "max": 31714.283470000024
+          },
+          "settledMs": 31717.196218999976,
+          "statePassed": true,
+          "backingBefore": "401",
+          "backingAfter": "401",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-split",
+          "requested": 100,
+          "submitted": 100,
+          "receiptVerified": 100,
+          "auditPassed": true,
+          "sendWindowMs": 5.5268100000103,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 100,
+            "p50": 27687.04885999998,
+            "p95": 27687.67281900003,
+            "max": 27687.912850000022
+          },
+          "settledMs": 27693.60738,
+          "statePassed": true,
+          "backingBefore": "401",
+          "backingAfter": "401",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 59681.107941000024,
+      "elapsedMs": 60020.67998200003,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 326008832,
+      "driverSampleCount": 12,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790956220.0584805,
+        "lastEpochSeconds": 1790956580.0540972,
+        "samples": 73,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 100.0,
+          "Collator-1502-2": 100.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 15362576384,
+          "/sys/fs/cgroup/system.slice/memory.current": 16421912576
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.024616493999999996,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 120.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 234.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 234.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.023530529000000022,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 120.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 234.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 234.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-1000-burst-default-pilot-37029048758-2",
+      "scenario": "split",
+      "actors": 1000,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 122067.09966500002,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "split-pilot-claim",
+          "requested": 1000,
+          "submitted": 1000,
+          "receiptVerified": 1000,
+          "auditPassed": true,
+          "sendWindowMs": 51.40884500002721,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 1000,
+            "p50": 26154.953685000015,
+            "p95": 26172.628394,
+            "max": 26186.040783000004
+          },
+          "settledMs": 26211.22557000001,
+          "statePassed": true,
+          "backingBefore": "4001",
+          "backingAfter": "4001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-split",
+          "requested": 1000,
+          "submitted": 1000,
+          "receiptVerified": 1000,
+          "auditPassed": true,
+          "sendWindowMs": 63.79678400000557,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 1000,
+            "p50": 29805.362175999966,
+            "p95": 29821.587763999996,
+            "max": 29822.26922399999
+          },
+          "settledMs": 29874.48723899998,
+          "statePassed": true,
+          "backingBefore": "4001",
+          "backingAfter": "4001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 57938.97676799999,
+      "elapsedMs": 60029.346160999965,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 438513664,
+      "driverSampleCount": 12,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790988623.7775133,
+        "lastEpochSeconds": 1790988988.7897022,
+        "samples": 74,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 1000.0,
+          "Collator-1502-2": 1000.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 15445188608,
+          "/sys/fs/cgroup/system.slice/memory.current": 16407744512
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.04507579200000002,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 122.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 2034.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 2034.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.039614320999999994,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 122.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 2034.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 2034.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-10000-burst-default-pilot-37029048758-1",
+      "scenario": "split",
+      "actors": 10000,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 186816.034486,
+      "summaryPresent": false,
+      "passed": null,
+      "waves": [
+        {
+          "name": "split-pilot-split",
+          "requested": 10000,
+          "submitted": 10000,
+          "receiptVerified": 8192,
+          "auditPassed": false,
+          "sendWindowMs": 479.5224509999971,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8192,
+            "p50": 40885.52410899999,
+            "p95": 48852.060498000006,
+            "max": 52735.110293999955
+          },
+          "settledMs": 53169.95201399998,
+          "statePassed": false,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 1808
+        }
+      ],
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 855351296,
+      "driverSampleCount": 14,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790957737.1539018,
+        "lastEpochSeconds": 1790958172.1250255,
+        "samples": 88,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 8192.0,
+          "Collator-1502-2": 8192.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17163911168,
+          "/sys/fs/cgroup/system.slice/memory.current": 18123792384
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.24672698100000007,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 146.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 18132.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 18132.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.3308215690000001,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 146.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 22252.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 22252.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-10000-burst-default-pilot-37029048758-2",
+      "scenario": "split",
+      "actors": 10000,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 186317.021529,
+      "summaryPresent": false,
+      "passed": null,
+      "waves": [
+        {
+          "name": "split-pilot-split",
+          "requested": 10000,
+          "submitted": 10000,
+          "receiptVerified": 8192,
+          "auditPassed": false,
+          "sendWindowMs": 515.9811609999742,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8192,
+            "p50": 41397.34815600002,
+            "p95": 49337.23178600002,
+            "max": 53208.69505000004
+          },
+          "settledMs": 53630.525185999984,
+          "statePassed": false,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 1808
+        }
+      ],
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 861954048,
+      "driverSampleCount": 14,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790989500.3789253,
+        "lastEpochSeconds": 1790989935.3625543,
+        "samples": 88,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 8353.0,
+          "Collator-1502-2": 8847.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 16570335232,
+          "/sys/fs/cgroup/system.slice/memory.current": 17535389696
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.338921375,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 145.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 23241.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 23241.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.31835514899999984,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 145.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 21613.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 21613.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-10000-burst-enlarged-pilot-37029048758-2",
+      "scenario": "split",
+      "actors": 10000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 11000,
+      "preparationMs": 211554.58937600002,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "split-pilot-claim",
+          "requested": 10000,
+          "submitted": 10000,
+          "receiptVerified": 10000,
+          "auditPassed": true,
+          "sendWindowMs": 507.9349420000217,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 10000,
+            "p50": 50847.57422999997,
+            "p95": 62523.587234999985,
+            "max": 62537.35712499998
+          },
+          "settledMs": 63039.05031800008,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-split",
+          "requested": 10000,
+          "submitted": 10000,
+          "receiptVerified": 10000,
+          "auditPassed": true,
+          "sendWindowMs": 531.5959849999635,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 10000,
+            "p50": 49232.54285000003,
+            "p95": 61231.80115299998,
+            "max": 65055.88150700001
+          },
+          "settledMs": 65363.20160999999,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 145495.81943900004,
+      "elapsedMs": 160062.60830000002,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 967680000,
+      "driverSampleCount": 32,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790993990.8288696,
+        "lastEpochSeconds": 1790994580.805613,
+        "samples": 119,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 10000.0,
+          "Collator-1502-2": 10000.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17229082624,
+          "/sys/fs/cgroup/system.slice/memory.current": 18207633408
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.9948494619999999,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 196.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 52868.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 52868.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.0415962729999997,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 196.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 53656.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 53656.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-10000-paced-default-pilot-37029048758-1",
+      "scenario": "split",
+      "actors": 10000,
+      "mode": "paced",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 186657.061542,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "split-pilot-wave-1-claim",
+          "requested": 8000,
+          "submitted": 8000,
+          "receiptVerified": 8000,
+          "auditPassed": true,
+          "sendWindowMs": 380.13276500004577,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8000,
+            "p50": 34603.06095299998,
+            "p95": 46334.31817599997,
+            "max": 46342.01824599999
+          },
+          "settledMs": 46674.22141200001,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-wave-1-split",
+          "requested": 8000,
+          "submitted": 8000,
+          "receiptVerified": 8000,
+          "auditPassed": true,
+          "sendWindowMs": 425.5291959999595,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8000,
+            "p50": 41036.204466000025,
+            "p95": 48937.25206700002,
+            "max": 52801.20959099999
+          },
+          "settledMs": 53221.88241699996,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-wave-2-claim",
+          "requested": 2000,
+          "submitted": 2000,
+          "receiptVerified": 2000,
+          "auditPassed": true,
+          "sendWindowMs": 92.26568100007717,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 2000,
+            "p50": 32640.14111800003,
+            "p95": 32663.24148800003,
+            "max": 32664.39169800002
+          },
+          "settledMs": 32740.0614890001,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-wave-2-split",
+          "requested": 2000,
+          "submitted": 2000,
+          "receiptVerified": 2000,
+          "auditPassed": true,
+          "sendWindowMs": 107.52339899999788,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 2000,
+            "p50": 32988.53933900001,
+            "p95": 33015.94406800001,
+            "max": 36897.09327599994
+          },
+          "settledMs": 37003.32674500003,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 197523.87039500003,
+      "elapsedMs": 205117.41152499994,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 1111904256,
+      "driverSampleCount": 41,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790961324.8635952,
+        "lastEpochSeconds": 1790961894.8722417,
+        "samples": 115,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 8000.0,
+          "Collator-1502-2": 8000.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17304711168,
+          "/sys/fs/cgroup/system.slice/memory.current": 18289373184
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.7725127989999996,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 190.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 42298.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 42298.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.6555812019999999,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 190.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 38544.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 38544.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-10000-paced-default-pilot-37029048758-2",
+      "scenario": "split",
+      "actors": 10000,
+      "mode": "paced",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 211682.58734499998,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "split-pilot-wave-1-claim",
+          "requested": 8000,
+          "submitted": 8000,
+          "receiptVerified": 8000,
+          "auditPassed": true,
+          "sendWindowMs": 370.0964720000047,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8000,
+            "p50": 46636.91690499999,
+            "p95": 50734.09657900006,
+            "max": 58501.419347000076
+          },
+          "settledMs": 58647.931889,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-wave-1-split",
+          "requested": 8000,
+          "submitted": 8000,
+          "receiptVerified": 8000,
+          "auditPassed": true,
+          "sendWindowMs": 383.4415409999783,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 8000,
+            "p50": 49067.49147299997,
+            "p95": 53007.61877,
+            "max": 60930.00649599999
+          },
+          "settledMs": 61310.27286699996,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-wave-2-claim",
+          "requested": 2000,
+          "submitted": 2000,
+          "receiptVerified": 2000,
+          "auditPassed": true,
+          "sendWindowMs": 84.90973100007977,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 2000,
+            "p50": 44557.05266300007,
+            "p95": 44626.076732999994,
+            "max": 44649.984112999984
+          },
+          "settledMs": 44661.47073300008,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-wave-2-split",
+          "requested": 2000,
+          "submitted": 2000,
+          "receiptVerified": 2000,
+          "auditPassed": true,
+          "sendWindowMs": 90.66886099998374,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 2000,
+            "p50": 37126.57960399997,
+            "p95": 37135.374694,
+            "max": 40998.21379299997
+          },
+          "settledMs": 41088.151144,
+          "statePassed": true,
+          "backingBefore": "40001",
+          "backingAfter": "40001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 233514.08646200004,
+      "elapsedMs": 240061.83738199994,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 906678272,
+      "driverSampleCount": 48,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790992658.7093499,
+        "lastEpochSeconds": 1790993328.6370635,
+        "samples": 135,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 8000.0,
+          "Collator-1502-2": 8000.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17393119232,
+          "/sys/fs/cgroup/system.slice/memory.current": 18442932224
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 3.0156497809999996,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 223.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 43624.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 43624.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.795419132,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 223.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 43549.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 43549.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-100000-burst-enlarged-pilot-37029048758-2",
+      "scenario": "split",
+      "actors": 100000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 110000,
+      "preparationMs": 1025074.104662,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "split-pilot-claim",
+          "requested": 100000,
+          "submitted": 100000,
+          "receiptVerified": 100000,
+          "auditPassed": true,
+          "sendWindowMs": 4365.016791000031,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 100000,
+            "p50": 172572.89951000013,
+            "p95": 318679.67182200006,
+            "max": 332598.79778200015
+          },
+          "settledMs": 333259.47337100003,
+          "statePassed": true,
+          "backingBefore": "400001",
+          "backingAfter": "400001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-split",
+          "requested": 100000,
+          "submitted": 100000,
+          "receiptVerified": 100000,
+          "auditPassed": true,
+          "sendWindowMs": 4955.642881999956,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 100000,
+            "p50": 207970.93552300008,
+            "p95": 371987.1556539999,
+            "max": 389556.815007
+          },
+          "settledMs": 391278.23384599993,
+          "statePassed": true,
+          "backingBefore": "400001",
+          "backingAfter": "400001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 899749.8893629999,
+      "elapsedMs": 1041877.2406030002,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 2138996736,
+      "driverSampleCount": 208,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1791010248.3472228,
+        "lastEpochSeconds": 1791012498.3180645,
+        "samples": 451,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 100000.0,
+          "Collator-1502-2": 21315.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 33146068992,
+          "/sys/fs/cgroup/system.slice/memory.current": 34146942976
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 97.71392992700012,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 731.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 1200467.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 1200467.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 31.35506899600002,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 732.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 681581.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 681581.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-20000-burst-enlarged-pilot-37029048758-2",
+      "scenario": "split",
+      "actors": 20000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 22000,
+      "preparationMs": 322155.57214299997,
+      "summaryPresent": false,
+      "passed": null,
+      "waves": [
+        {
+          "name": "split-pilot-split",
+          "requested": 20000,
+          "submitted": 20000,
+          "receiptVerified": 20000,
+          "auditPassed": false,
+          "sendWindowMs": 1005.1789210001007,
+          "generatorLimited": true,
+          "finalityMs": {
+            "count": 20000,
+            "p50": 62706.95526299998,
+            "p95": 98089.94666399993,
+            "max": 98936.16953800002
+          },
+          "settledMs": 99007.5015270001,
+          "statePassed": true,
+          "backingBefore": "80001",
+          "backingAfter": "80001",
+          "auditErrorCount": 0
+        }
+      ],
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 1400340480,
+      "driverSampleCount": 25,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790997668.940419,
+        "lastEpochSeconds": 1790998333.9050524,
+        "samples": 134,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 20000.0,
+          "Collator-1502-2": 15615.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 18638315520,
+          "/sys/fs/cgroup/system.slice/memory.current": 19779588096
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 7.286701461999998,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 221.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 97174.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 97174.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 2.69954189,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 221.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 70472.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 70472.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-40000-burst-enlarged-pilot-37029048758-2",
+      "scenario": "split",
+      "actors": 40000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 44000,
+      "preparationMs": 506745.661939,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "split-pilot-claim",
+          "requested": 40000,
+          "submitted": 40000,
+          "receiptVerified": 40000,
+          "auditPassed": true,
+          "sendWindowMs": 1802.0557250001002,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 40000,
+            "p50": 84129.81158199988,
+            "p95": 131315.28220000002,
+            "max": 132577.95193500002
+          },
+          "settledMs": 133004.69633299997,
+          "statePassed": true,
+          "backingBefore": "160001",
+          "backingAfter": "160001",
+          "auditErrorCount": 0
+        },
+        {
+          "name": "split-pilot-split",
+          "requested": 40000,
+          "submitted": 40000,
+          "receiptVerified": 40000,
+          "auditPassed": true,
+          "sendWindowMs": 1945.741015000036,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 40000,
+            "p50": 100739.467603,
+            "p95": 172903.47146699997,
+            "max": 177327.71456900006
+          },
+          "settledMs": 178435.97953300003,
+          "statePassed": true,
+          "backingBefore": "160001",
+          "backingAfter": "160001",
+          "auditErrorCount": 0
+        }
+      ],
+      "completionToLastReceiptMs": 378785.0045459999,
+      "elapsedMs": 435544.99716500007,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 2182746112,
+      "driverSampleCount": 87,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1790998820.8086767,
+        "lastEpochSeconds": 1791009615.9529667,
+        "samples": 2160,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 40000.0,
+          "Collator-1502-2": 17788.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 32658952192,
+          "/sys/fs/cgroup/system.slice/memory.current": 33680281600
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 33.86220966099998,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 3582.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 481920.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 481920.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 16.038439148999977,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 3582.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 279760.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 279760.0
+        }
+      }
+    }
+  ]
+}

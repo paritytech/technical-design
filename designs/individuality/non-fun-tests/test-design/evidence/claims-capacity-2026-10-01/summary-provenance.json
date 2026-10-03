@@ -1,0 +1,1171 @@
+{
+  "generatedAt": "2026-10-01T10:13:36.090891+00:00",
+  "experiments": [
+    {
+      "run": 36832069153,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36832069153",
+      "commit": "23a884c644dba50805f7b9373ad45d2529bb888f",
+      "verifiedAt": "2026-10-01T08:24:18.422021+00:00",
+      "artifact": {
+        "id": 11148628985,
+        "name": "coinage-claim-burst-36832069153-1"
+      },
+      "requested": 20000,
+      "submitted": 20000,
+      "originalVerifiedReceipts": 20000,
+      "verifiedFromSavedBlocks": 20000,
+      "failedDispatchReceipts": 0,
+      "submittedWithoutSavedReceipt": 0,
+      "correctFinalCoinStates": 20000,
+      "auditPassed": true,
+      "backingBefore": "40001",
+      "backingAfter": "40001",
+      "recoveryPassed": true,
+      "recoveryFinalityDelta": {
+        "alice": 10,
+        "bob": 10,
+        "charlie": 10,
+        "dave": 10,
+        "eve": 10,
+        "ferdie": 10,
+        "Collator-1500": 30,
+        "Collator-1502": 10,
+        "Collator-1502-2": 10,
+        "Collator-1501": 10,
+        "Collator-1600": 10
+      },
+      "authors": {
+        "Collator-1502": 34,
+        "Collator-1502-2": 30
+      },
+      "poolTransactions": 22000,
+      "poolKbytes": 40960,
+      "fixtureBatch": 1000,
+      "stateQueryConcurrency": 16,
+      "rpcSubscriptionLimit": 40050,
+      "launchTargetMs": 1000,
+      "launchMs": 802.183812999865,
+      "poolReadyObserved": 20000,
+      "poolReadyWindowMs": 3742.9445679998025,
+      "lastWatchReceiptMs": 94263.49105699989,
+      "finalityMs": {
+        "count": 20000,
+        "p50": 65710.67783199996,
+        "p95": 93806.48378499993,
+        "max": 93914.29302600003
+      },
+      "stageMs": 151428.396405,
+      "preparationMs": 1138346.536677,
+      "stateCutoff": {
+        "hash": "0xe6b1d08c0acf87eafccbdbac90df840de5b6d4cca5f1daf7e28ad43a137fced2",
+        "number": 173334,
+        "parent": "0xf9eb30530725cc73da0eeba6e706f65439acb70c2a131c4eeb6194d14fffcb8b",
+        "hasNewRuntime": false
+      },
+      "peakPoolGauges": {
+        "Collator-1502/substrate_ready_transactions_number": 20000.0,
+        "Collator-1502/substrate_sub_txpool_unwatched_txs": 0,
+        "Collator-1502/substrate_sub_txpool_watched_txs": 20000.0,
+        "Collator-1502-2/substrate_ready_transactions_number": 9877.0,
+        "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 15780.0,
+        "Collator-1502-2/substrate_sub_txpool_watched_txs": 0
+      },
+      "lastPoolGaugesInWindow": {
+        "Collator-1502/substrate_ready_transactions_number": 0.0,
+        "Collator-1502/substrate_sub_txpool_unwatched_txs": 0.0,
+        "Collator-1502/substrate_sub_txpool_watched_txs": 0.0,
+        "Collator-1502-2/substrate_ready_transactions_number": 0.0,
+        "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 0.0,
+        "Collator-1502-2/substrate_sub_txpool_watched_txs": 0.0
+      },
+      "peakSampledHostBusyPercent": 20.68987301787858,
+      "minSampledAvailableGiB": 47.98508834838867,
+      "canonicalProposalStopReasons": [
+        "HitBlockWeightLimit",
+        "NoMoreTransactions"
+      ],
+      "maxCanonicalProposalMs": 2735,
+      "receiptCountsByBlock": {
+        "173326": 2363,
+        "173327": 2363,
+        "173332": 2363,
+        "173333": 2363,
+        "173334": 1096,
+        "173328": 2363,
+        "173331": 2363,
+        "173329": 2363,
+        "173330": 2363
+      },
+      "evidence": "36832069153/original",
+      "runtimeVersion": {
+        "spec_name": "next-people-paseo",
+        "impl_name": "next-people-paseo",
+        "authoring_version": 1,
+        "spec_version": 3003000,
+        "impl_version": 0,
+        "apis": [
+          [
+            "0xdd718d5cc53262d4",
+            1
+          ],
+          [
+            "0x04e70521a0d3d2f8",
+            2
+          ],
+          [
+            "0x162bf19137abacbd",
+            1
+          ],
+          [
+            "0xd7bdd8a272ca0d65",
+            2
+          ],
+          [
+            "0xdf6acb689907609b",
+            5
+          ],
+          [
+            "0x37e397fc7c91f5e4",
+            2
+          ],
+          [
+            "0xccd9de6396c899ca",
+            1
+          ],
+          [
+            "0x40fe3ad401f8959a",
+            6
+          ],
+          [
+            "0xd2bc9897eed08f15",
+            3
+          ],
+          [
+            "0xf78b278be53f454c",
+            2
+          ],
+          [
+            "0xab3c0572291feb8b",
+            2
+          ],
+          [
+            "0xbc9d89904f5b923f",
+            1
+          ],
+          [
+            "0x37c8bb1350a9a2a8",
+            4
+          ],
+          [
+            "0xf3ff14d5ab527059",
+            3
+          ],
+          [
+            "0x6ff52ee858e6c5bd",
+            2
+          ],
+          [
+            "0x91b1c8b16328eb92",
+            2
+          ],
+          [
+            "0x9ffb505aa738d69c",
+            1
+          ],
+          [
+            "0xd0bac7be4a6b0920",
+            1
+          ],
+          [
+            "0x9287fb0e021bc854",
+            1
+          ],
+          [
+            "0x843b6f8cec8098c7",
+            1
+          ],
+          [
+            "0x5f4d07c7630fd6b9",
+            1
+          ],
+          [
+            "0xea93e3f16f3d6962",
+            3
+          ],
+          [
+            "0xfbc577b9d747efd6",
+            1
+          ]
+        ],
+        "transaction_version": 5,
+        "system_version": 1
+      },
+      "runtimeGenesis": "0x55e3e689ecfa9d2fffcf7d309b8011956671493982230bfd0420c683542249e9",
+      "canonicalProposals": [
+        {
+          "node": "Collator-1502-2",
+          "block": 173326,
+          "ms": 2734,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173331,
+          "ms": 1732,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173334,
+          "ms": 334,
+          "reason": "NoMoreTransactions"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173327,
+          "ms": 2734,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173328,
+          "ms": 2735,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173329,
+          "ms": 2732,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173330,
+          "ms": 2659,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173332,
+          "ms": 1575,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173333,
+          "ms": 975,
+          "reason": "HitBlockWeightLimit"
+        }
+      ],
+      "peakSampledLogicalCpuBusyPercent": 61.92384769539079
+    },
+    {
+      "run": 36836204912,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36836204912",
+      "commit": "39d2961bb7940ee0dd07b970968bc4be034a9608",
+      "verifiedAt": "2026-10-01T08:57:55.492162+00:00",
+      "artifact": {
+        "id": 11150407769,
+        "name": "coinage-claim-burst-36836204912-1"
+      },
+      "requested": 40000,
+      "submitted": 40000,
+      "originalVerifiedReceipts": 40000,
+      "verifiedFromSavedBlocks": 40000,
+      "failedDispatchReceipts": 0,
+      "submittedWithoutSavedReceipt": 0,
+      "correctFinalCoinStates": 40000,
+      "auditPassed": true,
+      "backingBefore": "80001",
+      "backingAfter": "80001",
+      "recoveryPassed": true,
+      "recoveryFinalityDelta": {
+        "alice": 10,
+        "bob": 10,
+        "charlie": 10,
+        "dave": 10,
+        "eve": 10,
+        "ferdie": 10,
+        "Collator-1500": 30,
+        "Collator-1502": 10,
+        "Collator-1502-2": 10,
+        "Collator-1501": 10,
+        "Collator-1600": 10
+      },
+      "authors": {
+        "Collator-1502": 31,
+        "Collator-1502-2": 33
+      },
+      "poolTransactions": 44000,
+      "poolKbytes": 40960,
+      "fixtureBatch": 5000,
+      "stateQueryConcurrency": 64,
+      "rpcSubscriptionLimit": 80050,
+      "launchTargetMs": 5000,
+      "launchMs": 1581.9844710000325,
+      "poolReadyObserved": 40000,
+      "poolReadyWindowMs": 8614.07444299967,
+      "lastWatchReceiptMs": 140924.67462299997,
+      "finalityMs": {
+        "count": 40000,
+        "p50": 92300.22739799996,
+        "p95": 139393.5743389998,
+        "max": 139565.76376900007
+      },
+      "stageMs": 182520.79588899994,
+      "preparationMs": 977090.7115720001,
+      "stateCutoff": {
+        "hash": "0xe10280a6d84b13afd1fb69c9406ca5f37b8be54dad272ac29fbd3e158c6022c1",
+        "number": 173305,
+        "parent": "0xce45e298fc158bc4bc713f42f5b459b41156ca05f97df007900e3b1da2fa80a1",
+        "hasNewRuntime": false
+      },
+      "peakPoolGauges": {
+        "Collator-1502/substrate_ready_transactions_number": 37637.0,
+        "Collator-1502/substrate_sub_txpool_unwatched_txs": 0,
+        "Collator-1502/substrate_sub_txpool_watched_txs": 40000.0,
+        "Collator-1502-2/substrate_ready_transactions_number": 21402.0,
+        "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 24858.0,
+        "Collator-1502-2/substrate_sub_txpool_watched_txs": 0
+      },
+      "lastPoolGaugesInWindow": {
+        "Collator-1502/substrate_ready_transactions_number": 0.0,
+        "Collator-1502/substrate_sub_txpool_unwatched_txs": 0.0,
+        "Collator-1502/substrate_sub_txpool_watched_txs": 0.0,
+        "Collator-1502-2/substrate_ready_transactions_number": 0.0,
+        "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 0.0,
+        "Collator-1502-2/substrate_sub_txpool_watched_txs": 0.0
+      },
+      "peakSampledHostBusyPercent": 25.173195208805442,
+      "minSampledAvailableGiB": 46.98488998413086,
+      "canonicalProposalStopReasons": [
+        "HitBlockWeightLimit",
+        "NoMoreTransactions"
+      ],
+      "maxCanonicalProposalMs": 2764,
+      "receiptCountsByBlock": {
+        "173288": 2363,
+        "173289": 2363,
+        "173290": 2363,
+        "173292": 2363,
+        "173297": 2363,
+        "173296": 2363,
+        "173295": 2363,
+        "173293": 2363,
+        "173294": 2363,
+        "173300": 2363,
+        "173299": 2363,
+        "173298": 2363,
+        "173301": 2363,
+        "173302": 2363,
+        "173291": 2363,
+        "173303": 2363,
+        "173304": 2192
+      },
+      "evidence": "36836204912/original",
+      "runtimeVersion": {
+        "spec_name": "next-people-paseo",
+        "impl_name": "next-people-paseo",
+        "authoring_version": 1,
+        "spec_version": 3003000,
+        "impl_version": 0,
+        "apis": [
+          [
+            "0xdd718d5cc53262d4",
+            1
+          ],
+          [
+            "0x04e70521a0d3d2f8",
+            2
+          ],
+          [
+            "0x162bf19137abacbd",
+            1
+          ],
+          [
+            "0xd7bdd8a272ca0d65",
+            2
+          ],
+          [
+            "0xdf6acb689907609b",
+            5
+          ],
+          [
+            "0x37e397fc7c91f5e4",
+            2
+          ],
+          [
+            "0xccd9de6396c899ca",
+            1
+          ],
+          [
+            "0x40fe3ad401f8959a",
+            6
+          ],
+          [
+            "0xd2bc9897eed08f15",
+            3
+          ],
+          [
+            "0xf78b278be53f454c",
+            2
+          ],
+          [
+            "0xab3c0572291feb8b",
+            2
+          ],
+          [
+            "0xbc9d89904f5b923f",
+            1
+          ],
+          [
+            "0x37c8bb1350a9a2a8",
+            4
+          ],
+          [
+            "0xf3ff14d5ab527059",
+            3
+          ],
+          [
+            "0x6ff52ee858e6c5bd",
+            2
+          ],
+          [
+            "0x91b1c8b16328eb92",
+            2
+          ],
+          [
+            "0x9ffb505aa738d69c",
+            1
+          ],
+          [
+            "0xd0bac7be4a6b0920",
+            1
+          ],
+          [
+            "0x9287fb0e021bc854",
+            1
+          ],
+          [
+            "0x843b6f8cec8098c7",
+            1
+          ],
+          [
+            "0x5f4d07c7630fd6b9",
+            1
+          ],
+          [
+            "0xea93e3f16f3d6962",
+            3
+          ],
+          [
+            "0xfbc577b9d747efd6",
+            1
+          ]
+        ],
+        "transaction_version": 5,
+        "system_version": 1
+      },
+      "runtimeGenesis": "0x55e3e689ecfa9d2fffcf7d309b8011956671493982230bfd0420c683542249e9",
+      "canonicalProposals": [
+        {
+          "node": "Collator-1502-2",
+          "block": 173290,
+          "ms": 2742,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173293,
+          "ms": 2745,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173294,
+          "ms": 2740,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173296,
+          "ms": 2104,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173297,
+          "ms": 1509,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173300,
+          "ms": 1423,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173301,
+          "ms": 876,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173304,
+          "ms": 747,
+          "reason": "NoMoreTransactions"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173288,
+          "ms": 2764,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173289,
+          "ms": 2740,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173291,
+          "ms": 2752,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173292,
+          "ms": 2738,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173295,
+          "ms": 2739,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173298,
+          "ms": 2749,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173299,
+          "ms": 2740,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173302,
+          "ms": 1888,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173303,
+          "ms": 1283,
+          "reason": "HitBlockWeightLimit"
+        }
+      ],
+      "peakSampledLogicalCpuBusyPercent": 94.97991967871486
+    },
+    {
+      "run": 36840043405,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36840043405",
+      "commit": "b7451cd74bbe71799ab9bc8e01a69696ab043217",
+      "verifiedAt": "2026-10-01T10:05:49.982071+00:00",
+      "artifact": {
+        "id": 11154045167,
+        "name": "coinage-claim-burst-36840043405-1"
+      },
+      "requested": 100000,
+      "submitted": 100000,
+      "originalVerifiedReceipts": 100000,
+      "verifiedFromSavedBlocks": 100000,
+      "failedDispatchReceipts": 0,
+      "submittedWithoutSavedReceipt": 0,
+      "correctFinalCoinStates": 100000,
+      "auditPassed": true,
+      "backingBefore": "200001",
+      "backingAfter": "200001",
+      "recoveryPassed": true,
+      "recoveryFinalityDelta": {
+        "alice": 11,
+        "bob": 11,
+        "charlie": 11,
+        "dave": 11,
+        "eve": 11,
+        "ferdie": 11,
+        "Collator-1500": 33,
+        "Collator-1502": 11,
+        "Collator-1502-2": 11,
+        "Collator-1501": 11,
+        "Collator-1600": 11
+      },
+      "authors": {
+        "Collator-1502": 32,
+        "Collator-1502-2": 32
+      },
+      "poolTransactions": 110000,
+      "poolKbytes": 40960,
+      "fixtureBatch": 5000,
+      "stateQueryConcurrency": 64,
+      "rpcSubscriptionLimit": 200050,
+      "launchTargetMs": 10000,
+      "launchMs": 3929.700974999927,
+      "poolReadyObserved": 100000,
+      "poolReadyWindowMs": 20370.604586999398,
+      "lastWatchReceiptMs": 312866.56213099975,
+      "finalityMs": {
+        "count": 100000,
+        "p50": 178521.20730200037,
+        "p95": 297346.0659500002,
+        "max": 310339.2376280003
+      },
+      "stageMs": 410384.99014999997,
+      "preparationMs": 2440796.664163,
+      "stateCutoff": {
+        "hash": "0x749e6f65498e7cc64a73d33b21f1d3888a58b8becc3248e69a1894700a3bf39b",
+        "number": 173583,
+        "parent": "0x92150c908bf6c22bd6edb773f22c5fcd104df8d9a4a5cb3922eeb05e791a76a5",
+        "hasNewRuntime": false
+      },
+      "peakPoolGauges": {
+        "Collator-1502/substrate_ready_transactions_number": 88185.0,
+        "Collator-1502/substrate_sub_txpool_unwatched_txs": 3.0,
+        "Collator-1502/substrate_sub_txpool_watched_txs": 100000.0,
+        "Collator-1502-2/substrate_ready_transactions_number": 18821.0,
+        "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 23547.0,
+        "Collator-1502-2/substrate_sub_txpool_watched_txs": 0
+      },
+      "lastPoolGaugesInWindow": {
+        "Collator-1502/substrate_ready_transactions_number": 0.0,
+        "Collator-1502/substrate_sub_txpool_unwatched_txs": 2.0,
+        "Collator-1502/substrate_sub_txpool_watched_txs": 0.0,
+        "Collator-1502-2/substrate_ready_transactions_number": 0.0,
+        "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 3.0,
+        "Collator-1502-2/substrate_sub_txpool_watched_txs": 0.0
+      },
+      "peakSampledHostBusyPercent": 21.29003445195866,
+      "minSampledAvailableGiB": 42.980010986328125,
+      "canonicalProposalStopReasons": [
+        "HitBlockWeightLimit",
+        "NoMoreTransactions"
+      ],
+      "maxCanonicalProposalMs": 2970,
+      "receiptCountsByBlock": {
+        "173541": 2363,
+        "173543": 2363,
+        "173553": 2363,
+        "173562": 2363,
+        "173557": 2363,
+        "173542": 2363,
+        "173544": 2363,
+        "173550": 2363,
+        "173547": 2363,
+        "173567": 2363,
+        "173565": 2363,
+        "173572": 2363,
+        "173569": 2363,
+        "173556": 2363,
+        "173561": 2363,
+        "173558": 2363,
+        "173546": 2363,
+        "173566": 2363,
+        "173551": 2363,
+        "173579": 2363,
+        "173559": 2363,
+        "173552": 2363,
+        "173575": 2363,
+        "173570": 2363,
+        "173576": 2363,
+        "173577": 2363,
+        "173571": 2363,
+        "173568": 2363,
+        "173560": 2363,
+        "173548": 2363,
+        "173573": 2363,
+        "173554": 2363,
+        "173545": 2363,
+        "173549": 2363,
+        "173555": 2363,
+        "173563": 2363,
+        "173580": 2363,
+        "173564": 2363,
+        "173574": 2363,
+        "173582": 2363,
+        "173578": 2363,
+        "173581": 2363,
+        "173583": 754
+      },
+      "evidence": "36840043405/original",
+      "runtimeVersion": {
+        "spec_name": "next-people-paseo",
+        "impl_name": "next-people-paseo",
+        "authoring_version": 1,
+        "spec_version": 3003000,
+        "impl_version": 0,
+        "apis": [
+          [
+            "0xdd718d5cc53262d4",
+            1
+          ],
+          [
+            "0x04e70521a0d3d2f8",
+            2
+          ],
+          [
+            "0x162bf19137abacbd",
+            1
+          ],
+          [
+            "0xd7bdd8a272ca0d65",
+            2
+          ],
+          [
+            "0xdf6acb689907609b",
+            5
+          ],
+          [
+            "0x37e397fc7c91f5e4",
+            2
+          ],
+          [
+            "0xccd9de6396c899ca",
+            1
+          ],
+          [
+            "0x40fe3ad401f8959a",
+            6
+          ],
+          [
+            "0xd2bc9897eed08f15",
+            3
+          ],
+          [
+            "0xf78b278be53f454c",
+            2
+          ],
+          [
+            "0xab3c0572291feb8b",
+            2
+          ],
+          [
+            "0xbc9d89904f5b923f",
+            1
+          ],
+          [
+            "0x37c8bb1350a9a2a8",
+            4
+          ],
+          [
+            "0xf3ff14d5ab527059",
+            3
+          ],
+          [
+            "0x6ff52ee858e6c5bd",
+            2
+          ],
+          [
+            "0x91b1c8b16328eb92",
+            2
+          ],
+          [
+            "0x9ffb505aa738d69c",
+            1
+          ],
+          [
+            "0xd0bac7be4a6b0920",
+            1
+          ],
+          [
+            "0x9287fb0e021bc854",
+            1
+          ],
+          [
+            "0x843b6f8cec8098c7",
+            1
+          ],
+          [
+            "0x5f4d07c7630fd6b9",
+            1
+          ],
+          [
+            "0xea93e3f16f3d6962",
+            3
+          ],
+          [
+            "0xfbc577b9d747efd6",
+            1
+          ]
+        ],
+        "transaction_version": 5,
+        "system_version": 1
+      },
+      "runtimeGenesis": "0x55e3e689ecfa9d2fffcf7d309b8011956671493982230bfd0420c683542249e9",
+      "canonicalProposals": [
+        {
+          "node": "Collator-1502-2",
+          "block": 173541,
+          "ms": 2754,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173542,
+          "ms": 2753,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173544,
+          "ms": 2761,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173545,
+          "ms": 2749,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173547,
+          "ms": 2748,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173550,
+          "ms": 2749,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173553,
+          "ms": 2763,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173554,
+          "ms": 2506,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173557,
+          "ms": 1746,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173558,
+          "ms": 1626,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173561,
+          "ms": 1305,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173562,
+          "ms": 1561,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173565,
+          "ms": 2765,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173566,
+          "ms": 1564,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173569,
+          "ms": 1046,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173572,
+          "ms": 1677,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173573,
+          "ms": 1526,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173576,
+          "ms": 1263,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173577,
+          "ms": 938,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173580,
+          "ms": 2144,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502-2",
+          "block": 173581,
+          "ms": 966,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173543,
+          "ms": 2750,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173546,
+          "ms": 2779,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173548,
+          "ms": 2768,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173549,
+          "ms": 2970,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173551,
+          "ms": 2763,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173552,
+          "ms": 2753,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173555,
+          "ms": 2766,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173556,
+          "ms": 2754,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173559,
+          "ms": 2881,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173560,
+          "ms": 2753,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173563,
+          "ms": 2768,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173564,
+          "ms": 2757,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173567,
+          "ms": 2767,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173568,
+          "ms": 2755,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173570,
+          "ms": 2753,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173571,
+          "ms": 2757,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173574,
+          "ms": 2747,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173575,
+          "ms": 2754,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173578,
+          "ms": 2753,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173579,
+          "ms": 2759,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173582,
+          "ms": 931,
+          "reason": "HitBlockWeightLimit"
+        },
+        {
+          "node": "Collator-1502",
+          "block": 173583,
+          "ms": 253,
+          "reason": "NoMoreTransactions"
+        }
+      ],
+      "peakSampledLogicalCpuBusyPercent": 97.97570850202429,
+      "serviceCgroupOomEventsObserved": 0
+    }
+  ],
+  "methods": [
+    "Claim-only workload with root-seeded, asset-backed coins; no issuance or wallet behavior tested.",
+    "One real signed Coinage.transfer per actor; no retries or additional waves.",
+    "Receipts rechecked against raw extrinsics, indexed System success and expected Coinage events; both local RPC finality views saved.",
+    "Finality percentiles describe per-claim watch receipt latency; the last receipt is measured from wave start.",
+    "Stage duration includes post-burst state reads but excludes preparation, the final receipt audit and recovery.",
+    "Queue gauges and host resources are five-second samples; peak values may miss shorter spikes.",
+    "Local RPC consistency checks are not independent consensus or state-proof verification.",
+    "A successful offered burst is a measured lower bound, not the absolute hardware ceiling or sustainable TPS."
+  ],
+  "excludedAttempts": [
+    {
+      "run": 36830248627,
+      "reason": "Nightly snapshot startup failed: Asset Hub HRMP head mismatch; claim driver never ran."
+    },
+    {
+      "run": 36839694827,
+      "reason": "Cancelled before claims to separate fixture checks from long signing pass; no capacity result."
+    }
+  ],
+  "documentType": "Compact derived summary and provenance; not the full raw evidence archive",
+  "sourceDirectory": "claims-capacity-2026-10-01 (preserved locally, not a public download)",
+  "sourceFileSha256": {
+    "experiments.json": "0842e172e9ef4ae3085151774617af77c6cad688e37c24f86cce6023c7388850",
+    "RESULTS.md": "6a3256e8a96b622ee8e1f4d65877398a35cb7b7db856329fd4dffa0851d0861a",
+    "36832069153/RESULTS.md": "9f0e7eb0d2f79c2961160041b2be5923b3b8700f6d746efe02162f659782cd8a",
+    "36832069153/verified-results.json": "3aae09070b2d14b7005cd7709a86f5a4da5a32d1fd08cbe9f00a6885e544d2d8",
+    "36832069153/analysis.json": "e82e9bde7d61c273a3d3fb3ac846311b8895f909a4bc18b85d3221492075e06d",
+    "36832069153/original/provenance.json": "a854ae3bdfdeb047138b9d4245925872d2efb47f06f08c3632fba5f9071b6b53",
+    "36832069153/original/claim-runtime.json": "7884d7d7d02ddb12c8bda9519e99ecf6cdbf08a58b103754f7579d092fcda5b0",
+    "36836204912/RESULTS.md": "655e76f66e0361375c767be39eb03c93298e1e4b4e58d7cb4232d83e82cb882f",
+    "36836204912/verified-results.json": "ffdb1c85284cc13c7d881e5beb4c262ba1ad78b2e65364eb11828f20cf57682c",
+    "36836204912/analysis.json": "77cca19a446c6c3b75fb4af720cd12f3076e90cfb6ba2d21045d594fa15436ff",
+    "36836204912/original/provenance.json": "a854ae3bdfdeb047138b9d4245925872d2efb47f06f08c3632fba5f9071b6b53",
+    "36836204912/original/claim-runtime.json": "c0818c5c86d2e1d9c7aa37548f4ad370fecad80cf30bb5b4f0025f0e62c70b84",
+    "36840043405/RESULTS.md": "d84d61abfb7241e40ce84e6bbd685d685e553a4f0ded0876f34da68b54cd751a",
+    "36840043405/verified-results.json": "8f5da8d1ba4ef1488ed83505b669e2dff0b30f60873dfaea856816fd2bb6627c",
+    "36840043405/analysis.json": "f1f921aac2abfb58947573dbb14b6240223b19441b5ec04c23ce3992f13cd9c8",
+    "36840043405/original/provenance.json": "a854ae3bdfdeb047138b9d4245925872d2efb47f06f08c3632fba5f9071b6b53",
+    "36840043405/original/claim-runtime.json": "7ea042953cc9aecfaf3b19d87adff21c639f9ae3db1e2d7a2bc0247cae537d95"
+  },
+  "sharedProvenance": {
+    "engine_commit": "7907a3bfa7b2e47535a74b7920086a05ca94773a",
+    "assets": [
+      {
+        "repo": "paritytech/release-automation",
+        "tag": "polkadot-weekly2026w33-rc2",
+        "asset_id": 512638416,
+        "name": "polkadot",
+        "sha256": "4a2a5476eaeb03b24fa43de2e19afc59ff82f67eeba0cbd504f28c0de52b5128"
+      },
+      {
+        "repo": "paritytech/release-automation",
+        "tag": "polkadot-weekly2026w33-rc2",
+        "asset_id": 512638401,
+        "name": "polkadot-execute-worker",
+        "sha256": "5549e9a2fd4d79f2a297d96015daf4fda98a52d00f70ff48f33eea4ade8962d3"
+      },
+      {
+        "repo": "paritytech/release-automation",
+        "tag": "polkadot-weekly2026w33-rc2",
+        "asset_id": 512638360,
+        "name": "polkadot-prepare-worker",
+        "sha256": "784fa62c819b1e187bb690cb130420620c43842407890813b8f339da433b57c2"
+      },
+      {
+        "repo": "paritytech/release-automation",
+        "tag": "polkadot-weekly2026w33-rc2",
+        "asset_id": 512638409,
+        "name": "polkadot-omni-node",
+        "sha256": "796de842beff52aae37afc661d4ceb32c7379fb23ff783a7872713508a31a912"
+      },
+      {
+        "repo": "paritytech/zombienet-sdk",
+        "tag": "v0.4.15",
+        "asset_id": 485842126,
+        "name": "zombie-cli-x86_64-unknown-linux-gnu",
+        "sha256": "1a28e8bc184fefda182f197c5ec196913bafedfef1c51d1dbe3cf5721712c8f4"
+      },
+      {
+        "repo": "paritytech/previewnet-engine",
+        "run_id": "36614342201",
+        "artifact_id": 11054628075,
+        "name": "fork-bundle-previewnet.tar.gz",
+        "sha256": "edab76b213657e499ae9fcb95673a2bf4ca717b78b00caf3d7783fc18b562b4f"
+      }
+    ]
+  },
+  "scope": "Root-seeded claim-only fixtures bypass normal issuance and held-backing setup. Unchanged fixture backing does not verify normal held-backing accounting. Saved local RPC observations are not independent cryptographic consensus proofs.",
+  "hardware": {
+    "reportedCpu": "AMD EPYC 7B13",
+    "cores": 16,
+    "logicalCpus": 32,
+    "approximateRamGiB": 62.8,
+    "scope": "All local PreviewNet processes and driver share one runner; resource samples approximately every five seconds."
+  },
+  "guide": "https://github.com/paritytech/polkadot-pop-e2e/blob/dfdc44a75bc91ea1610742b42b4e5278f4ad42fd/ci/previewnet/burst-results.md"
+}

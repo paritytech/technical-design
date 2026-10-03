@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-10-02T16:29:30.930285+00:00",
+  "artifact": "coinage-split-10000-burst-default-pilot-37029048758-1",
+  "stage": "split-pilot-split",
+  "requested": 10000,
+  "submitted": 10000,
+  "originalVerifiedReceipts": 8192,
+  "additionalReceiptsInSavedCanonicalBlocks": 0,
+  "totalReceiptsVerifiedNow": 8192,
+  "withoutVerifiedReceipt": 1808,
+  "watchStatusCounts": {
+    "submission-error": 1808,
+    "finalized": 8192
+  },
+  "nonfinalizedWatchErrors": {
+    "\"dropped\"": 819,
+    "\"RpcError: 1016: Immediately Dropped: The transaction couldn't enter the pool because of the limit\"": 989
+  },
+  "experimentPassed": false,
+  "canonicalBlocksScanned": 5,
+  "scope": "Saved two-node finalized canonical block evidence only. Unseen hashes are unresolved, not proven never executed."
+}

@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-10-03T11:37:14.483421+00:00",
+  "stateAt": {
+    "hash": "0xb39d569845da5bb157e0c7a16228a0c0d8a3b54cb91b633a724986341f270130",
+    "number": 173556,
+    "parent": "0x2e53ba700735730c43192ead73c54ef3a7155088e7b8edccb10cd9b3ce733b07",
+    "hasNewRuntime": false
+  },
+  "backingBefore": "200001",
+  "backingAfter": "200001",
+  "statePassed": false,
+  "remainingSourceCoins": 38149,
+  "memberEntries": 61851,
+  "stateByWatch": [
+    {
+      "watchStatus": "finalized",
+      "sourceAbsent": true,
+      "memberPresent": true,
+      "count": 60982
+    },
+    {
+      "watchStatus": "submission-error",
+      "sourceAbsent": true,
+      "memberPresent": true,
+      "count": 869
+    },
+    {
+      "watchStatus": "unresolved",
+      "sourceAbsent": false,
+      "memberPresent": false,
+      "count": 38149
+    }
+  ],
+  "withoutVerifiedReceipt": 39010,
+  "missingReceiptWatchCounts": {
+    "submission-error": 861,
+    "unresolved": 38149
+  },
+  "scope": "State observations are distinct from successful receipts. 861 invalid watches have expected member state but no successful receipt in saved blocks. 38149 deadline-unresolved watches retain source coins at the saved cutoff."
+}

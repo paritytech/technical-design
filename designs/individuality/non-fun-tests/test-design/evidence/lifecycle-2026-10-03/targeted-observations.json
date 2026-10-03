@@ -1,0 +1,175 @@
+{
+  "updatedAt": "2026-10-03T11:58:36.690842+00:00",
+  "runUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842",
+  "definitions": {
+    "finality": "Per call: client submission to successful finalized receipt lookup; percentiles include finalized watches only",
+    "completion": "First split/load submission to last settled final wave watch; includes split audit and claim signing",
+    "readiness": "Per member: submission to first finalized poll with root coverage; observed-ready population only",
+    "resourceScope": "Node/host samples span fixtures, smoke and pilot. Driver RSS samples are separately labelled by stage.",
+    "limitations": [
+      "No claim of production capacity",
+      "No independent consensus/storage-proof verification",
+      "No measured weight-versus-execution-cost or PVF deadline verification"
+    ]
+  },
+  "cases": [
+    {
+      "artifact": "coinage-recycle-100-burst-default-pilot-37116007842-1",
+      "scenario": "recycle",
+      "actors": 100,
+      "mode": "burst",
+      "pool": "default",
+      "poolTransactions": null,
+      "preparationMs": 148785.471004,
+      "summaryPresent": true,
+      "passed": true,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 100,
+          "submitted": 100,
+          "receiptVerified": 100,
+          "auditPassed": true,
+          "sendWindowMs": 5.608899999991991,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 100,
+            "p50": 35676.24424799997,
+            "p95": 35676.715977999964,
+            "max": 35677.21874800004
+          },
+          "settledMs": 35682.47646800004,
+          "statePassed": true,
+          "backingBefore": "201",
+          "backingAfter": "201",
+          "auditErrors": []
+        }
+      ],
+      "completionToLastReceiptMs": 35682.47646800004,
+      "elapsedMs": 55342.53599599999,
+      "ready": 100,
+      "readinessMs": {
+        "count": 100,
+        "p50": 50338.950109999976,
+        "p95": 50340.95491999999,
+        "max": 50341.30859999999
+      },
+      "unresolvedReadiness": 0,
+      "observationCutoff": {
+        "elapsedMs": 50341.31091,
+        "at": "0x23cc14dae3f6240d229f221a04c61fdb5c19d4f68337297e77987e15adb86081"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 256331776,
+      "driverSampleCount": 11,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1791026469.0337877,
+        "lastEpochSeconds": 1791026874.0858803,
+        "samples": 82,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 102.0,
+          "Collator-1502-2": 102.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 16602959872,
+          "/sys/fs/cgroup/system.slice/memory.current": 17608839168
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.028260946999999988,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 135.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 142.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 142.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.02752917500000001,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 135.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 143.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 143.0
+        }
+      }
+    },
+    {
+      "artifact": "coinage-split-20000-burst-enlarged-pilot-37116007842-1",
+      "scenario": "split",
+      "actors": 20000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 22000,
+      "preparationMs": 322687.637522,
+      "summaryPresent": true,
+      "passed": false,
+      "waves": [
+        {
+          "name": "split-pilot-claim",
+          "requested": 20000,
+          "submitted": 20000,
+          "receiptVerified": 20000,
+          "auditPassed": true,
+          "sendWindowMs": 949.0219639999559,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 20000,
+            "p50": 49999.49497300002,
+            "p95": 73644.53830699995,
+            "max": 73964.477158
+          },
+          "settledMs": 74532.78838599997,
+          "statePassed": true,
+          "backingBefore": "80001",
+          "backingAfter": "80001",
+          "auditErrors": []
+        },
+        {
+          "name": "split-pilot-split",
+          "requested": 20000,
+          "submitted": 20000,
+          "receiptVerified": 20000,
+          "auditPassed": false,
+          "sendWindowMs": 1099.6425969999982,
+          "generatorLimited": true,
+          "finalityMs": {
+            "count": 20000,
+            "p50": 57640.959684,
+            "p95": 81840.92748099996,
+            "max": 86023.84447300003
+          },
+          "settledMs": 86371.99721300008,
+          "statePassed": true,
+          "backingBefore": "80001",
+          "backingAfter": "80001",
+          "auditErrors": []
+        }
+      ],
+      "completionToLastReceiptMs": 194538.243365,
+      "elapsedMs": 225206.5104690001,
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 1385537536,
+      "driverSampleCount": 45,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1791027314.2456915,
+        "lastEpochSeconds": 1791028079.204207,
+        "samples": 154,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 20000.0,
+          "Collator-1502-2": 16087.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 21032906752,
+          "/sys/fs/cgroup/system.slice/memory.current": 22628675584
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 10.010874783999999,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 255.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 153297.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 153297.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 3.590663816999999,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 255.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 100927.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 100927.0
+        }
+      }
+    }
+  ]
+}

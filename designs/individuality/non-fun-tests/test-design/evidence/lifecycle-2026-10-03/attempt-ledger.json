@@ -1,0 +1,772 @@
+{
+  "updatedAt": "2026-10-03T10:10:57.179245+00:00",
+  "scope": "Original audit counts only; later reconciliation and independent verification remain in separate files. Missing artifacts do not establish zero submissions. Carried-over jobs may appear in a later attempt listing.",
+  "rows": [
+    {
+      "case": "a100",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110910965456,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-split-100-burst-default-pilot-37029048758-1",
+      "originalAudits": [
+        {
+          "file": "coinage-split-100-burst-default-pilot-37029048758-1/split-pilot-claim-audit.json",
+          "expected": 100,
+          "submitted": 100,
+          "originalVerifiedReceipts": 100,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-100-burst-default-pilot-37029048758-1/split-pilot-split-audit.json",
+          "expected": 100,
+          "submitted": 100,
+          "originalVerifiedReceipts": 100,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-100-burst-default-pilot-37029048758-1/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-100-burst-default-pilot-37029048758-1/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a1000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110916335685,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "a10000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110921056932,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": "coinage-split-10000-burst-default-pilot-37029048758-1",
+      "originalAudits": [
+        {
+          "file": "coinage-split-10000-burst-default-pilot-37029048758-1/split-pilot-split-audit.json",
+          "expected": 10000,
+          "submitted": 10000,
+          "originalVerifiedReceipts": 8192,
+          "auditPassed": false
+        },
+        {
+          "file": "coinage-split-10000-burst-default-pilot-37029048758-1/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-burst-default-pilot-37029048758-1/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b100",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110926613927,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "b1000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110932554997,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-1000-burst-default-pilot-37029048758-1",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-1000-burst-default-pilot-37029048758-1/recycle-pilot-recycle-audit.json",
+          "expected": 1000,
+          "submitted": 1000,
+          "originalVerifiedReceipts": 1000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-1000-burst-default-pilot-37029048758-1/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b10000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110938156932,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "a_paced",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110943642131,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-split-10000-paced-default-pilot-37029048758-1",
+      "originalAudits": [
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-1/split-pilot-wave-1-claim-audit.json",
+          "expected": 8000,
+          "submitted": 8000,
+          "originalVerifiedReceipts": 8000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-1/split-pilot-wave-1-split-audit.json",
+          "expected": 8000,
+          "submitted": 8000,
+          "originalVerifiedReceipts": 8000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-1/split-pilot-wave-2-claim-audit.json",
+          "expected": 2000,
+          "submitted": 2000,
+          "originalVerifiedReceipts": 2000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-1/split-pilot-wave-2-split-audit.json",
+          "expected": 2000,
+          "submitted": 2000,
+          "originalVerifiedReceipts": 2000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-1/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-1/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a_pool",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110949905167,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "b_paced",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110951390045,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-10000-paced-default-pilot-37029048758-1",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-10000-paced-default-pilot-37029048758-1/recycle-pilot-wave-1-recycle-audit.json",
+          "expected": 8000,
+          "submitted": 8000,
+          "originalVerifiedReceipts": 8000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-10000-paced-default-pilot-37029048758-1/recycle-pilot-wave-2-recycle-audit.json",
+          "expected": 2000,
+          "submitted": 2000,
+          "originalVerifiedReceipts": 2000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-10000-paced-default-pilot-37029048758-1/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b_pool",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110959991483,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-1",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-1/recycle-pilot-recycle-audit.json",
+          "expected": 10000,
+          "submitted": 10000,
+          "originalVerifiedReceipts": 10000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-1/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a20000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110967931030,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "a40000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 110977518400,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "a100000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 111041068856,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "b20000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 111041701790,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-1",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-1/recycle-pilot-recycle-audit.json",
+          "expected": 20000,
+          "submitted": 20000,
+          "originalVerifiedReceipts": 20000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-1/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b40000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 111050628843,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "b100000",
+      "attemptListing": 1,
+      "jobRunAttempt": 1,
+      "jobId": 111087335486,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "a1000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111088217155,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-split-1000-burst-default-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-split-1000-burst-default-pilot-37029048758-2/split-pilot-claim-audit.json",
+          "expected": 1000,
+          "submitted": 1000,
+          "originalVerifiedReceipts": 1000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-1000-burst-default-pilot-37029048758-2/split-pilot-split-audit.json",
+          "expected": 1000,
+          "submitted": 1000,
+          "originalVerifiedReceipts": 1000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-1000-burst-default-pilot-37029048758-2/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-1000-burst-default-pilot-37029048758-2/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a100",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111088217697,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "a10000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111091066111,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": "coinage-split-10000-burst-default-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-split-10000-burst-default-pilot-37029048758-2/split-pilot-split-audit.json",
+          "expected": 10000,
+          "submitted": 10000,
+          "originalVerifiedReceipts": 8192,
+          "auditPassed": false
+        },
+        {
+          "file": "coinage-split-10000-burst-default-pilot-37029048758-2/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-burst-default-pilot-37029048758-2/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b100",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111094179942,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "b1000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111094675197,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-1000-burst-default-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-1000-burst-default-pilot-37029048758-2/recycle-pilot-recycle-audit.json",
+          "expected": 1000,
+          "submitted": 1000,
+          "originalVerifiedReceipts": 1000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-1000-burst-default-pilot-37029048758-2/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b10000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111097683539,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": "coinage-recycle-10000-burst-default-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-10000-burst-default-pilot-37029048758-2/recycle-pilot-recycle-audit.json",
+          "expected": 10000,
+          "submitted": 10000,
+          "originalVerifiedReceipts": 8479,
+          "auditPassed": false
+        },
+        {
+          "file": "coinage-recycle-10000-burst-default-pilot-37029048758-2/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a_paced",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111101176047,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-split-10000-paced-default-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-2/split-pilot-wave-1-claim-audit.json",
+          "expected": 8000,
+          "submitted": 8000,
+          "originalVerifiedReceipts": 8000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-2/split-pilot-wave-1-split-audit.json",
+          "expected": 8000,
+          "submitted": 8000,
+          "originalVerifiedReceipts": 8000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-2/split-pilot-wave-2-claim-audit.json",
+          "expected": 2000,
+          "submitted": 2000,
+          "originalVerifiedReceipts": 2000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-2/split-pilot-wave-2-split-audit.json",
+          "expected": 2000,
+          "submitted": 2000,
+          "originalVerifiedReceipts": 2000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-2/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-paced-default-pilot-37029048758-2/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a_pool",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111104686208,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-split-10000-burst-enlarged-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-split-10000-burst-enlarged-pilot-37029048758-2/split-pilot-claim-audit.json",
+          "expected": 10000,
+          "submitted": 10000,
+          "originalVerifiedReceipts": 10000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-burst-enlarged-pilot-37029048758-2/split-pilot-split-audit.json",
+          "expected": 10000,
+          "submitted": 10000,
+          "originalVerifiedReceipts": 10000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-burst-enlarged-pilot-37029048758-2/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-10000-burst-enlarged-pilot-37029048758-2/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b_paced",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111108401107,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-10000-paced-default-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-10000-paced-default-pilot-37029048758-2/recycle-pilot-wave-1-recycle-audit.json",
+          "expected": 8000,
+          "submitted": 8000,
+          "originalVerifiedReceipts": 8000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-10000-paced-default-pilot-37029048758-2/recycle-pilot-wave-2-recycle-audit.json",
+          "expected": 2000,
+          "submitted": 2000,
+          "originalVerifiedReceipts": 2000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-10000-paced-default-pilot-37029048758-2/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b_pool",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111112313624,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2/recycle-pilot-recycle-audit.json",
+          "expected": 10000,
+          "submitted": 10000,
+          "originalVerifiedReceipts": 10000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a20000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111115755886,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": "coinage-split-20000-burst-enlarged-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-split-20000-burst-enlarged-pilot-37029048758-2/split-pilot-split-audit.json",
+          "expected": 20000,
+          "submitted": 20000,
+          "originalVerifiedReceipts": 20000,
+          "auditPassed": false
+        },
+        {
+          "file": "coinage-split-20000-burst-enlarged-pilot-37029048758-2/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-20000-burst-enlarged-pilot-37029048758-2/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a40000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111118958519,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": "coinage-split-40000-burst-enlarged-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-split-40000-burst-enlarged-pilot-37029048758-2/split-pilot-claim-audit.json",
+          "expected": 40000,
+          "submitted": 40000,
+          "originalVerifiedReceipts": 40000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-40000-burst-enlarged-pilot-37029048758-2/split-pilot-split-audit.json",
+          "expected": 40000,
+          "submitted": 40000,
+          "originalVerifiedReceipts": 40000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-40000-burst-enlarged-pilot-37029048758-2/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-40000-burst-enlarged-pilot-37029048758-2/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "a100000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111148834636,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-split-100000-burst-enlarged-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-split-100000-burst-enlarged-pilot-37029048758-2/split-pilot-claim-audit.json",
+          "expected": 100000,
+          "submitted": 100000,
+          "originalVerifiedReceipts": 100000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-100000-burst-enlarged-pilot-37029048758-2/split-pilot-split-audit.json",
+          "expected": 100000,
+          "submitted": 100000,
+          "originalVerifiedReceipts": 100000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-100000-burst-enlarged-pilot-37029048758-2/split-smoke-claim-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-split-100000-burst-enlarged-pilot-37029048758-2/split-smoke-split-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b20000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111156205276,
+      "status": "completed",
+      "conclusion": "success",
+      "artifactDirectory": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2",
+      "originalAudits": [
+        {
+          "file": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2/recycle-pilot-recycle-audit.json",
+          "expected": 20000,
+          "submitted": 20000,
+          "originalVerifiedReceipts": 20000,
+          "auditPassed": true
+        },
+        {
+          "file": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2/recycle-smoke-recycle-audit.json",
+          "expected": 1,
+          "submitted": 1,
+          "originalVerifiedReceipts": 1,
+          "auditPassed": true
+        }
+      ]
+    },
+    {
+      "case": "b40000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111161539758,
+      "status": "completed",
+      "conclusion": "failure",
+      "artifactDirectory": null,
+      "originalAudits": []
+    },
+    {
+      "case": "b100000",
+      "attemptListing": 2,
+      "jobRunAttempt": 2,
+      "jobId": 111181352051,
+      "status": "in_progress",
+      "conclusion": null,
+      "artifactDirectory": null,
+      "originalAudits": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "quota-pilot-wave-1",
+  "expected": 100,
+  "verifiedReceipts": 100,
+  "uniqueHashes": 100,
+  "passed": true,
+  "errors": [],
+  "operation": "RecyclerUnloadedIntoExternalAsset",
+  "nodes": [
+    10010,
+    10011
+  ],
+  "runId": "37570768389",
+  "attempt": "1",
+  "commit": "37b02ba65a52370e64c91b6809e1f2258ce48d55",
+  "summary": {
+    "name": "quota-pilot-wave-1",
+    "wallStart": "2026-10-07T04:35:32.724Z",
+    "count": 100,
+    "sent": 100,
+    "sendWindowMs": 4.547679999959655,
+    "finalityMs": {
+      "count": 100,
+      "p50": 43076.66045700002,
+      "p95": 55017.93553000002,
+      "max": 55017.98005000001
+    },
+    "settledMs": 55022.90087999997,
+    "passed": true
+  },
+  "trustBoundary": "Two local RPC views plus raw block bodies and decoded events; not an independent consensus or storage-proof verification."
+}

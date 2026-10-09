@@ -1,0 +1,68 @@
+{
+  "verificationDate": "2026-10-08T08:39:30.177691+00:00",
+  "runUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37733097599",
+  "attempt": 1,
+  "commit": "7f269bcf4f65109d6eb84b29c6afb1821c48c419",
+  "stage": "workload",
+  "requested": 10000,
+  "submitted": 10000,
+  "originalReceipts": 8921,
+  "reconciledReceipts": 90,
+  "receiptVerifiedTotal": 9011,
+  "rejectedAtPoolEntry": 989,
+  "unresolvedWatches": 0,
+  "people": 10,
+  "quotaLimit": 1000,
+  "setupMs": 3027737.0908689997,
+  "wave": {
+    "name": "quota-pilot-wave-1",
+    "wallStart": "2026-10-08T07:30:42.200Z",
+    "count": 10000,
+    "sent": 10000,
+    "sendWindowMs": 527.9445379991084,
+    "finalityMs": {
+      "count": 8921,
+      "p50": 2682254.4577,
+      "p95": 3347207.3379079998,
+      "max": 3355883.6168130003
+    },
+    "settledMs": 3356259.929493999,
+    "passed": false
+  },
+  "state": {
+    "uniqueActors": 10000,
+    "balances": {
+      "2": 9011,
+      "0": 989
+    },
+    "consumedTokens": 9011,
+    "snapshot": {
+      "at": {
+        "hash": "0x577ac6d59b83acb6000014f11aa5d212222d593026f6f94815e7cece0dbbfce0",
+        "number": 174746,
+        "parent": "0x7f9725d6e17fb63ec8ab1a83f60f09cc8a7f8f45cdef97e916dfdac6a45ed0ca",
+        "hasNewRuntime": false
+      },
+      "count": 10000,
+      "finalBacking": "1",
+      "heldBacking": "1978",
+      "cause": "AssertionError [ERR_ASSERTION]: quota-pilot-wave-1: block receipt evidence failed; see audit artifact",
+      "scope": "Finalized state observations only; not successful receipts or a workload pass",
+      "observedActors": 10000,
+      "complete": true
+    }
+  },
+  "recovery": {
+    "passed": true,
+    "observationSeconds": 64.93033816599927,
+    "scope": "post-load observation duration, not measured drain time"
+  },
+  "limitations": [
+    "No overall quota summary: audit assertion stopped normal completion.",
+    "Negative quota probes after workload did not run.",
+    "State observations are not receipt evidence.",
+    "Finality percentiles cover 8921 original receipts only; reconciled receipts have no watch finality latency.",
+    "Quota population is 10000 requests grouped across 10 people, not 10000 people.",
+    "Real quota period rollover is not implemented."
+  ]
+}

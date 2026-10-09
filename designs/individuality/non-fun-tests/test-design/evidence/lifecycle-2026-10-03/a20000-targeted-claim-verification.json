@@ -1,0 +1,18 @@
+{
+  "verifiedAt": "2026-10-03T11:58:34.924922+00:00",
+  "artifact": "coinage-split-20000-burst-enlarged-pilot-37116007842-1",
+  "stage": "split-pilot-claim",
+  "requested": 20000,
+  "submitted": 20000,
+  "originalVerifiedReceipts": 20000,
+  "additionalReceiptsInSavedCanonicalBlocks": 0,
+  "totalReceiptsVerifiedNow": 20000,
+  "withoutVerifiedReceipt": 0,
+  "watchStatusCounts": {
+    "finalized": 20000
+  },
+  "nonfinalizedWatchErrors": {},
+  "experimentPassed": true,
+  "canonicalBlocksScanned": 9,
+  "scope": "Saved two-node finalized canonical block evidence only. Unseen hashes are unresolved, not proven never executed."
+}

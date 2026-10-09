@@ -1,0 +1,25 @@
+{
+  "method": "nearest-rank percentiles; milliseconds from per-transaction submission entry; watch observation times, not chain execution duration",
+  "readyObservationMs": {
+    "count": 19996,
+    "p50": 334060.7206190005,
+    "p95": 647707.6603389997,
+    "max": 681760.4417059999
+  },
+  "invalidObservationMs": {
+    "count": 15831,
+    "p50": 4239928.167048,
+    "p95": 7191600.553934,
+    "max": 7599029.00805
+  },
+  "originalFinalizedOutcomeMs": {
+    "count": 4165,
+    "p50": 2596881.1741809994,
+    "p95": 6306909.159008,
+    "max": 7630672.895352999
+  },
+  "savedBlockCount": 295,
+  "blockSpan": 1206,
+  "unsavedHeightsWithinSpan": 911,
+  "latencyCaveat": "Reconciled successes have no observed finality latency and are excluded; original finality includes client outcome processing."
+}

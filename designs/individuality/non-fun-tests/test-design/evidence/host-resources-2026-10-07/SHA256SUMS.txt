@@ -1,0 +1,2 @@
+b43d555c8266399f23cf1b5636bfdd0865ae20bda8ce508d6ad608208f438542  host-resources.json
+449817df79c237d91572f1856b1cfa97f4eecfbb71eed35fc1862b0b59b75492  extract_host_resources.py

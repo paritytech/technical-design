@@ -1,0 +1,8 @@
+# python3 ci/previewnet/verify-remaining-flow.py <pilot-dir> --scenario full-flow --expected 1 --smoke-only true
+# verifier: polkadot-pop-e2e 36231206012e70b5eaf06df1ae983d44dee78012; run locally 2026-10-09T07:59:04Z
+full-flow-smoke-wave-1: 1 unique transactions matched saved block bodies and successful dispatch events
+full-flow-smoke-wave-1-claim: 1 unique transactions matched saved block bodies and successful dispatch events
+full-flow-smoke-wave-1-payment: 1 unique transactions matched saved block bodies and successful dispatch events
+full-flow-smoke-wave-1-recycle: 1 unique transactions matched saved block bodies and successful dispatch events
+full-flow-smoke-wave-1-topup: 1 unique transactions matched saved block bodies and successful dispatch events
+full-flow-smoke: receipt evidence and workload gates verified for 1 actors

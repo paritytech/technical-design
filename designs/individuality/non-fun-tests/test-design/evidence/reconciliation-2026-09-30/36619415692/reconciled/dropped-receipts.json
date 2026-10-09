@@ -1,0 +1,2930 @@
+[
+  {
+    "actor": 260,
+    "txHash": "0x47a02e030fe1779e1975d6430d82319e08f6fd888b46f26e52b2a4a348ad05f0",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 2,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5ESG59ZsGFkYxzSNakapnLJByougxoKnxN642DeNtUSPCneu"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x1d05b131ce0143057cd988d3b9678a0e04ba40e8f0212f9dec05dcdc46edf7f1"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5ESG59ZsGFkYxzSNakapnLJByougxoKnxN642DeNtUSPCneu",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "9901"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 261,
+    "txHash": "0x6f8e1f69c621ad51c10b68c4f43ef1758ec882f54a9b227a6b2376c86a55281e",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 3,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5H6DhaAays3SgjBZr3WqoxVsdEG7jyM4tXPF2w9QzQ7BPtAQ"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xc934a891f9eb2170ea8b58057d9936d4266080bb826497694c93218c117072f1"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5H6DhaAays3SgjBZr3WqoxVsdEG7jyM4tXPF2w9QzQ7BPtAQ",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2230"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 262,
+    "txHash": "0xf3a478956a22051d86cf0fb96718dea2822c85ba891f4c15778665c8a0e7d54d",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 4,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5ENmKAiFUbvrDr82FyuDMJ8dANZpQ7LXTBpsMk94FWgYVtXn"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x86c21b3d58c258d350b738827771e805c6e7e552ff3d1db56305b2a63c64e946"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5ENmKAiFUbvrDr82FyuDMJ8dANZpQ7LXTBpsMk94FWgYVtXn",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "3331"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 263,
+    "txHash": "0xbba3aa3b0539544a46dc0ec5a0db76d6fcecbfd3b6d0825bbec09adcc32c9a31",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 5,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5CFqxgx3RNMYXhh2PxfhKQoSRbxGx8ARDiyioESdfD7nLQ2q"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x88ceabec0ac92126b1884a9cbf31e8c6cb407192778d671877e10da1eee8748b"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5CFqxgx3RNMYXhh2PxfhKQoSRbxGx8ARDiyioESdfD7nLQ2q",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "3256"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 264,
+    "txHash": "0x5de887ef907c4dee7727448104dce542772985177b28bcf9bd945c2fda80d734",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 6,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5HMcpcaUPA12WEVhJ9DLBgK3ouTtVsmr8KB3f7KbaxpTnKte"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x0a964976e02d482c22b388ba1430c3ea437dc88c762a20284e9b69a6cf47e4d6"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5HMcpcaUPA12WEVhJ9DLBgK3ouTtVsmr8KB3f7KbaxpTnKte",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "3517"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 265,
+    "txHash": "0xc176e6c0b71d6f2459507e4febe534acb534765f09478487d8d3fbe50d9acc21",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 7,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5HKGijNhQvBGbNvMtHm3YtjrfkjgAMu7qGKMy3kJPDJanqWs"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x0996de390a2dd5e9b9202aa0ee44da09b826dc34aa4e0f76618c1bb3e885a871"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5HKGijNhQvBGbNvMtHm3YtjrfkjgAMu7qGKMy3kJPDJanqWs",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "3349"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 266,
+    "txHash": "0x8d98ed0f3a72117f9fafeef81a288a7d3343c09a29a341a4066bc72240c4d91e",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 8,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5Da74MQiMAsQdtm34qdLX4twSL4SACY3EZ2ACrv3vvRrohCv"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xdf3dd1d7e8e56e22033e6c11233e3f83e9a6fd4ea538d0d243150bb516633247"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5Da74MQiMAsQdtm34qdLX4twSL4SACY3EZ2ACrv3vvRrohCv",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1611"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 267,
+    "txHash": "0x1f4765747fa4ac32c27e54589d03a7c10cbb15b4482a975c9e78fd8a33307cb5",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 9,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5GYqAPMMm4hX8AqLMzCLkAaECr6mZunjAxBcnVT33FoV8C7w"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x3e66d1d7a7a7e43da60765a62ce1d71c57dbe2b18ee31ffec1f7342ba27bbbbd"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5GYqAPMMm4hX8AqLMzCLkAaECr6mZunjAxBcnVT33FoV8C7w",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2435"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 268,
+    "txHash": "0xb02fa14fe121938724f7ca22888ed6b236e90635cf55b85923aa65af530c9c2f",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 10,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5ELTwZcqpgrbhRTFGWUe5knmxE4BkHxyx6Up8XFG252QgGWG"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x2c57ca997afb5b0e4a8f7a1ee5152d535a1014626b93a5fbb2fedd0a2f7830ce"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5ELTwZcqpgrbhRTFGWUe5knmxE4BkHxyx6Up8XFG252QgGWG",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2783"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 269,
+    "txHash": "0x58fad721ea7e1e0368a5868fd2d1c17fa7647c58f49b63cf187c04266bb9b5b9",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 11,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5ESAbo83etMe3FNSNKL9S5DfkDdPCb8HdBonZmzhcpETgxT4"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x8d3481205d2b03592a7927b94d5b5452f9cd1b567993855ad9988c634c6a4271"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5ESAbo83etMe3FNSNKL9S5DfkDdPCb8HdBonZmzhcpETgxT4",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "3463"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 270,
+    "txHash": "0xd215e802dd31a97efdead9444d823aad1a3e92c47f3a613d398f6b4d15eeeecd",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 12,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5D2zyJZLihy37fUc9gyLC9qiQfCAVaaxTpzp5bv2GbpwueWx"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xcd5573463ea35492d154a756c5fbad1ca32013e5af26524fa6411db29b1a01ae"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5D2zyJZLihy37fUc9gyLC9qiQfCAVaaxTpzp5bv2GbpwueWx",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2501"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 271,
+    "txHash": "0xe4fd8d500bf36981667f26077db074647f28f9625ee3c185add02736e7f76bd8",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 13,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5Hq1Fg63FZhBggy8Fvk9xuJGwvLnnBBSkR92onEEcq47ivVK"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xc88bbf02abe5a6ea3962f7d02705bbf670caabb6070925d05f1276ba9a8e7297"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5Hq1Fg63FZhBggy8Fvk9xuJGwvLnnBBSkR92onEEcq47ivVK",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2481"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 272,
+    "txHash": "0x29e1a9769d67f11f4d47ede72cbc562d1ce4b2a6cbc58dd3d4115670c75c9292",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 14,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5Ec2xx8kmuSe8JVVaWyzgFk9TqdNfiqub3MsgL1vzT6M6BMd"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x526b887a513ac383a5ccb1ec91ddf301c2d0e2cfb3e950dcfcb81fe2c45d6d61"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5Ec2xx8kmuSe8JVVaWyzgFk9TqdNfiqub3MsgL1vzT6M6BMd",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2481"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 273,
+    "txHash": "0x8e0e932990ba1b5a3e1f81a7b45fc1cca25278af32934d66b2d47a11073740e0",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 15,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5E9Vmr3CSYfVj4QFg9HPy3Kq3tvXHwabLZRqj86VchixMmUQ"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x19838323c57ae85a2612192885d11e62aff0a5cf4bda4fadf562177dcf8e4a27"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5E9Vmr3CSYfVj4QFg9HPy3Kq3tvXHwabLZRqj86VchixMmUQ",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1613"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 274,
+    "txHash": "0xb75c92ffe3368137a352d32808c1ebd57a2c15116107c6eacfb85a14d68a3826",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 16,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5Ei4n68o4buZc6ux6erc5nbXkxnmiqkBP8ZaHM9ENsYxzngX"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x257e1a29d804a87f6b91f0c8d7a29edd98a343bdfb0e2cd40999ccc13e1bff1f"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5Ei4n68o4buZc6ux6erc5nbXkxnmiqkBP8ZaHM9ENsYxzngX",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2633"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 275,
+    "txHash": "0x62b5b08edba84f7fd54da48dbd7c29cb8c152ac4bdb5feee94b5f22fccd5c3aa",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 17,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5GmntkV6v9f3jE4sgUChhCVpyMwKLPYZ5x2rv28Lb6rnmHW6"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x6443a582577c009a9efdbb29b6b2e051380aee7e49c2120d211adba4fbe52635"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5GmntkV6v9f3jE4sgUChhCVpyMwKLPYZ5x2rv28Lb6rnmHW6",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1633"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 276,
+    "txHash": "0x51ae328a17bd4ba0fee0b8ab6ff1c87aa49154219c26bc699072730de0999f97",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 18,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5GjCqTYDb6R769rEjSJQ2HinPZr8Uah2YDUQViyfLp9yz4qE"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x8b7d162824a0bcfe1f01c7f39a03a687a276b394ce2bb1bd0633ac073edcebbd"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5GjCqTYDb6R769rEjSJQ2HinPZr8Uah2YDUQViyfLp9yz4qE",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1392"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 277,
+    "txHash": "0xc9edc50e9b884fc114d7b61210ce534a3739e704792d044c7b74adae69601735",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 19,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5FWgdZP9Dbk6ksHRt4B9CLoG2WV7W9ToHhqmRf9UUTW4cHwV"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xd8a1956538f5004dfb9bb73ea4b001298cecea683b046d210b61f15bb8edb334"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5FWgdZP9Dbk6ksHRt4B9CLoG2WV7W9ToHhqmRf9UUTW4cHwV",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1402"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 278,
+    "txHash": "0x740bc5aee22476a0343fbf441886dc38d54c15cfa2e9f439b9e67b05a40b3a82",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 20,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5HgH2WEeeGcmkEVMzp2B8rBGYepK5PMZuFv3yJfJoTJ5kaZ3"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xfabbfae58d89bc44f1c856e717af805c32fc0cfcc517a63d232d8563065a0feb"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5HgH2WEeeGcmkEVMzp2B8rBGYepK5PMZuFv3yJfJoTJ5kaZ3",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2298"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 279,
+    "txHash": "0x6df2d3970cbf1ddcc117bfb21c0679063a374137290dd018824aa09924d77d6c",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 21,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5FUTReXHcYWjzPFgkqUYFadf9eB2EU2XAha86LTn7q47Q97u"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x77f478227ec02305a093e15370c85155c288f0ab6160d1cd0a9c5be85cda9190"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5FUTReXHcYWjzPFgkqUYFadf9eB2EU2XAha86LTn7q47Q97u",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1527"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 280,
+    "txHash": "0xf8a3461218f7009f4d03c1ad629cbd3c55d8ceaa583e29076aa379b557bc5329",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 22,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5CP6z9kt7osQgfnT5qcyado1gJVXyjFy3sqhQbWgMosqLPHt"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x30394bdf8251afb5d8b838c6fba41242a6eff87fa9618ff88707497cf66d3729"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5CP6z9kt7osQgfnT5qcyado1gJVXyjFy3sqhQbWgMosqLPHt",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "768"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 281,
+    "txHash": "0x25738456754a0b4520c27674d8df3ff982e6be2ff5cda049e022a38f8fbf3400",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 23,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5E1Ukdp59YftN9kQ1coBiKfmqPGZib93tuU3uTmuBqjr1Z7p"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xbe6430f3f55eff979890add8cf24940e33dca0c8da98a955e5baa64a21432f85"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5E1Ukdp59YftN9kQ1coBiKfmqPGZib93tuU3uTmuBqjr1Z7p",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1567"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 282,
+    "txHash": "0x3c12bc7b62a5259fa41e6ac7bfba12b5800ba38b9b2e1db1505774df769043d9",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 24,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5CyzrWt93236HtbAxSiSRkgQejo1HjZyxaEhMYaeqqGNo7KH"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x353f98973e142a001f8d7211fdf4c161d4191eb3abf895d75b0d6a02e8288f90"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5CyzrWt93236HtbAxSiSRkgQejo1HjZyxaEhMYaeqqGNo7KH",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1742"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 283,
+    "txHash": "0x48f393839c3b8bc08b5f0e2eb6685dde6fb837eea05b6d70f904d39a6cc23d09",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 25,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5ChsLisRZZvRjHtxWg8KU1ecQXbYtyWFxbPziYbiucdRKYvF"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xcf6d008d1b597a3d69b766cb7903e6bb5d09cfbdf85e87ff087748d9245a8fac"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5ChsLisRZZvRjHtxWg8KU1ecQXbYtyWFxbPziYbiucdRKYvF",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1420"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 284,
+    "txHash": "0xbaf6443befd487540342b9ae35c8643f14fb9386d41f4f5dfdd241665f2566e8",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 26,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5G1iJxFTF9HYoosdFo6usgqJVEoYyUkTqGqAtjRMLXm1umPf"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x9eb1aec710c68774c45bb8f7fdbd29cf6846fdbb1b4a278646d0754e45d992bf"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5G1iJxFTF9HYoosdFo6usgqJVEoYyUkTqGqAtjRMLXm1umPf",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1958"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 285,
+    "txHash": "0x2b84094cd1e6a07fade199694585969f5b19ecf2225748fcb28d6183dac108a4",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 27,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5EpwJe1kFobRoLQfkYZ5ZYVrn3pwuo7rbnjxA2BYom6XenPY"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xccb3b62d8eff4cccf7ce992b0f0c9a2c7fc2f347157e3ddb15a05c490091f393"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5EpwJe1kFobRoLQfkYZ5ZYVrn3pwuo7rbnjxA2BYom6XenPY",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "293"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 286,
+    "txHash": "0x1061dfec2e75b963cabe44d6d0548ec78de2b82e4a441c017dde2cd2211a583b",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 28,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5GxU3pryVHJVgFoekPY8AfrFzzBKwUqZVPQEd6NmeYh77ujw"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x160ea7e171e60b7cdf458e7996d1cb8788c243c5a8125f406ee7b1e520e9d8ec"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5GxU3pryVHJVgFoekPY8AfrFzzBKwUqZVPQEd6NmeYh77ujw",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2151"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 287,
+    "txHash": "0x919cda0706f028efc9f62096dd7e79788841ddecdde2f8584b8faf8280841d82",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 29,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5DUHt2QGADYD9maSWa2SCCNhX7AbnpPGXJJgKpqjSBjAGCS6"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x84acce39d528edce16a00b34357ad51b88d8e18f17ce97d7c14fdd5ed0d9965b"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5DUHt2QGADYD9maSWa2SCCNhX7AbnpPGXJJgKpqjSBjAGCS6",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1491"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 288,
+    "txHash": "0xcedb599faa59cddfafb2b95da93f29ef326f4b82155ee7576af16dd7cdaeff3e",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 30,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5HauiXRppd5ryK7KKhzY2krkCj9dndc4JKXKHqrs7TbShY3P"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x50343a1caa57ef6a4d89f9bd8d1fba01383db195a411a427fceff7053884863a"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5HauiXRppd5ryK7KKhzY2krkCj9dndc4JKXKHqrs7TbShY3P",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2303"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 289,
+    "txHash": "0x78552b2a9538701b2f16f47a0c980cfd4b98521f3d9dbbc4bacc9637a8dd9238",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 31,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5HptXYbQ6rmHgvdnuyqHCTcxGZHVDCMvnc2wZSJPHbQqxCpx"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x0f8d427b590cc653de52a6b1387adbe75e8894af26f8c300a0663f1d1095cbe1"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5HptXYbQ6rmHgvdnuyqHCTcxGZHVDCMvnc2wZSJPHbQqxCpx",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2501"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 290,
+    "txHash": "0xa423d92a21a462e9b14cd5583ff51ea1a37c47d3c786ee52c664ce8cd31c0765",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 32,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5HQubqpG9vKdLgadwpMCww7MoXZN3jqJScfh4kQRuHPkgpaY"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x8929ce536a370a4863bd5b732c389bba58042b2d8870b1fe662eb75ad0642aa4"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5HQubqpG9vKdLgadwpMCww7MoXZN3jqJScfh4kQRuHPkgpaY",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2577"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 292,
+    "txHash": "0x85c3bd69b84bf4a61223a1435b0d1021a84be26059a48777bd266343b0b43bec",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 33,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5EfJ2b2VxbsBRb1FJbAddtZPc8TbDQEtAwpxwXYp9Hx8PKpK"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xb57e0175c0b0fa02f8b5778c63c46fc20fe0884f0a2381e148e71861f7367288"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5EfJ2b2VxbsBRb1FJbAddtZPc8TbDQEtAwpxwXYp9Hx8PKpK",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2491"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 291,
+    "txHash": "0x2c9cebd3151f177f22f9153fe1316c1550fac19eca2556b5b585bdf19717e793",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 34,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5GC413Vt6qNfkKtKzFBhNvSBvyQHQKs7XLsLRbYCF1GJcVEj"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x47cdc2b6060f001d8443630b8bb65e0be96dc8da9ffec0d87ee10767679bda95"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5GC413Vt6qNfkKtKzFBhNvSBvyQHQKs7XLsLRbYCF1GJcVEj",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2326"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 293,
+    "txHash": "0xf25f07c53322b1135076bdbb8430269e2ebd27c4c0a165558f9253ed36a99d4d",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 35,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5EbgKoJtCCRHdEPQVwDFbzP91ofpEKNh2dLx4XX2eW5PBqSD"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x7265ce49479763b492c077bb073e3645675ecd2a1250b896999141bcbafc63d4"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5EbgKoJtCCRHdEPQVwDFbzP91ofpEKNh2dLx4XX2eW5PBqSD",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1742"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 294,
+    "txHash": "0x21c6a7658425aa897bae9b2bf34e7c5ea33bcd3e5c67f14beff78dc1d4d87c23",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 36,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5D2VXfTgr7hQB3WxEu85BFutx4Ks9BZuQVaiEVe5szAXzoRh"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x785e5b3d3f3e385dbbdada54dded665f21511d2b7e7db85651ff00ba06e103d2"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5D2VXfTgr7hQB3WxEu85BFutx4Ks9BZuQVaiEVe5szAXzoRh",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1600"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 296,
+    "txHash": "0x5e2676270e8c28a876ae268520221f78faf7a06e8ecb57b7e452f160156623ae",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 37,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5EyVzMnzHhUYb8u7r24m61YyE4ZtLp3ZsZbX9Re4TmEv49qo"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xb893a288069208e7395d946757a327945aa2c0837a5527af14a5f58fc45b1b95"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5EyVzMnzHhUYb8u7r24m61YyE4ZtLp3ZsZbX9Re4TmEv49qo",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1567"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 295,
+    "txHash": "0xbafd6b78252fce87549a7d8235c87fe335f76abab944e117b1e439c40dd65cec",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 38,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5EWVvyv68tDZyf8pt57Kvnmp4RDjyZZiEXkdAA63TAdHthXa"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x0c9314a29b6e08bd9f03888b7720822b1012fb0471267f42ac8afad58331ec89"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5EWVvyv68tDZyf8pt57Kvnmp4RDjyZZiEXkdAA63TAdHthXa",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1227"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 297,
+    "txHash": "0x1792d263d12f2184e6e2e6a335a7b0ee3d88f4cc60c5aa3475e45e35d816f9ad",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 39,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5Hgj8kTdJXjEG7KjhMYwUHdPBr6X26eRgGJwUJT2fX5EDdrQ"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xb27ea625cd2f629ad2133411e43a88c557f9971045091bd7924f84897ce527be"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5Hgj8kTdJXjEG7KjhMYwUHdPBr6X26eRgGJwUJT2fX5EDdrQ",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1413"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 298,
+    "txHash": "0xa74a06281858526cc0a9ed213b237837d75518e079af387a2693a0e01b5a295a",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 40,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5Cob6WXysuo4jLH5ShqGEi2ohwtiZyJ6ce4HGaKSJtV1ATfy"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xd32bdf6e14e6e0078849ae86bcbfa693cda447d23f822d1c776f38d868829bb9"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5Cob6WXysuo4jLH5ShqGEi2ohwtiZyJ6ce4HGaKSJtV1ATfy",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1446"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 299,
+    "txHash": "0x4b200a0b3c173ead76065776c81b23ea1acd57ccab215bc6d080f89476db1a46",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 41,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5FeCnQKZREEHAfjNaSJNy9Lirqi6ENwTob6ZBLwhkcPt3uci"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x4d944a1762c7cae5d0864e39924a8b785307085bf500479c976115acaf8aef11"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5FeCnQKZREEHAfjNaSJNy9Lirqi6ENwTob6ZBLwhkcPt3uci",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "463"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 300,
+    "txHash": "0xd07da1df573f2c3555abaf8c584534d73dc43aff6f2e9a735a80b6e378bad6b5",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 42,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5GGg4XjErZBA3RBXANGK9Ranpw4Q955to1X53YGhTDnbxX4h"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x3f77d350d9759ed78e2732156bf5169fbcc909182c9f62ecb33e4f3ab6859253"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5GGg4XjErZBA3RBXANGK9Ranpw4Q955to1X53YGhTDnbxX4h",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1360"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 301,
+    "txHash": "0xbcba910074de53778a507e6da34b93600ddd6b7d0f76ed1df7d77c42a052d1c2",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 43,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5G3u7JDb1LBLsMoBb3FppgcMiURHCAdtLLyN9jcvXnFAMGiQ"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xa616b5fd30d25f933d89124f282688a02fab2e0e035a3d87fdc2cc9b10d56414"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5G3u7JDb1LBLsMoBb3FppgcMiURHCAdtLLyN9jcvXnFAMGiQ",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2567"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 302,
+    "txHash": "0x70ef99051d178405b6f5ff6bf295933886838a41f5c3bcc66eea983fa2b42a56",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 44,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5Fh9Ww2NnM1rR7VqJVyLtYu5SGhzjKFMeMY1CCPzPUs9w4aM"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x2b23e7b3b799f7de671607ba60452333ecae9b3487124a883fbfcb9bc2b48a35"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5Fh9Ww2NnM1rR7VqJVyLtYu5SGhzjKFMeMY1CCPzPUs9w4aM",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1567"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 303,
+    "txHash": "0xd6eba7766834fe5048d2e426384fdc59ff93d154cbdafd92ecfde53d001c3954",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 45,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5DWjUQAWn9k8URAPsGRrksq9HCjACyEsk5NYDW9RsNDoZrhS"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x48939d074c8f86c858d16388422ac346888bef7ec4715aee10cd0635d3ffb8f0"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5DWjUQAWn9k8URAPsGRrksq9HCjACyEsk5NYDW9RsNDoZrhS",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1603"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 304,
+    "txHash": "0x2cee19dce32fb88aa280dd13ca8794d914885da31bec75ddf561b385ce30eb6d",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 46,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5HVjVhFsFZGus1SaPrivqVcU4Y7RoZHeoTHCeJMct7VwaUCL"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x06ed66b395cd7679f9ddba854712a4c817a09e43f310f02959934c27de9f0be6"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5HVjVhFsFZGus1SaPrivqVcU4Y7RoZHeoTHCeJMct7VwaUCL",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "2567"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 305,
+    "txHash": "0x517e40efe0fd43bac4c7132ee5db098f04ecca23d076baf3344bb4d733357ea9",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 47,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5G6FPAFnQBAPjkwhaJJr8GJTky6TEWfBPS9nayBU6DLR6McC"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x3ab3ef85938ce7136edd2ffc7d78eb708f5d210882f692c79a856e800f96ac80"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5G6FPAFnQBAPjkwhaJJr8GJTky6TEWfBPS9nayBU6DLR6McC",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1025"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 306,
+    "txHash": "0x25b41a3fe8ae864507ec06f6b6e262319d8e9ce44618799d5dc2fbe9a4fe1966",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 48,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5H1RidAkBdiJpFG8oU9XdPrBanChtsiA1sjwjZWvWvJrpCeq"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x80a6a95740c379d18985be4b25e85e8c788b591c2eae9fe380bfbf3a60ef66c1"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5H1RidAkBdiJpFG8oU9XdPrBanChtsiA1sjwjZWvWvJrpCeq",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1768"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 307,
+    "txHash": "0x9b2c365bfeb4fa7f607c9c5f700a95619c502436ba3b1fbd9ecb158b1c66f859",
+    "outcome": "verified",
+    "blockNumber": 173699,
+    "blockHash": "0x1fe2476c36fcf7998f588acac8dd2607e4f402fb3cb1a8e124d264eb3576c0d0",
+    "extrinsicIndex": 49,
+    "evidenceFile": "original/evidence/burst/block-173699.json",
+    "events": [
+      {
+        "type": "System",
+        "value": {
+          "type": "KilledAccount",
+          "value": {
+            "account": "5FYr6uQSWHMLDkX3bPdLWRjCE7rqygP8ycDPSdiK6ieyY1Pn"
+          }
+        }
+      },
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xcbeac82b26b165e35ac5fc176610d1a0a6074c2ca17cceaaa419d2ba284c1516"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithExternalAsset",
+          "value": {
+            "instance_id": 2,
+            "who": "5FYr6uQSWHMLDkX3bPdLWRjCE7rqygP8ycDPSdiK6ieyY1Pn",
+            "value": 1,
+            "amount": "2"
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5753553000",
+                "proof_size": "1557"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+]

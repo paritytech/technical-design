@@ -1,0 +1,399 @@
+{
+  "updatedAt": "2026-10-09T07:33:46.305812+00:00",
+  "required": 41,
+  "complete": false,
+  "counts": {
+    "not-started": 19,
+    "preserved-reviewed": 6,
+    "reviewed-nonpass": 5,
+    "running-or-queued": 1,
+    "verified-pass": 10
+  },
+  "cases": [
+    {
+      "id": "coinage-burst-case-100-default-merchant",
+      "scenario": "merchant",
+      "profile": "100-default",
+      "phase": null,
+      "state": "preserved-reviewed",
+      "runId": 37510457575,
+      "attempt": 1,
+      "outcome": "passed; independently verified"
+    },
+    {
+      "id": "coinage-burst-case-1000-default-merchant",
+      "scenario": "merchant",
+      "profile": "1000-default",
+      "phase": null,
+      "state": "preserved-reviewed",
+      "runId": 37510457575,
+      "attempt": 1,
+      "outcome": "passed; independently verified"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-default-merchant",
+      "scenario": "merchant",
+      "profile": "10000-burst-default",
+      "phase": null,
+      "state": "preserved-reviewed",
+      "runId": 37510457575,
+      "attempt": 1,
+      "outcome": "failed completion target; 8193 original + 818 reconciled, 989 pool rejections"
+    },
+    {
+      "id": "coinage-burst-case-10000-paced-default-merchant",
+      "scenario": "merchant",
+      "profile": "10000-paced-default",
+      "phase": null,
+      "state": "preserved-reviewed",
+      "runId": 37510457575,
+      "attempt": 1,
+      "outcome": "passed; independently verified"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-enlarged-merchant",
+      "scenario": "merchant",
+      "profile": "10000-burst-enlarged",
+      "phase": null,
+      "state": "preserved-reviewed",
+      "runId": 37510457575,
+      "attempt": 1,
+      "outcome": "passed; independently verified"
+    },
+    {
+      "id": "coinage-burst-case-20000-burst-enlarged-merchant",
+      "scenario": "merchant",
+      "profile": "20000-burst-enlarged",
+      "phase": null,
+      "state": "preserved-reviewed",
+      "runId": 37510457575,
+      "attempt": 1,
+      "outcome": "passed; independently verified"
+    },
+    {
+      "id": "coinage-burst-case-100-default-offboard",
+      "scenario": "offboard",
+      "profile": "100-default",
+      "phase": null,
+      "runId": 37590878841,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37590878841",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-1000-default-offboard",
+      "scenario": "offboard",
+      "profile": "1000-default",
+      "phase": null,
+      "runId": 37593396451,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37593396451",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-default-offboard",
+      "scenario": "offboard",
+      "profile": "10000-burst-default",
+      "phase": null,
+      "runId": 37606103903,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37606103903",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "failure",
+      "state": "reviewed-nonpass"
+    },
+    {
+      "id": "coinage-burst-case-10000-paced-default-offboard",
+      "scenario": "offboard",
+      "profile": "10000-paced-default",
+      "phase": null,
+      "runId": 37645548491,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37645548491",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-enlarged-offboard",
+      "scenario": "offboard",
+      "profile": "10000-burst-enlarged",
+      "phase": null,
+      "runId": 37684376141,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37684376141",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "failure",
+      "state": "reviewed-nonpass"
+    },
+    {
+      "id": "coinage-burst-case-20000-burst-enlarged-offboard",
+      "scenario": "offboard",
+      "profile": "20000-burst-enlarged",
+      "phase": null,
+      "runId": 37694191834,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37694191834",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "failure",
+      "state": "reviewed-nonpass"
+    },
+    {
+      "id": "coinage-burst-case-100-default-quota",
+      "scenario": "quota",
+      "profile": "100-default",
+      "phase": null,
+      "runId": 37570768389,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37570768389",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-1000-default-quota",
+      "scenario": "quota",
+      "profile": "1000-default",
+      "phase": null,
+      "runId": 37690106740,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37690106740",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-default-quota",
+      "scenario": "quota",
+      "profile": "10000-burst-default",
+      "phase": null,
+      "runId": 37733097599,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37733097599",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "failure",
+      "state": "reviewed-nonpass"
+    },
+    {
+      "id": "coinage-burst-case-10000-paced-default-quota",
+      "scenario": "quota",
+      "profile": "10000-paced-default",
+      "phase": null,
+      "runId": 37751232138,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37751232138",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-enlarged-quota",
+      "scenario": "quota",
+      "profile": "10000-burst-enlarged",
+      "phase": null,
+      "runId": 37772925410,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37772925410",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-20000-burst-enlarged-quota",
+      "scenario": "quota",
+      "profile": "20000-burst-enlarged",
+      "phase": null,
+      "runId": 37800522275,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37800522275",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "failure",
+      "state": "reviewed-nonpass"
+    },
+    {
+      "id": "coinage-burst-case-100-default-full-flow",
+      "scenario": "full-flow",
+      "profile": "100-default",
+      "phase": null,
+      "runId": 37855938846,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37855938846",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-1000-default-full-flow",
+      "scenario": "full-flow",
+      "profile": "1000-default",
+      "phase": null,
+      "runId": 37858620774,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37858620774",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-default-full-flow",
+      "scenario": "full-flow",
+      "profile": "10000-burst-default",
+      "phase": null,
+      "runId": 37899564808,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37899564808",
+      "attempt": 1,
+      "ciStatus": "in_progress",
+      "ciConclusion": null,
+      "state": "running-or-queued"
+    },
+    {
+      "id": "coinage-burst-case-10000-paced-default-full-flow",
+      "scenario": "full-flow",
+      "profile": "10000-paced-default",
+      "phase": null,
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-burst-case-10000-burst-enlarged-full-flow",
+      "scenario": "full-flow",
+      "profile": "10000-burst-enlarged",
+      "phase": null,
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-burst-case-20000-burst-enlarged-full-flow",
+      "scenario": "full-flow",
+      "profile": "20000-burst-enlarged",
+      "phase": null,
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-burst-case-smoke-full-flow",
+      "scenario": "full-flow",
+      "profile": "smoke",
+      "phase": null,
+      "runId": 37854332739,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37854332739",
+      "attempt": 1,
+      "ciStatus": "completed",
+      "ciConclusion": "success",
+      "state": "verified-pass"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-topup",
+      "scenario": "topup",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-topup",
+      "scenario": "topup",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-claim",
+      "scenario": "claim",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-claim",
+      "scenario": "claim",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-split",
+      "scenario": "split",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-split",
+      "scenario": "split",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-recycle",
+      "scenario": "recycle",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-recycle",
+      "scenario": "recycle",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-merchant",
+      "scenario": "merchant",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-merchant",
+      "scenario": "merchant",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-quota",
+      "scenario": "quota",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-quota",
+      "scenario": "quota",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-offboard",
+      "scenario": "offboard",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-offboard",
+      "scenario": "offboard",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-smoke-full-flow",
+      "scenario": "full-flow",
+      "profile": null,
+      "phase": "smoke",
+      "state": "not-started"
+    },
+    {
+      "id": "coinage-sustained-case-hold-full-flow",
+      "scenario": "full-flow",
+      "profile": null,
+      "phase": "hold",
+      "state": "not-started"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "runId": 37694191834,
+  "attempt": 1,
+  "commit": "e163be9426078d59dc70e5c1ad846d48a4971e52",
+  "verificationDate": "2026-10-08T04:49:52.592783+00:00",
+  "requested": 20000,
+  "submitted": 20000,
+  "setupFinalizedReported": 20000,
+  "originalReceiptsVerifiedOffline": 4165,
+  "reconciledReceipts": 2614,
+  "receiptVerifiedTotal": 6779,
+  "unresolved": 13221,
+  "includedDispatchFailuresFound": 0,
+  "watchOutcomes": {
+    "finalized": 4165,
+    "readyThenInvalid": 15831,
+    "rpcInternalError": 4
+  },
+  "savedBlocks": 295,
+  "savedBlockRange": [
+    175556,
+    176761
+  ],
+  "classification": {
+    "setupFailure": false,
+    "workloadFailure": "not established for unresolved transactions",
+    "missingReceipts": 13221,
+    "unobservedOutcomes": 13221,
+    "infrastructureFailure": "not established",
+    "generatorLimitation": "receipt collection only saved blocks named by finalized watches"
+  },
+  "stateObservation": {
+    "heldBacking": "0",
+    "finalBacking": "1",
+    "completeActorObservation": true,
+    "isReceiptEvidence": false,
+    "actorReview": {
+      "observed": 20000,
+      "uniqueActors": 20000,
+      "actorCoverageComplete": true,
+      "balanceCounts": {
+        "2": 20000
+      },
+      "consumedTokenCount": 20000,
+      "sourceCoinPresent": 0,
+      "recipientCoinPresent": 0,
+      "observedAtHeights": [
+        176763
+      ],
+      "scope": "Saved finalized state observations; not receipt verification or proof of transaction identity."
+    }
+  },
+  "notes": [
+    "Original receipt-only verifier passed; workload completeness was not asserted.",
+    "Reconciled hashes matched signed bytes, raw block/index, successful dispatch, expected Coinage event and both saved finality views.",
+    "Hashes absent from saved blocks are unresolved, not proven failures.",
+    "Full artifact preservation still downloading."
+  ]
+}

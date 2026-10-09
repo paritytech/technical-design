@@ -1,0 +1,18 @@
+{
+  "kind": "harness-shutdown-timeout",
+  "elapsedMs": 120001,
+  "priorExitCode": 1,
+  "activeResources": [
+    "PipeWrap",
+    "PipeWrap",
+    "TCPSocketWrap"
+  ],
+  "memory": {
+    "rss": 463953920,
+    "heapTotal": 203108352,
+    "heapUsed": 52369040,
+    "external": 19928393,
+    "arrayBuffers": 4630350
+  },
+  "note": "Workload finished before this deadline was armed. Receipt and state results remain separate."
+}

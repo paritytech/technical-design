@@ -1,0 +1,5 @@
+quota-pilot-wave-1: receipt-only check; workload gates and completeness are NOT asserted
+quota-pilot-wave-1: 4823 unique transactions matched saved block bodies and successful dispatch events
+quota-smoke-wave-1: receipt-only check; workload gates and completeness are NOT asserted
+quota-smoke-wave-1: 1 unique transactions matched saved block bodies and successful dispatch events
+This checks saved evidence consistency; it does not authenticate the RPC nodes or prove consensus.

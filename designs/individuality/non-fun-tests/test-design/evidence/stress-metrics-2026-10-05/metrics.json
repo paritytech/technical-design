@@ -1,0 +1,5000 @@
+{
+  "extractedAt": "2026-10-04T18:33:22.262563+00:00",
+  "note": "Offline extraction of saved evidence; no tests run. verifiedOutcome supersedes original measurement receipt counts after reconciliation. Timing populations remain original.",
+  "lifecycle": [
+    {
+      "verifiedOutcome": {
+        "case": "a100",
+        "artifact": "coinage-split-100-burst-default-pilot-37029048758-1",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/1",
+        "attempt": 1,
+        "requestedActors": 100,
+        "submittedExtrinsics": 200,
+        "receiptVerified": 200,
+        "observedReady": null,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "a100-verification.json",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11236414289,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-100-burst-default-pilot-37029048758-1",
+        "scenario": "split",
+        "actors": 100,
+        "mode": "burst",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 120.24211249199999,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "split-pilot-claim",
+            "requested": 100,
+            "submitted": 100,
+            "receiptVerified": 100,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.003745028999983333,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 100,
+              "p50": 31.70952616000001,
+              "p95": 31.712494940999953,
+              "max": 31.714283470000023
+            },
+            "settledSeconds": 31.717196218999977,
+            "statePassed": true,
+            "backingBefore": "401",
+            "backingAfter": "401",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-split",
+            "requested": 100,
+            "submitted": 100,
+            "receiptVerified": 100,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.005526810000010301,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 100,
+              "p50": 27.68704885999998,
+              "p95": 27.687672819000028,
+              "max": 27.68791285000002
+            },
+            "settledSeconds": 27.69360738,
+            "statePassed": true,
+            "backingBefore": "401",
+            "backingAfter": "401",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 59.68110794100002,
+        "elapsedSeconds": 60.02067998200003,
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 326008832,
+        "driverSampleCount": 12,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790956220.0584805,
+          "lastEpochSeconds": 1790956580.0540972,
+          "samples": 73,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 100.0,
+            "Collator-1502-2": 100.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 15362576384,
+            "/sys/fs/cgroup/system.slice/memory.current": 16421912576
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.024616493999999996,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 120.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 234.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 234.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.023530529000000022,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 120.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 234.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 234.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "a1000",
+        "artifact": "coinage-split-1000-burst-default-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 1000,
+        "submittedExtrinsics": 2000,
+        "receiptVerified": 2000,
+        "observedReady": null,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "a1000-attempt-2-verification.json",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11260256369,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-1000-burst-default-pilot-37029048758-2",
+        "scenario": "split",
+        "actors": 1000,
+        "mode": "burst",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 122.06709966500001,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "split-pilot-claim",
+            "requested": 1000,
+            "submitted": 1000,
+            "receiptVerified": 1000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.051408845000027216,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 1000,
+              "p50": 26.154953685000017,
+              "p95": 26.172628394,
+              "max": 26.186040783000003
+            },
+            "settledSeconds": 26.21122557000001,
+            "statePassed": true,
+            "backingBefore": "4001",
+            "backingAfter": "4001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-split",
+            "requested": 1000,
+            "submitted": 1000,
+            "receiptVerified": 1000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.06379678400000557,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 1000,
+              "p50": 29.805362175999967,
+              "p95": 29.821587763999997,
+              "max": 29.82226922399999
+            },
+            "settledSeconds": 29.87448723899998,
+            "statePassed": true,
+            "backingBefore": "4001",
+            "backingAfter": "4001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 57.938976767999996,
+        "elapsedSeconds": 60.029346160999964,
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 438513664,
+        "driverSampleCount": 12,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790988623.7775133,
+          "lastEpochSeconds": 1790988988.7897022,
+          "samples": 74,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 1000.0,
+            "Collator-1502-2": 1000.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 15445188608,
+            "/sys/fs/cgroup/system.slice/memory.current": 16407744512
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.04507579200000002,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 122.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 2034.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 2034.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.039614320999999994,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 122.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 2034.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 2034.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "a10000",
+        "artifact": "coinage-split-10000-burst-default-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 10000,
+        "submittedExtrinsics": 10000,
+        "receiptVerified": 8192,
+        "observedReady": null,
+        "outcome": "incomplete",
+        "ciShutdownFailure": false,
+        "verificationFile": "coinage-split-10000-burst-default-pilot-37029048758-2-split-pilot-split-subset-verification.json",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11260286877,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-10000-burst-default-pilot-37029048758-2",
+        "scenario": "split",
+        "actors": 10000,
+        "mode": "burst",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 186.317021529,
+        "summaryPresent": false,
+        "passed": null,
+        "waves": [
+          {
+            "name": "split-pilot-split",
+            "requested": 10000,
+            "submitted": 10000,
+            "receiptVerified": 8192,
+            "auditPassed": false,
+            "sendWindowSeconds": 0.5159811609999743,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 8192,
+              "p50": 41.39734815600002,
+              "p95": 49.33723178600002,
+              "max": 53.20869505000004
+            },
+            "settledSeconds": 53.630525185999986,
+            "statePassed": false,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 1808
+          }
+        ],
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 861954048,
+        "driverSampleCount": 14,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790989500.3789253,
+          "lastEpochSeconds": 1790989935.3625543,
+          "samples": 88,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 8353.0,
+            "Collator-1502-2": 8847.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 16570335232,
+            "/sys/fs/cgroup/system.slice/memory.current": 17535389696
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.338921375,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 145.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 23241.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 23241.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.31835514899999984,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 145.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 21613.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 21613.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b100",
+        "artifact": "coinage-recycle-100-burst-default-pilot-37116007842-1",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842/attempts/1",
+        "attempt": 1,
+        "requestedActors": 100,
+        "submittedExtrinsics": 100,
+        "receiptVerified": 100,
+        "observedReady": 100,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "b100-targeted-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ba4bdee5c1a4a7ed725e6a1f34653b7bb39b774c",
+        "artifactId": 11272941802,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-100-burst-default-pilot-37116007842-1",
+        "scenario": "recycle",
+        "actors": 100,
+        "mode": "burst",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 148.785471004,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "recycle-pilot-recycle",
+            "requested": 100,
+            "submitted": 100,
+            "receiptVerified": 100,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.005608899999991991,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 100,
+              "p50": 35.676244247999975,
+              "p95": 35.67671597799996,
+              "max": 35.677218748000044
+            },
+            "settledSeconds": 35.68247646800004,
+            "statePassed": true,
+            "backingBefore": "201",
+            "backingAfter": "201",
+            "auditErrors": []
+          }
+        ],
+        "completionToLastReceiptSeconds": 35.68247646800004,
+        "elapsedSeconds": 55.34253599599999,
+        "ready": 100,
+        "readinessSeconds": {
+          "count": 100,
+          "p50": 50.33895010999998,
+          "p95": 50.34095491999999,
+          "max": 50.34130859999999
+        },
+        "unresolvedReadiness": 0,
+        "observationCutoff": {
+          "elapsedSeconds": 50.34131091,
+          "at": "0x23cc14dae3f6240d229f221a04c61fdb5c19d4f68337297e77987e15adb86081"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 256331776,
+        "driverSampleCount": 11,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1791026469.0337877,
+          "lastEpochSeconds": 1791026874.0858803,
+          "samples": 82,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 102.0,
+            "Collator-1502-2": 102.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 16602959872,
+            "/sys/fs/cgroup/system.slice/memory.current": 17608839168
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.028260946999999988,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 135.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 142.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 142.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.02752917500000001,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 135.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 143.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 143.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b1000",
+        "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 1000,
+        "submittedExtrinsics": 1000,
+        "receiptVerified": 1000,
+        "observedReady": 1000,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "b1000-attempt-2-verification.json",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11259668859,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-2",
+        "scenario": "recycle",
+        "actors": 1000,
+        "mode": "burst",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 150.611823076,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "recycle-pilot-recycle",
+            "requested": 1000,
+            "submitted": 1000,
+            "receiptVerified": 1000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.04421212400001241,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 1000,
+              "p50": 41.87304415899998,
+              "p95": 53.89430959199998,
+              "max": 53.91507435000001
+            },
+            "settledSeconds": 53.939579677000005,
+            "statePassed": true,
+            "backingBefore": "2001",
+            "backingAfter": "2001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 53.939579677000005,
+        "elapsedSeconds": 110.62921709499997,
+        "ready": 1000,
+        "readinessSeconds": {
+          "count": 1000,
+          "p50": 80.51704304399999,
+          "p95": 105.595375893,
+          "max": 105.59744353300002
+        },
+        "unresolvedReadiness": 0,
+        "observationCutoff": {
+          "elapsedSeconds": 105.62679960899997,
+          "at": "0xaf0957711a52f2f77c5e9b3c0ad762153c7f51af1db2f8d174164c0e60d5558e"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 409047040,
+        "driverSampleCount": 22,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790990568.4822621,
+          "lastEpochSeconds": 1790991028.4319472,
+          "samples": 93,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 1004.0,
+            "Collator-1502-2": 1005.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 15744602112,
+            "/sys/fs/cgroup/system.slice/memory.current": 16717127680
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.05664312200000001,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 154.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 1881.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 1881.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.05575029100000001,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 154.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 1911.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 1911.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b10000",
+        "artifact": "coinage-recycle-10000-burst-default-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 10000,
+        "submittedExtrinsics": 10000,
+        "receiptVerified": 8724,
+        "observedReady": 5002,
+        "outcome": "incomplete",
+        "ciShutdownFailure": false,
+        "verificationFile": "coinage-recycle-10000-burst-default-pilot-37029048758-2-recycle-pilot-recycle-subset-verification.json",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11260852886,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-10000-burst-default-pilot-37029048758-2",
+        "scenario": "recycle",
+        "actors": 10000,
+        "mode": "burst",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 206.564959107,
+        "summaryPresent": false,
+        "passed": null,
+        "waves": [
+          {
+            "name": "recycle-pilot-recycle",
+            "requested": 10000,
+            "submitted": 10000,
+            "receiptVerified": 8479,
+            "auditPassed": false,
+            "sendWindowSeconds": 0.3829111930000363,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 8479,
+              "p50": 133.68002700599993,
+              "p95": 217.97112799000007,
+              "max": 229.94226587300003
+            },
+            "settledSeconds": 230.08361931400006,
+            "statePassed": false,
+            "backingBefore": "20001",
+            "backingAfter": "20001",
+            "auditErrorCount": 1521
+          }
+        ],
+        "ready": 5002,
+        "unresolvedReadiness": 4998,
+        "observationCutoff": {
+          "elapsedSeconds": 247.07945489500003,
+          "at": "0x287b5d1475abd3cca4cbc6cb7bf1be2ae36b4ba45ab02111ac595496d854499c"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 1076408320,
+        "driverSampleCount": 50,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790991518.4439595,
+          "lastEpochSeconds": 1790992178.419045,
+          "samples": 133,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 9011.0,
+            "Collator-1502-2": 9011.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17494253568,
+            "/sys/fs/cgroup/system.slice/memory.current": 18467205120
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 11.281255956999996,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 217.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 55194.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 55194.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 2.1808407119999997,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 217.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 55301.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 55301.0
+          }
+        },
+        "readinessSeconds": {
+          "count": 5002,
+          "p50": 150.951398124,
+          "p95": 226.7362156439999,
+          "max": 231.870719707
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "a_paced",
+        "artifact": "coinage-split-10000-paced-default-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 10000,
+        "submittedExtrinsics": 20000,
+        "receiptVerified": 20000,
+        "observedReady": null,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "a-paced-attempt-2-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11261940156,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-10000-paced-default-pilot-37029048758-2",
+        "scenario": "split",
+        "actors": 10000,
+        "mode": "paced",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 211.68258734499997,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "split-pilot-wave-1-claim",
+            "requested": 8000,
+            "submitted": 8000,
+            "receiptVerified": 8000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.37009647200000473,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 8000,
+              "p50": 46.63691690499999,
+              "p95": 50.73409657900006,
+              "max": 58.50141934700007
+            },
+            "settledSeconds": 58.647931889,
+            "statePassed": true,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-wave-1-split",
+            "requested": 8000,
+            "submitted": 8000,
+            "receiptVerified": 8000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.3834415409999783,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 8000,
+              "p50": 49.067491472999976,
+              "p95": 53.00761877,
+              "max": 60.93000649599999
+            },
+            "settledSeconds": 61.310272866999966,
+            "statePassed": true,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-wave-2-claim",
+            "requested": 2000,
+            "submitted": 2000,
+            "receiptVerified": 2000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.08490973100007977,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 2000,
+              "p50": 44.557052663000064,
+              "p95": 44.626076733,
+              "max": 44.64998411299998
+            },
+            "settledSeconds": 44.66147073300008,
+            "statePassed": true,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-wave-2-split",
+            "requested": 2000,
+            "submitted": 2000,
+            "receiptVerified": 2000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.09066886099998374,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 2000,
+              "p50": 37.12657960399997,
+              "p95": 37.135374694,
+              "max": 40.99821379299998
+            },
+            "settledSeconds": 41.088151144,
+            "statePassed": true,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 233.51408646200002,
+        "elapsedSeconds": 240.06183738199994,
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 906678272,
+        "driverSampleCount": 48,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790992658.7093499,
+          "lastEpochSeconds": 1790993328.6370635,
+          "samples": 135,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 8000.0,
+            "Collator-1502-2": 8000.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17393119232,
+            "/sys/fs/cgroup/system.slice/memory.current": 18442932224
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 3.0156497809999996,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 223.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 43624.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 43624.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 0.795419132,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 223.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 43549.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 43549.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "a_pool",
+        "artifact": "coinage-split-10000-burst-enlarged-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 10000,
+        "submittedExtrinsics": 20000,
+        "receiptVerified": 20000,
+        "observedReady": null,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "a-pool-attempt-2-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11262321684,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-10000-burst-enlarged-pilot-37029048758-2",
+        "scenario": "split",
+        "actors": 10000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 11000,
+        "preparationSeconds": 211.55458937600002,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "split-pilot-claim",
+            "requested": 10000,
+            "submitted": 10000,
+            "receiptVerified": 10000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.5079349420000216,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 10000,
+              "p50": 50.84757422999997,
+              "p95": 62.52358723499999,
+              "max": 62.53735712499998
+            },
+            "settledSeconds": 63.03905031800008,
+            "statePassed": true,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-split",
+            "requested": 10000,
+            "submitted": 10000,
+            "receiptVerified": 10000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.5315959849999635,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 10000,
+              "p50": 49.23254285000003,
+              "p95": 61.23180115299998,
+              "max": 65.05588150700001
+            },
+            "settledSeconds": 65.36320160999999,
+            "statePassed": true,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 145.49581943900003,
+        "elapsedSeconds": 160.06260830000002,
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 967680000,
+        "driverSampleCount": 32,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790993990.8288696,
+          "lastEpochSeconds": 1790994580.805613,
+          "samples": 119,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 10000.0,
+            "Collator-1502-2": 10000.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17229082624,
+            "/sys/fs/cgroup/system.slice/memory.current": 18207633408
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 0.9948494619999999,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 196.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 52868.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 52868.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.0415962729999997,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 196.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 53656.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 53656.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b_paced",
+        "artifact": "coinage-recycle-10000-paced-default-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 10000,
+        "submittedExtrinsics": 10000,
+        "receiptVerified": 10000,
+        "observedReady": 10000,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "b-paced-attempt-2-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11262418930,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-10000-paced-default-pilot-37029048758-2",
+        "scenario": "recycle",
+        "actors": 10000,
+        "mode": "paced",
+        "pool": "default",
+        "poolTransactions": null,
+        "preparationSeconds": 206.71411925900003,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "recycle-pilot-wave-1-recycle",
+            "requested": 8000,
+            "submitted": 8000,
+            "receiptVerified": 8000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.3158208450000384,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 8000,
+              "p50": 121.805708759,
+              "p95": 197.826479313,
+              "max": 205.91290471800002
+            },
+            "settledSeconds": 205.987516157,
+            "statePassed": true,
+            "backingBefore": "20001",
+            "backingAfter": "20001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "recycle-pilot-wave-2-recycle",
+            "requested": 2000,
+            "submitted": 2000,
+            "receiptVerified": 2000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.07312826999998652,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 2000,
+              "p50": 46.643780611000025,
+              "p95": 66.68958800099999,
+              "max": 70.69373215199995
+            },
+            "settledSeconds": 70.74142107200005,
+            "statePassed": true,
+            "backingBefore": "20001",
+            "backingAfter": "20001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 414.125602989,
+        "elapsedSeconds": 480.183385269,
+        "ready": 10000,
+        "readinessSeconds": {
+          "count": 10000,
+          "p50": 165.93023077599995,
+          "p95": 317.95150481200005,
+          "max": 343.23632803900006
+        },
+        "unresolvedReadiness": 0,
+        "observationCutoff": {
+          "elapsedSeconds": 475.16903721600005,
+          "at": "0x668a5c430ad982fb6851d04a38345ca3d1f4e314ccb75b6188641358790a6ea7"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 952446976,
+        "driverSampleCount": 95,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790995064.4704854,
+          "lastEpochSeconds": 1790995949.461533,
+          "samples": 178,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 8003.0,
+            "Collator-1502-2": 8004.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17857777664,
+            "/sys/fs/cgroup/system.slice/memory.current": 18936369152
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 8.504570736,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 292.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 53016.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 53016.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.4543201179999996,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 292.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 52218.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 52218.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b_pool",
+        "artifact": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 10000,
+        "submittedExtrinsics": 10000,
+        "receiptVerified": 10000,
+        "observedReady": 10000,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "b-pool-attempt-2-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11263286350,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2",
+        "scenario": "recycle",
+        "actors": 10000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 11000,
+        "preparationSeconds": 184.028927341,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "recycle-pilot-recycle",
+            "requested": 10000,
+            "submitted": 10000,
+            "receiptVerified": 10000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.39395819000003396,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 10000,
+              "p50": 137.158344822,
+              "p95": 233.40065941899996,
+              "max": 245.434169714
+            },
+            "settledSeconds": 245.65699881400005,
+            "statePassed": true,
+            "backingBefore": "20001",
+            "backingAfter": "20001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 245.65699881400005,
+        "elapsedSeconds": 389.278832079,
+        "ready": 10000,
+        "readinessSeconds": {
+          "count": 10000,
+          "p50": 216.573339652,
+          "p95": 353.6357606420001,
+          "max": 384.042847993
+        },
+        "unresolvedReadiness": 0,
+        "observationCutoff": {
+          "elapsedSeconds": 384.264226353,
+          "at": "0x4b6ad5e0a04785ab74740db0cd438e0c825b247890f4235d9f894e1b586ad2d4"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 917254144,
+        "driverSampleCount": 77,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790996437.6266983,
+          "lastEpochSeconds": 1790997182.5128613,
+          "samples": 150,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 10002.0,
+            "Collator-1502-2": 10003.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 17509126144,
+            "/sys/fs/cgroup/system.slice/memory.current": 18647003136
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 17.094513830999997,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 248.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 68477.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 68477.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 1.456018951999999,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 248.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 65801.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 65801.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "a20000",
+        "artifact": "coinage-split-20000-burst-enlarged-pilot-37116007842-1",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842/attempts/1",
+        "attempt": 1,
+        "requestedActors": 20000,
+        "submittedExtrinsics": 40000,
+        "receiptVerified": 40000,
+        "observedReady": null,
+        "outcome": "launch-timing-failure",
+        "ciShutdownFailure": false,
+        "verificationFile": "a20000-targeted-workload-verification.json",
+        "recoveryPassed": true,
+        "testCommit": "ba4bdee5c1a4a7ed725e6a1f34653b7bb39b774c",
+        "artifactId": 11273650139,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-20000-burst-enlarged-pilot-37116007842-1",
+        "scenario": "split",
+        "actors": 20000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 22000,
+        "preparationSeconds": 322.687637522,
+        "summaryPresent": true,
+        "passed": false,
+        "waves": [
+          {
+            "name": "split-pilot-claim",
+            "requested": 20000,
+            "submitted": 20000,
+            "receiptVerified": 20000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.9490219639999559,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 20000,
+              "p50": 49.999494973000026,
+              "p95": 73.64453830699995,
+              "max": 73.964477158
+            },
+            "settledSeconds": 74.53278838599996,
+            "statePassed": true,
+            "backingBefore": "80001",
+            "backingAfter": "80001",
+            "auditErrors": []
+          },
+          {
+            "name": "split-pilot-split",
+            "requested": 20000,
+            "submitted": 20000,
+            "receiptVerified": 20000,
+            "auditPassed": false,
+            "sendWindowSeconds": 1.0996425969999981,
+            "generatorLimited": true,
+            "finalitySeconds": {
+              "count": 20000,
+              "p50": 57.640959684,
+              "p95": 81.84092748099997,
+              "max": 86.02384447300004
+            },
+            "settledSeconds": 86.37199721300009,
+            "statePassed": true,
+            "backingBefore": "80001",
+            "backingAfter": "80001",
+            "auditErrors": []
+          }
+        ],
+        "completionToLastReceiptSeconds": 194.538243365,
+        "elapsedSeconds": 225.20651046900008,
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 1385537536,
+        "driverSampleCount": 45,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1791027314.2456915,
+          "lastEpochSeconds": 1791028079.204207,
+          "samples": 154,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 20000.0,
+            "Collator-1502-2": 16087.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 21032906752,
+            "/sys/fs/cgroup/system.slice/memory.current": 22628675584
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 10.010874783999999,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 255.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 153297.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 153297.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 3.590663816999999,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 255.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 100927.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 100927.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "a40000",
+        "artifact": "coinage-split-40000-burst-enlarged-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 40000,
+        "submittedExtrinsics": 80000,
+        "receiptVerified": 80000,
+        "observedReady": null,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": true,
+        "verificationFile": "a40000-attempt-2-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11267410662,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-40000-burst-enlarged-pilot-37029048758-2",
+        "scenario": "split",
+        "actors": 40000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 44000,
+        "preparationSeconds": 506.745661939,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "split-pilot-claim",
+            "requested": 40000,
+            "submitted": 40000,
+            "receiptVerified": 40000,
+            "auditPassed": true,
+            "sendWindowSeconds": 1.8020557250001001,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 40000,
+              "p50": 84.12981158199987,
+              "p95": 131.3152822,
+              "max": 132.57795193500002
+            },
+            "settledSeconds": 133.00469633299997,
+            "statePassed": true,
+            "backingBefore": "160001",
+            "backingAfter": "160001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-split",
+            "requested": 40000,
+            "submitted": 40000,
+            "receiptVerified": 40000,
+            "auditPassed": true,
+            "sendWindowSeconds": 1.945741015000036,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 40000,
+              "p50": 100.739467603,
+              "p95": 172.90347146699997,
+              "max": 177.32771456900005
+            },
+            "settledSeconds": 178.43597953300002,
+            "statePassed": true,
+            "backingBefore": "160001",
+            "backingAfter": "160001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 378.7850045459999,
+        "elapsedSeconds": 435.54499716500004,
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 2182746112,
+        "driverSampleCount": 87,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1790998820.8086767,
+          "lastEpochSeconds": 1791009615.9529667,
+          "samples": 2160,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 40000.0,
+            "Collator-1502-2": 17788.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 32658952192,
+            "/sys/fs/cgroup/system.slice/memory.current": 33680281600
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 33.86220966099998,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 3582.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 481920.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 481920.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 16.038439148999977,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 3582.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 279760.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 279760.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "a100000",
+        "artifact": "coinage-split-100000-burst-enlarged-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 100000,
+        "submittedExtrinsics": 200000,
+        "receiptVerified": 200000,
+        "observedReady": null,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "a100000-attempt-2-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11267902978,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-split-100000-burst-enlarged-pilot-37029048758-2",
+        "scenario": "split",
+        "actors": 100000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 110000,
+        "preparationSeconds": 1025.074104662,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "split-pilot-claim",
+            "requested": 100000,
+            "submitted": 100000,
+            "receiptVerified": 100000,
+            "auditPassed": true,
+            "sendWindowSeconds": 4.365016791000031,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 100000,
+              "p50": 172.57289951000013,
+              "p95": 318.67967182200005,
+              "max": 332.59879778200013
+            },
+            "settledSeconds": 333.259473371,
+            "statePassed": true,
+            "backingBefore": "400001",
+            "backingAfter": "400001",
+            "auditErrorCount": 0
+          },
+          {
+            "name": "split-pilot-split",
+            "requested": 100000,
+            "submitted": 100000,
+            "receiptVerified": 100000,
+            "auditPassed": true,
+            "sendWindowSeconds": 4.955642881999957,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 100000,
+              "p50": 207.9709355230001,
+              "p95": 371.9871556539999,
+              "max": 389.556815007
+            },
+            "settledSeconds": 391.2782338459999,
+            "statePassed": true,
+            "backingBefore": "400001",
+            "backingAfter": "400001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 899.749889363,
+        "elapsedSeconds": 1041.8772406030002,
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 2138996736,
+        "driverSampleCount": 208,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1791010248.3472228,
+          "lastEpochSeconds": 1791012498.3180645,
+          "samples": 451,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 100000.0,
+            "Collator-1502-2": 21315.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 33146068992,
+            "/sys/fs/cgroup/system.slice/memory.current": 34146942976
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 97.71392992700012,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 731.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 1200467.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 1200467.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 31.35506899600002,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 732.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 681581.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 681581.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b20000",
+        "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 20000,
+        "submittedExtrinsics": 20000,
+        "receiptVerified": 20000,
+        "observedReady": 20000,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": false,
+        "verificationFile": "b20000-attempt-2-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11268553109,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2",
+        "scenario": "recycle",
+        "actors": 20000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 22000,
+        "preparationSeconds": 316.67067396500005,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "recycle-pilot-recycle",
+            "requested": 20000,
+            "submitted": 20000,
+            "receiptVerified": 20000,
+            "auditPassed": true,
+            "sendWindowSeconds": 0.7993096249999944,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 20000,
+              "p50": 363.69423872600004,
+              "p95": 615.8554973310002,
+              "max": 636.099738032
+            },
+            "settledSeconds": 636.3236671980001,
+            "statePassed": true,
+            "backingBefore": "40001",
+            "backingAfter": "40001",
+            "auditErrorCount": 0
+          }
+        ],
+        "completionToLastReceiptSeconds": 636.3236671980001,
+        "elapsedSeconds": 851.216173186,
+        "ready": 20000,
+        "readinessSeconds": {
+          "count": 20000,
+          "p50": 524.207135279,
+          "p95": 809.9790907099999,
+          "max": 845.9246096090002
+        },
+        "unresolvedReadiness": 0,
+        "observationCutoff": {
+          "elapsedSeconds": 846.1850691810001,
+          "at": "0x1f4e1e05312eb146dc32e61c89d22e30b3334ee65b281d1939e4d6528eed30df"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 1673269248,
+        "driverSampleCount": 168,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1791013196.3446422,
+          "lastEpochSeconds": 1791014566.2933686,
+          "samples": 275,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 20000.0,
+            "Collator-1502-2": 17146.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 20709457920,
+            "/sys/fs/cgroup/system.slice/memory.current": 21707112448
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 62.04387755700003,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 424.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 215673.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 215673.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 24.177974611000003,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 420.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 216218.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 216218.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b40000",
+        "artifact": "coinage-recycle-40000-burst-enlarged-pilot-37121458129-1",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37121458129/attempts/1",
+        "attempt": 1,
+        "requestedActors": 40000,
+        "submittedExtrinsics": 40000,
+        "receiptVerified": 40000,
+        "observedReady": 40000,
+        "outcome": "workload-pass",
+        "ciShutdownFailure": true,
+        "verificationFile": "b40000-targeted-verification.txt",
+        "recoveryPassed": true,
+        "testCommit": "ba4bdee5c1a4a7ed725e6a1f34653b7bb39b774c",
+        "artifactId": 11274353408,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-40000-burst-enlarged-pilot-37121458129-1",
+        "scenario": "recycle",
+        "actors": 40000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 44000,
+        "preparationSeconds": 533.362167275,
+        "summaryPresent": true,
+        "passed": true,
+        "waves": [
+          {
+            "name": "recycle-pilot-recycle",
+            "requested": 40000,
+            "submitted": 40000,
+            "receiptVerified": 40000,
+            "auditPassed": true,
+            "sendWindowSeconds": 1.4284354479999748,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 40000,
+              "p50": 606.384410589,
+              "p95": 1095.312549141,
+              "max": 1143.6902092579999
+            },
+            "settledSeconds": 1144.000059062,
+            "statePassed": true,
+            "backingBefore": "80001",
+            "backingAfter": "80001",
+            "auditErrors": []
+          }
+        ],
+        "completionToLastReceiptSeconds": 1144.000059062,
+        "elapsedSeconds": 1563.826330804,
+        "ready": 40000,
+        "readinessSeconds": {
+          "count": 40000,
+          "p50": 910.8671112589999,
+          "p95": 1485.1401877320002,
+          "max": 1558.508892182
+        },
+        "unresolvedReadiness": 0,
+        "observationCutoff": {
+          "elapsedSeconds": 1558.7658356890001,
+          "at": "0xed5c8167534f7bceb9ccc50c8decc4c94cb0efafa99a24298f3ac43afc1332c7"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 2610733056,
+        "driverSampleCount": 306,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1791029223.1894927,
+          "lastEpochSeconds": 1791031638.2500427,
+          "samples": 484,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 40004.0,
+            "Collator-1502-2": 19070.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 26872516608,
+            "/sys/fs/cgroup/system.slice/memory.current": 27867250688
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 133.79467493900003,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 762.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 441084.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 441084.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 67.23554946200002,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 755.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 420430.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 420430.0
+          }
+        }
+      }
+    },
+    {
+      "verifiedOutcome": {
+        "case": "b100000",
+        "artifact": "coinage-recycle-100000-burst-enlarged-pilot-37029048758-2",
+        "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/attempts/2",
+        "attempt": 2,
+        "requestedActors": 100000,
+        "submittedExtrinsics": 100000,
+        "receiptVerified": 60990,
+        "observedReady": 39917,
+        "outcome": "incomplete",
+        "ciShutdownFailure": false,
+        "verificationFile": "b100000-receipts-reconciliation.json",
+        "recoveryPassed": true,
+        "testCommit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+        "artifactId": 11272711030,
+        "verificationDate": "2026-10-03"
+      },
+      "measurements": {
+        "artifact": "coinage-recycle-100000-burst-enlarged-pilot-37029048758-2",
+        "scenario": "recycle",
+        "actors": 100000,
+        "mode": "burst",
+        "pool": "enlarged",
+        "poolTransactions": 110000,
+        "preparationSeconds": 1155.456957451,
+        "summaryPresent": false,
+        "passed": null,
+        "waves": [
+          {
+            "name": "recycle-pilot-recycle",
+            "requested": 100000,
+            "submitted": 100000,
+            "receiptVerified": 60982,
+            "auditPassed": false,
+            "sendWindowSeconds": 3.692298991000047,
+            "generatorLimited": false,
+            "finalitySeconds": {
+              "count": 60982,
+              "p50": 925.5646334689998,
+              "p95": 1709.5607843010002,
+              "max": 1794.057695809
+            },
+            "settledSeconds": 1801.618611283,
+            "statePassed": false,
+            "backingBefore": "200001",
+            "backingAfter": "200001",
+            "auditErrorCount": 39018
+          }
+        ],
+        "ready": 39917,
+        "unresolvedReadiness": 60083,
+        "observationCutoff": {
+          "elapsedSeconds": 1797.948941764,
+          "at": "0xb39d569845da5bb157e0c7a16228a0c0d8a3b54cb91b633a724986341f270130"
+        },
+        "recoveryPassed": true,
+        "driverRssSampledPeakBytes": 4713390080,
+        "driverSampleCount": 391,
+        "resources": {
+          "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+          "firstEpochSeconds": 1791022530.3516831,
+          "lastEpochSeconds": 1791025890.4616497,
+          "samples": 673,
+          "scrapeErrors": {},
+          "sampledPoolWatchedPlusUnwatchedPeak": {
+            "Collator-1502": 100007.0,
+            "Collator-1502-2": 51332.0
+          },
+          "sampledCgroupMemoryPeakBytes": {
+            "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 34320834560,
+            "/sys/fs/cgroup/system.slice/memory.current": 35851247616
+          },
+          "poolCounterDeltas": {
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 400.9199431209996,
+            "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 1014.0,
+            "Collator-1502:substrate_sub_txpool_validations_finished": 834815.0,
+            "Collator-1502:substrate_sub_txpool_validations_scheduled": 834816.0,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 193.4652424779999,
+            "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 1023.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_finished": 768059.0,
+            "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 768060.0
+          }
+        },
+        "readinessSeconds": {
+          "count": 39917,
+          "p50": 992.5826300860001,
+          "p95": 1718.515421966,
+          "max": 1797.529424156
+        }
+      }
+    }
+  ],
+  "topupReconciliation": [
+    {
+      "run": 36537079387,
+      "testCommit": "8bffb7d1583ec6c97c17fe9fd93035c1ba8c40d0",
+      "verifiedAt": "2026-09-30T09:51:14.197763+00:00",
+      "requested": 10000,
+      "submitted": 10000,
+      "originalVerified": 8971,
+      "droppedCount": 40,
+      "droppedReconciliation": {
+        "verified": 40
+      },
+      "droppedBlocks": {
+        "159734": 40
+      },
+      "totalReceiptOutcomes": {
+        "verified": 9011,
+        "no-saved-receipt": 989
+      },
+      "submissionErrors": {
+        "dropped": 40,
+        "RpcError: 1016: Immediately Dropped: The transaction couldn't enter the pool because of the limit": 989
+      },
+      "originalReady": 9011,
+      "stateReady": 9011,
+      "additionalReady": 0,
+      "readinessUnresolvedSubmitted": 989,
+      "stateAt": {
+        "hash": "0x86bae5ebff61e224d2bf3c9610acd62ee84535983840d6214220d5c55e817bac",
+        "number": 159827,
+        "parent": "0xf7c7d0fc7427e10796263f897f7b8f123394ec874519c11776778603069fe6e0",
+        "hasNewRuntime": false
+      },
+      "lastReadinessSample": {
+        "elapsedSeconds": 596.0957873900002,
+        "at": "0xf7c7d0fc7427e10796263f897f7b8f123394ec874519c11776778603069fe6e0",
+        "finalized": 159826,
+        "ready": 9011
+      },
+      "wallStart": "2026-09-29T08:34:18.733Z",
+      "stageDurationSeconds": 628.2562784830001,
+      "originalFinalitySeconds": {
+        "count": 8971,
+        "p50": 136.7215745649999,
+        "p95": 232.776893466,
+        "max": 244.98109979999998
+      },
+      "originalReadinessSeconds": {
+        "count": 9011,
+        "p50": 216.39249007499964,
+        "p95": 332.5224106119997,
+        "max": 347.91015770099966
+      },
+      "debited": 9011,
+      "heldBacking": 18022,
+      "wrappedBacking": 18022,
+      "expectedFullRequestBacking": "20000",
+      "recovery": true,
+      "authors": {
+        "names": [
+          "Collator-1502",
+          "Collator-1502-2"
+        ],
+        "keys": [
+          "0x3cfde612e45c223a6f3e0e993e04c43c19ef034c686803b4a2b075a0febd8b03",
+          "0x5c785f98deac67b65ef3d4f764bde941babf7ea659f23a0a7563ac43cf15026c"
+        ],
+        "setup_block": 159148,
+        "setup_hash": "0x793070d436844e997d60937c1e61209cffa07444fc2d5e259171e187249eaabd",
+        "authored_finalized_blocks": {
+          "Collator-1502": 32,
+          "Collator-1502-2": 32
+        },
+        "first_verified_block": 159784,
+        "last_verified_block": 159847,
+        "verification_scope": "up to 64 recent finalized blocks after setup"
+      },
+      "originalPassed": false,
+      "poolProfile": "default",
+      "availableBlockEvidence": 37
+    },
+    {
+      "run": 36619415692,
+      "testCommit": "28ff6d47717904567aa2a97b1119b6cd6443f65f",
+      "verifiedAt": "2026-09-30T09:51:14.689649+00:00",
+      "requested": 10000,
+      "submitted": 8500,
+      "originalVerified": 8452,
+      "droppedCount": 48,
+      "droppedReconciliation": {
+        "verified": 48
+      },
+      "droppedBlocks": {
+        "173699": 48
+      },
+      "totalReceiptOutcomes": {
+        "verified": 8500
+      },
+      "submissionErrors": {
+        "dropped": 48
+      },
+      "originalReady": 5602,
+      "stateReady": 5869,
+      "additionalReady": 267,
+      "readinessUnresolvedSubmitted": 2631,
+      "stateAt": {
+        "hash": "0xb101f459d64630f96b26de4e70f66b095be936ea1992fd68fce9ed4cd5597298",
+        "number": 173733,
+        "parent": "0x8ebcf4f8d15da1deaa3b081dc94641a737c5570502ff729200af7f1a936fe2a5",
+        "hasNewRuntime": false
+      },
+      "lastReadinessSample": {
+        "elapsedSeconds": 236.91870291699982,
+        "at": "0x8ebcf4f8d15da1deaa3b081dc94641a737c5570502ff729200af7f1a936fe2a5",
+        "finalized": 173732,
+        "ready": 5602
+      },
+      "wallStart": "2026-09-29T20:33:38.045Z",
+      "stageDurationSeconds": 269.07477879399994,
+      "originalFinalitySeconds": {
+        "count": 8452,
+        "p50": 128.5074678130001,
+        "p95": 224.54556427600002,
+        "max": 236.6015123080001
+      },
+      "originalReadinessSeconds": {
+        "count": 5602,
+        "p50": 155.9736917340001,
+        "p95": 231.60281258000015,
+        "max": 236.727807393
+      },
+      "debited": 8500,
+      "heldBacking": 17000,
+      "wrappedBacking": 17000,
+      "expectedFullRequestBacking": "20000",
+      "recovery": true,
+      "authors": {
+        "names": [
+          "Collator-1502",
+          "Collator-1502-2"
+        ],
+        "keys": [
+          "0x3cfde612e45c223a6f3e0e993e04c43c19ef034c686803b4a2b075a0febd8b03",
+          "0x5c785f98deac67b65ef3d4f764bde941babf7ea659f23a0a7563ac43cf15026c"
+        ],
+        "setup_block": 173087,
+        "setup_hash": "0xe19a3fb48d5e855e00b850743cc0b694df5b6e1628191a343c3e5c8f9f293e70",
+        "authored_finalized_blocks": {
+          "Collator-1502": 32,
+          "Collator-1502-2": 32
+        },
+        "first_verified_block": 173689,
+        "last_verified_block": 173752,
+        "verification_scope": "up to 64 recent finalized blocks after setup"
+      },
+      "originalPassed": false,
+      "poolProfile": "default",
+      "availableBlockEvidence": 35
+    },
+    {
+      "run": 36662212241,
+      "testCommit": "28ff6d47717904567aa2a97b1119b6cd6443f65f",
+      "verifiedAt": "2026-09-30T09:51:15.324125+00:00",
+      "requested": 10000,
+      "submitted": 10000,
+      "originalVerified": 10000,
+      "droppedCount": 0,
+      "droppedReconciliation": {},
+      "droppedBlocks": {},
+      "totalReceiptOutcomes": {
+        "verified": 10000
+      },
+      "submissionErrors": {},
+      "originalReady": 10000,
+      "stateReady": 10000,
+      "additionalReady": 0,
+      "readinessUnresolvedSubmitted": 0,
+      "stateAt": {
+        "hash": "0x161336fa1de62aa9e7ce7454df8ca1205c46ef75b90affd260e19f5ca153fd7c",
+        "number": 173800,
+        "parent": "0x6530540b49a99b7f6f520060a22e83c4ece2b2fcc032a6993f899b8f594b924a",
+        "hasNewRuntime": false
+      },
+      "lastReadinessSample": {
+        "elapsedSeconds": 373.4056849080003,
+        "at": "0x161336fa1de62aa9e7ce7454df8ca1205c46ef75b90affd260e19f5ca153fd7c",
+        "finalized": 173800,
+        "ready": 10000
+      },
+      "wallStart": "2026-09-30T04:12:04.125Z",
+      "stageDurationSeconds": 405.54819530000026,
+      "originalFinalitySeconds": {
+        "count": 10000,
+        "p50": 107.0185359459999,
+        "p95": 214.93078872900037,
+        "max": 227.1769974819999
+      },
+      "originalReadinessSeconds": {
+        "count": 10000,
+        "p50": 171.10028603499987,
+        "p95": 312.3934848519997,
+        "max": 347.93082141799994
+      },
+      "debited": 10000,
+      "heldBacking": 20000,
+      "wrappedBacking": 20000,
+      "expectedFullRequestBacking": "20000",
+      "recovery": true,
+      "authors": {
+        "names": [
+          "Collator-1502",
+          "Collator-1502-2"
+        ],
+        "keys": [
+          "0x3cfde612e45c223a6f3e0e993e04c43c19ef034c686803b4a2b075a0febd8b03",
+          "0x5c785f98deac67b65ef3d4f764bde941babf7ea659f23a0a7563ac43cf15026c"
+        ],
+        "setup_block": 173088,
+        "setup_hash": "0xce22a6d918b7de3c215ce7e1ed13ae1b08f066a0afdb1faa52f77034801ea5cd",
+        "authored_finalized_blocks": {
+          "Collator-1502": 32,
+          "Collator-1502-2": 32
+        },
+        "first_verified_block": 173772,
+        "last_verified_block": 173835,
+        "verification_scope": "up to 64 recent finalized blocks after setup"
+      },
+      "originalPassed": true,
+      "poolProfile": "default",
+      "availableBlockEvidence": 41
+    }
+  ],
+  "claimComparison": {
+    "commit": "3e2552a841a20ee8d3f209e0e7390d1976bc3c89",
+    "verificationDate": "2026-09-30T15:47:53.337600+00:00",
+    "runs": [
+      {
+        "id": 36719621433,
+        "mode": "paced",
+        "waves": [
+          8000,
+          2000
+        ],
+        "pool": "default",
+        "status": "verified success",
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36719621433",
+        "requested": 10000,
+        "submitted": 10000,
+        "receiptVerified": 10000,
+        "correctFinalStates": 10000,
+        "outcomes": {
+          "finalized": 10000
+        },
+        "finalitySeconds": {
+          "count": 10000,
+          "p50": 38.97026307199989,
+          "p95": 50.68002979200008,
+          "max": 50.69656909099966
+        },
+        "watchResultsSettledSeconds": 79.20655286299996,
+        "stageDurationSeconds": 113.61481276600016,
+        "sendWindowSeconds": 0.34960263199964536,
+        "waveObservations": [
+          {
+            "count": 8000,
+            "startActor": 0,
+            "startedSeconds": 4.670000029727816e-05,
+            "sendWindowSeconds": 0.34960263199964536,
+            "settledSeconds": 51.03820617299993,
+            "finalized": 8000,
+            "verified": true
+          },
+          {
+            "count": 2000,
+            "startActor": 8000,
+            "startedSeconds": 52.24119616599987,
+            "sendWindowSeconds": 0.08413078300002963,
+            "settledSeconds": 79.20655286299996,
+            "finalized": 2000,
+            "verified": true
+          }
+        ],
+        "fixtureBalanceBefore": "20001",
+        "fixtureBalanceAfter": "20001",
+        "recoveryPassed": true,
+        "peopleFinalityDelta": {
+          "Collator-1502": 11,
+          "Collator-1502-2": 11
+        },
+        "authoredFinalizedBlocks": {
+          "Collator-1502": 32,
+          "Collator-1502-2": 32
+        },
+        "artifactId": 11105025693,
+        "confirmedPoolStartupLines": [
+          "2026-09-30 13:12:35.542  INFO main txpool: [Parachain] Creating transaction pool txpool_type=ForkAware ready=Limit { count: 8192, total_bytes: 20971520 } future=Limit { count: 819, total_bytes: 2097152 }",
+          "2026-09-30 13:12:38.829  INFO main txpool: [Parachain] Creating transaction pool txpool_type=ForkAware ready=Limit { count: 8192, total_bytes: 20971520 } future=Limit { count: 819, total_bytes: 2097152 }"
+        ],
+        "fixturePreparationSeconds": 3551.100910598,
+        "measuredClaimBlockRange": [
+          173725,
+          173733
+        ],
+        "stateCutoff": {
+          "hash": "0x071cc62ff656b786a8692f8198a9a67eb3f77b4d8ebb32fad3a5eb4031b3b5ab",
+          "number": 173733,
+          "parent": "0xeab6a0fc358261d8c195f2e394753df93f84e35a10fcb2ae6c45a946e46f1b3e",
+          "hasNewRuntime": false
+        },
+        "rejected": 0,
+        "droppedWatches": 0,
+        "failedDispatchReceipts": 0,
+        "unresolvedReceipts": 0,
+        "fullArtifactSaved": true
+      },
+      {
+        "id": 36719745986,
+        "mode": "burst",
+        "waves": [
+          10000
+        ],
+        "pool": "11000 transactions, 40 MiB",
+        "status": "verified success",
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36719745986",
+        "requested": 10000,
+        "submitted": 10000,
+        "receiptVerified": 10000,
+        "correctFinalStates": 10000,
+        "outcomes": {
+          "finalized": 10000
+        },
+        "finalitySeconds": {
+          "count": 10000,
+          "p50": 42.903239952999634,
+          "p95": 54.68636486000009,
+          "max": 54.694101059000005
+        },
+        "watchResultsSettledSeconds": 55.12727410400007,
+        "stageDurationSeconds": 88.27458884999994,
+        "sendWindowSeconds": 0.43339930500043555,
+        "waveObservations": [
+          {
+            "count": 10000,
+            "startActor": 0,
+            "startedSeconds": 4.138999991118908e-05,
+            "sendWindowSeconds": 0.43339930500043555,
+            "settledSeconds": 55.12727410400007,
+            "finalized": 10000,
+            "verified": false
+          }
+        ],
+        "fixtureBalanceBefore": "20001",
+        "fixtureBalanceAfter": "20001",
+        "recoveryPassed": true,
+        "peopleFinalityDelta": {
+          "Collator-1502": 10,
+          "Collator-1502-2": 10
+        },
+        "authoredFinalizedBlocks": {
+          "Collator-1502": 32,
+          "Collator-1502-2": 32
+        },
+        "artifactId": 11109621586,
+        "confirmedPoolStartupLines": [
+          "2026-09-30 14:38:01.095  INFO main txpool: [Parachain] Creating transaction pool txpool_type=ForkAware ready=Limit { count: 11000, total_bytes: 41943040 } future=Limit { count: 1100, total_bytes: 4194304 }",
+          "2026-09-30 14:38:04.381  INFO main txpool: [Parachain] Creating transaction pool txpool_type=ForkAware ready=Limit { count: 11000, total_bytes: 41943040 } future=Limit { count: 1100, total_bytes: 4194304 }"
+        ],
+        "fixturePreparationSeconds": 3306.867758437,
+        "measuredClaimBlockRange": [
+          173683,
+          173687
+        ],
+        "stateCutoff": {
+          "hash": "0x051a00649502291011a9affc7374791e195970d81cd8157905a37f108e1b5221",
+          "number": 173687,
+          "parent": "0x6876fd16168cc7058f9288ef47e1223e661d60828580a2c7aeaa4075356c9c45",
+          "hasNewRuntime": false
+        },
+        "rejected": 0,
+        "droppedWatches": 0,
+        "failedDispatchReceipts": 0,
+        "unresolvedReceipts": 0,
+        "fullArtifactSaved": true
+      }
+    ],
+    "methods": {
+      "fixtures": "One root-seeded source coin per actor, normal issuance and held-backing bypassed; one extra smoke claim excluded from burst counts.",
+      "retries": 0,
+      "finalitySeconds": "Own submission to finalized notification plus receipt/block lookup, measured only for successful watches.",
+      "settledAtSeconds": "First wave start to last watch result; includes time spent on the inter-wave receipt gate.",
+      "elapsedSeconds": "First wave start through wave gates, observer shutdown and final state queries; excludes setup, final aggregate receipt audit, offline verification and recovery.",
+      "readiness": "Not applicable to claiming existing coins.",
+      "verification": "Raw extrinsic hashes, indexed System.ExtrinsicSuccess and Coinage.CoinTransferred events, saved finality views of both nodes, actor coin state checks. No independent consensus/storage proof.",
+      "singleBurstWaveVerifiedFlag": "A false waves[].verified on the single-burst run means there was no intermediate wave gate. Its final aggregate claim-burst-audit passed with all 10000 receipts."
+    },
+    "sameSnapshotAndBinaryProvenance": true,
+    "preservedAt": "2026-09-30T15:57:37.915881+00:00"
+  },
+  "claimCapacity": {
+    "generatedAt": "2026-10-01T10:13:36.090891+00:00",
+    "experiments": [
+      {
+        "run": 36832069153,
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36832069153",
+        "commit": "23a884c644dba50805f7b9373ad45d2529bb888f",
+        "verifiedAt": "2026-10-01T08:24:18.422021+00:00",
+        "artifact": {
+          "id": 11148628985,
+          "name": "coinage-claim-burst-36832069153-1"
+        },
+        "requested": 20000,
+        "submitted": 20000,
+        "originalVerifiedReceipts": 20000,
+        "verifiedFromSavedBlocks": 20000,
+        "failedDispatchReceipts": 0,
+        "submittedWithoutSavedReceipt": 0,
+        "correctFinalCoinStates": 20000,
+        "auditPassed": true,
+        "backingBefore": "40001",
+        "backingAfter": "40001",
+        "recoveryPassed": true,
+        "recoveryFinalityDelta": {
+          "alice": 10,
+          "bob": 10,
+          "charlie": 10,
+          "dave": 10,
+          "eve": 10,
+          "ferdie": 10,
+          "Collator-1500": 30,
+          "Collator-1502": 10,
+          "Collator-1502-2": 10,
+          "Collator-1501": 10,
+          "Collator-1600": 10
+        },
+        "authors": {
+          "Collator-1502": 34,
+          "Collator-1502-2": 30
+        },
+        "poolTransactions": 22000,
+        "poolKbytes": 40960,
+        "fixtureBatch": 1000,
+        "stateQueryConcurrency": 16,
+        "rpcSubscriptionLimit": 40050,
+        "launchTargetSeconds": 1.0,
+        "launchSeconds": 0.8021838129998651,
+        "poolReadyObserved": 20000,
+        "poolReadyWindowSeconds": 3.7429445679998024,
+        "lastWatchReceiptSeconds": 94.2634910569999,
+        "finalitySeconds": {
+          "count": 20000,
+          "p50": 65.71067783199996,
+          "p95": 93.80648378499993,
+          "max": 93.91429302600002
+        },
+        "stageSeconds": 151.428396405,
+        "preparationSeconds": 1138.3465366770001,
+        "stateCutoff": {
+          "hash": "0xe6b1d08c0acf87eafccbdbac90df840de5b6d4cca5f1daf7e28ad43a137fced2",
+          "number": 173334,
+          "parent": "0xf9eb30530725cc73da0eeba6e706f65439acb70c2a131c4eeb6194d14fffcb8b",
+          "hasNewRuntime": false
+        },
+        "peakPoolGauges": {
+          "Collator-1502/substrate_ready_transactions_number": 20000.0,
+          "Collator-1502/substrate_sub_txpool_unwatched_txs": 0,
+          "Collator-1502/substrate_sub_txpool_watched_txs": 20000.0,
+          "Collator-1502-2/substrate_ready_transactions_number": 9877.0,
+          "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 15780.0,
+          "Collator-1502-2/substrate_sub_txpool_watched_txs": 0
+        },
+        "lastPoolGaugesInWindow": {
+          "Collator-1502/substrate_ready_transactions_number": 0.0,
+          "Collator-1502/substrate_sub_txpool_unwatched_txs": 0.0,
+          "Collator-1502/substrate_sub_txpool_watched_txs": 0.0,
+          "Collator-1502-2/substrate_ready_transactions_number": 0.0,
+          "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 0.0,
+          "Collator-1502-2/substrate_sub_txpool_watched_txs": 0.0
+        },
+        "peakSampledHostBusyPercent": 20.68987301787858,
+        "minSampledAvailableGiB": 47.98508834838867,
+        "canonicalProposalStopReasons": [
+          "HitBlockWeightLimit",
+          "NoMoreTransactions"
+        ],
+        "maxCanonicalProposalSeconds": 2.735,
+        "receiptCountsByBlock": {
+          "173326": 2363,
+          "173327": 2363,
+          "173332": 2363,
+          "173333": 2363,
+          "173334": 1096,
+          "173328": 2363,
+          "173331": 2363,
+          "173329": 2363,
+          "173330": 2363
+        },
+        "evidence": "36832069153/original"
+      },
+      {
+        "run": 36836204912,
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36836204912",
+        "commit": "39d2961bb7940ee0dd07b970968bc4be034a9608",
+        "verifiedAt": "2026-10-01T08:57:55.492162+00:00",
+        "artifact": {
+          "id": 11150407769,
+          "name": "coinage-claim-burst-36836204912-1"
+        },
+        "requested": 40000,
+        "submitted": 40000,
+        "originalVerifiedReceipts": 40000,
+        "verifiedFromSavedBlocks": 40000,
+        "failedDispatchReceipts": 0,
+        "submittedWithoutSavedReceipt": 0,
+        "correctFinalCoinStates": 40000,
+        "auditPassed": true,
+        "backingBefore": "80001",
+        "backingAfter": "80001",
+        "recoveryPassed": true,
+        "recoveryFinalityDelta": {
+          "alice": 10,
+          "bob": 10,
+          "charlie": 10,
+          "dave": 10,
+          "eve": 10,
+          "ferdie": 10,
+          "Collator-1500": 30,
+          "Collator-1502": 10,
+          "Collator-1502-2": 10,
+          "Collator-1501": 10,
+          "Collator-1600": 10
+        },
+        "authors": {
+          "Collator-1502": 31,
+          "Collator-1502-2": 33
+        },
+        "poolTransactions": 44000,
+        "poolKbytes": 40960,
+        "fixtureBatch": 5000,
+        "stateQueryConcurrency": 64,
+        "rpcSubscriptionLimit": 80050,
+        "launchTargetSeconds": 5.0,
+        "launchSeconds": 1.5819844710000326,
+        "poolReadyObserved": 40000,
+        "poolReadyWindowSeconds": 8.61407444299967,
+        "lastWatchReceiptSeconds": 140.92467462299996,
+        "finalitySeconds": {
+          "count": 40000,
+          "p50": 92.30022739799996,
+          "p95": 139.3935743389998,
+          "max": 139.56576376900006
+        },
+        "stageSeconds": 182.52079588899994,
+        "preparationSeconds": 977.090711572,
+        "stateCutoff": {
+          "hash": "0xe10280a6d84b13afd1fb69c9406ca5f37b8be54dad272ac29fbd3e158c6022c1",
+          "number": 173305,
+          "parent": "0xce45e298fc158bc4bc713f42f5b459b41156ca05f97df007900e3b1da2fa80a1",
+          "hasNewRuntime": false
+        },
+        "peakPoolGauges": {
+          "Collator-1502/substrate_ready_transactions_number": 37637.0,
+          "Collator-1502/substrate_sub_txpool_unwatched_txs": 0,
+          "Collator-1502/substrate_sub_txpool_watched_txs": 40000.0,
+          "Collator-1502-2/substrate_ready_transactions_number": 21402.0,
+          "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 24858.0,
+          "Collator-1502-2/substrate_sub_txpool_watched_txs": 0
+        },
+        "lastPoolGaugesInWindow": {
+          "Collator-1502/substrate_ready_transactions_number": 0.0,
+          "Collator-1502/substrate_sub_txpool_unwatched_txs": 0.0,
+          "Collator-1502/substrate_sub_txpool_watched_txs": 0.0,
+          "Collator-1502-2/substrate_ready_transactions_number": 0.0,
+          "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 0.0,
+          "Collator-1502-2/substrate_sub_txpool_watched_txs": 0.0
+        },
+        "peakSampledHostBusyPercent": 25.173195208805442,
+        "minSampledAvailableGiB": 46.98488998413086,
+        "canonicalProposalStopReasons": [
+          "HitBlockWeightLimit",
+          "NoMoreTransactions"
+        ],
+        "maxCanonicalProposalSeconds": 2.764,
+        "receiptCountsByBlock": {
+          "173288": 2363,
+          "173289": 2363,
+          "173290": 2363,
+          "173292": 2363,
+          "173297": 2363,
+          "173296": 2363,
+          "173295": 2363,
+          "173293": 2363,
+          "173294": 2363,
+          "173300": 2363,
+          "173299": 2363,
+          "173298": 2363,
+          "173301": 2363,
+          "173302": 2363,
+          "173291": 2363,
+          "173303": 2363,
+          "173304": 2192
+        },
+        "evidence": "36836204912/original"
+      },
+      {
+        "run": 36840043405,
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36840043405",
+        "commit": "b7451cd74bbe71799ab9bc8e01a69696ab043217",
+        "verifiedAt": "2026-10-01T10:05:49.982071+00:00",
+        "artifact": {
+          "id": 11154045167,
+          "name": "coinage-claim-burst-36840043405-1"
+        },
+        "requested": 100000,
+        "submitted": 100000,
+        "originalVerifiedReceipts": 100000,
+        "verifiedFromSavedBlocks": 100000,
+        "failedDispatchReceipts": 0,
+        "submittedWithoutSavedReceipt": 0,
+        "correctFinalCoinStates": 100000,
+        "auditPassed": true,
+        "backingBefore": "200001",
+        "backingAfter": "200001",
+        "recoveryPassed": true,
+        "recoveryFinalityDelta": {
+          "alice": 11,
+          "bob": 11,
+          "charlie": 11,
+          "dave": 11,
+          "eve": 11,
+          "ferdie": 11,
+          "Collator-1500": 33,
+          "Collator-1502": 11,
+          "Collator-1502-2": 11,
+          "Collator-1501": 11,
+          "Collator-1600": 11
+        },
+        "authors": {
+          "Collator-1502": 32,
+          "Collator-1502-2": 32
+        },
+        "poolTransactions": 110000,
+        "poolKbytes": 40960,
+        "fixtureBatch": 5000,
+        "stateQueryConcurrency": 64,
+        "rpcSubscriptionLimit": 200050,
+        "launchTargetSeconds": 10.0,
+        "launchSeconds": 3.929700974999927,
+        "poolReadyObserved": 100000,
+        "poolReadyWindowSeconds": 20.3706045869994,
+        "lastWatchReceiptSeconds": 312.86656213099974,
+        "finalitySeconds": {
+          "count": 100000,
+          "p50": 178.52120730200036,
+          "p95": 297.3460659500002,
+          "max": 310.3392376280003
+        },
+        "stageSeconds": 410.38499014999996,
+        "preparationSeconds": 2440.796664163,
+        "stateCutoff": {
+          "hash": "0x749e6f65498e7cc64a73d33b21f1d3888a58b8becc3248e69a1894700a3bf39b",
+          "number": 173583,
+          "parent": "0x92150c908bf6c22bd6edb773f22c5fcd104df8d9a4a5cb3922eeb05e791a76a5",
+          "hasNewRuntime": false
+        },
+        "peakPoolGauges": {
+          "Collator-1502/substrate_ready_transactions_number": 88185.0,
+          "Collator-1502/substrate_sub_txpool_unwatched_txs": 3.0,
+          "Collator-1502/substrate_sub_txpool_watched_txs": 100000.0,
+          "Collator-1502-2/substrate_ready_transactions_number": 18821.0,
+          "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 23547.0,
+          "Collator-1502-2/substrate_sub_txpool_watched_txs": 0
+        },
+        "lastPoolGaugesInWindow": {
+          "Collator-1502/substrate_ready_transactions_number": 0.0,
+          "Collator-1502/substrate_sub_txpool_unwatched_txs": 2.0,
+          "Collator-1502/substrate_sub_txpool_watched_txs": 0.0,
+          "Collator-1502-2/substrate_ready_transactions_number": 0.0,
+          "Collator-1502-2/substrate_sub_txpool_unwatched_txs": 3.0,
+          "Collator-1502-2/substrate_sub_txpool_watched_txs": 0.0
+        },
+        "peakSampledHostBusyPercent": 21.29003445195866,
+        "minSampledAvailableGiB": 42.980010986328125,
+        "canonicalProposalStopReasons": [
+          "HitBlockWeightLimit",
+          "NoMoreTransactions"
+        ],
+        "maxCanonicalProposalSeconds": 2.97,
+        "receiptCountsByBlock": {
+          "173541": 2363,
+          "173543": 2363,
+          "173553": 2363,
+          "173562": 2363,
+          "173557": 2363,
+          "173542": 2363,
+          "173544": 2363,
+          "173550": 2363,
+          "173547": 2363,
+          "173567": 2363,
+          "173565": 2363,
+          "173572": 2363,
+          "173569": 2363,
+          "173556": 2363,
+          "173561": 2363,
+          "173558": 2363,
+          "173546": 2363,
+          "173566": 2363,
+          "173551": 2363,
+          "173579": 2363,
+          "173559": 2363,
+          "173552": 2363,
+          "173575": 2363,
+          "173570": 2363,
+          "173576": 2363,
+          "173577": 2363,
+          "173571": 2363,
+          "173568": 2363,
+          "173560": 2363,
+          "173548": 2363,
+          "173573": 2363,
+          "173554": 2363,
+          "173545": 2363,
+          "173549": 2363,
+          "173555": 2363,
+          "173563": 2363,
+          "173580": 2363,
+          "173564": 2363,
+          "173574": 2363,
+          "173582": 2363,
+          "173578": 2363,
+          "173581": 2363,
+          "173583": 754
+        },
+        "evidence": "36840043405/original"
+      }
+    ],
+    "methods": [
+      "Claim-only workload with root-seeded, asset-backed coins; no issuance or wallet behavior tested.",
+      "One real signed Coinage.transfer per actor; no retries or additional waves.",
+      "Receipts rechecked against raw extrinsics, indexed System success and expected Coinage events; both local RPC finality views saved.",
+      "Finality percentiles describe per-claim watch receipt latency; the last receipt is measured from wave start.",
+      "Stage duration includes post-burst state reads but excludes preparation, the final receipt audit and recovery.",
+      "Queue gauges and host resources are five-second samples; peak values may miss shorter spikes.",
+      "Local RPC consistency checks are not independent consensus or state-proof verification.",
+      "A successful offered burst is a measured lower bound, not the absolute hardware ceiling or sustainable TPS."
+    ],
+    "excludedAttempts": [
+      {
+        "run": 36830248627,
+        "reason": "Nightly snapshot startup failed: Asset Hub HRMP head mismatch; claim driver never ran."
+      },
+      {
+        "run": 36839694827,
+        "reason": "Cancelled before claims to separate fixture checks from long signing pass; no capacity result."
+      }
+    ]
+  },
+  "claim150kSummary": {
+    "name": "claim-burst",
+    "mode": "burst",
+    "poolProfile": "enlarged",
+    "waves": [
+      {
+        "count": 150000,
+        "startActor": 0,
+        "startedSeconds": 0.0003254499998874962,
+        "sendWindowSeconds": 6.662429802000057,
+        "settledSeconds": 509.97942343999983,
+        "finalized": 150000,
+        "verified": false
+      }
+    ],
+    "users": 150000,
+    "wallStart": "2026-10-01T19:13:27.965Z",
+    "sent": 150000,
+    "finalized": 150000,
+    "verified": 150000,
+    "passed": true,
+    "generatorLimited": false,
+    "sendWindowSeconds": 6.662429802000057,
+    "launchTargetSeconds": 60.0,
+    "deadlineSeconds": 3600.0,
+    "poolKbytes": 262144,
+    "elapsedSeconds": 649.976051919,
+    "poolReadyCount": 150000,
+    "poolReadyWindowSeconds": 97.73880435799994,
+    "finalityProgress": 64,
+    "settledAtSeconds": 509.97942343999983,
+    "drainAfterLastSendSeconds": 503.3180399079998,
+    "finalitySeconds": {
+      "count": 150000,
+      "p50": 275.7694861649999,
+      "p95": 489.735365219,
+      "max": 507.26237913
+    },
+    "outcomes": {
+      "finalized": 150000
+    },
+    "verificationBlock": {
+      "hash": "0x58abb11ff52c8f0782288b079095c156a394d5200b0ec3cbb9ee9427655e3815",
+      "number": 173396,
+      "parent": "0xd7215f6bf107b1faa59f78a7fbd1220cbae7dcf331d144900db79ca59de3b4e5",
+      "hasNewRuntime": false
+    },
+    "mismatches": [],
+    "backing": "300001",
+    "finalBacking": "300001",
+    "sampledMetrics": "See node-metrics.jsonl for available node metric names, samples and errors; event dispatch weights are saved in block evidence."
+  },
+  "claim150kVerification": {
+    "verifiedAt": "2026-10-02T03:05:11.110954+00:00",
+    "receiptCount": 150000,
+    "savedStateCount": 150000,
+    "stateMismatches": 0,
+    "fixtureBackingBefore": "300001",
+    "fixtureBackingAfter": "300001",
+    "verifierCommit": "932677d50e07052e62d45356a334801dc4630270",
+    "verifierOutput": "claim-burst: 150000 unique transactions matched saved block bodies and successful dispatch events\nclaim-smoke: 1 unique transactions matched saved block bodies and successful dispatch events\nThis checks saved evidence consistency; it does not authenticate the RPC nodes or prove consensus.\n",
+    "scope": "Raw block hashes/indexed success and CoinTransferred presence checked by pinned verifier; all final states and receipt event recipient/instance/value/age checked locally. Saved local RPC consistency, not consensus proofs."
+  },
+  "sources": [
+    {
+      "filename": "technical-design/designs/individuality/non-fun-tests/test-design/evidence/lifecycle-2026-10-03/campaign-completion-audit.json",
+      "sha256": "0f1b3b16d09599053b08d9e5ef63469dc948249c874ff7069757f514412501a5"
+    },
+    {
+      "filename": "technical-design/designs/individuality/non-fun-tests/test-design/evidence/lifecycle-2026-10-03/observations.json",
+      "sha256": "582322a6554eab10938b232c7f7e4185667214c67e674214c83e1099efe3e881"
+    },
+    {
+      "filename": "technical-design/designs/individuality/non-fun-tests/test-design/evidence/lifecycle-2026-10-03/targeted-observations.json",
+      "sha256": "b88ab6c3c2fdae1d8c3eeb86766375e0da9e1d24b4deb0956b90f6a16a548bd4"
+    },
+    {
+      "filename": "technical-design/designs/individuality/non-fun-tests/test-design/evidence/lifecycle-2026-10-03/b40000-targeted-observations.json",
+      "sha256": "40856a04a40b03cca69659feb3e5daf66eadef58c43534f968a6c4f7dc1555ca"
+    },
+    {
+      "filename": "technical-design/designs/individuality/non-fun-tests/test-design/evidence/lifecycle-2026-10-03/b100000-resource-observations.json",
+      "sha256": "7938d252304209a89e2e42399dcf914a83cc9c655cacdf1ceda59ed802d45e29"
+    },
+    {
+      "filename": "technical-design/designs/individuality/non-fun-tests/test-design/evidence/lifecycle-2026-10-03/b100000-readiness-verification.json",
+      "sha256": "8eccbcb02d0c4ca2f5ec09b3eac23e5cef1742c465f538c328593c10c53125b8"
+    },
+    {
+      "filename": "coinage-evidence/reconciliation-2026-09-30/analysis.json",
+      "sha256": "932a499a82d315ffb33892f3b8b583dec60d05bd18562b555f1013dbb9a9491a"
+    },
+    {
+      "filename": "coinage-evidence/claims-comparison-2026-09-30/experiments.json",
+      "sha256": "0b2ee58ee7f8077e4f34a6bc4963dfe1203ada662d05b31ee89bfd97dee2814b"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/experiments.json",
+      "sha256": "0842e172e9ef4ae3085151774617af77c6cad688e37c24f86cce6023c7388850"
+    },
+    {
+      "filename": "coinage-evidence/claims-retention-2026-10-02/36900802673/original/claim-burst-summary.json",
+      "sha256": "bd2b8654c4baac7eefacde7cda55199198a703dfb83fecde350b81dfa5de493a"
+    },
+    {
+      "filename": "coinage-evidence/claims-retention-2026-10-02/36900802673/local-verification.json",
+      "sha256": "89d3d00ad23510a1946888c49d38455eaa0f32ee98f83510afbf5b2cd04a9495"
+    }
+  ],
+  "additionalSources": [
+    {
+      "filename": "coinage-evidence/report-metrics-2026-10-05/metrics.json",
+      "sha256": "a0d17eb2952ffaadb7b73c4efab08645366137e17ca4ef3db274891849cbcc7a"
+    },
+    {
+      "filename": "technical-design/designs/individuality/non-fun-tests/test-design/evidence/lifecycle-2026-10-03/b10000-partial-readiness.json",
+      "sha256": "ea397ca343ef0e5210b191ad62710c9dd3beda3195e7655d3083238bf178dd9a"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36832069153/original/claim-burst-transactions.jsonl",
+      "sha256": "df377d81635149e24e02a21c4b2d081255fa04133d4490f983aeb4b2e569bba1"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36832069153/original/node-metrics.jsonl",
+      "sha256": "85d59b13f4537d357b38f414708dab0748fdd3f4e399d3163279d0baf172b064"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36832069153/original/claim-burst-samples.jsonl",
+      "sha256": "91451734e79927a5d2a3dbcec1183ecdd2c9500af097036890a3df69811a936d"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36832069153/original/claim-runtime.json",
+      "sha256": "7884d7d7d02ddb12c8bda9519e99ecf6cdbf08a58b103754f7579d092fcda5b0"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36832069153/original/provenance.json",
+      "sha256": "a854ae3bdfdeb047138b9d4245925872d2efb47f06f08c3632fba5f9071b6b53"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36832069153/original/claim-burst-summary.json",
+      "sha256": "2523296f3f165c90a553b5cf7e004034ff3d44edfddff2cd8639b1412ecf4dee"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36836204912/original/claim-burst-transactions.jsonl",
+      "sha256": "881956f8a0a68da398cc60ead09cd2d526182e1816c01bafa3cd1ef31fa66ed1"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36836204912/original/node-metrics.jsonl",
+      "sha256": "95da2fe9dc47c78d0a70533463c80589f8fb6e79b25620611c85944f9a8cd2cb"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36836204912/original/claim-burst-samples.jsonl",
+      "sha256": "afcea3c305df849fa449f45035c9ca632d1542ef4364870b55392ee0c809eff0"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36836204912/original/claim-runtime.json",
+      "sha256": "c0818c5c86d2e1d9c7aa37548f4ad370fecad80cf30bb5b4f0025f0e62c70b84"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36836204912/original/provenance.json",
+      "sha256": "a854ae3bdfdeb047138b9d4245925872d2efb47f06f08c3632fba5f9071b6b53"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36836204912/original/claim-burst-summary.json",
+      "sha256": "483df55890b73f3b5eb3d5c48a5e6ea635e5e38e88fdb1501a3e40bfb6b91a39"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36840043405/original/claim-burst-transactions.jsonl",
+      "sha256": "c01f9c29d6ecca5584ee3e1f1b955778e613e03fd450023a5d31b2e30fd92f0b"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36840043405/original/node-metrics.jsonl",
+      "sha256": "fcbaec39ee255211094ac8dbdf3cc673c533da71a81c3ee838dd1e228e2db542"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36840043405/original/claim-burst-samples.jsonl",
+      "sha256": "97d91c779e04e3b69bf92aeba6811680b4f5af2da72c73818b5e1a214c3b428d"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36840043405/original/claim-runtime.json",
+      "sha256": "7ea042953cc9aecfaf3b19d87adff21c639f9ae3db1e2d7a2bc0247cae537d95"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36840043405/original/provenance.json",
+      "sha256": "a854ae3bdfdeb047138b9d4245925872d2efb47f06f08c3632fba5f9071b6b53"
+    },
+    {
+      "filename": "coinage-evidence/claims-capacity-2026-10-01/36840043405/original/claim-burst-summary.json",
+      "sha256": "420f147e8a33d0bac88a259481df693efbe66cc3e5f5418ca0c2fc0749494e64"
+    },
+    {
+      "filename": "claims-capacity-2026-10-01/code/b7451cd/packages/chain-tests/src/lib/coinage-burst-submit.ts",
+      "sha256": "cff59bfaad431da9373f283d3a1f8118602b932a5e716c944db0fd6bf230845e"
+    }
+  ],
+  "claimCapacityDerived": [
+    {
+      "run": 36832069153,
+      "attempt": 1,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36832069153/attempts/1",
+      "clientObservedSeconds": {
+        "ready": {
+          "count": 20000,
+          "p50": 1.5418925809999928,
+          "p95": 2.8088071859998163,
+          "p99": 2.9146784359999,
+          "max": 2.9411879850002007
+        },
+        "inclusion": {
+          "count": 20000,
+          "p50": 29.142040065000067,
+          "p95": 62.28441371799982,
+          "p99": 62.58376316299988,
+          "max": 68.15209747799999
+        },
+        "finalizedNotification": {
+          "count": 20000,
+          "p50": 65.53718674700009,
+          "p95": 93.80339386499999,
+          "p99": 93.83169081299985,
+          "max": 93.91191562599991
+        },
+        "receiptLookup": {
+          "count": 20000,
+          "p50": 65.71067783199996,
+          "p95": 93.80648378499993,
+          "p99": 93.89774811699986,
+          "max": 93.91429302600002
+        }
+      },
+      "readyPoolSamples": [
+        {
+          "secondsFromBurstStart": 4.81522011756897,
+          "readyTransactions": {
+            "Collator-1502": 8573.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 9.783263206481934,
+          "readyTransactions": {
+            "Collator-1502": 20000.0,
+            "Collator-1502-2": 9877.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 14.812529802322388,
+          "readyTransactions": {
+            "Collator-1502": 15274.0,
+            "Collator-1502-2": 9877.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 19.797170162200928,
+          "readyTransactions": {
+            "Collator-1502": 15274.0,
+            "Collator-1502-2": 7514.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 24.768667221069336,
+          "readyTransactions": {
+            "Collator-1502": 12911.0,
+            "Collator-1502-2": 7514.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 29.824702501296997,
+          "readyTransactions": {
+            "Collator-1502": 12911.0,
+            "Collator-1502-2": 8161.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 34.80889630317688,
+          "readyTransactions": {
+            "Collator-1502": 10548.0,
+            "Collator-1502-2": 5798.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 39.75051164627075,
+          "readyTransactions": {
+            "Collator-1502": 10548.0,
+            "Collator-1502-2": 8691.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 44.82525587081909,
+          "readyTransactions": {
+            "Collator-1502": 8185.0,
+            "Collator-1502-2": 8691.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 49.735129594802856,
+          "readyTransactions": {
+            "Collator-1502": 8185.0,
+            "Collator-1502-2": 8691.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 54.72282671928406,
+          "readyTransactions": {
+            "Collator-1502": 8185.0,
+            "Collator-1502-2": 6426.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 59.89694356918335,
+          "readyTransactions": {
+            "Collator-1502": 5822.0,
+            "Collator-1502-2": 4063.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 64.80808138847351,
+          "readyTransactions": {
+            "Collator-1502": 3459.0,
+            "Collator-1502-2": 1700.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 69.76436233520508,
+          "readyTransactions": {
+            "Collator-1502": 1096.0,
+            "Collator-1502-2": 1096.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 74.81769943237305,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 79.78464651107788,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 84.73890113830566,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 89.81249618530273,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 94.8076605796814,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 99.77820181846619,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 104.81726479530334,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 109.80904507637024,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 114.75694489479065,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 119.80976796150208,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 124.80585527420044,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 129.7850272655487,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 134.8186182975769,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 139.77196836471558,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 144.77086281776428,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 149.90838813781738,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        }
+      ],
+      "driverSamples": [
+        {
+          "secondsFromBurstStart": 0.006147119999863207,
+          "rssBytes": 1276178432,
+          "heapUsedBytes": 527707616
+        },
+        {
+          "secondsFromBurstStart": 5.006563801999902,
+          "rssBytes": 1256640512,
+          "heapUsedBytes": 556609896
+        },
+        {
+          "secondsFromBurstStart": 10.006103584999916,
+          "rssBytes": 1256640512,
+          "heapUsedBytes": 561368728
+        },
+        {
+          "secondsFromBurstStart": 15.006599956999999,
+          "rssBytes": 1256640512,
+          "heapUsedBytes": 594434656
+        },
+        {
+          "secondsFromBurstStart": 20.006976258999902,
+          "rssBytes": 1256640512,
+          "heapUsedBytes": 598754024
+        },
+        {
+          "secondsFromBurstStart": 25.00719864099985,
+          "rssBytes": 1258008576,
+          "heapUsedBytes": 250660424
+        },
+        {
+          "secondsFromBurstStart": 30.007847932999955,
+          "rssBytes": 1258008576,
+          "heapUsedBytes": 254941160
+        },
+        {
+          "secondsFromBurstStart": 35.008394325,
+          "rssBytes": 1259323392,
+          "heapUsedBytes": 388318664
+        },
+        {
+          "secondsFromBurstStart": 40.00986981699988,
+          "rssBytes": 1259323392,
+          "heapUsedBytes": 408290048
+        },
+        {
+          "secondsFromBurstStart": 45.010710831000004,
+          "rssBytes": 1259556864,
+          "heapUsedBytes": 383139816
+        },
+        {
+          "secondsFromBurstStart": 50.0119727429999,
+          "rssBytes": 1258995712,
+          "heapUsedBytes": 251887952
+        },
+        {
+          "secondsFromBurstStart": 55.012160404999975,
+          "rssBytes": 1258995712,
+          "heapUsedBytes": 256201000
+        },
+        {
+          "secondsFromBurstStart": 60.0120494469998,
+          "rssBytes": 1259450368,
+          "heapUsedBytes": 396533000
+        },
+        {
+          "secondsFromBurstStart": 65.01245186999999,
+          "rssBytes": 1259450368,
+          "heapUsedBytes": 400821800
+        },
+        {
+          "secondsFromBurstStart": 70.01235773299983,
+          "rssBytes": 1259315200,
+          "heapUsedBytes": 254500168
+        },
+        {
+          "secondsFromBurstStart": 75.01296054599993,
+          "rssBytes": 1259315200,
+          "heapUsedBytes": 254550728
+        },
+        {
+          "secondsFromBurstStart": 80.01375230799988,
+          "rssBytes": 1260707840,
+          "heapUsedBytes": 399977224
+        },
+        {
+          "secondsFromBurstStart": 85.0133450999998,
+          "rssBytes": 1259466752,
+          "heapUsedBytes": 252318456
+        },
+        {
+          "secondsFromBurstStart": 90.01377997299983,
+          "rssBytes": 1259466752,
+          "heapUsedBytes": 252387456
+        }
+      ],
+      "runtime": {
+        "version": {
+          "spec_name": "next-people-paseo",
+          "impl_name": "next-people-paseo",
+          "authoring_version": 1,
+          "spec_version": 3003000,
+          "impl_version": 0,
+          "apis": [
+            [
+              "0xdd718d5cc53262d4",
+              1
+            ],
+            [
+              "0x04e70521a0d3d2f8",
+              2
+            ],
+            [
+              "0x162bf19137abacbd",
+              1
+            ],
+            [
+              "0xd7bdd8a272ca0d65",
+              2
+            ],
+            [
+              "0xdf6acb689907609b",
+              5
+            ],
+            [
+              "0x37e397fc7c91f5e4",
+              2
+            ],
+            [
+              "0xccd9de6396c899ca",
+              1
+            ],
+            [
+              "0x40fe3ad401f8959a",
+              6
+            ],
+            [
+              "0xd2bc9897eed08f15",
+              3
+            ],
+            [
+              "0xf78b278be53f454c",
+              2
+            ],
+            [
+              "0xab3c0572291feb8b",
+              2
+            ],
+            [
+              "0xbc9d89904f5b923f",
+              1
+            ],
+            [
+              "0x37c8bb1350a9a2a8",
+              4
+            ],
+            [
+              "0xf3ff14d5ab527059",
+              3
+            ],
+            [
+              "0x6ff52ee858e6c5bd",
+              2
+            ],
+            [
+              "0x91b1c8b16328eb92",
+              2
+            ],
+            [
+              "0x9ffb505aa738d69c",
+              1
+            ],
+            [
+              "0xd0bac7be4a6b0920",
+              1
+            ],
+            [
+              "0x9287fb0e021bc854",
+              1
+            ],
+            [
+              "0x843b6f8cec8098c7",
+              1
+            ],
+            [
+              "0x5f4d07c7630fd6b9",
+              1
+            ],
+            [
+              "0xea93e3f16f3d6962",
+              3
+            ],
+            [
+              "0xfbc577b9d747efd6",
+              1
+            ]
+          ],
+          "transaction_version": 5,
+          "system_version": 1
+        },
+        "blockWeights": {
+          "base_block": {
+            "ref_time": "5000000000",
+            "proof_size": "0"
+          },
+          "max_block": {
+            "ref_time": "2000000000000",
+            "proof_size": "10485760"
+          },
+          "per_class": {
+            "normal": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              },
+              "max_extrinsic": {
+                "ref_time": "1399875000000",
+                "proof_size": "7340032"
+              },
+              "max_total": {
+                "ref_time": "1500000000000",
+                "proof_size": "7864320"
+              },
+              "reserved": {
+                "ref_time": "0",
+                "proof_size": "0"
+              }
+            },
+            "operational": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              },
+              "max_extrinsic": {
+                "ref_time": "1899875000000",
+                "proof_size": "9961472"
+              },
+              "max_total": {
+                "ref_time": "2000000000000",
+                "proof_size": "10485760"
+              },
+              "reserved": {
+                "ref_time": "500000000000",
+                "proof_size": "2621440"
+              }
+            },
+            "mandatory": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              }
+            }
+          }
+        },
+        "blockLength": {
+          "max": {
+            "normal": 3932160,
+            "operational": 5242880,
+            "mandatory": 5242880
+          }
+        },
+        "genesis": "0x55e3e689ecfa9d2fffcf7d309b8011956671493982230bfd0420c683542249e9",
+        "requestedActors": 20000,
+        "syntheticDelaySeconds": 0.0,
+        "mode": "burst",
+        "poolProfile": "enlarged"
+      },
+      "provenance": {
+        "engine_commit": "7907a3bfa7b2e47535a74b7920086a05ca94773a",
+        "assets": [
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638416,
+            "name": "polkadot",
+            "sha256": "4a2a5476eaeb03b24fa43de2e19afc59ff82f67eeba0cbd504f28c0de52b5128"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638401,
+            "name": "polkadot-execute-worker",
+            "sha256": "5549e9a2fd4d79f2a297d96015daf4fda98a52d00f70ff48f33eea4ade8962d3"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638360,
+            "name": "polkadot-prepare-worker",
+            "sha256": "784fa62c819b1e187bb690cb130420620c43842407890813b8f339da433b57c2"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638409,
+            "name": "polkadot-omni-node",
+            "sha256": "796de842beff52aae37afc661d4ceb32c7379fb23ff783a7872713508a31a912"
+          },
+          {
+            "repo": "paritytech/zombienet-sdk",
+            "tag": "v0.4.15",
+            "asset_id": 485842126,
+            "name": "zombie-cli-x86_64-unknown-linux-gnu",
+            "sha256": "1a28e8bc184fefda182f197c5ec196913bafedfef1c51d1dbe3cf5721712c8f4"
+          },
+          {
+            "repo": "paritytech/previewnet-engine",
+            "run_id": "36614342201",
+            "artifact_id": 11054628075,
+            "name": "fork-bundle-previewnet.tar.gz",
+            "sha256": "edab76b213657e499ae9fcb95673a2bf4ca717b78b00caf3d7783fc18b562b4f"
+          }
+        ]
+      }
+    },
+    {
+      "run": 36836204912,
+      "attempt": 1,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36836204912/attempts/1",
+      "clientObservedSeconds": {
+        "ready": {
+          "count": 40000,
+          "p50": 3.3205928749998566,
+          "p95": 6.398590147999814,
+          "p99": 6.867526465999894,
+          "max": 7.032705130999908
+        },
+        "inclusion": {
+          "count": 40000,
+          "p50": 73.21457522300003,
+          "p95": 112.83344971000007,
+          "p99": 112.90910127800005,
+          "max": 112.92333219600003
+        },
+        "finalizedNotification": {
+          "count": 40000,
+          "p50": 92.29515210299985,
+          "p95": 139.38785565400008,
+          "p99": 139.51273605299997,
+          "max": 139.56050717400015
+        },
+        "receiptLookup": {
+          "count": 40000,
+          "p50": 92.30022739799996,
+          "p95": 139.3935743389998,
+          "p99": 139.516484439,
+          "max": 139.56576376900006
+        }
+      },
+      "readyPoolSamples": [
+        {
+          "secondsFromBurstStart": 0.6329050064086914,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 5.587472677230835,
+          "readyTransactions": {
+            "Collator-1502": 20501.0,
+            "Collator-1502-2": 11779.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 10.573392629623413,
+          "readyTransactions": {
+            "Collator-1502": 37637.0,
+            "Collator-1502-2": 21402.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 15.618041515350342,
+          "readyTransactions": {
+            "Collator-1502": 35274.0,
+            "Collator-1502-2": 19039.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 20.601868391036987,
+          "readyTransactions": {
+            "Collator-1502": 35274.0,
+            "Collator-1502-2": 19039.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 25.560386896133423,
+          "readyTransactions": {
+            "Collator-1502": 35274.0,
+            "Collator-1502-2": 17507.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 30.600621938705444,
+          "readyTransactions": {
+            "Collator-1502": 32911.0,
+            "Collator-1502-2": 17769.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 35.599714040756226,
+          "readyTransactions": {
+            "Collator-1502": 30548.0,
+            "Collator-1502-2": 17769.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 40.59479570388794,
+          "readyTransactions": {
+            "Collator-1502": 28185.0,
+            "Collator-1502-2": 15406.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 45.660480976104736,
+          "readyTransactions": {
+            "Collator-1502": 28185.0,
+            "Collator-1502-2": 14807.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 50.64734125137329,
+          "readyTransactions": {
+            "Collator-1502": 25822.0,
+            "Collator-1502-2": 12444.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 55.591691732406616,
+          "readyTransactions": {
+            "Collator-1502": 25822.0,
+            "Collator-1502-2": 10081.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 60.663938999176025,
+          "readyTransactions": {
+            "Collator-1502": 23459.0,
+            "Collator-1502-2": 10081.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 65.6179678440094,
+          "readyTransactions": {
+            "Collator-1502": 21096.0,
+            "Collator-1502-2": 7718.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 70.54793310165405,
+          "readyTransactions": {
+            "Collator-1502": 21096.0,
+            "Collator-1502-2": 5355.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 75.66252589225769,
+          "readyTransactions": {
+            "Collator-1502": 16370.0,
+            "Collator-1502-2": 2992.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 80.64035987854004,
+          "readyTransactions": {
+            "Collator-1502": 16370.0,
+            "Collator-1502-2": 6448.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 85.54594492912292,
+          "readyTransactions": {
+            "Collator-1502": 14007.0,
+            "Collator-1502-2": 6448.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 90.64431881904602,
+          "readyTransactions": {
+            "Collator-1502": 11644.0,
+            "Collator-1502-2": 5178.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 95.64364385604858,
+          "readyTransactions": {
+            "Collator-1502": 9281.0,
+            "Collator-1502-2": 2815.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 100.6120491027832,
+          "readyTransactions": {
+            "Collator-1502": 6918.0,
+            "Collator-1502-2": 3908.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 105.63137149810791,
+          "readyTransactions": {
+            "Collator-1502": 4555.0,
+            "Collator-1502-2": 4555.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 110.62652087211609,
+          "readyTransactions": {
+            "Collator-1502": 2192.0,
+            "Collator-1502-2": 2192.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 115.551518201828,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 120.68055129051208,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 125.60529899597168,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 130.55055236816406,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 135.62389373779297,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 140.64681911468506,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 145.58539390563965,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 150.65337824821472,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 155.6354627609253,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 160.55101490020752,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 165.68348002433777,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 170.64007806777954,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 175.52852177619934,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 180.61595177650452,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        }
+      ],
+      "driverSamples": [
+        {
+          "secondsFromBurstStart": 0.006959573999978602,
+          "rssBytes": 1812074496,
+          "heapUsedBytes": 818213512
+        },
+        {
+          "secondsFromBurstStart": 5.007614031000063,
+          "rssBytes": 1807593472,
+          "heapUsedBytes": 952052176
+        },
+        {
+          "secondsFromBurstStart": 10.007310029000044,
+          "rssBytes": 1807593472,
+          "heapUsedBytes": 983531088
+        },
+        {
+          "secondsFromBurstStart": 15.007393815000075,
+          "rssBytes": 1804177408,
+          "heapUsedBytes": 464054600
+        },
+        {
+          "secondsFromBurstStart": 20.007212382999946,
+          "rssBytes": 1804177408,
+          "heapUsedBytes": 464073624
+        },
+        {
+          "secondsFromBurstStart": 25.00768810999999,
+          "rssBytes": 1804177408,
+          "heapUsedBytes": 471123656
+        },
+        {
+          "secondsFromBurstStart": 30.007845086999936,
+          "rssBytes": 1804177408,
+          "heapUsedBytes": 479620296
+        },
+        {
+          "secondsFromBurstStart": 35.008925763000036,
+          "rssBytes": 1804734464,
+          "heapUsedBytes": 589031176
+        },
+        {
+          "secondsFromBurstStart": 40.00918336999998,
+          "rssBytes": 1805008896,
+          "heapUsedBytes": 723258688
+        },
+        {
+          "secondsFromBurstStart": 45.009054957000075,
+          "rssBytes": 1805008896,
+          "heapUsedBytes": 723313952
+        },
+        {
+          "secondsFromBurstStart": 50.009143543999876,
+          "rssBytes": 1804476416,
+          "heapUsedBytes": 656508752
+        },
+        {
+          "secondsFromBurstStart": 55.00984134100005,
+          "rssBytes": 1804476416,
+          "heapUsedBytes": 656528896
+        },
+        {
+          "secondsFromBurstStart": 60.01097012800002,
+          "rssBytes": 1805094912,
+          "heapUsedBytes": 503024248
+        },
+        {
+          "secondsFromBurstStart": 65.01190001400002,
+          "rssBytes": 1805336576,
+          "heapUsedBytes": 487439744
+        },
+        {
+          "secondsFromBurstStart": 70.09111321699991,
+          "rssBytes": 1805635584,
+          "heapUsedBytes": 635191960
+        },
+        {
+          "secondsFromBurstStart": 75.09198665299988,
+          "rssBytes": 1805635584,
+          "heapUsedBytes": 749217352
+        },
+        {
+          "secondsFromBurstStart": 80.09250933999988,
+          "rssBytes": 1805635584,
+          "heapUsedBytes": 774343360
+        },
+        {
+          "secondsFromBurstStart": 85.09792097299989,
+          "rssBytes": 1805758464,
+          "heapUsedBytes": 917969432
+        },
+        {
+          "secondsFromBurstStart": 90.09900433299993,
+          "rssBytes": 1805160448,
+          "heapUsedBytes": 655293536
+        },
+        {
+          "secondsFromBurstStart": 95.09984019299992,
+          "rssBytes": 1805459456,
+          "heapUsedBytes": 477271752
+        },
+        {
+          "secondsFromBurstStart": 100.10058554399991,
+          "rssBytes": 1806770176,
+          "heapUsedBytes": 609433608
+        },
+        {
+          "secondsFromBurstStart": 105.10046538499999,
+          "rssBytes": 1807282176,
+          "heapUsedBytes": 740981016
+        },
+        {
+          "secondsFromBurstStart": 110.10050802499987,
+          "rssBytes": 1807716352,
+          "heapUsedBytes": 871868536
+        },
+        {
+          "secondsFromBurstStart": 115.10188503400003,
+          "rssBytes": 1807716352,
+          "heapUsedBytes": 875835784
+        },
+        {
+          "secondsFromBurstStart": 120.10283331399992,
+          "rssBytes": 1805467648,
+          "heapUsedBytes": 639359008
+        },
+        {
+          "secondsFromBurstStart": 125.10338658699999,
+          "rssBytes": 1806245888,
+          "heapUsedBytes": 762657736
+        },
+        {
+          "secondsFromBurstStart": 130.10320635899996,
+          "rssBytes": 1806544896,
+          "heapUsedBytes": 890095312
+        },
+        {
+          "secondsFromBurstStart": 135.1030715089999,
+          "rssBytes": 1806913536,
+          "heapUsedBytes": 1015502624
+        },
+        {
+          "secondsFromBurstStart": 140.1065597969999,
+          "rssBytes": 1806913536,
+          "heapUsedBytes": 1015551728
+        }
+      ],
+      "runtime": {
+        "version": {
+          "spec_name": "next-people-paseo",
+          "impl_name": "next-people-paseo",
+          "authoring_version": 1,
+          "spec_version": 3003000,
+          "impl_version": 0,
+          "apis": [
+            [
+              "0xdd718d5cc53262d4",
+              1
+            ],
+            [
+              "0x04e70521a0d3d2f8",
+              2
+            ],
+            [
+              "0x162bf19137abacbd",
+              1
+            ],
+            [
+              "0xd7bdd8a272ca0d65",
+              2
+            ],
+            [
+              "0xdf6acb689907609b",
+              5
+            ],
+            [
+              "0x37e397fc7c91f5e4",
+              2
+            ],
+            [
+              "0xccd9de6396c899ca",
+              1
+            ],
+            [
+              "0x40fe3ad401f8959a",
+              6
+            ],
+            [
+              "0xd2bc9897eed08f15",
+              3
+            ],
+            [
+              "0xf78b278be53f454c",
+              2
+            ],
+            [
+              "0xab3c0572291feb8b",
+              2
+            ],
+            [
+              "0xbc9d89904f5b923f",
+              1
+            ],
+            [
+              "0x37c8bb1350a9a2a8",
+              4
+            ],
+            [
+              "0xf3ff14d5ab527059",
+              3
+            ],
+            [
+              "0x6ff52ee858e6c5bd",
+              2
+            ],
+            [
+              "0x91b1c8b16328eb92",
+              2
+            ],
+            [
+              "0x9ffb505aa738d69c",
+              1
+            ],
+            [
+              "0xd0bac7be4a6b0920",
+              1
+            ],
+            [
+              "0x9287fb0e021bc854",
+              1
+            ],
+            [
+              "0x843b6f8cec8098c7",
+              1
+            ],
+            [
+              "0x5f4d07c7630fd6b9",
+              1
+            ],
+            [
+              "0xea93e3f16f3d6962",
+              3
+            ],
+            [
+              "0xfbc577b9d747efd6",
+              1
+            ]
+          ],
+          "transaction_version": 5,
+          "system_version": 1
+        },
+        "blockWeights": {
+          "base_block": {
+            "ref_time": "5000000000",
+            "proof_size": "0"
+          },
+          "max_block": {
+            "ref_time": "2000000000000",
+            "proof_size": "10485760"
+          },
+          "per_class": {
+            "normal": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              },
+              "max_extrinsic": {
+                "ref_time": "1399875000000",
+                "proof_size": "7340032"
+              },
+              "max_total": {
+                "ref_time": "1500000000000",
+                "proof_size": "7864320"
+              },
+              "reserved": {
+                "ref_time": "0",
+                "proof_size": "0"
+              }
+            },
+            "operational": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              },
+              "max_extrinsic": {
+                "ref_time": "1899875000000",
+                "proof_size": "9961472"
+              },
+              "max_total": {
+                "ref_time": "2000000000000",
+                "proof_size": "10485760"
+              },
+              "reserved": {
+                "ref_time": "500000000000",
+                "proof_size": "2621440"
+              }
+            },
+            "mandatory": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              }
+            }
+          }
+        },
+        "blockLength": {
+          "max": {
+            "normal": 3932160,
+            "operational": 5242880,
+            "mandatory": 5242880
+          }
+        },
+        "genesis": "0x55e3e689ecfa9d2fffcf7d309b8011956671493982230bfd0420c683542249e9",
+        "requestedActors": 40000,
+        "syntheticDelaySeconds": 0.0,
+        "mode": "burst",
+        "poolProfile": "enlarged",
+        "launchTargetSeconds": 5.0,
+        "fixtureBatch": 5000,
+        "poolTransactions": 44000
+      },
+      "provenance": {
+        "engine_commit": "7907a3bfa7b2e47535a74b7920086a05ca94773a",
+        "assets": [
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638416,
+            "name": "polkadot",
+            "sha256": "4a2a5476eaeb03b24fa43de2e19afc59ff82f67eeba0cbd504f28c0de52b5128"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638401,
+            "name": "polkadot-execute-worker",
+            "sha256": "5549e9a2fd4d79f2a297d96015daf4fda98a52d00f70ff48f33eea4ade8962d3"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638360,
+            "name": "polkadot-prepare-worker",
+            "sha256": "784fa62c819b1e187bb690cb130420620c43842407890813b8f339da433b57c2"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638409,
+            "name": "polkadot-omni-node",
+            "sha256": "796de842beff52aae37afc661d4ceb32c7379fb23ff783a7872713508a31a912"
+          },
+          {
+            "repo": "paritytech/zombienet-sdk",
+            "tag": "v0.4.15",
+            "asset_id": 485842126,
+            "name": "zombie-cli-x86_64-unknown-linux-gnu",
+            "sha256": "1a28e8bc184fefda182f197c5ec196913bafedfef1c51d1dbe3cf5721712c8f4"
+          },
+          {
+            "repo": "paritytech/previewnet-engine",
+            "run_id": "36614342201",
+            "artifact_id": 11054628075,
+            "name": "fork-bundle-previewnet.tar.gz",
+            "sha256": "edab76b213657e499ae9fcb95673a2bf4ca717b78b00caf3d7783fc18b562b4f"
+          }
+        ]
+      }
+    },
+    {
+      "run": 36840043405,
+      "attempt": 1,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36840043405/attempts/1",
+      "clientObservedSeconds": {
+        "ready": {
+          "count": 100000,
+          "p50": 7.435431121999864,
+          "p95": 15.268071542999706,
+          "p99": 16.088053462000097,
+          "max": 16.441350241000297
+        },
+        "inclusion": {
+          "count": 100000,
+          "p50": 150.10610275899992,
+          "p95": 274.79649287199976,
+          "p99": 278.92379419399987,
+          "max": 284.3085818810002
+        },
+        "finalizedNotification": {
+          "count": 100000,
+          "p50": 178.3405648670001,
+          "p95": 297.15720772499964,
+          "p99": 306.36048073399996,
+          "max": 310.2502574300002
+        },
+        "receiptLookup": {
+          "count": 100000,
+          "p50": 178.52120730200036,
+          "p95": 297.3460659500002,
+          "p99": 306.367131263,
+          "max": 310.3392376280003
+        }
+      },
+      "readyPoolSamples": [
+        {
+          "secondsFromBurstStart": 2.5520660877227783,
+          "readyTransactions": {
+            "Collator-1502": 1941.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 7.5470476150512695,
+          "readyTransactions": {
+            "Collator-1502": 27495.0,
+            "Collator-1502-2": 17061.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 12.57165789604187,
+          "readyTransactions": {
+            "Collator-1502": 55677.0,
+            "Collator-1502-2": 14698.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 17.507773637771606,
+          "readyTransactions": {
+            "Collator-1502": 64959.0,
+            "Collator-1502-2": 18821.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 22.62540626525879,
+          "readyTransactions": {
+            "Collator-1502": 64959.0,
+            "Collator-1502-2": 18821.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 27.604416370391846,
+          "readyTransactions": {
+            "Collator-1502": 76596.0,
+            "Collator-1502-2": 18821.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 32.51121282577515,
+          "readyTransactions": {
+            "Collator-1502": 81233.0,
+            "Collator-1502-2": 16458.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 37.60566735267639,
+          "readyTransactions": {
+            "Collator-1502": 85870.0,
+            "Collator-1502-2": 14095.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 42.59129738807678,
+          "readyTransactions": {
+            "Collator-1502": 85870.0,
+            "Collator-1502-2": 11732.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 47.56856369972229,
+          "readyTransactions": {
+            "Collator-1502": 88185.0,
+            "Collator-1502-2": 11732.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 52.61419701576233,
+          "readyTransactions": {
+            "Collator-1502": 85822.0,
+            "Collator-1502-2": 11738.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 57.575528383255005,
+          "readyTransactions": {
+            "Collator-1502": 85822.0,
+            "Collator-1502-2": 11738.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 62.54838681221008,
+          "readyTransactions": {
+            "Collator-1502": 85822.0,
+            "Collator-1502-2": 11738.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 67.5495855808258,
+          "readyTransactions": {
+            "Collator-1502": 83459.0,
+            "Collator-1502-2": 10378.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 72.5818738937378,
+          "readyTransactions": {
+            "Collator-1502": 81096.0,
+            "Collator-1502-2": 12065.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 77.57040095329285,
+          "readyTransactions": {
+            "Collator-1502": 78733.0,
+            "Collator-1502-2": 12956.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 82.56064629554749,
+          "readyTransactions": {
+            "Collator-1502": 78733.0,
+            "Collator-1502-2": 11283.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 87.57070279121399,
+          "readyTransactions": {
+            "Collator-1502": 78733.0,
+            "Collator-1502-2": 13854.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 92.5379228591919,
+          "readyTransactions": {
+            "Collator-1502": 78733.0,
+            "Collator-1502-2": 11491.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 97.59450316429138,
+          "readyTransactions": {
+            "Collator-1502": 74007.0,
+            "Collator-1502-2": 11491.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 102.57722997665405,
+          "readyTransactions": {
+            "Collator-1502": 71644.0,
+            "Collator-1502-2": 11491.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 107.51975631713867,
+          "readyTransactions": {
+            "Collator-1502": 71644.0,
+            "Collator-1502-2": 9128.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 112.68880486488342,
+          "readyTransactions": {
+            "Collator-1502": 71644.0,
+            "Collator-1502-2": 9128.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 117.56178689002991,
+          "readyTransactions": {
+            "Collator-1502": 64555.0,
+            "Collator-1502-2": 6765.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 122.48601460456848,
+          "readyTransactions": {
+            "Collator-1502": 64555.0,
+            "Collator-1502-2": 8372.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 127.54769444465637,
+          "readyTransactions": {
+            "Collator-1502": 62192.0,
+            "Collator-1502-2": 6009.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 132.55695152282715,
+          "readyTransactions": {
+            "Collator-1502": 59829.0,
+            "Collator-1502-2": 6009.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 137.5912013053894,
+          "readyTransactions": {
+            "Collator-1502": 57466.0,
+            "Collator-1502-2": 3646.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 142.62258172035217,
+          "readyTransactions": {
+            "Collator-1502": 55103.0,
+            "Collator-1502-2": 7102.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 147.628657579422,
+          "readyTransactions": {
+            "Collator-1502": 52740.0,
+            "Collator-1502-2": 7102.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 152.52869868278503,
+          "readyTransactions": {
+            "Collator-1502": 52740.0,
+            "Collator-1502-2": 4739.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 157.58679866790771,
+          "readyTransactions": {
+            "Collator-1502": 50377.0,
+            "Collator-1502-2": 4997.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 162.64982509613037,
+          "readyTransactions": {
+            "Collator-1502": 48014.0,
+            "Collator-1502-2": 3412.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 167.51106929779053,
+          "readyTransactions": {
+            "Collator-1502": 45651.0,
+            "Collator-1502-2": 6868.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 172.56594800949097,
+          "readyTransactions": {
+            "Collator-1502": 43288.0,
+            "Collator-1502-2": 6868.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 177.5278811454773,
+          "readyTransactions": {
+            "Collator-1502": 43288.0,
+            "Collator-1502-2": 7961.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 182.4913010597229,
+          "readyTransactions": {
+            "Collator-1502": 38562.0,
+            "Collator-1502-2": 5598.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 187.58535194396973,
+          "readyTransactions": {
+            "Collator-1502": 38562.0,
+            "Collator-1502-2": 4706.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 192.53604745864868,
+          "readyTransactions": {
+            "Collator-1502": 36199.0,
+            "Collator-1502-2": 4706.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 197.53532791137695,
+          "readyTransactions": {
+            "Collator-1502": 33836.0,
+            "Collator-1502-2": 5799.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 202.60210847854614,
+          "readyTransactions": {
+            "Collator-1502": 33836.0,
+            "Collator-1502-2": 3436.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 207.62221360206604,
+          "readyTransactions": {
+            "Collator-1502": 33836.0,
+            "Collator-1502-2": 1073.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 212.52680897712708,
+          "readyTransactions": {
+            "Collator-1502": 31473.0,
+            "Collator-1502-2": 4529.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 217.57345008850098,
+          "readyTransactions": {
+            "Collator-1502": 29110.0,
+            "Collator-1502-2": 5622.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 222.58857560157776,
+          "readyTransactions": {
+            "Collator-1502": 26747.0,
+            "Collator-1502-2": 5622.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 227.55058455467224,
+          "readyTransactions": {
+            "Collator-1502": 26747.0,
+            "Collator-1502-2": 5625.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 232.54702997207642,
+          "readyTransactions": {
+            "Collator-1502": 24384.0,
+            "Collator-1502-2": 3262.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 237.6456925868988,
+          "readyTransactions": {
+            "Collator-1502": 22021.0,
+            "Collator-1502-2": 6718.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 242.57203578948975,
+          "readyTransactions": {
+            "Collator-1502": 19658.0,
+            "Collator-1502-2": 6718.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 247.59823966026306,
+          "readyTransactions": {
+            "Collator-1502": 17295.0,
+            "Collator-1502-2": 4549.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 252.57975578308105,
+          "readyTransactions": {
+            "Collator-1502": 17295.0,
+            "Collator-1502-2": 2186.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 257.5357391834259,
+          "readyTransactions": {
+            "Collator-1502": 12569.0,
+            "Collator-1502-2": 4781.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 262.5622458457947,
+          "readyTransactions": {
+            "Collator-1502": 12569.0,
+            "Collator-1502-2": 4781.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 267.6081495285034,
+          "readyTransactions": {
+            "Collator-1502": 10207.0,
+            "Collator-1502-2": 4550.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 272.55236983299255,
+          "readyTransactions": {
+            "Collator-1502": 7844.0,
+            "Collator-1502-2": 5643.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 277.6040253639221,
+          "readyTransactions": {
+            "Collator-1502": 5481.0,
+            "Collator-1502-2": 3280.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 282.5853576660156,
+          "readyTransactions": {
+            "Collator-1502": 5481.0,
+            "Collator-1502-2": 917.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 287.52982473373413,
+          "readyTransactions": {
+            "Collator-1502": 755.0,
+            "Collator-1502-2": 755.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 292.6000325679779,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 297.6722004413605,
+          "readyTransactions": {
+            "Collator-1502": 1.0,
+            "Collator-1502-2": 1.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 302.4552171230316,
+          "readyTransactions": {
+            "Collator-1502": 1.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 307.6011061668396,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 312.58875918388367,
+          "readyTransactions": {
+            "Collator-1502": 1.0,
+            "Collator-1502-2": 1.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 317.5422842502594,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 322.558057308197,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 327.59068512916565,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 332.5211937427521,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 337.58692049980164,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 342.59242129325867,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 347.5434830188751,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 352.5941858291626,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 357.6297733783722,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 362.562979221344,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 367.6069269180298,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 372.5882487297058,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 377.5031578540802,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 382.61726355552673,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 387.64634108543396,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 392.4671196937561,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 397.56435990333557,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 402.5995500087738,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        },
+        {
+          "secondsFromBurstStart": 407.5301969051361,
+          "readyTransactions": {
+            "Collator-1502": 0.0,
+            "Collator-1502-2": 0.0
+          }
+        }
+      ],
+      "driverSamples": [
+        {
+          "secondsFromBurstStart": 0.006041119999717921,
+          "rssBytes": 3020378112,
+          "heapUsedBytes": 1277520224
+        },
+        {
+          "secondsFromBurstStart": 5.005756776999682,
+          "rssBytes": 3018854400,
+          "heapUsedBytes": 1609223072
+        },
+        {
+          "secondsFromBurstStart": 10.006020783999935,
+          "rssBytes": 3021975552,
+          "heapUsedBytes": 1621380616
+        },
+        {
+          "secondsFromBurstStart": 15.006497519999742,
+          "rssBytes": 3022315520,
+          "heapUsedBytes": 1647937440
+        },
+        {
+          "secondsFromBurstStart": 20.00742108699959,
+          "rssBytes": 3027849216,
+          "heapUsedBytes": 1679563456
+        },
+        {
+          "secondsFromBurstStart": 25.007838383999655,
+          "rssBytes": 3027849216,
+          "heapUsedBytes": 1652674880
+        },
+        {
+          "secondsFromBurstStart": 30.008549490999897,
+          "rssBytes": 3027849216,
+          "heapUsedBytes": 1656946344
+        },
+        {
+          "secondsFromBurstStart": 35.276390979999675,
+          "rssBytes": 2960789504,
+          "heapUsedBytes": 1180649648
+        },
+        {
+          "secondsFromBurstStart": 40.27703568700002,
+          "rssBytes": 2961088512,
+          "heapUsedBytes": 1290749512
+        },
+        {
+          "secondsFromBurstStart": 45.2773186329999,
+          "rssBytes": 2961088512,
+          "heapUsedBytes": 1299723440
+        },
+        {
+          "secondsFromBurstStart": 50.278342549999714,
+          "rssBytes": 2961285120,
+          "heapUsedBytes": 1158048688
+        },
+        {
+          "secondsFromBurstStart": 55.28070886699995,
+          "rssBytes": 2961285120,
+          "heapUsedBytes": 1158068304
+        },
+        {
+          "secondsFromBurstStart": 60.28156464400003,
+          "rssBytes": 2961424384,
+          "heapUsedBytes": 1171491456
+        },
+        {
+          "secondsFromBurstStart": 65.28325725999987,
+          "rssBytes": 2962612224,
+          "heapUsedBytes": 1344842248
+        },
+        {
+          "secondsFromBurstStart": 70.28482653700001,
+          "rssBytes": 2962612224,
+          "heapUsedBytes": 1349125272
+        },
+        {
+          "secondsFromBurstStart": 75.28543219399964,
+          "rssBytes": 2962493440,
+          "heapUsedBytes": 1207446040
+        },
+        {
+          "secondsFromBurstStart": 80.28593231999967,
+          "rssBytes": 2962493440,
+          "heapUsedBytes": 1136568312
+        },
+        {
+          "secondsFromBurstStart": 85.28651264699968,
+          "rssBytes": 2962493440,
+          "heapUsedBytes": 1136648344
+        },
+        {
+          "secondsFromBurstStart": 90.4387252799999,
+          "rssBytes": 2962436096,
+          "heapUsedBytes": 1100880480
+        },
+        {
+          "secondsFromBurstStart": 95.44115306799999,
+          "rssBytes": 2962771968,
+          "heapUsedBytes": 1231655000
+        },
+        {
+          "secondsFromBurstStart": 100.44176464399975,
+          "rssBytes": 2964426752,
+          "heapUsedBytes": 1367901608
+        },
+        {
+          "secondsFromBurstStart": 105.44280829099985,
+          "rssBytes": 2964426752,
+          "heapUsedBytes": 1367917120
+        },
+        {
+          "secondsFromBurstStart": 110.44359972799988,
+          "rssBytes": 2964426752,
+          "heapUsedBytes": 1368048720
+        },
+        {
+          "secondsFromBurstStart": 115.44455747399991,
+          "rssBytes": 2963292160,
+          "heapUsedBytes": 1248255656
+        },
+        {
+          "secondsFromBurstStart": 120.44556387199974,
+          "rssBytes": 2963591168,
+          "heapUsedBytes": 1392816840
+        },
+        {
+          "secondsFromBurstStart": 125.44673029799992,
+          "rssBytes": 2963476480,
+          "heapUsedBytes": 1263037160
+        },
+        {
+          "secondsFromBurstStart": 130.44767612499976,
+          "rssBytes": 2963714048,
+          "heapUsedBytes": 1299103872
+        },
+        {
+          "secondsFromBurstStart": 135.4477586099999,
+          "rssBytes": 2964013056,
+          "heapUsedBytes": 1415208136
+        },
+        {
+          "secondsFromBurstStart": 140.44825851599964,
+          "rssBytes": 2964013056,
+          "heapUsedBytes": 1424913496
+        },
+        {
+          "secondsFromBurstStart": 145.44969524299958,
+          "rssBytes": 2967539712,
+          "heapUsedBytes": 1678654816
+        },
+        {
+          "secondsFromBurstStart": 150.4499911199999,
+          "rssBytes": 2967539712,
+          "heapUsedBytes": 1682934448
+        },
+        {
+          "secondsFromBurstStart": 155.4502782879998,
+          "rssBytes": 2960486400,
+          "heapUsedBytes": 1334179464
+        },
+        {
+          "secondsFromBurstStart": 160.4513234939999,
+          "rssBytes": 2960830464,
+          "heapUsedBytes": 1452399376
+        },
+        {
+          "secondsFromBurstStart": 165.45209286099998,
+          "rssBytes": 2960687104,
+          "heapUsedBytes": 1308198504
+        },
+        {
+          "secondsFromBurstStart": 170.45163052699994,
+          "rssBytes": 2960388096,
+          "heapUsedBytes": 1332088632
+        },
+        {
+          "secondsFromBurstStart": 175.45397084399966,
+          "rssBytes": 2960388096,
+          "heapUsedBytes": 1354753248
+        },
+        {
+          "secondsFromBurstStart": 180.45490822099987,
+          "rssBytes": 2960388096,
+          "heapUsedBytes": 1183862144
+        },
+        {
+          "secondsFromBurstStart": 185.4565709569999,
+          "rssBytes": 2960527360,
+          "heapUsedBytes": 1327293440
+        },
+        {
+          "secondsFromBurstStart": 190.48471576399962,
+          "rssBytes": 2960027648,
+          "heapUsedBytes": 1328984216
+        },
+        {
+          "secondsFromBurstStart": 195.48590078199982,
+          "rssBytes": 2960363520,
+          "heapUsedBytes": 1473548560
+        },
+        {
+          "secondsFromBurstStart": 200.48854733999957,
+          "rssBytes": 2960363520,
+          "heapUsedBytes": 1473562800
+        },
+        {
+          "secondsFromBurstStart": 205.4892053779997,
+          "rssBytes": 2960625664,
+          "heapUsedBytes": 1481809568
+        },
+        {
+          "secondsFromBurstStart": 210.48959716599992,
+          "rssBytes": 2960625664,
+          "heapUsedBytes": 1491163920
+        },
+        {
+          "secondsFromBurstStart": 215.48966371400002,
+          "rssBytes": 2960625664,
+          "heapUsedBytes": 1350034480
+        },
+        {
+          "secondsFromBurstStart": 220.5097003809996,
+          "rssBytes": 2960515072,
+          "heapUsedBytes": 1365522096
+        },
+        {
+          "secondsFromBurstStart": 225.51054893899988,
+          "rssBytes": 2960515072,
+          "heapUsedBytes": 1362322840
+        },
+        {
+          "secondsFromBurstStart": 230.51141257799975,
+          "rssBytes": 2962399232,
+          "heapUsedBytes": 1494844880
+        },
+        {
+          "secondsFromBurstStart": 235.5166716859997,
+          "rssBytes": 2959056896,
+          "heapUsedBytes": 1274503440
+        },
+        {
+          "secondsFromBurstStart": 240.51697261399963,
+          "rssBytes": 2959478784,
+          "heapUsedBytes": 1393745384
+        },
+        {
+          "secondsFromBurstStart": 245.51677740200003,
+          "rssBytes": 2959245312,
+          "heapUsedBytes": 1394021616
+        },
+        {
+          "secondsFromBurstStart": 250.89218447199977,
+          "rssBytes": 2959282176,
+          "heapUsedBytes": 1255869096
+        },
+        {
+          "secondsFromBurstStart": 255.89200375899998,
+          "rssBytes": 2959581184,
+          "heapUsedBytes": 1414131848
+        },
+        {
+          "secondsFromBurstStart": 260.942180067,
+          "rssBytes": 2959925248,
+          "heapUsedBytes": 1383017344
+        },
+        {
+          "secondsFromBurstStart": 265.943526815,
+          "rssBytes": 2959626240,
+          "heapUsedBytes": 1379884376
+        },
+        {
+          "secondsFromBurstStart": 270.9439926629998,
+          "rssBytes": 2959626240,
+          "heapUsedBytes": 1405996824
+        },
+        {
+          "secondsFromBurstStart": 275.9445518409996,
+          "rssBytes": 2958761984,
+          "heapUsedBytes": 1250302144
+        },
+        {
+          "secondsFromBurstStart": 280.9452717889999,
+          "rssBytes": 2958946304,
+          "heapUsedBytes": 1259974416
+        },
+        {
+          "secondsFromBurstStart": 285.94505830699995,
+          "rssBytes": 2959245312,
+          "heapUsedBytes": 1251361832
+        },
+        {
+          "secondsFromBurstStart": 290.9443571859999,
+          "rssBytes": 2958635008,
+          "heapUsedBytes": 1250898424
+        },
+        {
+          "secondsFromBurstStart": 295.94591799600005,
+          "rssBytes": 2958635008,
+          "heapUsedBytes": 1250967368
+        },
+        {
+          "secondsFromBurstStart": 301.06318044100004,
+          "rssBytes": 2958897152,
+          "heapUsedBytes": 1413258296
+        },
+        {
+          "secondsFromBurstStart": 306.06436893999995,
+          "rssBytes": 2958401536,
+          "heapUsedBytes": 1250354128
+        },
+        {
+          "secondsFromBurstStart": 311.064401939,
+          "rssBytes": 2958188544,
+          "heapUsedBytes": 1249882728
+        }
+      ],
+      "runtime": {
+        "version": {
+          "spec_name": "next-people-paseo",
+          "impl_name": "next-people-paseo",
+          "authoring_version": 1,
+          "spec_version": 3003000,
+          "impl_version": 0,
+          "apis": [
+            [
+              "0xdd718d5cc53262d4",
+              1
+            ],
+            [
+              "0x04e70521a0d3d2f8",
+              2
+            ],
+            [
+              "0x162bf19137abacbd",
+              1
+            ],
+            [
+              "0xd7bdd8a272ca0d65",
+              2
+            ],
+            [
+              "0xdf6acb689907609b",
+              5
+            ],
+            [
+              "0x37e397fc7c91f5e4",
+              2
+            ],
+            [
+              "0xccd9de6396c899ca",
+              1
+            ],
+            [
+              "0x40fe3ad401f8959a",
+              6
+            ],
+            [
+              "0xd2bc9897eed08f15",
+              3
+            ],
+            [
+              "0xf78b278be53f454c",
+              2
+            ],
+            [
+              "0xab3c0572291feb8b",
+              2
+            ],
+            [
+              "0xbc9d89904f5b923f",
+              1
+            ],
+            [
+              "0x37c8bb1350a9a2a8",
+              4
+            ],
+            [
+              "0xf3ff14d5ab527059",
+              3
+            ],
+            [
+              "0x6ff52ee858e6c5bd",
+              2
+            ],
+            [
+              "0x91b1c8b16328eb92",
+              2
+            ],
+            [
+              "0x9ffb505aa738d69c",
+              1
+            ],
+            [
+              "0xd0bac7be4a6b0920",
+              1
+            ],
+            [
+              "0x9287fb0e021bc854",
+              1
+            ],
+            [
+              "0x843b6f8cec8098c7",
+              1
+            ],
+            [
+              "0x5f4d07c7630fd6b9",
+              1
+            ],
+            [
+              "0xea93e3f16f3d6962",
+              3
+            ],
+            [
+              "0xfbc577b9d747efd6",
+              1
+            ]
+          ],
+          "transaction_version": 5,
+          "system_version": 1
+        },
+        "blockWeights": {
+          "base_block": {
+            "ref_time": "5000000000",
+            "proof_size": "0"
+          },
+          "max_block": {
+            "ref_time": "2000000000000",
+            "proof_size": "10485760"
+          },
+          "per_class": {
+            "normal": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              },
+              "max_extrinsic": {
+                "ref_time": "1399875000000",
+                "proof_size": "7340032"
+              },
+              "max_total": {
+                "ref_time": "1500000000000",
+                "proof_size": "7864320"
+              },
+              "reserved": {
+                "ref_time": "0",
+                "proof_size": "0"
+              }
+            },
+            "operational": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              },
+              "max_extrinsic": {
+                "ref_time": "1899875000000",
+                "proof_size": "9961472"
+              },
+              "max_total": {
+                "ref_time": "2000000000000",
+                "proof_size": "10485760"
+              },
+              "reserved": {
+                "ref_time": "500000000000",
+                "proof_size": "2621440"
+              }
+            },
+            "mandatory": {
+              "base_extrinsic": {
+                "ref_time": "125000000",
+                "proof_size": "0"
+              }
+            }
+          }
+        },
+        "blockLength": {
+          "max": {
+            "normal": 3932160,
+            "operational": 5242880,
+            "mandatory": 5242880
+          }
+        },
+        "genesis": "0x55e3e689ecfa9d2fffcf7d309b8011956671493982230bfd0420c683542249e9",
+        "requestedActors": 100000,
+        "syntheticDelaySeconds": 0.0,
+        "mode": "burst",
+        "poolProfile": "enlarged",
+        "launchTargetSeconds": 10.0,
+        "fixtureBatch": 5000,
+        "poolTransactions": 110000
+      },
+      "provenance": {
+        "engine_commit": "7907a3bfa7b2e47535a74b7920086a05ca94773a",
+        "assets": [
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638416,
+            "name": "polkadot",
+            "sha256": "4a2a5476eaeb03b24fa43de2e19afc59ff82f67eeba0cbd504f28c0de52b5128"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638401,
+            "name": "polkadot-execute-worker",
+            "sha256": "5549e9a2fd4d79f2a297d96015daf4fda98a52d00f70ff48f33eea4ade8962d3"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638360,
+            "name": "polkadot-prepare-worker",
+            "sha256": "784fa62c819b1e187bb690cb130420620c43842407890813b8f339da433b57c2"
+          },
+          {
+            "repo": "paritytech/release-automation",
+            "tag": "polkadot-weekly2026w33-rc2",
+            "asset_id": 512638409,
+            "name": "polkadot-omni-node",
+            "sha256": "796de842beff52aae37afc661d4ceb32c7379fb23ff783a7872713508a31a912"
+          },
+          {
+            "repo": "paritytech/zombienet-sdk",
+            "tag": "v0.4.15",
+            "asset_id": 485842126,
+            "name": "zombie-cli-x86_64-unknown-linux-gnu",
+            "sha256": "1a28e8bc184fefda182f197c5ec196913bafedfef1c51d1dbe3cf5721712c8f4"
+          },
+          {
+            "repo": "paritytech/previewnet-engine",
+            "run_id": "36614342201",
+            "artifact_id": 11054628075,
+            "name": "fork-bundle-previewnet.tar.gz",
+            "sha256": "edab76b213657e499ae9fcb95673a2bf4ca717b78b00caf3d7783fc18b562b4f"
+          }
+        ]
+      }
+    }
+  ],
+  "publicationNote": "Selected saved metrics and provenance, not raw receipt evidence. Numeric duration fields use seconds; millisecond source fields were converted and renamed Seconds. Original source hashes identify unmodified preserved files. Extracted offline 2026-10-05; no experiments rerun.",
+  "earlierPublishedResults": {
+    "source": "measured-results.md at b57a659",
+    "verificationDate": "2026-09-29 to 2026-09-30 UTC; see existing evidence record",
+    "topups": [
+      {
+        "run": 36534910589,
+        "requested": 1000,
+        "submitted": 1000,
+        "receiptVerified": 1000,
+        "ready": 1000,
+        "finalityP95Seconds": 53.0,
+        "readinessP95Seconds": 105.6,
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36534910589/attempts/1"
+      },
+      {
+        "run": 36560408065,
+        "requested": 10000,
+        "submitted": 10000,
+        "receiptVerified": 10000,
+        "ready": 10000,
+        "waves": [
+          7000,
+          3000
+        ],
+        "launchSeconds": [
+          0.282,
+          0.103
+        ],
+        "finalityP95Seconds": 183.0,
+        "readinessP95Seconds": 262.1,
+        "stageSeconds": 410.9,
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36560408065/attempts/1"
+      },
+      {
+        "run": 36609355696,
+        "requested": 10000,
+        "submitted": 10000,
+        "receiptVerified": 10000,
+        "ready": 10000,
+        "launchSeconds": 0.38,
+        "finalityP95Seconds": 256.0,
+        "readinessP95Seconds": 353.1,
+        "stageSeconds": 420.7,
+        "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36609355696/attempts/1"
+      }
+    ],
+    "defaultClaim10000": {
+      "run": 36705343718,
+      "requested": 10000,
+      "submitted": 10000,
+      "receiptVerified": 8192,
+      "launchSeconds": 0.47112,
+      "finalitySeconds": {
+        "count": 8192,
+        "p50": 38.234,
+        "p95": 50.167,
+        "max": 50.185
+      },
+      "rejected": 989,
+      "dropped": 819,
+      "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/36705343718/attempts/1"
+    }
+  }
+}

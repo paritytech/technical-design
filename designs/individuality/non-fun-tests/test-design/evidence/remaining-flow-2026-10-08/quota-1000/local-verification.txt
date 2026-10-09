@@ -1,0 +1,4 @@
+# python3 ci/previewnet/verify-remaining-flow.py <pilot-dir> --scenario quota --expected 1000
+# verifier: polkadot-pop-e2e e163be9426078d59dc70e5c1ad846d48a4971e52; run locally 2026-10-08T04:30:08Z
+quota-pilot-wave-1: 1000 unique transactions matched saved block bodies and successful dispatch events
+quota-pilot: receipt evidence and workload gates verified for 1000 actors

@@ -1,0 +1,1110 @@
+{
+  "kind": "Selected CI observations and local verification report; not a full raw evidence archive",
+  "checkedAt": "2026-10-02T03:00:28.577565+00:00",
+  "run150000": {
+    "run": 36900802673,
+    "attempt": 1,
+    "commit": "932677d50e07052e62d45356a334801dc4630270",
+    "artifactId": 11189200900,
+    "artifactName": "coinage-claim-results-36900802673-1",
+    "ciSummary": {
+      "name": "claim-burst",
+      "mode": "burst",
+      "poolProfile": "enlarged",
+      "waves": [
+        {
+          "count": 150000,
+          "startActor": 0,
+          "startedMs": 0.32544999988749623,
+          "sendWindowMs": 6662.429802000057,
+          "settledMs": 509979.4234399998,
+          "finalized": 150000,
+          "verified": false
+        }
+      ],
+      "users": 150000,
+      "wallStart": "2026-10-01T19:13:27.965Z",
+      "sent": 150000,
+      "finalized": 150000,
+      "verified": 150000,
+      "passed": true,
+      "generatorLimited": false,
+      "sendWindowMs": 6662.429802000057,
+      "launchTargetMs": 60000,
+      "deadlineMs": 3600000,
+      "poolKbytes": 262144,
+      "elapsedMs": 649976.051919,
+      "poolReadyCount": 150000,
+      "poolReadyWindowMs": 97738.80435799994,
+      "finalityProgress": 64,
+      "settledAtMs": 509979.4234399998,
+      "drainAfterLastSendMs": 503318.0399079998,
+      "finalityMs": {
+        "count": 150000,
+        "p50": 275769.4861649999,
+        "p95": 489735.365219,
+        "max": 507262.37913
+      },
+      "outcomes": {
+        "finalized": 150000
+      },
+      "verificationBlock": {
+        "hash": "0x58abb11ff52c8f0782288b079095c156a394d5200b0ec3cbb9ee9427655e3815",
+        "number": 173396,
+        "parent": "0xd7215f6bf107b1faa59f78a7fbd1220cbae7dcf331d144900db79ca59de3b4e5",
+        "hasNewRuntime": false
+      },
+      "mismatches": [],
+      "backing": "300001",
+      "finalBacking": "300001",
+      "unavailableMetrics": [
+        "node-internal acceptance timestamps (pool-ready notifications are observed by the client)",
+        "measured execution cost versus declared weight",
+        "PVF deadline compliance"
+      ],
+      "sampledMetrics": "See node-metrics.jsonl for available node metric names, samples and errors; event dispatch weights are saved in block evidence."
+    },
+    "localVerification": {
+      "verifiedAt": "2026-10-02T03:05:11.110954+00:00",
+      "receiptCount": 150000,
+      "savedStateCount": 150000,
+      "stateMismatches": 0,
+      "fixtureBackingBefore": "300001",
+      "fixtureBackingAfter": "300001",
+      "verifierCommit": "932677d50e07052e62d45356a334801dc4630270",
+      "verifierOutput": "claim-burst: 150000 unique transactions matched saved block bodies and successful dispatch events\nclaim-smoke: 1 unique transactions matched saved block bodies and successful dispatch events\nThis checks saved evidence consistency; it does not authenticate the RPC nodes or prove consensus.\n",
+      "scope": "Raw block hashes/indexed success and CoinTransferred presence checked by pinned verifier; all final states and receipt event recipient/instance/value/age checked locally. Saved local RPC consistency, not consensus proofs."
+    },
+    "artifactSha256": "8619a5c68d9b649acfce6f7548c813e26f2156a26197ab3c3ec9214b2ced9b5c",
+    "sourceFileSha256": {
+      "original/claim-burst-audit.json": "73588faf661117275e5494807f683722a48f4478f3b8e50de04e2b1fde2f3a24",
+      "original/claim-burst-state.json": "9b2a6a607101cb15bc10e77cd2d1a1ee17385e6415e1dc6ddce202255127b80f",
+      "original/claim-burst-receipts.json": "5b40dd809729f0236dba19a47af080dd64f19a88cb3a49c5aaeff3f342cf48d2",
+      "original/claim-burst-summary.json": "bd2b8654c4baac7eefacde7cda55199198a703dfb83fecde350b81dfa5de493a",
+      "verify-burst-artifact.py": "1c093c7183d052a22d01d562d07fa865c3fb85978b38148358cfde05a8c338ca"
+    }
+  },
+  "largerAttempts": [
+    {
+      "run": 36898423397,
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 110491195476,
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate requested load and client",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Prepare the PreviewNet engine network from PR 32",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start six relay validators and two People collators",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check claim driver types",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run smoke claim and requested burst",
+              "status": "in_progress",
+              "conclusion": null
+            },
+            {
+              "name": "Verify saved claim evidence",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Save claim results before recovery checks",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Summarise available results",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Check network recovery and both People authors",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Stop this run's network",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run pnpm/action-setup@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            }
+          ],
+          "annotations": [
+            "The self-hosted runner lost communication with the server. Verify the machine is running and has a healthy network connection. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error."
+          ]
+        }
+      ]
+    },
+    {
+      "run": 36898423397,
+      "attempt": 2,
+      "jobs": [
+        {
+          "id": 110544436089,
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate requested load and client",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Prepare the PreviewNet engine network from PR 32",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start six relay validators and two People collators",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check claim driver types",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run smoke claim and requested burst",
+              "status": "in_progress",
+              "conclusion": null
+            },
+            {
+              "name": "Verify saved claim evidence",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Save claim results before recovery checks",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Summarise available results",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Check network recovery and both People authors",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Stop this run's network",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run pnpm/action-setup@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            }
+          ],
+          "annotations": [
+            "The self-hosted runner lost communication with the server. Verify the machine is running and has a healthy network connection. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error."
+          ]
+        }
+      ]
+    },
+    {
+      "run": 36898423397,
+      "attempt": 3,
+      "jobs": [
+        {
+          "id": 110582110421,
+          "status": "completed",
+          "conclusion": "cancelled",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate requested load and client",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Prepare the PreviewNet engine network from PR 32",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start six relay validators and two People collators",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check claim driver types",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run smoke claim and requested burst",
+              "status": "completed",
+              "conclusion": "cancelled"
+            },
+            {
+              "name": "Verify saved claim evidence",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Save claim results before recovery checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Summarise available results",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check network recovery and both People authors",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Stop this run's network",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ],
+          "annotations": [
+            "The run was canceled by @agustinustheo."
+          ]
+        }
+      ]
+    },
+    {
+      "run": 36902568601,
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 110505061411,
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate requested load and client",
+              "status": "in_progress",
+              "conclusion": null
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Prepare the PreviewNet engine network from PR 32",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Start six relay validators and two People collators",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Check claim driver types",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run smoke claim and requested burst",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Verify saved claim evidence",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Save claim results before recovery checks",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Summarise available results",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Check network recovery and both People authors",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Stop this run's network",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run pnpm/action-setup@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            }
+          ],
+          "annotations": [
+            "The self-hosted runner lost communication with the server. Verify the machine is running and has a healthy network connection. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error."
+          ]
+        }
+      ]
+    },
+    {
+      "run": 36902568601,
+      "attempt": 2,
+      "jobs": [
+        {
+          "id": 110510163519,
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate requested load and client",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Prepare the PreviewNet engine network from PR 32",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start six relay validators and two People collators",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check claim driver types",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run smoke claim and requested burst",
+              "status": "in_progress",
+              "conclusion": null
+            },
+            {
+              "name": "Verify saved claim evidence",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Save claim results before recovery checks",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Summarise available results",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Check network recovery and both People authors",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Stop this run's network",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run pnpm/action-setup@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            }
+          ],
+          "annotations": [
+            "The self-hosted runner lost communication with the server. Verify the machine is running and has a healthy network connection. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error."
+          ]
+        }
+      ]
+    },
+    {
+      "run": 36902568601,
+      "attempt": 3,
+      "jobs": [
+        {
+          "id": 110582893223,
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate requested load and client",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Prepare the PreviewNet engine network from PR 32",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start six relay validators and two People collators",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check claim driver types",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run smoke claim and requested burst",
+              "status": "in_progress",
+              "conclusion": null
+            },
+            {
+              "name": "Verify saved claim evidence",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Save claim results before recovery checks",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Summarise available results",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Check network recovery and both People authors",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Stop this run's network",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run pnpm/action-setup@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            }
+          ],
+          "annotations": [
+            "The self-hosted runner lost communication with the server. Verify the machine is running and has a healthy network connection. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error."
+          ]
+        }
+      ]
+    },
+    {
+      "run": 36902568601,
+      "attempt": 4,
+      "jobs": [
+        {
+          "id": 110617765552,
+          "status": "completed",
+          "conclusion": "cancelled",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate requested load and client",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Prepare the PreviewNet engine network from PR 32",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Start six relay validators and two People collators",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check claim driver types",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run smoke claim and requested burst",
+              "status": "completed",
+              "conclusion": "cancelled"
+            },
+            {
+              "name": "Verify saved claim evidence",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Save claim results before recovery checks",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Summarise available results",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check network recovery and both People authors",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Stop this run's network",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run pnpm/action-setup@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ],
+          "annotations": [
+            "The run was canceled by @agustinustheo.",
+            "Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4, pnpm/action-setup@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/",
+            "The operation was canceled."
+          ]
+        }
+      ]
+    }
+  ],
+  "largerFinalAttemptSummaries": [
+    {
+      "run": 36898423397,
+      "source": "CI log, not local raw-artifact re-audit",
+      "summary": {
+        "name": "claim-burst",
+        "mode": "burst",
+        "poolProfile": "enlarged",
+        "waves": [
+          {
+            "count": 250000,
+            "startActor": 0,
+            "startedMs": 0.0790999997407198,
+            "sendWindowMs": 10513.864451000001,
+            "settledMs": 834776.8696339997,
+            "finalized": 250000,
+            "verified": false
+          }
+        ],
+        "users": 250000,
+        "wallStart": "2026-10-01T21:47:34.258Z",
+        "sent": 250000,
+        "finalized": 250000,
+        "verified": 250000,
+        "passed": true,
+        "generatorLimited": false,
+        "sendWindowMs": 10513.864451000001,
+        "launchTargetMs": 60000,
+        "deadlineMs": 3600000,
+        "poolKbytes": 262144,
+        "elapsedMs": 1069744.2316859998,
+        "poolReadyCount": 250000,
+        "poolReadyWindowMs": 229705.61856999947,
+        "finalityProgress": 104,
+        "settledAtMs": 834776.8696339997,
+        "drainAfterLastSendMs": 824263.6393519999,
+        "finalityMs": {
+          "count": 250000,
+          "p50": 448208.41856200015,
+          "p95": 796641.9381509996,
+          "max": 832169.0141019998
+        },
+        "outcomes": {
+          "finalized": 250000
+        },
+        "verificationBlock": {
+          "hash": "0x2b2ebd2c20d0f5cdef2589de2a42d2d53f3dc939d7a0bbb66b10230bf53b93b2",
+          "number": 173628,
+          "parent": "0xb836c67f4d59244c6ada9df6eeeb29d2916687556b9aebff07fc5798bb91f2bb",
+          "hasNewRuntime": false
+        },
+        "mismatches": [],
+        "backing": "500001",
+        "finalBacking": "500001",
+        "unavailableMetrics": [
+          "node-internal acceptance timestamps (pool-ready notifications are observed by the client)",
+          "measured execution cost versus declared weight",
+          "PVF deadline compliance"
+        ],
+        "sampledMetrics": "See node-metrics.jsonl for available node metric names, samples and errors; event dispatch weights are saved in block evidence."
+      },
+      "logSha256": "7863b373b7c42490d048cc0851bed4f7d560b43d2b73bcd010aa7b6fb435a9df"
+    },
+    {
+      "run": 36902568601,
+      "source": "CI log, not local raw-artifact re-audit",
+      "summary": {
+        "name": "claim-burst",
+        "mode": "burst",
+        "poolProfile": "enlarged",
+        "waves": [
+          {
+            "count": 500000,
+            "startActor": 0,
+            "startedMs": 0.08117000013589859,
+            "sendWindowMs": 20980.612881000154,
+            "settledMs": 1538685.9426550004,
+            "finalized": 500000,
+            "verified": false
+          }
+        ],
+        "users": 500000,
+        "wallStart": "2026-10-01T23:54:38.808Z",
+        "sent": 500000,
+        "finalized": 500000,
+        "verified": 500000,
+        "passed": true,
+        "generatorLimited": false,
+        "sendWindowMs": 20980.612881000154,
+        "launchTargetMs": 60000,
+        "deadlineMs": 3600000,
+        "poolKbytes": 262144,
+        "elapsedMs": 2014476.536953,
+        "poolReadyCount": 500000,
+        "poolReadyWindowMs": 452663.23426599987,
+        "finalityProgress": 206,
+        "settledAtMs": 1538685.9426550004,
+        "drainAfterLastSendMs": 1517705.365474,
+        "finalityMs": {
+          "count": 500000,
+          "p50": 781847.2378689996,
+          "p95": 1444233.4818180003,
+          "max": 1536235.6517530004
+        },
+        "outcomes": {
+          "finalized": 500000
+        },
+        "verificationBlock": {
+          "hash": "0xea5d863f90ae79f61c748cb7806ebbfb779cb0d7771822e3a0f63ad38cf68699",
+          "number": 174005,
+          "parent": "0x308b927da73653711188f72efa27560e159bc5138285ba7a81bdd986073e3942",
+          "hasNewRuntime": false
+        },
+        "mismatches": [],
+        "backing": "1000001",
+        "finalBacking": "1000001",
+        "unavailableMetrics": [
+          "node-internal acceptance timestamps (pool-ready notifications are observed by the client)",
+          "measured execution cost versus declared weight",
+          "PVF deadline compliance"
+        ],
+        "sampledMetrics": "See node-metrics.jsonl for available node metric names, samples and errors; event dispatch weights are saved in block evidence."
+      },
+      "logSha256": "633c9fcddb5279dc03ea0b5d33066cb90b80da74fed1877dd0aa583060b5d2f7"
+    }
+  ],
+  "limitations": [
+    "Cancelled workflows are not labelled full-run passes. Earlier disconnect failures remain inconclusive.",
+    "250k and 500k artifacts have not been independently re-audited locally in this update.",
+    "Claims replace root-seeded source coins; fixture setup bypasses issuance and the full wallet lifecycle.",
+    "Saved local RPC consistency is not an independent consensus proof."
+  ]
+}

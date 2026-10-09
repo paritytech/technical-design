@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-10-09T07:31:13.197283+00:00",
+  "runId": 37863573263,
+  "attempt": 1,
+  "commit": "aa72510d3fbf321b2946430db0264f50ae5d8785",
+  "stageReached": "full-flow-pilot: first top-up wave; later lifecycle stages not reached",
+  "requested": 10000,
+  "submitted": 10000,
+  "submissionDefinition": "Local submit/watch calls attempted; no ready or in-block observation establishes node acceptance",
+  "originalReceipts": 0,
+  "reconciledReceipts": 0,
+  "receiptVerifiedTotal": 0,
+  "poolEntryRejections": 0,
+  "missingReceipts": 10000,
+  "unobservedOutcomes": 10000,
+  "unresolvedWatchesAfterReconciliation": 10000,
+  "classification": {
+    "setupFailure": false,
+    "workloadFailure": "not established: no valid measured chain load",
+    "missingReceipts": 10000,
+    "unobservedOutcomes": 10000,
+    "infrastructureFailure": null,
+    "generatorLimitation": "sender disconnected at every attempted measured top-up submission"
+  },
+  "smoke": {
+    "actors": 1,
+    "originalReceipts": 5,
+    "passed": true,
+    "excludedFromPilotCounts": true
+  },
+  "observations": {
+    "rpcErrors": 10000,
+    "ready": 0,
+    "inBlock": 0,
+    "finalized": 0,
+    "savedMeasuredBlockRange": null
+  },
+  "correction": "Prior reconciliation incorrectly classified 94 errors as pool rejections by matching 1016 inside signed request hex. Original report retained; corrected report excludes request payloads.",
+  "sources": [
+    "full-flow-pilot-wave-1-topup-transactions.jsonl",
+    "full-flow-pilot-wave-1-topup-signed.json",
+    "full-flow-pilot-wave-1-topup-audit.json",
+    "full-flow-pilot-wave-1-topup-corrected-reconciliation.json",
+    "unload-error.json"
+  ],
+  "retryReason": "Check the live WebSocket handshake immediately before each prepared wave; do not retry individual transactions. Regression test demonstrates cached isReady does not cover reconnect."
+}

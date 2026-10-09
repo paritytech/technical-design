@@ -1,0 +1,494 @@
+{
+  "recordedAt": "2026-10-03T13:31:37.806751+00:00",
+  "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+  "artifacts": [
+    {
+      "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-1",
+      "id": 11240417314,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "2871a17111e2e8d1c27217090e319a780586ad2a6a4bbad5968f5b3a815906db",
+      "downloadedAt": "2026-10-02T16:55:37.962655+00:00",
+      "expiresAt": "2026-11-01T16:54:58Z",
+      "sizeBytes": 15270182,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11240417314"
+    },
+    {
+      "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-2",
+      "id": 11259668859,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "b65340af4b66acd0b0465b3cb900847cbdad929f7725a1db80a416d9dd2efa1b",
+      "downloadedAt": "2026-10-03T01:32:18.515900+00:00",
+      "expiresAt": "2026-11-02T01:31:55Z",
+      "sizeBytes": 15680032,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11259668859"
+    },
+    {
+      "artifact": "coinage-recycle-10000-burst-default-pilot-37029048758-2",
+      "id": 11260852886,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "d7831b1ba24cef3bc4252c5ce69993d7e13052df0569c588e9020c0295f118cb",
+      "downloadedAt": "2026-10-03T01:51:31.004209+00:00",
+      "expiresAt": "2026-11-02T01:50:58Z",
+      "sizeBytes": 36879396,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11260852886"
+    },
+    {
+      "artifact": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-1",
+      "id": 11243999404,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "5e8a9e70fe4d5b23676ebe7c90bf3b9b1144e49aacb71d82b09524e3aa9ed0cc",
+      "downloadedAt": "2026-10-02T18:15:24.254440+00:00",
+      "expiresAt": "2026-11-01T18:14:40Z",
+      "sizeBytes": 49967734,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11243999404"
+    },
+    {
+      "artifact": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2",
+      "id": 11263286350,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "415e6902cbe18a250b72bc715daf315b0a3e731f4ab136c260a576f4913a4bc5",
+      "downloadedAt": "2026-10-03T03:15:02.381862+00:00",
+      "expiresAt": "2026-11-02T03:14:30Z",
+      "sizeBytes": 49740281,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11263286350"
+    },
+    {
+      "artifact": "coinage-recycle-10000-paced-default-pilot-37029048758-1",
+      "id": 11243296921,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "f1504197ce042131a1fa96fd56043d31765c0f775769b9e1b49e7755a2431143",
+      "downloadedAt": "2026-10-02T17:53:55.069987+00:00",
+      "expiresAt": "2026-11-01T17:53:16Z",
+      "sizeBytes": 54331006,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11243296921"
+    },
+    {
+      "artifact": "coinage-recycle-10000-paced-default-pilot-37029048758-2",
+      "id": 11262418930,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "83dda9679b7adf723bd6e15c6ddf905b88aefc02ae8fd05267267ee4748b8ed6",
+      "downloadedAt": "2026-10-03T02:55:13.389677+00:00",
+      "expiresAt": "2026-11-02T02:53:58Z",
+      "sizeBytes": 53363237,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11262418930"
+    },
+    {
+      "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-1",
+      "id": 11254193435,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "51daff932a81d1a21d1e43391349897204fef4415f505569236c7927d97d9723",
+      "downloadedAt": "2026-10-02T22:13:09.200032+00:00",
+      "expiresAt": "2026-11-01T22:11:22Z",
+      "sizeBytes": 110264638,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11254193435"
+    },
+    {
+      "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2",
+      "id": 11268553109,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "7521083f70928da311c4b60c559cdcf5994a38a2d27dd5399b19d583ad1caa01",
+      "downloadedAt": "2026-10-03T08:06:08.414933+00:00",
+      "expiresAt": "2026-11-02T08:04:17Z",
+      "sizeBytes": 111956499,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11268553109"
+    },
+    {
+      "artifact": "coinage-split-100-burst-default-pilot-37029048758-1",
+      "id": 11236414289,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "27e4a88388ed73b56a69203195a693c1d543439f9aa9d4bacdd022f05ee107f8",
+      "downloadedAt": "2026-10-02T15:59:29.001177+00:00",
+      "expiresAt": "2026-11-01T15:57:45Z",
+      "sizeBytes": 11128892,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11236414289"
+    },
+    {
+      "artifact": "coinage-split-1000-burst-default-pilot-37029048758-2",
+      "id": 11260256369,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "e1760c4322a7f5a934cd14c9339a9a46d769f3955aa09be2ffde516896855f2d",
+      "downloadedAt": "2026-10-03T00:58:06.489932+00:00",
+      "expiresAt": "2026-11-02T00:57:51Z",
+      "sizeBytes": 13208415,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11260256369"
+    },
+    {
+      "artifact": "coinage-split-10000-burst-default-pilot-37029048758-1",
+      "id": 11237748934,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "e9d0e651ef5276447c700dbb1346c846b8c8857381b5a9747bfb89caa563cd8b",
+      "downloadedAt": "2026-10-02T16:27:38.537167+00:00",
+      "expiresAt": "2026-11-01T16:24:16Z",
+      "sizeBytes": 23674748,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11237748934"
+    },
+    {
+      "artifact": "coinage-split-10000-burst-default-pilot-37029048758-2",
+      "id": 11260286877,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "5537ea29d10656c81cbdde987a76ce3a989a96d89814e92c5faa1b888479da26",
+      "downloadedAt": "2026-10-03T01:14:59.013818+00:00",
+      "expiresAt": "2026-11-02T01:13:39Z",
+      "sizeBytes": 23652481,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11260286877"
+    },
+    {
+      "artifact": "coinage-split-10000-burst-enlarged-pilot-37029048758-2",
+      "id": 11262321684,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "e64720fcf767831a6baacb6a56b496561059c51083cbe9895fe95819579258d4",
+      "downloadedAt": "2026-10-03T02:32:00.962010+00:00",
+      "expiresAt": "2026-11-02T02:31:09Z",
+      "sizeBytes": 39168437,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11262321684"
+    },
+    {
+      "artifact": "coinage-split-10000-paced-default-pilot-37029048758-1",
+      "id": 11242661612,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "c33d05a2e20b7da318c2904f505162b7a1e5dd4472b46b5e9c07817f03f8e0bb",
+      "downloadedAt": "2026-10-02T17:27:07.987421+00:00",
+      "expiresAt": "2026-11-01T17:26:25Z",
+      "sizeBytes": 38646718,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11242661612"
+    },
+    {
+      "artifact": "coinage-split-10000-paced-default-pilot-37029048758-2",
+      "id": 11261940156,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "886313f6703a71ed2098bbbbc19c5692d1876493b176f8d551c2eab37956f9d3",
+      "downloadedAt": "2026-10-03T02:11:16.393622+00:00",
+      "expiresAt": "2026-11-02T02:10:18Z",
+      "sizeBytes": 41879504,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11261940156"
+    },
+    {
+      "artifact": "coinage-split-100000-burst-enlarged-pilot-37029048758-2",
+      "id": 11267902978,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "ebdf2b3ec5b7106d0ea0766130c2e83a96897476a7d3701b4d2499ea1e0cf852",
+      "downloadedAt": "2026-10-03T07:31:52.670071+00:00",
+      "expiresAt": "2026-11-02T07:30:16Z",
+      "sizeBytes": 294775921,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11267902978"
+    },
+    {
+      "artifact": "coinage-split-20000-burst-enlarged-pilot-37029048758-2",
+      "id": 11263528127,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "48be6d823cba0f471bb399ca651d53bbcba902f941544e825ded1f4f49513cb6",
+      "downloadedAt": "2026-10-03T03:34:22.269681+00:00",
+      "expiresAt": "2026-11-02T03:33:40Z",
+      "sizeBytes": 44311039,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11263528127"
+    },
+    {
+      "artifact": "coinage-split-40000-burst-enlarged-pilot-37029048758-2",
+      "id": 11267410662,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "e89c2789c8abc7d58f85cfa423232679cab6aee2e2dde2af72fa2b51ea03ff71",
+      "downloadedAt": "2026-10-03T06:43:50.871787+00:00",
+      "expiresAt": "2026-11-02T06:42:33Z",
+      "sizeBytes": 416209846,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11267410662"
+    },
+    {
+      "artifact": "lifecycle-campaign-conclusions-37029048758-1",
+      "id": 11259009939,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "828fe57f62369017c90b037080d074655ae88dbb070f46047dbf62ee07141cb8",
+      "downloadedAt": "2026-10-03T00:44:40.215320+00:00",
+      "expiresAt": "2026-11-02T00:43:31Z",
+      "sizeBytes": 298,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11259009939"
+    },
+    {
+      "artifact": "coinage-recycle-100-burst-default-pilot-37116007842-1",
+      "id": 11272941802,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842",
+      "commit": "ba4bdee5c1a4a7ed725e6a1f34653b7bb39b774c",
+      "zipSha256": "b1607fc60b94bdeb320cde2b6eb4608bf475ba5f37bbaf25883595f8c81d69c7",
+      "downloadedAt": "2026-10-03T11:29:42.958277+00:00",
+      "expiresAt": "2026-11-02T11:29:17Z",
+      "sizeBytes": 12346821,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842/artifacts/11272941802"
+    },
+    {
+      "artifact": "coinage-recycle-100000-burst-enlarged-pilot-37029048758-2",
+      "id": 11272711030,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+      "zipSha256": "e9df8c2b604e029de74954a32970c9d1adbb10c931ecb6c983cbc4fdc96b7215",
+      "downloadedAt": "2026-10-03T11:14:15.974031+00:00",
+      "expiresAt": "2026-11-02T11:13:25Z",
+      "sizeBytes": 367271624,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758/artifacts/11272711030"
+    },
+    {
+      "artifact": "coinage-split-20000-burst-enlarged-pilot-37116007842-1",
+      "id": 11273650139,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842",
+      "commit": "ba4bdee5c1a4a7ed725e6a1f34653b7bb39b774c",
+      "zipSha256": "3982f62f7724abd8442fd141975d546d91dd28a061b48ba360cee85bd7364786",
+      "downloadedAt": "2026-10-03T11:50:05.652658+00:00",
+      "expiresAt": "2026-11-02T11:49:27Z",
+      "sizeBytes": 66928042,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842/artifacts/11273650139"
+    },
+    {
+      "artifact": "coinage-recycle-40000-burst-enlarged-pilot-37121458129-1",
+      "id": 11274353408,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37121458129",
+      "commit": "ba4bdee5c1a4a7ed725e6a1f34653b7bb39b774c",
+      "zipSha256": "042b7443bf611411a3040f7c384a208a300b4d2645aa3f15058194f2f2239e4f",
+      "downloadedAt": "2026-10-03T12:49:50.281269+00:00",
+      "expiresAt": "2026-11-02T12:49:11Z",
+      "sizeBytes": 284632654,
+      "artifactUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37121458129/artifacts/11274353408"
+    }
+  ],
+  "selectedFileChecksums": [
+    {
+      "file": "a-paced-attempt-2-verification.txt",
+      "sha256": "3d603f6ed4457208cb25327d6f3dee479c3ed1c5d98d773b93bfd76801de7f7c",
+      "sourceFile": "a-paced-attempt-2-verification.json"
+    },
+    {
+      "file": "a-paced-verification.json",
+      "sha256": "bed5a99edafe4ed1f853a097733e96e6544cf6c81905a08e60c8686857cdedd1"
+    },
+    {
+      "file": "a-pool-attempt-2-verification.txt",
+      "sha256": "ddf1a55156c56de89bab51be5735af5f24bcf80ae1a4ace798ff68d23cb1e771"
+    },
+    {
+      "file": "a100-verification.json",
+      "sha256": "b5cada8074267961afd4062db279f36a81546fd3086c01b5f5f106f5f02e381e"
+    },
+    {
+      "file": "a1000-attempt-2-verification.json",
+      "sha256": "25ed06f707fc6046e286f086d6f22fb20ceb0a0ccc00846655b7279b828e64e1"
+    },
+    {
+      "file": "a100000-attempt-2-verification.txt",
+      "sha256": "a927790cc47d681ad63336a57d096a3a007a22454e80cd97a23d54c44e67da76"
+    },
+    {
+      "file": "a40000-attempt-2-verification.txt",
+      "sha256": "7eed0be16472c17501dd79ee03e2821cbe13928d0b2f0d68eb1e8971a18a40f3"
+    },
+    {
+      "file": "b-paced-attempt-2-verification.txt",
+      "sha256": "c98f7cf4ab28bb40cca4b9c043dfc49a989a9c1c4d00a1165e106633e1b2371d"
+    },
+    {
+      "file": "b-paced-verification.json",
+      "sha256": "cc1d97b43718a056add05d85d90cbb0be4cdabfcb0a9179748c27d816eb1b13e"
+    },
+    {
+      "file": "b-pool-attempt-2-verification.txt",
+      "sha256": "adfb4769824c389e5893c08373da76ea877d09698b2bcbb55f32c42876836654"
+    },
+    {
+      "file": "b-pool-verification.json",
+      "sha256": "d2e22d36597d1ee6b5ec33264596104be59e138d40365609030da595b08e2e2d"
+    },
+    {
+      "file": "b1000-attempt-2-verification.json",
+      "sha256": "12cc99628fb32a140034518473bcf86d0b2bae71541d318c59680f53c13cb842"
+    },
+    {
+      "file": "b1000-verification.json",
+      "sha256": "5150d0344529d0162707e66e224607ea651b4e655d8cc74fd9a6f12a277295fa"
+    },
+    {
+      "file": "b20000-attempt-2-verification.txt",
+      "sha256": "7ac67a443580f0c8f9abf70ba59a511762cfaabd59f41c72698d0234b042c7cb"
+    },
+    {
+      "file": "b20000-verification.json",
+      "sha256": "b65ffdb68bfcea5868d5cd164769d69d3c58981c66df6357832fb552a2fdfdc7"
+    },
+    {
+      "file": "coinage-recycle-10000-burst-default-pilot-37029048758-2-recycle-pilot-recycle-subset-verification.json",
+      "sha256": "93006c994abb7d1859943e9a6bb504defe71acc9122472f10a1dccbcd638ef6f"
+    },
+    {
+      "file": "coinage-split-10000-burst-default-pilot-37029048758-1-split-pilot-split-subset-verification.json",
+      "sha256": "e74d8113cfabb76a4a6fbe1510a993c996648e14f16ec7bd9c96ee26154839e8"
+    },
+    {
+      "file": "coinage-split-10000-burst-default-pilot-37029048758-2-split-pilot-split-subset-verification.json",
+      "sha256": "6f79f05cc48566b1cf4ac4cde48e13f70f2022ccd7bbf3ba4c9392960e30ccc4"
+    },
+    {
+      "file": "coinage-split-20000-burst-enlarged-pilot-37029048758-2-split-pilot-split-subset-verification.json",
+      "sha256": "6d97929147a6e5c70bb8441826ae4302a52f9446e37220955fc35a50a7ac8faa"
+    },
+    {
+      "file": "b10000-attempt-2-reconciliation.json",
+      "sha256": "ce3758f729e5acb2212c39a7e5fdd698392210f9106d39df68ebe0a8026ef803"
+    },
+    {
+      "file": "b40000-attempt-2-failure.json",
+      "sha256": "72b85da7139980198baeb72186f5c7c28af8d6f06b03c46258ee4d54456cb4e2"
+    },
+    {
+      "file": "attempt-ledger.json",
+      "sha256": "36e6226eedbfe6e816966d0f12bfcb42346d20f9784dba0f4bda96d7c3a23bf7"
+    },
+    {
+      "file": "b10000-partial-readiness.json",
+      "sha256": "ea397ca343ef0e5210b191ad62710c9dd3beda3195e7655d3083238bf178dd9a"
+    },
+    {
+      "file": "a100000-runner-limits.json",
+      "sha256": "4a37c3247e0e5eccdbd94bb1e35254f1414df8db9f48de5867e09d4400b49b03"
+    },
+    {
+      "file": "observations.json",
+      "sha256": "582322a6554eab10938b232c7f7e4185667214c67e674214c83e1099efe3e881"
+    },
+    {
+      "file": "b100000-original-observation.json",
+      "sha256": "8831d45e7a696113df1b0872e8de84d0811ea15f3aa2848bb7964dedd727067e",
+      "sourceFile": "b100000-original-observation.json"
+    },
+    {
+      "file": "b100-targeted-verification.txt",
+      "sha256": "8e66be565b85fbafa89aebf78319e89e28fed83272b7b04b9ceb477aefbf5ec2",
+      "sourceFile": "lifecycle-37116007842/b100-verification.txt"
+    },
+    {
+      "file": "b100000-state-observation.json",
+      "sha256": "6c0a829eaf6729e053e3c70ccf4b74a00f8d7505881e8dbf4c69eb36d22a27cc",
+      "sourceFile": "b100000-state-observation.json"
+    },
+    {
+      "file": "b100000-block-coverage.json",
+      "sha256": "cc2a88eda90c5872da8b8295a8f632088d6cf2182d673001cb9ed865e9cd1526",
+      "sourceFile": "b100000-block-coverage.json"
+    },
+    {
+      "file": "b100000-receipts-reconciliation.json",
+      "sha256": "997b03d926245335bfd9be096f259448f9358f00ac24ac57f04745617f75e2be",
+      "sourceFile": "b100000-full-receipts-verification.json"
+    },
+    {
+      "file": "b100000-readiness-verification.json",
+      "sha256": "8eccbcb02d0c4ca2f5ec09b3eac23e5cef1742c465f538c328593c10c53125b8",
+      "sourceFile": "b100000-full-readiness-verification.json"
+    },
+    {
+      "file": "b100000-reconciled-receipts.json",
+      "sha256": "fea4915d459c96561ae9dbb200a897d7be95f821213c6ea815e2f96b22fb880d",
+      "sourceFile": "coinage-recycle-100000-burst-enlarged-pilot-37029048758-2-recycle-pilot-recycle-reconciled-receipts.json"
+    },
+    {
+      "file": "b100000-resource-observations.json",
+      "sha256": "7938d252304209a89e2e42399dcf914a83cc9c655cacdf1ceda59ed802d45e29",
+      "sourceFile": "b100000-resource-observations.json"
+    },
+    {
+      "file": "a20000-targeted-split-verification.json",
+      "sha256": "45957876eeb97d91312d39a9c1d5d6066502fb8d3bf8325739da6698177645a2",
+      "sourceFile": "lifecycle-37116007842/a20000-split-verification.json"
+    },
+    {
+      "file": "a20000-targeted-claim-verification.json",
+      "sha256": "ba8e579d7ced429fdb67f9e4442f6c396e3cfd22a834ea2070c27d1f57982823",
+      "sourceFile": "lifecycle-37116007842/a20000-claim-verification.json"
+    },
+    {
+      "file": "a20000-targeted-workload-verification.json",
+      "sha256": "cfa2cfb9acb304ef5fac886f6e61f4007bb6fa20e6210dff93798db682120498",
+      "sourceFile": "lifecycle-37116007842/a20000-workload-verification.json"
+    },
+    {
+      "file": "duplicate-attempt-3-cancellation.json",
+      "sha256": "4cff1dff99ef278fd761727cd64e4a1d5fb1e5368ffbff66121dd26701f8bb42",
+      "sourceFile": "lifecycle-37029048758/duplicate-attempt-3-cancellation.json"
+    },
+    {
+      "file": "targeted-observations.json",
+      "sha256": "b88ab6c3c2fdae1d8c3eeb86766375e0da9e1d24b4deb0956b90f6a16a548bd4",
+      "sourceFile": "lifecycle-37116007842/campaign-results.json"
+    },
+    {
+      "file": "saved-configuration-verification.json",
+      "sha256": "03079e6ad6daee25759ea56b5cd62909a4b513c3722353794ed64a2955a94192",
+      "sourceFile": "lifecycle-37029048758/saved-configuration-verification.json"
+    },
+    {
+      "file": "b40000-targeted-verification.txt",
+      "sha256": "c978b0e7b5e71a8b1ca23bc275cdd4d3eca2f3d58465b8d506ee669039800663",
+      "sourceFile": "lifecycle-37121458129/b40000-verification.txt"
+    },
+    {
+      "file": "b40000-targeted-receipts-verification.json",
+      "sha256": "0cacc61819450131fc0172d226f12a1fc9b9a40c45499df013d229237ef0b155",
+      "sourceFile": "lifecycle-37121458129/coinage-recycle-40000-burst-enlarged-pilot-37121458129-1-recycle-pilot-recycle-subset-verification.json"
+    },
+    {
+      "file": "b40000-targeted-readiness-verification.json",
+      "sha256": "257ef44dea86d71131b1f463a2d4130e1d8fbcf7fb2bafa3c36cf1cb975c450b",
+      "sourceFile": "lifecycle-37121458129/coinage-recycle-40000-burst-enlarged-pilot-37121458129-1-readiness-subset-verification.json"
+    },
+    {
+      "file": "b40000-targeted-shutdown-error.json",
+      "sha256": "0f34a220e760350bec5a747d9bfdad2ca6b99b5214a75233ef0bd47e2c7adeb7",
+      "sourceFile": "lifecycle-37121458129/coinage-recycle-40000-burst-enlarged-pilot-37121458129-1/lifecycle-shutdown-error.json"
+    },
+    {
+      "file": "b40000-targeted-recovery.json",
+      "sha256": "7562295412da14e606b4f1e9bee6788afa345efc91e791b8609a14b0794a0a74",
+      "sourceFile": "lifecycle-37121458129/coinage-recycle-40000-burst-enlarged-pilot-37121458129-1/recovery.json"
+    },
+    {
+      "file": "case-inventory-check.json",
+      "sha256": "0a9f92f6dfba4d5c9ab83d04ff8498e2a34e8f9a43ecfc88f4e1d7c7e05fe305",
+      "sourceFile": "lifecycle-37029048758/case-inventory-check.json"
+    },
+    {
+      "file": "sequential-schedule-verification.json",
+      "sha256": "8ba3c3c5d2f53db66be653d8f65a6138a8fb0c194252313f44748bc1a0e4b118",
+      "sourceFile": "lifecycle-37029048758/sequential-schedule-verification.json"
+    },
+    {
+      "file": "b40000-targeted-observations.json",
+      "sha256": "40856a04a40b03cca69659feb3e5daf66eadef58c43534f968a6c4f7dc1555ca",
+      "sourceFile": "lifecycle-37121458129/campaign-results.json"
+    },
+    {
+      "file": "campaign-completion-audit.json",
+      "sha256": "0f1b3b16d09599053b08d9e5ef63469dc948249c874ff7069757f514412501a5",
+      "sourceFile": "lifecycle-37029048758/campaign-completion-audit.json"
+    }
+  ],
+  "rawArchiveLocation": "~/Projects/parity/coinage-test-evidence/lifecycle-37029048758",
+  "scope": "Selected summaries, verification outputs and hashes are committed. Raw archives and block/state evidence are retained locally; hashes alone do not reproduce an audit.",
+  "additionalRawArchiveLocations": [
+    "~/Projects/parity/coinage-test-evidence/lifecycle-37116007842",
+    "~/Projects/parity/coinage-test-evidence/lifecycle-37121458129"
+  ]
+}

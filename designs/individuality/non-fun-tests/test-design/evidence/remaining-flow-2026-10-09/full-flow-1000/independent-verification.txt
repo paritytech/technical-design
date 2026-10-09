@@ -1,0 +1,6 @@
+full-flow-pilot-wave-1: 1000 unique transactions matched saved block bodies and successful dispatch events
+full-flow-pilot-wave-1-claim: 1000 unique transactions matched saved block bodies and successful dispatch events
+full-flow-pilot-wave-1-payment: 1000 unique transactions matched saved block bodies and successful dispatch events
+full-flow-pilot-wave-1-recycle: 1000 unique transactions matched saved block bodies and successful dispatch events
+full-flow-pilot-wave-1-topup: 1000 unique transactions matched saved block bodies and successful dispatch events
+full-flow-pilot: receipt evidence and workload gates verified for 1000 actors

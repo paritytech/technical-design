@@ -1,0 +1,5 @@
+offboard-pilot-wave-1: receipt-only check; workload gates and completeness are NOT asserted
+offboard-pilot-wave-1: 8922 unique transactions matched saved block bodies and successful dispatch events
+offboard-smoke-wave-1: receipt-only check; workload gates and completeness are NOT asserted
+offboard-smoke-wave-1: 1 unique transactions matched saved block bodies and successful dispatch events
+This checks saved evidence consistency; it does not authenticate the RPC nodes or prove consensus.

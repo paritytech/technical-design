@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-10-02T16:57:38.653855+00:00",
+  "command": [
+    "python3",
+    "ci/previewnet/verify-lifecycle-artifact.py",
+    "/Users/theo/Projects/parity/coinage-test-evidence/lifecycle-37029048758/coinage-recycle-1000-burst-default-pilot-37029048758-1",
+    "--scenario",
+    "recycle",
+    "--expected",
+    "1000"
+  ],
+  "exitCode": 0,
+  "stdout": "recycle-smoke-recycle: 1 unique transactions matched saved block bodies and successful dispatch events\nrecycle-smoke: 1 actors passed saved lifecycle state checks\nrecycle-pilot-recycle: 1000 unique transactions matched saved block bodies and successful dispatch events\nrecycle-pilot: 1000 actors passed saved lifecycle state checks\nSaved RPC evidence consistency only; not a cryptographic storage or consensus proof.\n",
+  "stderr": ""
+}

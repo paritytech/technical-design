@@ -1,0 +1,4 @@
+claim-burst: 10000 unique transactions matched saved block bodies and successful dispatch events
+claim-burst-wave-1: 8000 unique transactions matched saved block bodies and successful dispatch events
+claim-burst-wave-2: 10000 unique transactions matched saved block bodies and successful dispatch events
+claim-burst: receipt evidence and workload gates verified for 10000 actors

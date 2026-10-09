@@ -1,0 +1,11 @@
+{
+  "count": 5002,
+  "p50": 150951.398124,
+  "p95": 226736.21564399992,
+  "max": 231870.719707,
+  "cutoff": {
+    "elapsedMs": 247079.45489500003,
+    "at": "0x287b5d1475abd3cca4cbc6cb7bf1be2ae36b4ba45ab02111ac595496d854499c"
+  },
+  "derivation": "First observed finalized root coverage minus each member submission timestamp; nearest-rank percentiles."
+}

@@ -1,0 +1,513 @@
+---
+layout: null
+title: Coinage stress metrics — slides
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coinage stress metrics — what we measured and why</title>
+<link rel="icon" href="slides-assets/polkadot-favicon-light.svg" media="(prefers-color-scheme: light)" type="image/svg+xml">
+<link rel="icon" href="slides-assets/polkadot-favicon-dark.svg" media="(prefers-color-scheme: dark)" type="image/svg+xml">
+<link rel="icon" href="slides-assets/polkadot-favicon.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="slides-assets/polkadot-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<style>
+  /* Follows polkadot.com: DM Serif Display headings, DM Sans body, JetBrains Mono labels, stone palette. */
+  :root {
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --surface-2: #f5f5f4;
+    --border: #e7e5e4;
+    --border-strong: #d6d3d1;
+    --text: #1c1917;
+    --text-2: #57534e;
+    --text-3: #78716c;
+    --dark-bg: #0f0f0f;
+    --dark-surface: #1c1917;
+    --dark-surface-2: #292524;
+    --dark-border: #44403c;
+    --dark-text: #fafaf9;
+    --dark-text-2: #d6d3d1;
+    /* Data colours only: they match the report charts. */
+    --data: #2a78d6;
+    --data-soft: #e6f0fb;
+    --fail: #d03b3b;
+    --fail-soft: #fbeaea;
+    --none: #c3c2b7;
+
+    --serif: "DM Serif Display", Georgia, serif;
+    --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+    --r-background-color: var(--bg);
+    --r-main-color: var(--text);
+    --r-heading-color: var(--text);
+    --r-link-color: var(--text);
+    --r-link-color-hover: var(--text-2);
+    --r-main-font: var(--sans);
+    --r-heading-font: var(--serif);
+    --r-code-font: var(--mono);
+    --r-main-font-size: 28px;
+    --r-heading-text-transform: none;
+    --r-heading-font-weight: 400;
+    --r-heading-letter-spacing: -0.02em;
+    --r-heading-line-height: 1.12;
+    --r-progress-color: var(--text);
+  }
+
+  /* Layout */
+  .reveal .slides { text-align: left; }
+  .reveal .slides > section { padding: 0 8px; box-sizing: border-box; }
+  .reveal .slides > section.center { text-align: center; }
+  .reveal h1 { font-size: 2.9em; letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 0.3em; }
+  .reveal h1 em { font-style: italic; }
+  .reveal h2 { font-size: 1.8em; margin: 0 0 0.55em; max-width: 24em; }
+  .reveal h3 { font-family: var(--sans); }
+  .reveal p { margin: 0 0 0.6em; line-height: 1.45; }
+  .reveal b, .reveal strong { font-weight: 600; }
+  .reveal a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border-strong); }
+  .reveal .muted { color: var(--text-2); }
+  .reveal .small { font-size: 0.7em; }
+  .reveal .tiny { font-size: 0.55em; color: var(--text-3); }
+
+  /* Mono label, as polkadot.com uses for small captions */
+  .reveal .kicker {
+    display: inline-block; margin: 0 0 1em; padding: 0.35em 0.8em; border-radius: 9999px;
+    border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-2);
+    font: 500 0.5em/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  /* Dark slides */
+  .reveal .dark, .reveal .dark h1, .reveal .dark h2 { color: var(--dark-text); }
+  .reveal .dark .muted { color: var(--dark-text-2); }
+  .reveal .dark .kicker { background: transparent; border-color: var(--dark-border); color: var(--dark-text-2); }
+  .reveal .dark a { color: var(--dark-text); text-decoration-color: var(--dark-border); }
+  .reveal .rule { width: 72px; height: 1px; background: var(--dark-border); margin: 1.1em auto; }
+
+  /* Footer */
+  .deck-footer {
+    position: fixed; left: 32px; bottom: 18px; z-index: 30;
+    font: 500 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3);
+  }
+  .reveal .slide-number { background: transparent; color: var(--text-3); font: 500 12px/1 var(--mono); right: 32px; bottom: 18px; }
+  html.dark-slide .deck-footer, html.dark-slide .reveal .slide-number { color: #a8a29e; }
+  .reveal .slide-number a { text-decoration: none; color: inherit; }
+
+  /* Lists */
+  .reveal ul { margin: 0 0 0 1.1em; }
+  .reveal li { margin: 0.4em 0; line-height: 1.4; }
+  .reveal li::marker { color: var(--text-3); }
+
+  /* Flow diagram */
+  .flow { display: flex; align-items: center; gap: 14px; margin: 0.35em 0 0.2em; }
+  .flow .label { width: 210px; font: 500 0.5em/1 var(--mono); color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; }
+  .flow .node {
+    padding: 0.55em 0.95em; border-radius: 12px; background: var(--surface); border: 1px solid var(--border-strong);
+    font-size: 0.8em; font-weight: 500; white-space: nowrap;
+  }
+  .flow .node.good { background: var(--text); border-color: var(--text); color: var(--dark-text); }
+  .flow .arrow { color: var(--text-3); font-size: 0.8em; }
+  .flow-caption { margin-left: 224px; font-size: 0.6em; color: var(--text-3); }
+
+  /* Table */
+  .reveal table.nice { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.68em; margin: 0; }
+  .reveal table.nice th {
+    text-align: left; font: 500 0.7em/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-3); border-bottom: 1px solid var(--border-strong); padding: 0.55em 0.8em;
+  }
+  .reveal table.nice td { padding: 0.55em 0.8em; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .reveal table.nice td:first-child { color: var(--text-2); }
+  .reveal table.nice td.arrow { color: var(--text-3); padding: 0 0.2em; text-align: center; width: 1.2em; }
+  .reveal table.nice td.coinage { font-weight: 600; }
+  .reveal table.nice td.why { color: var(--text-2); }
+  .reveal table.nice tr:last-child td { border-bottom: 0; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px 16px; }
+  .card h3 { font: 600 0.7em/1.3 var(--sans); margin: 0 0 0.25em; color: var(--text); text-transform: none; letter-spacing: 0; }
+  .card p { font-size: 0.58em; color: var(--text-2); margin: 0 0 0.6em; min-height: 2.6em; }
+  .card .num { font: 400 1.55em/1 var(--serif); letter-spacing: -0.02em; color: var(--text); }
+  .card .num small { font: 500 0.32em/1 var(--mono); color: var(--text-3); letter-spacing: 0.04em; text-transform: uppercase; margin-left: 0.5em; }
+  .card.prelim { background: var(--surface-2); border-style: dashed; border-color: var(--border-strong); }
+  .card.prelim .num { color: var(--text-2); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .chip { font: 500 0.42em/1 var(--mono); letter-spacing: 0.04em; padding: 0.55em 0.9em; border-radius: 9999px; border: 1px solid var(--border); background: var(--surface); color: var(--text-2); }
+
+  /* Split: chart + takeaway */
+  .split { display: grid; grid-template-columns: 1.8fr 1fr; gap: 36px; align-items: center; }
+  .reveal img.chart { display: block; width: 100%; height: auto; max-height: 470px; object-fit: contain; margin: 0; border: 1px solid var(--border); border-radius: 12px; box-shadow: none; background: #fcfcfb; padding: 10px; box-sizing: border-box; }
+  .takeaway .hero { font: 400 3.6em/0.95 var(--serif); letter-spacing: -0.03em; color: var(--text); }
+  .takeaway .hero.red { color: var(--fail); }
+  .takeaway .hero-label { font: 500 0.48em/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); margin: 0.6em 0 1em; }
+  .takeaway p { font-size: 0.62em; color: var(--text-2); }
+
+  /* Hero stat slide */
+  .hero-xl { font: 400 6.4em/0.9 var(--serif); letter-spacing: -0.04em; color: var(--text); margin-top: 0.1em; }
+  .hero-xl-label { font-size: 0.8em; color: var(--text-2); margin: 0.5em 0 1.1em; }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px 16px; text-align: center; }
+  .stat b { display: block; font: 400 1.5em/1.1 var(--serif); letter-spacing: -0.02em; color: var(--text); }
+  .stat span { font-size: 0.52em; color: var(--text-2); }
+  .stat.fail { background: var(--fail-soft); border-color: #f2c9c9; }
+  .stat.fail b { color: var(--fail); }
+
+  /* Outcome bars */
+  .bars { display: grid; grid-template-columns: 180px 1fr 100px; gap: 12px 16px; align-items: center; margin-top: 0.2em; }
+  .bars .name { font-size: 0.66em; font-weight: 500; }
+  .bars .track { display: flex; height: 44px; border-radius: 8px; overflow: hidden; background: var(--surface-2); }
+  .bars .seg { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; box-sizing: border-box; font: 500 0.46em/1 var(--mono); color: #fff; }
+  .bars .ok { background: var(--data); }
+  .bars .rej { background: var(--fail); justify-content: center; padding: 0; }
+  .bars .lost { background: var(--none); color: var(--text); justify-content: center; padding: 0; }
+  .bars .pct { font: 400 0.95em/1 var(--serif); text-align: right; }
+  .legend { display: flex; gap: 22px; font: 500 0.42em/1 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); margin: 1.2em 0 0; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .reveal .callout { margin: 1.6em 0 0; padding: 1em 1.35em; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--border); font-size: 0.6em; }
+
+  /* Unload comparison */
+  .compare { display: grid; grid-template-columns: 200px 1fr 140px; gap: 14px 18px; align-items: center; margin: 0.4em 0 0.8em; }
+  .compare .name { font-size: 0.62em; font-weight: 500; }
+  .compare .track { height: 56px; border-radius: 10px; background: var(--surface-2); overflow: hidden; }
+  .compare .fill { height: 100%; background: var(--data); }
+  .compare .fill.red { background: var(--fail); min-width: 6px; }
+  .compare .val { font: 400 1.6em/1 var(--serif); letter-spacing: -0.02em; text-align: right; }
+
+  /* Full-flow stages */
+  .stages { display: grid; grid-template-columns: 200px 1fr 110px; gap: 10px 18px; align-items: center; margin: 0.3em 0 0.9em; }
+  .stages .name { font-size: 0.62em; font-weight: 500; }
+  .stages .name small { display: block; font: 500 0.7em/1.3 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); }
+  .stages .track { height: 38px; border-radius: 8px; background: var(--surface-2); overflow: hidden; }
+  .stages .fill { height: 100%; background: var(--none); }
+  .stages .fill.unload { background: var(--data); }
+  .stages .val { font: 400 1.1em/1 var(--serif); letter-spacing: -0.02em; text-align: right; }
+  .stat-row.compact .stat { padding: 12px 14px; }
+  .stat-row.compact .stat b { font-size: 1.2em; }
+
+  /* Compute budget per block */
+  .budget { display: grid; grid-template-columns: 150px 130px 1fr 110px; gap: 12px 18px; align-items: center; margin: 0.2em 0 0.4em; }
+  .budget .head { font: 500 0.42em/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
+  .budget .name { font-size: 0.66em; font-weight: 600; }
+  .budget .cost { font: 500 0.55em/1 var(--mono); color: var(--text-2); }
+  .budget .track { height: 36px; border-radius: 8px; background: var(--surface-2); overflow: hidden; }
+  .budget .fill { height: 100%; background: var(--data); min-width: 6px; }
+  .budget .fill.red { background: var(--fail); }
+  .budget .val { font: 400 1.25em/1 var(--serif); letter-spacing: -0.02em; text-align: right; }
+  .reveal .note-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 0.9em; }
+  .reveal .note-row .callout { margin: 0; }
+
+  /* Stage table */
+  .reveal table.nice td.num, .reveal table.nice th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .reveal table.nice td .mini { display: inline-block; height: 12px; border-radius: 3px; background: var(--none); vertical-align: middle; margin-right: 10px; }
+  .reveal table.nice td .mini.unload { background: var(--data); }
+  .reveal table.nice tr.hot td { font-weight: 600; }
+
+  /* Lessons */
+  .lessons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .lesson { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; }
+  .lesson .n { font: 400 1.6em/1 var(--serif); color: var(--text-3); margin-bottom: 0.3em; }
+  .lesson h3 { font: 600 0.72em/1.3 var(--sans); margin: 0 0 0.45em; text-transform: none; letter-spacing: 0; color: var(--text); }
+  .lesson p { font-size: 0.56em; color: var(--text-2); margin: 0 0 0.5em; }
+  .lesson p.why { font-size: 0.5em; color: var(--text-3); margin: 0; }
+
+  .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .cols-2 .lesson h3 { font-size: 0.9em; }
+  .cols-2 .lesson p { font-size: 0.68em; }
+  .cols-2 .lesson p.why { font-size: 0.6em; }
+  .reveal .callout.warn { background: var(--fail-soft); border-color: #f2c9c9; font-size: 0.64em; }
+
+  /* Backup: raising the limit */
+  .glossary { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .glossary .lesson h3 { font-size: 0.78em; }
+  .glossary .lesson p { font-size: 0.58em; margin-bottom: 0.4em; }
+  .glossary .lesson p b { color: var(--text); }
+  .glossary dl { margin: 0; font-size: 0.56em; }
+  .glossary dt { font-weight: 600; color: var(--text); margin-top: 0.4em; }
+  .glossary dt:first-child { margin-top: 0; }
+  .glossary dd { margin: 0.15em 0 0; color: var(--text-2); }
+
+  /* Wrap-up */
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 1em; }
+  .three > div { background: var(--dark-surface); border: 1px solid var(--dark-border); border-radius: 16px; padding: 20px 22px; }
+  .three h3 { font: 500 0.46em/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: #a8a29e; margin: 0 0 0.9em; }
+  .three p { font-size: 0.62em; color: var(--dark-text); margin: 0; }
+  .quote { font: 400 1.25em/1.25 var(--serif); letter-spacing: -0.01em; color: var(--dark-text); margin: 0.7em 0 0.8em; }
+  .quote em { font-style: italic; color: var(--dark-text-2); }
+  .reveal kbd { font-family: var(--mono); font-size: 0.9em; padding: 0.05em 0.4em; border-radius: 4px; border: 1px solid var(--dark-border); }
+  .reveal code { font-family: var(--mono); font-size: 0.875em; padding: 0.1em 0.35em; border-radius: 4px; border: 1px solid var(--border); background: var(--surface); }
+</style>
+</head>
+<body>
+<div class="deck-footer">Coinage stress metrics · October 2026</div>
+<div class="reveal"><div class="slides">
+
+<section class="center dark" data-background-color="#0f0f0f" data-state="dark-slide">
+  <p class="kicker">Coinage stress testing</p>
+  <h1>What we measured,<br><em>and why</em></h1>
+  <div class="rule"></div>
+  <p class="muted">Five flows on a local PreviewNet, from 100 to 150,000 actors</p>
+  <p class="tiny" style="margin-top:2.2em"><a href="coinage-stress-metrics.html">Full report</a> · <a href="coinage-stress-metrics-appendix.html">Appendix</a> · press <kbd>S</kbd> for speaker notes</p>
+  <aside class="notes">About 15 minutes. Plan: why a chain is different (2 min), the metrics and where they come from (3 min), the scenarios (1 min), six results (7 min), conclusion and testing notes (2 min).</aside>
+</section>
+
+<section>
+  <p class="kicker">Starting point</p>
+  <h2>A chain is not a REST API, but we can test it like one</h2>
+  <div class="flow">
+    <div class="label">REST API</div>
+    <div class="node">Request</div><div class="arrow">→</div>
+    <div class="node good">Response ✓</div>
+  </div>
+  <p class="flow-caption">One round trip, and you know if it worked.</p>
+  <div class="flow" style="margin-top:0.9em">
+    <div class="label">Coinage</div>
+    <div class="node">Submit</div><div class="arrow">→</div>
+    <div class="node">Wait in pool</div><div class="arrow">→</div>
+    <div class="node">Into a block</div><div class="arrow">→</div>
+    <div class="node">Final</div><div class="arrow">→</div>
+    <div class="node good">Receipt ✓</div>
+  </div>
+  <p class="flow-caption">"Accepted" only means it got in the door. We only know it worked at the end.</p>
+  <p class="fragment callout" style="margin-top:1.4em">So I took the metrics we use for REST API load tests, like JMeter's, and changed what <b>"a response"</b> means: a successful receipt in a finalized block.</p>
+  <aside class="notes">The node answering "accepted" is not the response. A node can accept a transaction and lose it later. The real response is a successful receipt in a finalized block.</aside>
+</section>
+
+<section>
+  <p class="kicker">The metrics</p>
+  <h2>From JMeter to Coinage</h2>
+  <table class="nice">
+    <thead><tr><th>JMeter / REST API</th><th></th><th>What we measure in Coinage</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>Assertion passed</td><td class="arrow">→</td><td class="coinage">Verified receipt + correct coin state</td><td class="why">Did the transaction succeed and leave the right state?</td></tr>
+      <tr><td>Error %</td><td class="arrow">→</td><td class="coinage">No verified receipt</td><td class="why">A lost payment is the worst outcome</td></tr>
+      <tr><td>HTTP 503 / refused</td><td class="arrow">→</td><td class="coinage">Pool rejections (error 1016)</td><td class="why">How many the node refuses when too many arrive at once</td></tr>
+      <tr><td>Median, 95% and 99% line</td><td class="arrow">→</td><td class="coinage">Finality p50 / p95 / p99</td><td class="why">How long people at the back wait</td></tr>
+      <tr><td>Throughput (requests/s)</td><td class="arrow">→</td><td class="coinage">Transactions per block</td><td class="why">How fast a queue can drain</td></tr>
+      <tr><td>Thread group ramp-up</td><td class="arrow">→</td><td class="coinage">At once vs in waves; pool size</td><td class="why">Does spreading the load help?</td></tr>
+      <tr><td>Server monitoring (PerfMon)</td><td class="arrow">→</td><td class="coinage">Machine CPU and memory</td><td class="why">How much CPU and memory the whole run uses</td></tr>
+    </tbody>
+  </table>
+  <p class="small fragment callout">One Coinage-only metric: <b>readiness</b>, when a new coin can actually be used. REST APIs have no equivalent.</p>
+  <aside class="notes">I report p95 rather than the average because the average hides the people at the back of the queue. We do not report a TPS number, because a finite burst does not show a sustainable rate.</aside>
+</section>
+
+<section>
+  <p class="kicker">The scenarios</p>
+  <h2>Five flows, each a burst of signed transactions</h2>
+  <div class="cards">
+    <div class="card"><h3>Top-up</h3><p>Pays with an external asset, gets a voucher</p><div class="num">10,000</div></div>
+    <div class="card"><h3>Claim</h3><p>Transfers one coin</p><div class="num">150,000</div></div>
+    <div class="card"><h3>Split-and-claim</h3><p>Splits a coin, then claims it</p><div class="num">100,000<small>actors</small></div></div>
+    <div class="card"><h3>Recycling</h3><p>Loads a coin into a recycler</p><div class="num">40,000</div></div>
+    <div class="card"><h3>Merchant fan-in</h3><p>Pays one merchant</p><div class="num">20,000</div></div>
+    <div class="card prelim"><h3>Unloads</h3><p>Free quota (all six profiles) and offboarding (preliminary): cash out</p><div class="num">10,000<small>in waves</small></div></div>
+  </div>
+  <p class="tiny" style="margin-top:0.8em">Number = largest fully verified run. Each flow ran at several sizes, at once or in waves, on the default pool or a bigger one.</p>
+  <p class="tiny"><b>Why only five?</b> We had limited time, so we covered the main payment flows first. Sponsored pot, cleanup backlog, instance proliferation and sustained load are next.</p>
+  <div class="chips">
+    <span class="chip">parity-large runner</span><span class="chip">32 logical CPUs · 62.8 GiB</span><span class="chip">6 validators + 2 People collators</span><span class="chip">one machine</span><span class="chip">not covered: wallet planner, chat, TrUAPI, mobile</span>
+  </div>
+  <aside class="notes">All on one parity-large runner, with the load generator on the same machine. Full flow ran end to end at 1,000 people (Result 6). Sponsored pot, cleanup backlog and instance proliferation are not run yet.</aside>
+</section>
+
+<section class="center">
+  <p class="kicker">Result 1 · Correctness</p>
+  <div class="hero-xl">150,000</div>
+  <div class="hero-xl-label">claims in one burst · 150,000 verified receipts · zero errors</div>
+  <div class="stat-row">
+    <div class="stat"><b>200,000</b><span>split-and-claim receipts, all verified</span></div>
+    <div class="stat"><b>20,000</b><span>merchant payments, all verified</span></div>
+    <div class="stat fail"><b>1,000,000</b><span>did not run: our load generator ran out of memory</span></div>
+  </div>
+  <aside class="notes">Every passing run had zero errors in its receipts and coin states. The one-million failure is a test tool limit, not a chain limit.</aside>
+</section>
+
+<section>
+  <p class="kicker">Result 2 · Throughput</p>
+  <h2>The block, not the pool, sets the speed</h2>
+  <div class="split">
+    <img class="chart" src="evidence/stress-metrics-2026-10-05/blocks.svg" alt="Bar charts of claims per block for 20,000, 40,000 and 100,000 claims. Every full block holds 2,363 claims.">
+    <div class="takeaway">
+      <div class="hero">2,363</div>
+      <div class="hero-label">claims in every full block</div>
+      <p><b>Think of a funnel.</b> The pool is the wide top: it decides how many can wait. The block is the narrow spout: every 6 seconds it lets through 1.5 s worth of computation.</p>
+      <p>A bigger pool only widens the top. It doesn't widen the spout. And because the spout runs at a steady pace, it also sets the response time (next slide).</p>
+    </div>
+  </div>
+  <aside class="notes">This is our throughput metric: instead of requests per second, it's transactions per block. Blocks came every 6.0 seconds (measured from the collator logs). Each block may use up to 2 s of computation, 1.5 s of it for normal transactions. Every full block stopped at that weight limit, so the queue drains by about 2,363 claims every 6 seconds. To push more through you'd need lighter transactions, more computation per block, or more blocks. We didn't test any of those.</aside>
+</section>
+
+<section>
+  <p class="kicker">Result 3 · Response time</p>
+  <h2>Response time grows in a straight line with load</h2>
+  <div class="split">
+    <img class="chart" src="evidence/stress-metrics-2026-10-05/topup-trend.svg" alt="Top-up p95 against batch size: about 22 seconds more finality and 28 seconds more readiness per 1,000 top-ups.">
+    <div class="takeaway">
+      <div class="hero">+22 s</div>
+      <div class="hero-label">finality p95 per extra 1,000 top-ups</div>
+      <p><b>+28 s</b> readiness p95 per extra 1,000.</p>
+      <p>This follows from the last slide. Blocks come at a fixed pace, every 6 s, and each transaction type costs a fixed amount, so time adds up in a straight line.</p>
+      <p>A full block holds 260 top-ups. So 1,000 more top-ups need about 3.8 more blocks: <b>about 23 s</b>, close to the 22 s we measured.</p>
+    </div>
+  </div>
+  <aside class="notes">The 260-per-block figure is from the full-flow run, where top-up blocks stopped at the weight limit. Four passing top-up runs only, with different pools and schedules, so a strong pattern, not a model.</aside>
+</section>
+
+<section>
+  <p class="kicker">Result 4 · Error rate under a spike</p>
+  <h2>10,000 at once on the default pool: 1 in 10 rejected</h2>
+  <div class="bars">
+    <div class="name">Top-up</div>
+    <div class="track"><div class="seg ok" style="width:90.11%">9,011</div><div class="seg rej" style="width:9.89%">989</div></div>
+    <div class="pct">90.1%</div>
+    <div class="name">Claim</div>
+    <div class="track"><div class="seg ok" style="width:81.92%">8,192</div><div class="seg rej" style="width:9.89%">989</div><div class="seg lost" style="width:8.19%">819</div></div>
+    <div class="pct">81.9%</div>
+    <div class="name">Merchant fan-in</div>
+    <div class="track"><div class="seg ok" style="width:90.11%">9,011</div><div class="seg rej" style="width:9.89%">989</div></div>
+    <div class="pct">90.1%</div>
+    <div class="name">Recycling</div>
+    <div class="track"><div class="seg ok" style="width:87.24%">8,724</div><div class="seg rej" style="width:9.89%">989</div><div class="seg lost" style="width:2.87%"></div></div>
+    <div class="pct">87.2%</div>
+    <div class="name">Offboarding</div>
+    <div class="track"><div class="seg ok" style="width:90.11%">9,011</div><div class="seg rej" style="width:9.89%">989</div></div>
+    <div class="pct">90.1%</div>
+    <div class="name">Free quota</div>
+    <div class="track"><div class="seg ok" style="width:90.11%">9,011</div><div class="seg rej" style="width:9.89%">989</div></div>
+    <div class="pct">90.1%</div>
+  </div>
+  <div class="legend"><span><i style="background:var(--data)"></i>Verified receipt</span><span><i style="background:var(--fail)"></i>Rejected at the door</span><span><i style="background:var(--none)"></i>No receipt found</span><span style="margin-left:auto">Right: share verified</span></div>
+  <p class="fragment callout">The default pool holds 9,011 (8,192 ready + 819 future). <b>Sending in waves fixed it in every flow, and so did a bigger pool wherever we have a result.</b></p>
+  <aside class="notes">This is our "ramp-up" finding. Same total load, different arrival pattern: a single spike fails, waves pass. Recycling's grey sliver is 287 transactions with no receipt found.</aside>
+</section>
+
+<section>
+  <p class="kicker">Result 5 · What "fit in a block" means</p>
+  <h2>Each block has a computation budget, and unloads use the most</h2>
+  <div class="budget">
+    <div class="head">Transaction</div><div class="head">Compute each</div><div class="head">How many fit in one block</div><div class="head" style="text-align:right">Per block</div>
+    <div class="name">Claim</div><div class="cost">0.6 ms</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">2,363</div>
+    <div class="name">Recycle</div><div class="cost">5.2 ms</div><div class="track"><div class="fill" style="width:12.1%"></div></div><div class="val">287</div>
+    <div class="name">Top-up</div><div class="cost">5.8 ms</div><div class="track"><div class="fill" style="width:11%"></div></div><div class="val">260</div>
+    <div class="name">Unload</div><div class="cost">62.9 ms</div><div class="track"><div class="fill red" style="width:0.97%"></div></div><div class="val" style="color:var(--fail)">23</div>
+  </div>
+  <div class="note-row">
+    <p class="callout">It's not the size in bytes. A block can hold 3.75 MiB, and 23 unloads are only 39 KB. The limit is <b>computation</b>: 1.5 s per block for normal transactions. An unload costs about 100 claims, because it carries two ring-VRF proofs that the chain must check.</p>
+    <p class="callout fragment">So unloads are the slowest: 10,000 offboards at once needed 392 blocks and took <b>56 minutes</b> at p95. Sent in waves, all 10,000 verified.</p>
+  </div>
+  <aside class="notes">Compute per transaction is the ref_time weight recorded on each successful transaction. Every full block of each type stopped with HitBlockWeightLimit in the collator logs. The claim figure comes from the claim bursts; recycle, top-up and unload come from the full-flow run, and 23 unloads held in every unload run. That the proofs are the main cost is our reading; we didn't profile it. Offboarding is still preliminary.</aside>
+</section>
+
+<section>
+  <p class="kicker">Result 6 · End to end</p>
+  <h2>The whole lifecycle works at 1,000 people, and unloads set the pace</h2>
+  <table class="nice">
+    <thead><tr><th>Stage</th><th class="num">Transactions</th><th class="num">Fit per full block</th><th class="num">Blocks used</th><th>Time for 95% (p95)</th></tr></thead>
+    <tbody>
+      <tr><td>Top-up</td><td class="num">1,000</td><td class="num">260</td><td class="num">5</td><td><span class="mini" style="width:36px"></span>53 s</td></tr>
+      <tr class="hot"><td>Payment unload</td><td class="num">1,000</td><td class="num">23</td><td class="num">44</td><td><span class="mini unload" style="width:200px"></span>297 s</td></tr>
+      <tr><td>Claim</td><td class="num">1,000</td><td class="num">2,363</td><td class="num">1</td><td><span class="mini" style="width:21px"></span>31 s</td></tr>
+      <tr><td>Recycle</td><td class="num">1,000</td><td class="num">287</td><td class="num">4</td><td><span class="mini" style="width:32px"></span>48 s</td></tr>
+      <tr class="hot"><td>Offboard</td><td class="num">1,000</td><td class="num">23</td><td class="num">44</td><td><span class="mini unload" style="width:183px"></span>272 s</td></tr>
+    </tbody>
+  </table>
+  <p class="callout">1,000 people each went through all five stages: <b>5,000 transactions, every one verified</b>. The two unload stages need 44 blocks each, so they take most of the time.</p>
+  <aside class="notes">Each person follows one fixed plan: top-up → unload into a payment coin → claim → recycle → offboard. Not the wallet planner. Smoke and 100 people also passed every stage. 10,000 at once was a test-tool failure: our sender lost its connection, so no load reached the chain; a retry is running. All 1,000 claims fit in one block, well under the 2,363 a full block holds.</aside>
+</section>
+
+<section>
+  <p class="kicker">Server monitoring</p>
+  <h2>The machine was not the limit</h2>
+  <div class="split">
+    <img class="chart" src="evidence/stress-metrics-2026-10-05/machine-resources.svg" alt="During the 100,000-claim run, machine CPU averaged 12% with a 21% peak; memory rose from 12 GiB to 19.8 GiB.">
+    <div class="takeaway">
+      <div class="hero">21%</div>
+      <div class="hero-label">peak CPU during 100,000 claims</div>
+      <p>About 5% idle → 12% average across 32 CPUs.</p>
+      <p>Memory 12 → 19.8 GiB, partly our load generator.</p>
+      <p>The machine never came close to full, because block weight caps how much work each block does. So the hardware wasn't what limited us.</p>
+      <p class="tiny">Our load generator shared this machine, so these numbers include it.</p>
+    </div>
+  </div>
+  <aside class="notes">Like PerfMon in JMeter: how much CPU and memory the run consumes. Here it mattered less than expected, because block weight throttles the work per block, so the machine stayed mostly idle. The load generator reached 2.8 GiB and about one full CPU core while it signed transactions.</aside>
+</section>
+
+<section>
+  <p class="kicker">Conclusion</p>
+  <h2>Coinage is limited by block weight, not hardware</h2>
+  <div class="cols-2">
+    <div class="lesson"><h3>Load testing the chain</h3><p>How many transactions the chain handles in total.</p><p class="why">What we see today: every full block stops at its computation budget while the machine stays mostly idle.</p></div>
+    <div class="lesson"><h3>Load testing a pallet action</h3><p>How many of one specific extrinsic the block weight can sustain.</p><p class="why">Results differ a lot by action: 2,363 claims fit in a block, but only 23 unloads.</p></div>
+  </div>
+  <p class="callout warn">At today's block weight, with a block every 6 s, the ceiling for one transaction type alone is about <b>390 claims per second</b>, or about <b>4 unloads per second</b> (roughly 13,800 an hour). We can't support many more transactions unless this limit is addressed, for example with lighter transactions, more computation per block or more blocks. We should be wary of this.</p>
+  <aside class="notes">Per-second figures are the per-block capacity divided by the 6-second block time, with the whole normal-transaction budget used by one transaction type. They are ceilings for that type alone, not a measured sustained rate. We did not test any of the ways to raise the limit.</aside>
+</section>
+
+<section>
+  <p class="kicker">Notes for testing future features</p>
+  <h2>What we'd set up differently</h2>
+  <p class="small muted" style="margin-bottom:1em">We don't need to rerun these tests: they already show the limits. These notes are for testing future features.</p>
+  <div class="lessons">
+    <div class="lesson"><div class="n">1</div><h3>Two machines: one for the load generator, one for the chain</h3><p>Today the load generator shares CPU and memory with the nodes, so we can't fully separate the chain's cost from our tool's cost.</p><p class="why">It reached 2.8 GiB and about one full CPU core while signing.</p></div>
+    <div class="lesson"><div class="n">2</div><h3>A faster, more efficient client</h3><p>Stream results to disk instead of holding every transaction and watch in memory while we wait for them to finish.</p><p class="why">One million claims ran out of a 24 GiB heap. At 20,000, watch status was unreliable. At 10,000, the sender disconnected.</p></div>
+    <div class="lesson"><div class="n">3</div><h3>Limit the CPU cores for each node</h3><p>Pin each validator and collator to its own cores, so each node's work is measured on its own and more objectively.</p><p class="why">Draft: <a href="https://github.com/paritytech/polkadot-pop-e2e/pull/42">K3s CPU pinning spike (#42)</a>.</p></div>
+  </div>
+  <aside class="notes">These come from what went wrong in our own tooling, not the chain. The block-saving fix (save every finalized block, not only those the watches reported) is already in, and that's what let us reconcile lost watches at 20,000.</aside>
+</section>
+
+<section class="dark" data-background-color="#0f0f0f" data-state="dark-slide">
+  <p class="kicker">Wrap-up</p>
+  <h2>What this does and doesn't show</h2>
+  <div class="three">
+    <div><h3>Shows</h3><p>Which bursts Coinage completed correctly, how long people waited, and where the limit is: block weight, not hardware. That limit decides how many transactions we can support.</p></div>
+    <div class="no"><h3>Doesn't show</h3><p>A measured, sustainable TPS. These were finite bursts; the per-second figures are ceilings worked out from block weight, not measured rates.</p></div>
+    <div class="next"><h3>Next</h3><p>Use the testing notes for future features. Still open if we need them: remaining offboarding profiles, full flow at 10,000 and above, sustained load, sponsored pot, cleanup backlog and instance proliferation.</p></div>
+  </div>
+  <div class="quote"><em>Acceptance tells us a transaction got in the door.</em><br>A verified receipt tells us the money moved.</div>
+  <p class="tiny"><a href="coinage-stress-metrics.html">Full report</a> · <a href="coinage-stress-metrics-appendix.html">Appendix</a></p>
+</section>
+
+<section>
+  <p class="kicker">Backup · Raising the limit</p>
+  <h2>More throughput needs more cores, not more collators</h2>
+  <div class="glossary">
+    <div class="lesson">
+      <h3>Who does what</h3>
+      <dl>
+        <dt>Collator</dt><dd>Builds our parachain blocks. Collators take turns on the same chain, so adding more adds backup, not blocks.</dd>
+        <dt>Relay-chain core</dt><dd>A lane in the relay chain: each lets one parachain block be checked by a small group of validators and included per relay block. Today we use one, so one block every 6 s.</dd>
+        <dt>GRANDPA</dt><dd>Finalizes relay-chain blocks. Our block is final when the relay block that included it is final.</dd>
+        <dt>Coretime</dt><dd>How a parachain gets cores: bought from the Coretime chain, in bulk or on demand. Adding our own nodes doesn't create cores.</dd>
+      </dl>
+    </div>
+    <div class="lesson">
+      <h3>Ways to raise the limit (untested)</h3>
+      <p><b>More cores (elastic scaling).</b> 4 cores = 4 blocks per 6 s, so up to about 92 unloads instead of 23. Needs coretime, elastic scaling in the runtime and collators, and fast enough collators.</p>
+      <p><b>Lighter unloads.</b> Each costs 62.9 ms, mostly two ring-VRF proof checks. Halve it and twice as many fit.</p>
+      <p><b>Bigger share for normal transactions.</b> Up to about +20% (1.5 s → 1.8 s of the 2 s).</p>
+      <p><b>Not an option: heavier blocks.</b> 2 s is about the most relay validators allow to re-check a parachain block. An idle collator doesn't change that.</p>
+    </div>
+  </div>
+  <p class="callout warn" style="margin-top:0.9em">The catch: with 4 cores, each block must be built in about 1.5 s. On our machine, building a full 23-unload block took <b>2.7 s</b> (median of 391 blocks). So the real gain would be less than 4×. Locally we could test it by giving our parachain extra cores with a sudo call and turning on elastic scaling.</p>
+  <aside class="notes">More cores raise throughput (transactions per second). A single transaction's latency stays about one block plus finality; it only gets faster under load because the queue drains sooner. Block building time is from the collator logs of the 10,000-offboard run (range 2.58 to 2.83 s); it ran on a shared machine and includes work beyond the unloads themselves.</aside>
+</section>
+
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true, slideNumber: "c/t", width: 1280, height: 720, margin: 0.05, center: true, controls: false,
+    transition: "fade", transitionSpeed: "fast", backgroundTransition: "fade", plugins: [RevealNotes]
+  });
+</script>
+</body>
+</html>

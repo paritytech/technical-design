@@ -1,0 +1,41 @@
+{
+  "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+  "job": 111181352051,
+  "attempt": 2,
+  "commit": "ed563b14f5bc99c82c0158cd6ece6f9affff3f46",
+  "artifactId": 11272711030,
+  "reportedCounts": {
+    "requested": 100000,
+    "submitted": 100000,
+    "finalizedWatches": 60982,
+    "receiptAuditReported": 60982,
+    "auditErrors": 39018,
+    "observedReady": 39917,
+    "unobservedReadiness": 60083
+  },
+  "launchMs": 3692.298991000047,
+  "finalityMs": {
+    "count": 60982,
+    "p50": 925564.6334689998,
+    "p95": 1709560.7843010002,
+    "max": 1794057.695809
+  },
+  "readinessMs": {
+    "count": 39917,
+    "p50": 992582.6300860001,
+    "p95": 1718515.421966,
+    "max": 1797529.424156
+  },
+  "readinessCutoff": {
+    "elapsedMs": 1797948.9417639999,
+    "at": "0xb39d569845da5bb157e0c7a16228a0c0d8a3b54cb91b633a724986341f270130"
+  },
+  "settledMs": 1801618.611283,
+  "stageDurationMs": null,
+  "stageDurationUnavailableReason": "Overall stage summary was not written after the audit gate failed. Per-wave settledMs is not the completed stage duration.",
+  "experimentPassed": false,
+  "stateVerifiedReported": false,
+  "recoveryPassed": true,
+  "recoverySeconds": 65.17917995300013,
+  "scope": "Original saved summaries and in-run audit, extracted from CRC-checked ZIP entries. Independent raw receipt/readiness verification and full archive SHA are pending. No unobserved outcome is classified as a failed dispatch."
+}

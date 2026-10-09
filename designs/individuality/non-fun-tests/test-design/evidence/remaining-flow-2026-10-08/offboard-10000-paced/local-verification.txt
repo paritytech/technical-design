@@ -1,0 +1,5 @@
+# python3 ci/previewnet/verify-remaining-flow.py <pilot-dir> --scenario offboard --expected 10000
+# verifier: polkadot-pop-e2e e163be9426078d59dc70e5c1ad846d48a4971e52; run locally 2026-10-08T04:30:08Z
+offboard-pilot-wave-1: 8000 unique transactions matched saved block bodies and successful dispatch events
+offboard-pilot-wave-2: 2000 unique transactions matched saved block bodies and successful dispatch events
+offboard-pilot: receipt evidence and workload gates verified for 10000 actors

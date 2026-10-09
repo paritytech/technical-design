@@ -1,0 +1,35 @@
+{
+  "runId": 37684376141,
+  "attempt": 1,
+  "commit": "fd826a3843e1a6a40990a616bcbf3de8be400fb2",
+  "verifiedAt": "2026-10-07T21:12:09.632072+00:00",
+  "stage": "Run smoke and lifecycle pilot",
+  "classification": {
+    "setupFailure": null,
+    "workloadFailure": null,
+    "missingReceipts": "No workload artifact; receipt counts unknown",
+    "unobservedOutcomes": "All transaction and state outcomes unavailable",
+    "infrastructureFailure": "Self-hosted runner lost communication; annotation for job 113008352654",
+    "generatorLimitation": null
+  },
+  "requested": 10000,
+  "submitted": null,
+  "originalReceipts": null,
+  "reconciledReceipts": null,
+  "cause": "Unknown; preflight is not a crash diagnosis",
+  "automaticAttempt2": {
+    "conclusion": "success",
+    "pilot": "skipped",
+    "result": "No workload ran; exclude from test results"
+  },
+  "decision": "No further automatic retry. Keep infrastructure limitation; continue next independent profile because offboard 100 and 1000 prerequisites passed.",
+  "sources": [
+    "attempt-1.json",
+    "attempt-1-jobs.json",
+    "attempt-1-annotations.json",
+    "attempt-1-log-request.txt",
+    "artifact-manifest.json",
+    "preflight/runner-preflight.json",
+    "attempt-2-jobs.json"
+  ]
+}

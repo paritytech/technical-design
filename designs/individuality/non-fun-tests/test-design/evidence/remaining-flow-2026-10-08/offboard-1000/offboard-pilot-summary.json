@@ -1,0 +1,1 @@
+{"count":1000,"waves":[{"name":"offboard-pilot-wave-1","wallStart":"2026-10-07T09:34:54.129Z","count":1000,"sent":1000,"sendWindowMs":52.45128899998963,"finalityMs":{"count":1000,"p50":152481.52463999996,"p95":272555.36790600047,"max":284534.09480800014},"settledMs":284557.8820270002,"passed":true}],"elapsedMs":290028.5082519995,"passed":true}

@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-10-02T17:30:04.319729+00:00",
+  "command": [
+    "python3",
+    "ci/previewnet/verify-lifecycle-artifact.py",
+    "/Users/theo/Projects/parity/coinage-test-evidence/lifecycle-37029048758/coinage-split-10000-paced-default-pilot-37029048758-1",
+    "--scenario",
+    "split",
+    "--expected",
+    "10000"
+  ],
+  "exitCode": 0,
+  "stdout": "split-smoke-split: 1 unique transactions matched saved block bodies and successful dispatch events\nsplit-smoke-claim: 1 unique transactions matched saved block bodies and successful dispatch events\nsplit-smoke: 1 actors passed saved lifecycle state checks\nsplit-pilot-wave-1-split: 8000 unique transactions matched saved block bodies and successful dispatch events\nsplit-pilot-wave-1-claim: 8000 unique transactions matched saved block bodies and successful dispatch events\nsplit-pilot-wave-2-split: 2000 unique transactions matched saved block bodies and successful dispatch events\nsplit-pilot-wave-2-claim: 2000 unique transactions matched saved block bodies and successful dispatch events\nsplit-pilot: 10000 actors passed saved lifecycle state checks\nSaved RPC evidence consistency only; not a cryptographic storage or consensus proof.\n",
+  "stderr": ""
+}

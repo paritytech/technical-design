@@ -1,0 +1,95 @@
+{
+ "note": "Summaries of reconciliation files too large to publish (4.7-8.2 MB). The full files are kept locally. Per-transaction entries are omitted; outcome counts are recomputed from them.",
+ "quota-20000-burst-enlarged": {
+  "name": "quota-pilot-wave-1",
+  "operation": "RecyclerUnloadedIntoExternalAsset",
+  "originalReceipts": 4823,
+  "nonFinalizedWatches": 15177,
+  "outcomes": {
+   "reconciled-success": 15162,
+   "not-found-in-saved-blocks": 15
+  },
+  "receiptVerifiedTotal": 19985,
+  "savedBlockRange": [
+   175190,
+   176125
+  ],
+  "scope": "Saved raw block bodies, decoded events and two local RPC finality views. Not found means not in the saved block range, not proof of non-execution.",
+  "recountedOutcomes": {
+   "reconciled-success": 15162,
+   "not-found-in-saved-blocks": 15
+  },
+  "unresolvedTxHashes": [
+   "0x1da774fe8149e4161f3356ef6898acc799f4b768b8f21db7dfccd14c732ae4c9",
+   "0x206e0c6a996f5f00ca97809ea56c77d6ba295c0a19fe7cbd8da7856ee51a57da",
+   "0x2531fe49f1346d96a1d53f323d68d75386f56d82eba1f378053973b69e90db75",
+   "0x3e460b9d4f754dde529d5fbe0b9f2b00d643f4cf414ad9fcbd96bde4868a057c",
+   "0x42a9a2c29d1ca86cb3e2c831b86f46a5c52edbfbf431d120168925c9353f6bcc",
+   "0x4da38a9e724f2ac53afb5699a243db4283f8805e0d4db52e45901e096bb851b4",
+   "0x7e40f514c42eff228d30a60d0c78b4e8e4605956089ece7c1b6e3ce25c31f82e",
+   "0x88a80dad9a9e4725038723ad93d6b15a2ef0527d12c607817534f20eaf3b2bf9",
+   "0x8a588f57ae1e20446093c814c1eb55400ccf9ef952937259b5864ccb3e6ae7fb",
+   "0xa237e49ac2aedb3ab6fdcbdf5c1c47ae51146570e6f3dc68bd75b4ab2ea5bfc3",
+   "0xaa3b5a33ec7ea73bc4d4d37ed6f7ed0970b9565374a57cd3f69d09d9693f5960",
+   "0xb649e187585c479aba6447def70a6faeb53d0ef80ed6500752492138e0a9a24f",
+   "0xc5911cecc7cb5a5f177f89e8c05f9c1917c7ce2ec3706339a6b4e896d705f56d",
+   "0xd2d5d60c82bd5054da9efb458393ac9f82ebd1cf726cf66946a6f2f559fe0071",
+   "0xec603924690ea39fbeb28beb36aeda4b0b5bdb8caf36933195d4fc87daa026f9"
+  ]
+ },
+ "offboard-20000-burst-enlarged": {
+  "name": "offboard-pilot-wave-1",
+  "operation": "RecyclerUnloadedIntoExternalAsset",
+  "originalReceipts": 4165,
+  "nonFinalizedWatches": 15835,
+  "outcomes": {
+   "not-found-in-saved-blocks": 13221,
+   "reconciled-success": 2614
+  },
+  "receiptVerifiedTotal": 6779,
+  "savedBlockRange": [
+   175556,
+   176761
+  ],
+  "scope": "Saved raw block bodies, decoded events and two local RPC finality views. Not found means not in the saved block range, not proof of non-execution.",
+  "recountedOutcomes": {
+   "not-found-in-saved-blocks": 13221,
+   "reconciled-success": 2614
+  },
+  "unresolvedTxHashes": null
+ },
+ "full-flow-10000-burst-default (corrected)": {
+  "name": "full-flow-pilot-wave-1-topup",
+  "operation": "RecyclerLoadedWithExternalAsset",
+  "originalReceipts": 0,
+  "nonFinalizedWatches": 10000,
+  "outcomes": {
+   "not-found-in-saved-blocks": 10000
+  },
+  "receiptVerifiedTotal": 0,
+  "savedBlockRange": null,
+  "scope": "Saved raw block bodies, decoded events and two local RPC finality views. Not found means not in the saved block range, not proof of non-execution.",
+  "recountedOutcomes": {
+   "not-found-in-saved-blocks": 10000
+  },
+  "unresolvedTxHashes": null
+ },
+ "full-flow-10000-burst-default (superseded, misclassified 94)": {
+  "name": "full-flow-pilot-wave-1-topup",
+  "operation": "RecyclerLoadedWithExternalAsset",
+  "originalReceipts": 0,
+  "nonFinalizedWatches": 10000,
+  "outcomes": {
+   "not-found-in-saved-blocks": 9906,
+   "rejected-at-pool-entry": 94
+  },
+  "receiptVerifiedTotal": 0,
+  "savedBlockRange": null,
+  "scope": "Saved raw block bodies, decoded events and two local RPC finality views. Not found means not in the saved block range, not proof of non-execution.",
+  "recountedOutcomes": {
+   "not-found-in-saved-blocks": 9906,
+   "rejected-at-pool-entry": 94
+  },
+  "unresolvedTxHashes": null
+ }
+}

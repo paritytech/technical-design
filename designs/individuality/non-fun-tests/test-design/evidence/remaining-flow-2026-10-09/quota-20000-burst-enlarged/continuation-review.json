@@ -1,0 +1,84 @@
+{
+  "runId": 37800522275,
+  "attempt": 1,
+  "commit": "7f269bcf4f65109d6eb84b29c6afb1821c48c419",
+  "verifiedAt": "2026-10-08T22:34:08.789050+00:00",
+  "requested": 20000,
+  "submitted": 20000,
+  "setupFinalized": 20000,
+  "originalReceipts": 4823,
+  "reconciledReceipts": 15162,
+  "receiptVerifiedTotal": 19985,
+  "missingReceipts": 15,
+  "unobservedOutcomes": 15,
+  "includedDispatchFailures": 0,
+  "people": 20,
+  "quotaLimit": 1000,
+  "negativeProbes": "not reached after receipt assertion",
+  "realPeriodRollover": false,
+  "savedBlockRange": [
+    175190,
+    176125
+  ],
+  "savedBlockCount": 936,
+  "watchErrors": {
+    "invalid": 15176,
+    "rpcInternalError": 1
+  },
+  "state": {
+    "at": {
+      "hash": "0x5ec5293f29243fe01460c3a3e9c4ddd3493bf58cc50c292948e04daee9cbeef1",
+      "number": 176129,
+      "parent": "0xd8ff158e9199949db9d3dbb6483cb807d850f72cb40d5b6b430b51577ec2010f",
+      "hasNewRuntime": false
+    },
+    "balances": {
+      "2": 19985,
+      "0": 15
+    },
+    "consumed": 19985,
+    "unconsumed": 15,
+    "unconsumedActorsMatchUnresolved": true,
+    "heldBacking": "30",
+    "freeBacking": "1"
+  },
+  "setupPreparationMs": 5864783.130697,
+  "wave": {
+    "name": "quota-pilot-wave-1",
+    "wallStart": "2026-10-08T19:00:53.268Z",
+    "count": 20000,
+    "sent": 20000,
+    "sendWindowMs": 1085.2560469992459,
+    "finalityMs": {
+      "count": 4823,
+      "p50": 3558239.0713800006,
+      "p95": 8594338.837897003,
+      "max": 8714882.369972
+    },
+    "settledMs": 8715292.981935998,
+    "passed": false
+  },
+  "recovery": {
+    "passed": true,
+    "observationSeconds": 65.10533597199901,
+    "peopleFinalityDelta": 8,
+    "peopleTailDelta": 7,
+    "note": "Observation duration, not drain time"
+  },
+  "classification": {
+    "setupFailure": false,
+    "workloadPass": false,
+    "missingReceipts": 15,
+    "unobservedOutcomes": 15,
+    "infrastructureFailure": "not established",
+    "generatorLimitation": "shutdown timeout after workload; submission-watch errors require separate interpretation"
+  },
+  "limitations": [
+    "Absence from saved range is not proof of never executing.",
+    "Finality percentiles cover only 4823 original receipts; no latency inferred for reconciled receipts.",
+    "State observations corroborate receipts but do not create receipts."
+  ],
+  "fullArtifactPreserved": true,
+  "artifactId": 11580900463,
+  "verification": "Full archive receipt-only verifier exit0; independent reconciliation matches selected evidence. Strict workload verifier fails because assertion prevented overall summary."
+}

@@ -1,0 +1,18 @@
+{
+  "verifiedAt": "2026-10-03T13:24:38.705326+00:00",
+  "artifact": "coinage-recycle-40000-burst-enlarged-pilot-37121458129-1",
+  "stage": "recycle-pilot-recycle",
+  "requested": 40000,
+  "submitted": 40000,
+  "originalVerifiedReceipts": 40000,
+  "additionalReceiptsInSavedCanonicalBlocks": 0,
+  "totalReceiptsVerifiedNow": 40000,
+  "withoutVerifiedReceipt": 0,
+  "watchStatusCounts": {
+    "finalized": 40000
+  },
+  "nonfinalizedWatchErrors": {},
+  "experimentPassed": true,
+  "canonicalBlocksScanned": 147,
+  "scope": "Saved two-node finalized canonical block evidence only. Unseen hashes are unresolved, not proven never executed."
+}

@@ -1,0 +1,74 @@
+{
+  "name": "claim-burst",
+  "expected": 1000,
+  "verifiedReceipts": 1000,
+  "uniqueHashes": 1000,
+  "passed": true,
+  "errors": [],
+  "operation": "CoinTransferred",
+  "nodes": [
+    10010,
+    10011
+  ],
+  "runId": "37510457575",
+  "attempt": "1",
+  "commit": "7373fe8c1def9c8a5ef6531859ac85a844945bd5",
+  "summary": {
+    "name": "claim-burst",
+    "mode": "burst",
+    "poolProfile": "default",
+    "waves": [
+      {
+        "count": 1000,
+        "startActor": 0,
+        "startedMs": 0.036499999987427145,
+        "sendWindowMs": 80.14592799998354,
+        "settledMs": 30518.072129999986,
+        "finalized": 1000,
+        "verified": false
+      }
+    ],
+    "users": 1000,
+    "wallStart": "2026-10-06T20:44:52.928Z",
+    "sent": 1000,
+    "finalized": 1000,
+    "verified": 1000,
+    "passed": true,
+    "generatorLimited": false,
+    "sendWindowMs": 80.14592799998354,
+    "launchTargetMs": 1000,
+    "deadlineMs": 600000,
+    "poolKbytes": 262144,
+    "elapsedMs": 36043.540699000005,
+    "poolReadyCount": 1000,
+    "poolReadyWindowMs": 260.76424300001236,
+    "finalityProgress": 4,
+    "settledAtMs": 30518.072129999986,
+    "drainAfterLastSendMs": 30439.123992000008,
+    "finalityMs": {
+      "count": 1000,
+      "p50": 30423.731781999988,
+      "p95": 30450.82723200001,
+      "max": 30452.661811999977
+    },
+    "outcomes": {
+      "finalized": 1000
+    },
+    "verificationBlock": {
+      "hash": "0x6ad0ce2e5035fa6edbb5d9d2da1f0ce2e3ec233a5a82c0ad1eb4c13f909a43d1",
+      "number": 173148,
+      "parent": "0x8e0942d3943c940206a3ce1f65b01addd5447952034e5a07def40fcf1fadd60b",
+      "hasNewRuntime": false
+    },
+    "mismatches": [],
+    "backing": "2001",
+    "finalBacking": "2001",
+    "unavailableMetrics": [
+      "node-internal acceptance timestamps (pool-ready notifications are observed by the client)",
+      "measured execution cost versus declared weight",
+      "PVF deadline compliance"
+    ],
+    "sampledMetrics": "See node-metrics.jsonl for available node metric names, samples and errors; event dispatch weights are saved in block evidence."
+  },
+  "trustBoundary": "Two local RPC views plus raw block bodies and decoded events; not an independent consensus or storage-proof verification."
+}

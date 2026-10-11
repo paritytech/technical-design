@@ -1,0 +1,2 @@
+offboard-pilot-wave-1: receipt-only check; workload gates and completeness are NOT asserted
+offboard-pilot-wave-1: 4165 unique transactions matched saved block bodies and successful dispatch events

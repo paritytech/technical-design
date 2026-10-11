@@ -1,0 +1,6 @@
+{
+  "verifiedAt": "2026-10-02T18:19:49.016778+00:00",
+  "exitCode": 0,
+  "stdout": "recycle-smoke-recycle: 1 unique transactions matched saved block bodies and successful dispatch events\nrecycle-smoke: 1 actors passed saved lifecycle state checks\nrecycle-pilot-recycle: 10000 unique transactions matched saved block bodies and successful dispatch events\nrecycle-pilot: 10000 actors passed saved lifecycle state checks\nSaved RPC evidence consistency only; not a cryptographic storage or consensus proof.\n",
+  "stderr": ""
+}

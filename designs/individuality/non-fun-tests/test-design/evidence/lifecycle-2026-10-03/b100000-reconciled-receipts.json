@@ -1,0 +1,410 @@
+[
+  {
+    "actor": 83538,
+    "sourceActor": 83538,
+    "txHash": "0x4a9b217f388f0a5c59ebf2eea98cc7e9ecf6961978bd86a033db5f2642158a51",
+    "block": {
+      "number": 173362,
+      "hash": "0x161e1f401c8a9939997e3d986bc000ccc01f488a29d54c577a94f710376cafa8",
+      "index": 5
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x3dd09b57bdcad7becf7b4f21b174504a5e6a422ccd9ef2707d4b9db068f72a72"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "14540"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 86634,
+    "sourceActor": 86634,
+    "txHash": "0xa941b5832ef8f57f8c3ef8e9f3af187646f29f0a77474165f2b4fee9695f1b86",
+    "block": {
+      "number": 173362,
+      "hash": "0x161e1f401c8a9939997e3d986bc000ccc01f488a29d54c577a94f710376cafa8",
+      "index": 130
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x2679527053f2fc3eed242df98ae1040ed195316a8938bcd53df379f7a53bad97"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "1765"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 98619,
+    "sourceActor": 98619,
+    "txHash": "0x913fed72d2504b0ed1ad673cb6a16ce1fd13a31aa04a1baab5c5811175ab142c",
+    "block": {
+      "number": 173367,
+      "hash": "0x10fd36c361a7dd86ed38e9e556a47fab60791f1c0c3094d870ea0c4e3ac9ec2a",
+      "index": 45
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xc61b4c739f1d84925ea578e1a826e038e1f9d19b5233ebb36fac4396a73558ca"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "1204"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 6638,
+    "sourceActor": 6638,
+    "txHash": "0x1141344eb341f9c99652d5894c09421c9cd2092dcd0bfa5e74785fc506be6375",
+    "block": {
+      "number": 173368,
+      "hash": "0x9945099f24696ab6f9dd6d445ed1fa5583dfe761dc421b13952b4e2475582fba",
+      "index": 234
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xf0758f722e2244796951ece938e8972633689c79a6c66a518e299853c91f9161"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "605"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 89618,
+    "sourceActor": 89618,
+    "txHash": "0xdc64d3788c65dd5f9afecca9e4c8c72fe486864781d0a1ef1b2b046c627651f5",
+    "block": {
+      "number": 173369,
+      "hash": "0x65d38affe7e88f9094878b7929f8ec8aecb90677676e597dfbfe8617996415e4",
+      "index": 288
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xc348bd6c99355cabed20e2f5f52e853a8ea9dbd10bb504652c60e38afe69b220"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "737"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 9877,
+    "sourceActor": 9877,
+    "txHash": "0x69ffa1f1b6e62bc1f756d8fc325088d0a722d98da9153b93b48c23999fa9b5ba",
+    "block": {
+      "number": 173370,
+      "hash": "0x1af0cd3aea138406dfcb5fca46d2a590b00f4b9c5d5212695b0cdb2367f34fbd",
+      "index": 107
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x98eefa868e4f51b6f2a27e5d43edbb9d05a71dea32967ce0a4465a6b8eb53281"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "666"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 9968,
+    "sourceActor": 9968,
+    "txHash": "0x77fbb31e50086df93e633006c4c7b8a8ca129c14f4ce848ae3f2ae72304d1817",
+    "block": {
+      "number": 173370,
+      "hash": "0x1af0cd3aea138406dfcb5fca46d2a590b00f4b9c5d5212695b0cdb2367f34fbd",
+      "index": 198
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0xd7aa1ea0aa24a853d54fb1d397f133fa52edd413ea7e19a6293b0c189236b418"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "1737"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "actor": 9975,
+    "sourceActor": 9975,
+    "txHash": "0xdc25c74980c594e0ca058ba360bdaedabb415747cc44252263730cb08d48b018",
+    "block": {
+      "number": 173370,
+      "hash": "0x1af0cd3aea138406dfcb5fca46d2a590b00f4b9c5d5212695b0cdb2367f34fbd",
+      "index": 205
+    },
+    "events": [
+      {
+        "type": "Members",
+        "value": {
+          "type": "MemberAdded",
+          "value": {
+            "key": "0x12d9c5d6f37b6e55b031f5ee67db36fd11c6af1a3377fddb3f02bf0168d0f30b"
+          }
+        }
+      },
+      {
+        "type": "Coinage",
+        "value": {
+          "type": "RecyclerLoadedWithCoin",
+          "value": {
+            "instance_id": 2,
+            "value": 1
+          }
+        }
+      },
+      {
+        "type": "System",
+        "value": {
+          "type": "ExtrinsicSuccess",
+          "value": {
+            "dispatch_info": {
+              "weight": {
+                "ref_time": "5210514000",
+                "proof_size": "1270"
+              },
+              "class": {
+                "type": "Normal"
+              },
+              "pays_fee": {
+                "type": "No"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+]

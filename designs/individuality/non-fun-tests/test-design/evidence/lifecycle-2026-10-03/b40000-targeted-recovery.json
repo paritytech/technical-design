@@ -1,0 +1,167 @@
+{
+  "phase": "recovery",
+  "passed": true,
+  "elapsed_seconds": 64.91712140399977,
+  "initial": {
+    "alice": {
+      "finalized": 174739,
+      "finalized_hash": "0x1256f05bf431ab89cbe7673ed53951c8622019eb48e479f6c9d09fa31518ff24",
+      "best": 174742,
+      "peers": 7
+    },
+    "bob": {
+      "finalized": 174739,
+      "finalized_hash": "0x1256f05bf431ab89cbe7673ed53951c8622019eb48e479f6c9d09fa31518ff24",
+      "best": 174742,
+      "peers": 5
+    },
+    "charlie": {
+      "finalized": 174739,
+      "finalized_hash": "0x1256f05bf431ab89cbe7673ed53951c8622019eb48e479f6c9d09fa31518ff24",
+      "best": 174742,
+      "peers": 7
+    },
+    "dave": {
+      "finalized": 174739,
+      "finalized_hash": "0x1256f05bf431ab89cbe7673ed53951c8622019eb48e479f6c9d09fa31518ff24",
+      "best": 174742,
+      "peers": 7
+    },
+    "eve": {
+      "finalized": 174739,
+      "finalized_hash": "0x1256f05bf431ab89cbe7673ed53951c8622019eb48e479f6c9d09fa31518ff24",
+      "best": 174742,
+      "peers": 5
+    },
+    "ferdie": {
+      "finalized": 174739,
+      "finalized_hash": "0x1256f05bf431ab89cbe7673ed53951c8622019eb48e479f6c9d09fa31518ff24",
+      "best": 174742,
+      "peers": 5
+    },
+    "Collator-1500": {
+      "finalized": 520506,
+      "finalized_hash": "0x62ecf9c477d8d70616a4d6765b72eeeb680b73b6cf82e465d79c58946c7559bb",
+      "best": 520520,
+      "peers": 0
+    },
+    "Collator-1502": {
+      "finalized": 173469,
+      "finalized_hash": "0x657eaadbe12295729d79e1b5a2dedb6d46cf786345934561dc165f80fcdd89f0",
+      "best": 173474,
+      "peers": 1
+    },
+    "Collator-1502-2": {
+      "finalized": 173469,
+      "finalized_hash": "0x657eaadbe12295729d79e1b5a2dedb6d46cf786345934561dc165f80fcdd89f0",
+      "best": 173474,
+      "peers": 1
+    },
+    "Collator-1501": {
+      "finalized": 173806,
+      "finalized_hash": "0x11291a4f92aa2cc69a9f9c152c1c7349f22f54b07a290636a35d1c0bb621d430",
+      "best": 173812,
+      "peers": 0
+    },
+    "Collator-1600": {
+      "finalized": 173798,
+      "finalized_hash": "0x83e6554ff9094ae6c981414382aaae99f975fa327d1cca3c1bbc5a27e48f3bd5",
+      "best": 173804,
+      "peers": 0
+    }
+  },
+  "last": {
+    "alice": {
+      "finalized": 174750,
+      "finalized_hash": "0x64e0d65b5e5b7590bbe646bea633750c172eea229e0c670de102c99313855d53",
+      "best": 174753,
+      "peers": 7
+    },
+    "bob": {
+      "finalized": 174750,
+      "finalized_hash": "0x64e0d65b5e5b7590bbe646bea633750c172eea229e0c670de102c99313855d53",
+      "best": 174753,
+      "peers": 5
+    },
+    "charlie": {
+      "finalized": 174750,
+      "finalized_hash": "0x64e0d65b5e5b7590bbe646bea633750c172eea229e0c670de102c99313855d53",
+      "best": 174753,
+      "peers": 7
+    },
+    "dave": {
+      "finalized": 174750,
+      "finalized_hash": "0x64e0d65b5e5b7590bbe646bea633750c172eea229e0c670de102c99313855d53",
+      "best": 174753,
+      "peers": 7
+    },
+    "eve": {
+      "finalized": 174750,
+      "finalized_hash": "0x64e0d65b5e5b7590bbe646bea633750c172eea229e0c670de102c99313855d53",
+      "best": 174753,
+      "peers": 5
+    },
+    "ferdie": {
+      "finalized": 174750,
+      "finalized_hash": "0x64e0d65b5e5b7590bbe646bea633750c172eea229e0c670de102c99313855d53",
+      "best": 174753,
+      "peers": 5
+    },
+    "Collator-1500": {
+      "finalized": 520539,
+      "finalized_hash": "0x71447de5a2df86fd28d321063d8f7f50e1899989c7fbac59150aec572f8def0c",
+      "best": 520551,
+      "peers": 0
+    },
+    "Collator-1502": {
+      "finalized": 173480,
+      "finalized_hash": "0x683f5d86e14301f6b06367b4172151709570de0dde9215ec17089b9f7f33db2c",
+      "best": 173484,
+      "peers": 1
+    },
+    "Collator-1502-2": {
+      "finalized": 173480,
+      "finalized_hash": "0x683f5d86e14301f6b06367b4172151709570de0dde9215ec17089b9f7f33db2c",
+      "best": 173484,
+      "peers": 1
+    },
+    "Collator-1501": {
+      "finalized": 173817,
+      "finalized_hash": "0x84f45d90cef07aec9a5a3d251eb427572331dcbb16449f49388189512c094c30",
+      "best": 173822,
+      "peers": 0
+    },
+    "Collator-1600": {
+      "finalized": 173809,
+      "finalized_hash": "0xb332d811bc6c604bc5cfbdf371a74de4593aa6510e8137b871ce194125a0ff93",
+      "best": 173814,
+      "peers": 0
+    }
+  },
+  "finality_delta": {
+    "alice": 11,
+    "bob": 11,
+    "charlie": 11,
+    "dave": 11,
+    "eve": 11,
+    "ferdie": 11,
+    "Collator-1500": 33,
+    "Collator-1502": 11,
+    "Collator-1502-2": 11,
+    "Collator-1501": 11,
+    "Collator-1600": 11
+  },
+  "tail_finality_delta": {
+    "alice": 9,
+    "bob": 9,
+    "charlie": 9,
+    "dave": 9,
+    "eve": 9,
+    "ferdie": 9,
+    "Collator-1500": 27,
+    "Collator-1502": 9,
+    "Collator-1502-2": 9,
+    "Collator-1501": 9,
+    "Collator-1600": 9
+  }
+}

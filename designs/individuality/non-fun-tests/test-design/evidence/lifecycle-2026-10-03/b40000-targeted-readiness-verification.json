@@ -1,0 +1,20 @@
+{
+  "verifiedAt": "2026-10-03T13:24:39.249890+00:00",
+  "artifact": "coinage-recycle-40000-burst-enlarged-pilot-37121458129-1",
+  "requested": 40000,
+  "observedReady": 40000,
+  "unobserved": 0,
+  "cutoff": {
+    "elapsedMs": 1558765.835689,
+    "at": "0xed5c8167534f7bceb9ccc50c8decc4c94cb0efafa99a24298f3ac43afc1332c7"
+  },
+  "snapshotsChecked": 192,
+  "readinessMs": {
+    "count": 40000,
+    "p50": 910867.1112589999,
+    "p95": 1485140.1877320001,
+    "max": 1558508.892182
+  },
+  "definition": "Submission to first saved finalized ready observation. Nearest-rank percentiles use observed-ready members only and include local polling delay.",
+  "scope": "Saved membership pages, ring status and root revision consistency only; no cryptographic storage proof. Unobserved members are unresolved, not failed."
+}

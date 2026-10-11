@@ -1,0 +1,65 @@
+{
+  "runId": 37606103903,
+  "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37606103903",
+  "attempt": 1,
+  "commit": "4a652d912e9d38c02a9c41e7496bf1acca41cdbd",
+  "verificationDate": "2026-10-07T15:18:26.654794+00:00",
+  "scenario": "offboard",
+  "profile": "10000-burst-default",
+  "stageReached": "workload and receipt audit; final state snapshot not reached",
+  "requested": 10000,
+  "submitted": 10000,
+  "setupFinalized": 10000,
+  "originalReceipts": 8922,
+  "reconciledReceipts": 89,
+  "receiptVerifiedTotal": 9011,
+  "poolEntryRejections": 989,
+  "unresolvedWatchesAfterReconciliation": 0,
+  "includedDispatchFailuresInReconciliation": 0,
+  "savedBlockRange": [
+    175287,
+    175678
+  ],
+  "verdict": "failed requested completion target; valid overload observation; do not rerun for green",
+  "classification": {
+    "setupFailure": false,
+    "workloadFailure": "989 explicit pool-entry rejections; 9011 of 10000 completed with verified receipts",
+    "missingReceipts": "89 original dropped watches reconciled successfully; none remain unresolved in saved evidence",
+    "unobservedOutcomes": "Final destination-balance, held-backing and token snapshot not captured because audit assertion aborted the stage",
+    "infrastructureFailure": false,
+    "generatorLimitation": "Evidence collection stopped at failed receipt audit; corrected for future runs without changing pass gates"
+  },
+  "finalityMs": {
+    "count": 8922,
+    "p50": 2673240.036773,
+    "p95": 3333125.437454,
+    "max": 3341910.5158870015
+  },
+  "latencyDefinition": "Driver submit entry to finalized outcome resolution, including block receipt fetch; only 8922 original finalized watches. No latency imputed to the 89 reconciled receipts.",
+  "sendWindowMs": 480.80325699970126,
+  "settledMs": 3342260.649383001,
+  "stageDurationDefinition": "Wave submission start to settlement of all watches; excludes fixture and proof preparation, subsequent independent receipt audit and recovery. No full-stage elapsed summary was produced.",
+  "fixturePreparationMs": 9526209.144273998,
+  "poolConfiguration": "network.toml contains no pool-limit or pool-kbytes overrides. poolTransactions=11000 in fixture is an inactive enlarged-profile input, not the effective default limit.",
+  "rpcSubscriptionsPerConnection": 20050,
+  "recovery": {
+    "passed": true,
+    "observationSeconds": 64.91280951799854,
+    "peopleFinalityDelta": {
+      "Collator-1502": 11,
+      "Collator-1502-2": 11
+    },
+    "note": "Recovery observation duration is not pool drain time."
+  },
+  "evidence": [
+    "original-receipt-verification.txt",
+    "offboard-pilot-wave-1-reconciliation.json",
+    "offboard-pilot-wave-1-signed.json",
+    "offboard-pilot-wave-1-receipts.json",
+    "evidence/offboard-pilot-wave-1/",
+    "receipt-selection-provenance.json",
+    "network.toml",
+    "unload-error.json"
+  ],
+  "scope": "Root-created people and funded actors; real setup top-ups and held backing; fixed test driver, no native wallet."
+}

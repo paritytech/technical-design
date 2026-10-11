@@ -1,0 +1,109 @@
+{
+  "runId": 37858620774,
+  "attempt": 1,
+  "commit": "aa72510d3fbf321b2946430db0264f50ae5d8785",
+  "verifiedAt": "2026-10-09T00:13:36.273692+00:00",
+  "actors": 1000,
+  "requestedTransactions": 5000,
+  "submittedTransactions": 5000,
+  "originalReceipts": 5000,
+  "reconciledReceipts": 0,
+  "unresolved": 0,
+  "passed": true,
+  "operations": [
+    {
+      "name": "full-flow-pilot-wave-1-topup",
+      "wallStart": "2026-10-08T23:38:12.769Z",
+      "count": 1000,
+      "sent": 1000,
+      "sendWindowMs": 41.995668999967165,
+      "finalityMs": {
+        "count": 1000,
+        "p50": 45005.56166799995,
+        "p95": 53004.04528199998,
+        "max": 57044.901640999946
+      },
+      "settledMs": 57083.04534000007,
+      "passed": true
+    },
+    {
+      "name": "full-flow-pilot-wave-1-payment",
+      "wallStart": "2026-10-08T23:45:25.791Z",
+      "count": 1000,
+      "sent": 1000,
+      "sendWindowMs": 49.307959999889135,
+      "finalityMs": {
+        "count": 1000,
+        "p50": 164405.15911499993,
+        "p95": 296483.9984729998,
+        "max": 308494.099588
+      },
+      "settledMs": 308530.47276799986,
+      "passed": true
+    },
+    {
+      "name": "full-flow-pilot-wave-1-claim",
+      "wallStart": "2026-10-08T23:50:51.055Z",
+      "count": 1000,
+      "sent": 1000,
+      "sendWindowMs": 38.98652000003494,
+      "finalityMs": {
+        "count": 1000,
+        "p50": 31362.872162999818,
+        "p95": 31366.990422999952,
+        "max": 31367.857683000155
+      },
+      "settledMs": 31422.22821199987,
+      "passed": true
+    },
+    {
+      "name": "full-flow-pilot-wave-1-recycle",
+      "wallStart": "2026-10-08T23:51:38.199Z",
+      "count": 1000,
+      "sent": 1000,
+      "sendWindowMs": 38.371199999935925,
+      "finalityMs": {
+        "count": 1000,
+        "p50": 36174.83048899984,
+        "p95": 48162.42717300006,
+        "max": 48164.874552999856
+      },
+      "settledMs": 48204.52324300003,
+      "passed": true
+    },
+    {
+      "name": "full-flow-pilot-wave-1",
+      "wallStart": "2026-10-08T23:58:42.551Z",
+      "count": 1000,
+      "sent": 1000,
+      "sendWindowMs": 51.695599999977276,
+      "finalityMs": {
+        "count": 1000,
+        "p50": 152180.86328100017,
+        "p95": 272278.23418299994,
+        "max": 284336.46383100003
+      },
+      "settledMs": 284361.41015099967,
+      "passed": true
+    }
+  ],
+  "elapsedMs": 1519618.417705,
+  "state": {
+    "at": {
+      "hash": "0x44b1bd77e20304e59ccb757f81fb5f3a1b9e7a21adec24339a77635f4f6f077c",
+      "number": 173486,
+      "parent": "0x982c2f5c61cf556746d4b7ea50f7d2c1421470e2ec984e9b0da2a00b32b82f9b",
+      "hasNewRuntime": false
+    },
+    "actors": 1000,
+    "heldBacking": "0",
+    "freeBacking": "1"
+  },
+  "recovery": {
+    "passed": true,
+    "observationSeconds": 64.94446793499992,
+    "peopleFinalityDelta": 10,
+    "note": "Observation duration, not drain time"
+  },
+  "scope": "Fixed planned lifecycle, no native wallet planner or chat; 5000 transactions for 1000 actors."
+}

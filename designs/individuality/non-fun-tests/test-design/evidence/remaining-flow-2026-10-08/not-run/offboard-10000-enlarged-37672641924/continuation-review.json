@@ -1,0 +1,21 @@
+{
+  "runId": 37672641924,
+  "attempt": 1,
+  "commit": "73223951e57549a88f20fd22033ed53575977976",
+  "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37672641924/attempts/1",
+  "verifiedAt": "2026-10-07T20:43:39.086597+00:00",
+  "stageReached": "Run smoke and lifecycle pilot; internal phase unavailable",
+  "classification": {
+    "setupFailure": null,
+    "workloadFailure": null,
+    "missingReceipts": "No workload artifact survived",
+    "unobservedOutcomes": "Submitted, finalized, receipts, state and recovery unknown",
+    "infrastructureFailure": "Self-hosted runner lost communication with GitHub",
+    "generatorLimitation": null
+  },
+  "originalReceipts": null,
+  "reconciledReceipts": null,
+  "cause": "Not established; annotation alone does not prove OOM, CPU starvation or network cause.",
+  "attempt2": "Automatically started by cattery-scheduler[bot]; cancelled under no-automatic-retries rule.",
+  "retryJustification": "Fresh independent attempt required because runner loss left no auditable workload outcome; add attempt guards before retry."
+}

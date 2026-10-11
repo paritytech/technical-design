@@ -1,0 +1,9 @@
+split-smoke-split: 1 unique transactions matched saved block bodies and successful dispatch events
+split-smoke-claim: 1 unique transactions matched saved block bodies and successful dispatch events
+split-smoke: 1 actors passed saved lifecycle state checks
+split-pilot-wave-1-split: 8000 unique transactions matched saved block bodies and successful dispatch events
+split-pilot-wave-1-claim: 8000 unique transactions matched saved block bodies and successful dispatch events
+split-pilot-wave-2-split: 2000 unique transactions matched saved block bodies and successful dispatch events
+split-pilot-wave-2-claim: 2000 unique transactions matched saved block bodies and successful dispatch events
+split-pilot: 10000 actors passed saved lifecycle state checks
+Saved RPC evidence consistency only; not a cryptographic storage or consensus proof.

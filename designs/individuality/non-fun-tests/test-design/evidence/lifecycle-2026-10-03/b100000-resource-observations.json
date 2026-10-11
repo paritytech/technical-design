@@ -1,0 +1,84 @@
+{
+  "updatedAt": "2026-10-03T11:37:18.203752+00:00",
+  "runUrl": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+  "definitions": {
+    "finality": "Per call: client submission to successful finalized receipt lookup; percentiles include finalized watches only",
+    "completion": "First split/load submission to last settled final wave watch; includes split audit and claim signing",
+    "readiness": "Per member: submission to first finalized poll with root coverage; observed-ready population only",
+    "resourceScope": "Node/host samples span fixtures, smoke and pilot. Driver RSS samples are separately labelled by stage.",
+    "limitations": [
+      "No claim of production capacity",
+      "No independent consensus/storage-proof verification",
+      "No measured weight-versus-execution-cost or PVF deadline verification"
+    ]
+  },
+  "cases": [
+    {
+      "artifact": "coinage-recycle-100000-burst-enlarged-pilot-37029048758-2",
+      "scenario": "recycle",
+      "actors": 100000,
+      "mode": "burst",
+      "pool": "enlarged",
+      "poolTransactions": 110000,
+      "preparationMs": 1155456.957451,
+      "summaryPresent": false,
+      "passed": null,
+      "waves": [
+        {
+          "name": "recycle-pilot-recycle",
+          "requested": 100000,
+          "submitted": 100000,
+          "receiptVerified": 60982,
+          "auditPassed": false,
+          "sendWindowMs": 3692.298991000047,
+          "generatorLimited": false,
+          "finalityMs": {
+            "count": 60982,
+            "p50": 925564.6334689998,
+            "p95": 1709560.7843010002,
+            "max": 1794057.695809
+          },
+          "settledMs": 1801618.611283,
+          "statePassed": false,
+          "backingBefore": "200001",
+          "backingAfter": "200001",
+          "auditErrorCount": 39018
+        }
+      ],
+      "ready": 39917,
+      "unresolvedReadiness": 60083,
+      "observationCutoff": {
+        "elapsedMs": 1797948.9417639999,
+        "at": "0xb39d569845da5bb157e0c7a16228a0c0d8a3b54cb91b633a724986341f270130"
+      },
+      "recoveryPassed": true,
+      "driverRssSampledPeakBytes": 4713390080,
+      "driverSampleCount": 391,
+      "resources": {
+        "scope": "Entire driver step, including fixtures and smoke; sampled observations",
+        "firstEpochSeconds": 1791022530.3516831,
+        "lastEpochSeconds": 1791025890.4616497,
+        "samples": 673,
+        "scrapeErrors": {},
+        "sampledPoolWatchedPlusUnwatchedPeak": {
+          "Collator-1502": 100007.0,
+          "Collator-1502-2": 51332.0
+        },
+        "sampledCgroupMemoryPeakBytes": {
+          "/sys/fs/cgroup/system.slice/cattery.service/memory.current": 34320834560,
+          "/sys/fs/cgroup/system.slice/memory.current": 35851247616
+        },
+        "poolCounterDeltas": {
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_sum": 400.9199431209996,
+          "Collator-1502:substrate_sub_txpool_maintain_duration_seconds_count": 1014.0,
+          "Collator-1502:substrate_sub_txpool_validations_finished": 834815.0,
+          "Collator-1502:substrate_sub_txpool_validations_scheduled": 834816.0,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_sum": 193.4652424779999,
+          "Collator-1502-2:substrate_sub_txpool_maintain_duration_seconds_count": 1023.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_finished": 768059.0,
+          "Collator-1502-2:substrate_sub_txpool_validations_scheduled": 768060.0
+        }
+      }
+    }
+  ]
+}

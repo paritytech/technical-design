@@ -1,0 +1,3 @@
+quota-pilot-wave-1: 8000 unique transactions matched saved block bodies and successful dispatch events
+quota-pilot-wave-2: 2000 unique transactions matched saved block bodies and successful dispatch events
+quota-pilot: receipt evidence and workload gates verified for 10000 actors

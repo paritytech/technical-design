@@ -1,0 +1,1 @@
+{"count":10000,"waves":[{"name":"quota-pilot-wave-1","wallStart":"2026-10-08T13:55:32.458Z","count":10000,"sent":10000,"sendWindowMs":438.4635850004852,"finalityMs":{"count":10000,"p50":2743636.240813,"p95":3577005.5362399993,"max":3588543.65864},"settledMs":3588906.208028,"passed":true}],"elapsedMs":3690792.2812520005,"passed":true}

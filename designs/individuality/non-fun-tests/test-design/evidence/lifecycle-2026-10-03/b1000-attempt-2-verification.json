@@ -1,0 +1,10 @@
+{
+  "verifiedAt": "2026-10-03T01:34:07.834743+00:00",
+  "attempt": 2,
+  "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-2",
+  "verifier": "verify-lifecycle-artifact.py --scenario recycle --expected 1000",
+  "exitCode": 0,
+  "receiptVerified": 1000,
+  "stateActors": 1000,
+  "recoveryPassed": true
+}

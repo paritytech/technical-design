@@ -1,0 +1,15 @@
+{
+  "observed": 20000,
+  "uniqueActors": 20000,
+  "actorCoverageComplete": true,
+  "balanceCounts": {
+    "2": 20000
+  },
+  "consumedTokenCount": 20000,
+  "sourceCoinPresent": 0,
+  "recipientCoinPresent": 0,
+  "observedAtHeights": [
+    176763
+  ],
+  "scope": "Saved finalized state observations; not receipt verification or proof of transaction identity."
+}

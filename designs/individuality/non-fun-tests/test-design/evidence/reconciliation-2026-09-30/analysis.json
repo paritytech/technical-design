@@ -1,0 +1,232 @@
+[
+  {
+    "run": 36537079387,
+    "testCommit": "8bffb7d1583ec6c97c17fe9fd93035c1ba8c40d0",
+    "verifiedAt": "2026-09-30T09:51:14.197763+00:00",
+    "requested": 10000,
+    "submitted": 10000,
+    "originalVerified": 8971,
+    "droppedCount": 40,
+    "droppedReconciliation": {
+      "verified": 40
+    },
+    "droppedBlocks": {
+      "159734": 40
+    },
+    "totalReceiptOutcomes": {
+      "verified": 9011,
+      "no-saved-receipt": 989
+    },
+    "submissionErrors": {
+      "dropped": 40,
+      "RpcError: 1016: Immediately Dropped: The transaction couldn't enter the pool because of the limit": 989
+    },
+    "originalReady": 9011,
+    "stateReady": 9011,
+    "additionalReady": 0,
+    "readinessUnresolvedSubmitted": 989,
+    "stateAt": {
+      "hash": "0x86bae5ebff61e224d2bf3c9610acd62ee84535983840d6214220d5c55e817bac",
+      "number": 159827,
+      "parent": "0xf7c7d0fc7427e10796263f897f7b8f123394ec874519c11776778603069fe6e0",
+      "hasNewRuntime": false
+    },
+    "lastReadinessSample": {
+      "elapsedMs": 596095.7873900002,
+      "at": "0xf7c7d0fc7427e10796263f897f7b8f123394ec874519c11776778603069fe6e0",
+      "finalized": 159826,
+      "ready": 9011
+    },
+    "wallStart": "2026-09-29T08:34:18.733Z",
+    "stageDurationMs": 628256.2784830001,
+    "originalFinalityMs": {
+      "count": 8971,
+      "p50": 136721.5745649999,
+      "p95": 232776.89346599998,
+      "max": 244981.09979999997
+    },
+    "originalReadinessMs": {
+      "count": 9011,
+      "p50": 216392.49007499963,
+      "p95": 332522.4106119997,
+      "max": 347910.15770099964
+    },
+    "debited": 9011,
+    "heldBacking": 18022,
+    "wrappedBacking": 18022,
+    "expectedFullRequestBacking": "20000",
+    "recovery": true,
+    "authors": {
+      "names": [
+        "Collator-1502",
+        "Collator-1502-2"
+      ],
+      "keys": [
+        "0x3cfde612e45c223a6f3e0e993e04c43c19ef034c686803b4a2b075a0febd8b03",
+        "0x5c785f98deac67b65ef3d4f764bde941babf7ea659f23a0a7563ac43cf15026c"
+      ],
+      "setup_block": 159148,
+      "setup_hash": "0x793070d436844e997d60937c1e61209cffa07444fc2d5e259171e187249eaabd",
+      "authored_finalized_blocks": {
+        "Collator-1502": 32,
+        "Collator-1502-2": 32
+      },
+      "first_verified_block": 159784,
+      "last_verified_block": 159847,
+      "verification_scope": "up to 64 recent finalized blocks after setup"
+    },
+    "originalPassed": false,
+    "poolProfile": "default",
+    "availableBlockEvidence": 37
+  },
+  {
+    "run": 36619415692,
+    "testCommit": "28ff6d47717904567aa2a97b1119b6cd6443f65f",
+    "verifiedAt": "2026-09-30T09:51:14.689649+00:00",
+    "requested": 10000,
+    "submitted": 8500,
+    "originalVerified": 8452,
+    "droppedCount": 48,
+    "droppedReconciliation": {
+      "verified": 48
+    },
+    "droppedBlocks": {
+      "173699": 48
+    },
+    "totalReceiptOutcomes": {
+      "verified": 8500
+    },
+    "submissionErrors": {
+      "dropped": 48
+    },
+    "originalReady": 5602,
+    "stateReady": 5869,
+    "additionalReady": 267,
+    "readinessUnresolvedSubmitted": 2631,
+    "stateAt": {
+      "hash": "0xb101f459d64630f96b26de4e70f66b095be936ea1992fd68fce9ed4cd5597298",
+      "number": 173733,
+      "parent": "0x8ebcf4f8d15da1deaa3b081dc94641a737c5570502ff729200af7f1a936fe2a5",
+      "hasNewRuntime": false
+    },
+    "lastReadinessSample": {
+      "elapsedMs": 236918.7029169998,
+      "at": "0x8ebcf4f8d15da1deaa3b081dc94641a737c5570502ff729200af7f1a936fe2a5",
+      "finalized": 173732,
+      "ready": 5602
+    },
+    "wallStart": "2026-09-29T20:33:38.045Z",
+    "stageDurationMs": 269074.7787939999,
+    "originalFinalityMs": {
+      "count": 8452,
+      "p50": 128507.46781300008,
+      "p95": 224545.56427600002,
+      "max": 236601.51230800012
+    },
+    "originalReadinessMs": {
+      "count": 5602,
+      "p50": 155973.6917340001,
+      "p95": 231602.81258000014,
+      "max": 236727.807393
+    },
+    "debited": 8500,
+    "heldBacking": 17000,
+    "wrappedBacking": 17000,
+    "expectedFullRequestBacking": "20000",
+    "recovery": true,
+    "authors": {
+      "names": [
+        "Collator-1502",
+        "Collator-1502-2"
+      ],
+      "keys": [
+        "0x3cfde612e45c223a6f3e0e993e04c43c19ef034c686803b4a2b075a0febd8b03",
+        "0x5c785f98deac67b65ef3d4f764bde941babf7ea659f23a0a7563ac43cf15026c"
+      ],
+      "setup_block": 173087,
+      "setup_hash": "0xe19a3fb48d5e855e00b850743cc0b694df5b6e1628191a343c3e5c8f9f293e70",
+      "authored_finalized_blocks": {
+        "Collator-1502": 32,
+        "Collator-1502-2": 32
+      },
+      "first_verified_block": 173689,
+      "last_verified_block": 173752,
+      "verification_scope": "up to 64 recent finalized blocks after setup"
+    },
+    "originalPassed": false,
+    "poolProfile": "default",
+    "availableBlockEvidence": 35
+  },
+  {
+    "run": 36662212241,
+    "testCommit": "28ff6d47717904567aa2a97b1119b6cd6443f65f",
+    "verifiedAt": "2026-09-30T09:51:15.324125+00:00",
+    "requested": 10000,
+    "submitted": 10000,
+    "originalVerified": 10000,
+    "droppedCount": 0,
+    "droppedReconciliation": {},
+    "droppedBlocks": {},
+    "totalReceiptOutcomes": {
+      "verified": 10000
+    },
+    "submissionErrors": {},
+    "originalReady": 10000,
+    "stateReady": 10000,
+    "additionalReady": 0,
+    "readinessUnresolvedSubmitted": 0,
+    "stateAt": {
+      "hash": "0x161336fa1de62aa9e7ce7454df8ca1205c46ef75b90affd260e19f5ca153fd7c",
+      "number": 173800,
+      "parent": "0x6530540b49a99b7f6f520060a22e83c4ece2b2fcc032a6993f899b8f594b924a",
+      "hasNewRuntime": false
+    },
+    "lastReadinessSample": {
+      "elapsedMs": 373405.6849080003,
+      "at": "0x161336fa1de62aa9e7ce7454df8ca1205c46ef75b90affd260e19f5ca153fd7c",
+      "finalized": 173800,
+      "ready": 10000
+    },
+    "wallStart": "2026-09-30T04:12:04.125Z",
+    "stageDurationMs": 405548.19530000025,
+    "originalFinalityMs": {
+      "count": 10000,
+      "p50": 107018.5359459999,
+      "p95": 214930.78872900037,
+      "max": 227176.99748199992
+    },
+    "originalReadinessMs": {
+      "count": 10000,
+      "p50": 171100.28603499988,
+      "p95": 312393.4848519997,
+      "max": 347930.8214179999
+    },
+    "debited": 10000,
+    "heldBacking": 20000,
+    "wrappedBacking": 20000,
+    "expectedFullRequestBacking": "20000",
+    "recovery": true,
+    "authors": {
+      "names": [
+        "Collator-1502",
+        "Collator-1502-2"
+      ],
+      "keys": [
+        "0x3cfde612e45c223a6f3e0e993e04c43c19ef034c686803b4a2b075a0febd8b03",
+        "0x5c785f98deac67b65ef3d4f764bde941babf7ea659f23a0a7563ac43cf15026c"
+      ],
+      "setup_block": 173088,
+      "setup_hash": "0xce22a6d918b7de3c215ce7e1ed13ae1b08f066a0afdb1faa52f77034801ea5cd",
+      "authored_finalized_blocks": {
+        "Collator-1502": 32,
+        "Collator-1502-2": 32
+      },
+      "first_verified_block": 173772,
+      "last_verified_block": 173835,
+      "verification_scope": "up to 64 recent finalized blocks after setup"
+    },
+    "originalPassed": true,
+    "poolProfile": "default",
+    "availableBlockEvidence": 41
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "name": "offboard-pilot-wave-1",
+  "expected": 100,
+  "verifiedReceipts": 100,
+  "uniqueHashes": 100,
+  "passed": true,
+  "errors": [],
+  "operation": "RecyclerUnloadedIntoExternalAsset",
+  "nodes": [
+    10010,
+    10011
+  ],
+  "runId": "37590878841",
+  "attempt": "1",
+  "commit": "37b02ba65a52370e64c91b6809e1f2258ce48d55",
+  "summary": {
+    "name": "offboard-pilot-wave-1",
+    "wallStart": "2026-10-07T08:19:04.596Z",
+    "count": 100,
+    "sent": 100,
+    "sendWindowMs": 4.687030000030063,
+    "finalityMs": {
+      "count": 100,
+      "p50": 49155.69929500006,
+      "p95": 61121.32824499998,
+      "max": 61121.44627399999
+    },
+    "settledMs": 61124.614124999964,
+    "passed": true
+  },
+  "trustBoundary": "Two local RPC views plus raw block bodies and decoded events; not an independent consensus or storage-proof verification."
+}

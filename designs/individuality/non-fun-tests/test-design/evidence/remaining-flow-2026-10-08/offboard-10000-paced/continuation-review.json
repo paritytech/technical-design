@@ -1,0 +1,52 @@
+{
+  "runId": 37645548491,
+  "attempt": 1,
+  "commit": "42f2e8d997531e0731a8551147badca4bb55456e",
+  "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37645548491",
+  "verifiedAt": "2026-10-07T18:55:46.487046+00:00",
+  "requested": 10000,
+  "submitted": 10000,
+  "originalReceipts": 10000,
+  "reconciledReceipts": 0,
+  "verifiedReceipts": 10000,
+  "strictVerificationExitCode": 0,
+  "classification": {
+    "setupFailure": false,
+    "workloadFailure": false,
+    "missingReceipts": 0,
+    "unobservedOutcomes": 0,
+    "infrastructureFailure": false,
+    "generatorLimitation": false
+  },
+  "waves": [
+    8000,
+    2000
+  ],
+  "poolProfile": "default",
+  "summaryFile": "offboard-pilot-summary.json",
+  "verificationFile": "independent-verification.txt",
+  "sourceArtifactId": 11503559366,
+  "scope": "Fixed planned offboarding using real setup top-ups; no native wallet. Full pilot artifact preservation remains separate.",
+  "preparationMs": 3979991.7627769997,
+  "setupBatchSize": 250,
+  "proofWorkers": 8,
+  "heldBackingAfterWaves": [
+    "4000",
+    "0"
+  ],
+  "finalFreeBacking": "1",
+  "timingNotes": [
+    "Preparation is setup time, separate from measured waves.",
+    "Finality latency includes the driver receipt-resolution path; do not equate it with block execution time.",
+    "poolTransactions=11000 is an inactive enlarged-profile input; this run uses poolProfile=default."
+  ],
+  "networkConfigFile": "network.toml",
+  "poolStartupOverrides": [],
+  "fullArtifactId": 11504018093,
+  "fullArtifactPreservedAt": "<local evidence archive>/cases/coinage-burst-case-10000-paced-default-offboard-37645548491/coinage-offboard-10000-paced-default-pilot-37645548491-1",
+  "recovery": {
+    "passed": true,
+    "observationSeconds": 65.11684291799975,
+    "note": "Recovery observation duration, not pool drain time"
+  }
+}

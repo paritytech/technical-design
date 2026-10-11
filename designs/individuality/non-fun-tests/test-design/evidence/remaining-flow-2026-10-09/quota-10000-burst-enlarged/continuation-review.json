@@ -1,0 +1,87 @@
+{
+  "verifiedAt": "2026-10-08T15:25:38.066043+00:00",
+  "runId": 37772925410,
+  "attempt": 1,
+  "commit": "7f269bcf4f65109d6eb84b29c6afb1821c48c419",
+  "url": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37772925410",
+  "requested": 10000,
+  "submitted": 10000,
+  "originalReceiptsVerifiedOffline": 10000,
+  "reconciledReceipts": 0,
+  "unresolvedWatches": 0,
+  "people": 10,
+  "allowancePerPerson": 1000,
+  "negativeProbes": 20,
+  "poolLimit": 11000,
+  "poolKbytes": 262144,
+  "rpcSubscriptionsPerConnection": 20050,
+  "setup": {
+    "requested": 10000,
+    "attempted": 10000,
+    "outcomes": {
+      "finalized": 10000
+    }
+  },
+  "wave": {
+    "name": "quota-pilot-wave-1",
+    "wallStart": "2026-10-08T13:55:32.458Z",
+    "count": 10000,
+    "sent": 10000,
+    "sendWindowMs": 438.4635850004852,
+    "finalityMs": {
+      "count": 10000,
+      "p50": 2743636.240813,
+      "p95": 3577005.5362399993,
+      "max": 3588543.65864
+    },
+    "settledMs": 3588906.208028,
+    "passed": true
+  },
+  "stageElapsedMs": 3690792.2812520005,
+  "state": {
+    "at": {
+      "hash": "0x5e0a169af067a1b8b4ac71bf8b98284162f3978ab7181d8f47a41a8a050e5a58",
+      "number": 174862,
+      "parent": "0x4df23e9c3cf42a54599222af3f2c205cac07196325bb13da63adcb96aa680f7e",
+      "hasNewRuntime": false
+    },
+    "finalBacking": "1",
+    "expectedBacking": "1",
+    "heldBacking": "0",
+    "expectedHeldBacking": "0"
+  },
+  "recovery": {
+    "passed": true,
+    "observationSeconds": 64.98925420700107,
+    "peopleFinalityDelta": 11
+  },
+  "limitations": [
+    "Requests are not distinct people.",
+    "Real quota period rollover was not tested.",
+    "Recovery observation duration is not pool drain time.",
+    "Receipt trust boundary is saved raw bodies, decoded events and two local RPC finality views."
+  ],
+  "sources": [
+    "independent-verification.txt",
+    "independent-receipt-verification.txt",
+    "quota-pilot-wave-1-audit.json",
+    "quota-pilot-wave-1-independent-reconciliation.json",
+    "quota-pilot-wave-1-state.json",
+    "quota-pilot-negative-probes.json",
+    "quota-pilot-setup-outcome.json",
+    "quota-pilot-summary.json",
+    "network.toml",
+    "recovery.json"
+  ],
+  "receiptVerifiedTotal": 10000,
+  "unresolvedWatchesAfterReconciliation": 0,
+  "stageReached": "Verified workload, negative quota probes and recovery",
+  "classification": {
+    "setupFailure": false,
+    "workloadFailure": false,
+    "missingReceipts": 0,
+    "unobservedOutcomes": 0,
+    "infrastructureFailure": false,
+    "generatorLimitation": false
+  }
+}

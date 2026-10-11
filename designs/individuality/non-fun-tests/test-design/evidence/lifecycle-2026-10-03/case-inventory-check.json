@@ -1,0 +1,383 @@
+{
+  "checkedAt": "2026-10-03T13:26:09.755239+00:00",
+  "scope": "Required workflow cases compared with saved fixture settings and original audit counts. Later receipt reconciliation is separate. Presence is a coverage check, not independent proof of receipt correctness. This does not mark the goal complete.",
+  "requiredCases": 16,
+  "casesWithAttemptEvidence": 16,
+  "cases": [
+    {
+      "case": "a100",
+      "artifact": "coinage-split-100-burst-default-pilot-37029048758-1",
+      "requestedActors": 100,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 1,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-claim",
+          "requested": 100,
+          "submitted": 100,
+          "originalReceiptVerified": 100,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-split",
+          "requested": 100,
+          "submitted": 100,
+          "originalReceiptVerified": 100,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "a1000",
+      "artifact": "coinage-split-1000-burst-default-pilot-37029048758-2",
+      "requestedActors": 1000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-claim",
+          "requested": 1000,
+          "submitted": 1000,
+          "originalReceiptVerified": 1000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-split",
+          "requested": 1000,
+          "submitted": 1000,
+          "originalReceiptVerified": 1000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "a10000",
+      "artifact": "coinage-split-10000-burst-default-pilot-37029048758-2",
+      "requestedActors": 10000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-split",
+          "requested": 10000,
+          "submitted": 10000,
+          "originalReceiptVerified": 8192,
+          "auditPassed": false
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "b100",
+      "artifact": "coinage-recycle-100-burst-default-pilot-37116007842-1",
+      "requestedActors": 100,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842",
+      "attempt": 1,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-recycle",
+          "requested": 100,
+          "submitted": 100,
+          "originalReceiptVerified": 100,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    },
+    {
+      "case": "b1000",
+      "artifact": "coinage-recycle-1000-burst-default-pilot-37029048758-2",
+      "requestedActors": 1000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-recycle",
+          "requested": 1000,
+          "submitted": 1000,
+          "originalReceiptVerified": 1000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    },
+    {
+      "case": "b10000",
+      "artifact": "coinage-recycle-10000-burst-default-pilot-37029048758-2",
+      "requestedActors": 10000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-recycle",
+          "requested": 10000,
+          "submitted": 10000,
+          "originalReceiptVerified": 8479,
+          "auditPassed": false
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    },
+    {
+      "case": "a_paced",
+      "artifact": "coinage-split-10000-paced-default-pilot-37029048758-2",
+      "requestedActors": 10000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-wave-1-claim",
+          "requested": 8000,
+          "submitted": 8000,
+          "originalReceiptVerified": 8000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-wave-1-split",
+          "requested": 8000,
+          "submitted": 8000,
+          "originalReceiptVerified": 8000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-wave-2-claim",
+          "requested": 2000,
+          "submitted": 2000,
+          "originalReceiptVerified": 2000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-wave-2-split",
+          "requested": 2000,
+          "submitted": 2000,
+          "originalReceiptVerified": 2000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "a_pool",
+      "artifact": "coinage-split-10000-burst-enlarged-pilot-37029048758-2",
+      "requestedActors": 10000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-claim",
+          "requested": 10000,
+          "submitted": 10000,
+          "originalReceiptVerified": 10000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-split",
+          "requested": 10000,
+          "submitted": 10000,
+          "originalReceiptVerified": 10000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "b_paced",
+      "artifact": "coinage-recycle-10000-paced-default-pilot-37029048758-2",
+      "requestedActors": 10000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-wave-1-recycle",
+          "requested": 8000,
+          "submitted": 8000,
+          "originalReceiptVerified": 8000,
+          "auditPassed": true
+        },
+        {
+          "wave": "recycle-pilot-wave-2-recycle",
+          "requested": 2000,
+          "submitted": 2000,
+          "originalReceiptVerified": 2000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    },
+    {
+      "case": "b_pool",
+      "artifact": "coinage-recycle-10000-burst-enlarged-pilot-37029048758-2",
+      "requestedActors": 10000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-recycle",
+          "requested": 10000,
+          "submitted": 10000,
+          "originalReceiptVerified": 10000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    },
+    {
+      "case": "a20000",
+      "artifact": "coinage-split-20000-burst-enlarged-pilot-37116007842-1",
+      "requestedActors": 20000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37116007842",
+      "attempt": 1,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-claim",
+          "requested": 20000,
+          "submitted": 20000,
+          "originalReceiptVerified": 20000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-split",
+          "requested": 20000,
+          "submitted": 20000,
+          "originalReceiptVerified": 20000,
+          "auditPassed": false
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "a40000",
+      "artifact": "coinage-split-40000-burst-enlarged-pilot-37029048758-2",
+      "requestedActors": 40000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-claim",
+          "requested": 40000,
+          "submitted": 40000,
+          "originalReceiptVerified": 40000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-split",
+          "requested": 40000,
+          "submitted": 40000,
+          "originalReceiptVerified": 40000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "a100000",
+      "artifact": "coinage-split-100000-burst-enlarged-pilot-37029048758-2",
+      "requestedActors": 100000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "split-pilot-claim",
+          "requested": 100000,
+          "submitted": 100000,
+          "originalReceiptVerified": 100000,
+          "auditPassed": true
+        },
+        {
+          "wave": "split-pilot-split",
+          "requested": 100000,
+          "submitted": 100000,
+          "originalReceiptVerified": 100000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": null
+    },
+    {
+      "case": "b20000",
+      "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-2",
+      "requestedActors": 20000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-recycle",
+          "requested": 20000,
+          "submitted": 20000,
+          "originalReceiptVerified": 20000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    },
+    {
+      "case": "b40000",
+      "artifact": "coinage-recycle-40000-burst-enlarged-pilot-37121458129-1",
+      "requestedActors": 40000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37121458129",
+      "attempt": 1,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-recycle",
+          "requested": 40000,
+          "submitted": 40000,
+          "originalReceiptVerified": 40000,
+          "auditPassed": true
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    },
+    {
+      "case": "b100000",
+      "artifact": "coinage-recycle-100000-burst-enlarged-pilot-37029048758-2",
+      "requestedActors": 100000,
+      "run": "https://github.com/paritytech/polkadot-pop-e2e/actions/runs/37029048758",
+      "attempt": 2,
+      "fixtureAvailable": true,
+      "auditObservations": [
+        {
+          "wave": "recycle-pilot-recycle",
+          "requested": 100000,
+          "submitted": 100000,
+          "originalReceiptVerified": 60982,
+          "auditPassed": false
+        }
+      ],
+      "actualWorkloadEvidenceAvailable": true,
+      "readinessEvidenceAvailable": true
+    }
+  ],
+  "missingWorkloadEvidence": []
+}

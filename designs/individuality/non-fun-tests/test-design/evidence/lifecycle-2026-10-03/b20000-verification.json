@@ -1,0 +1,9 @@
+{
+  "verifiedAt": "2026-10-02T22:21:30.901511+00:00",
+  "artifact": "coinage-recycle-20000-burst-enlarged-pilot-37029048758-1",
+  "command": "python3 ci/previewnet/verify-lifecycle-artifact.py <artifact> --scenario recycle --expected 20000",
+  "exitCode": 0,
+  "verifiedReceipts": 20000,
+  "readyMembers": 20000,
+  "limitation": "Saved RPC evidence consistency only, not cryptographic storage or consensus proof"
+}

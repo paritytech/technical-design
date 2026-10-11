@@ -1,0 +1,5 @@
+recycle-smoke-recycle: 1 unique transactions matched saved block bodies and successful dispatch events
+recycle-smoke: 1 actors passed saved lifecycle state checks
+recycle-pilot-recycle: 40000 unique transactions matched saved block bodies and successful dispatch events
+recycle-pilot: 40000 actors passed saved lifecycle state checks
+Saved RPC evidence consistency only; not a cryptographic storage or consensus proof.

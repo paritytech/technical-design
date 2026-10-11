@@ -1,0 +1,97 @@
+{
+  "observedAt": "2026-10-03T11:53:07.115787+00:00",
+  "run": 37029048758,
+  "attempt": 3,
+  "triggeringActor": "cattery-scheduler[bot]",
+  "outcome": "Cancelled duplicate automatic rerun after preserving attempt-2 evidence.",
+  "newWorkloadSteps": [],
+  "jobConclusions": [
+    {
+      "job": 111196622831,
+      "case": "a100 / pilot",
+      "conclusion": "success"
+    },
+    {
+      "job": 111196622983,
+      "case": "a10000 / pilot",
+      "conclusion": "cancelled"
+    },
+    {
+      "job": 111196623583,
+      "case": "a1000 / pilot",
+      "conclusion": "success"
+    },
+    {
+      "job": 111196835424,
+      "case": "b1000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196835615,
+      "case": "b100",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196835816,
+      "case": "b10000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196835961,
+      "case": "a_paced",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196836309,
+      "case": "a_pool",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196836650,
+      "case": "b_paced",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196837137,
+      "case": "b_pool",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196837419,
+      "case": "a20000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196837502,
+      "case": "a40000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196837563,
+      "case": "a100000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196837786,
+      "case": "b20000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196837974,
+      "case": "b40000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196838359,
+      "case": "b100000",
+      "conclusion": "skipped"
+    },
+    {
+      "job": 111196838733,
+      "case": "report",
+      "conclusion": "cancelled"
+    }
+  ],
+  "scope": "GitHub step times distinguish carried-over successful jobs from new workload executions.",
+  "cancelledDuring": "Validate requested load and client; network preparation and workload steps were skipped."
+}

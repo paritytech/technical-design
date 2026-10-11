@@ -1,0 +1,89 @@
+{
+  "runId": "37751232138",
+  "attempt": 1,
+  "commit": "7f269bcf4f65109d6eb84b29c6afb1821c48c419",
+  "verifiedAt": "2026-10-08T11:53:35.289087+00:00",
+  "requested": 10000,
+  "submitted": 10000,
+  "originalReceipts": 10000,
+  "reconciledReceipts": 0,
+  "unresolved": 0,
+  "poolProfile": "default",
+  "people": 10,
+  "negativeProbes": 20,
+  "negativeProbeErrors": [
+    "RpcError: 1010: Invalid Transaction: Custom error: 57",
+    "RpcError: 1010: Invalid Transaction: Custom error: 58"
+  ],
+  "summary": {
+    "count": 10000,
+    "waves": [
+      {
+        "name": "quota-pilot-wave-1",
+        "wallStart": "2026-10-08T10:22:28.693Z",
+        "count": 8000,
+        "sent": 8000,
+        "sendWindowMs": 372.0631790002808,
+        "finalityMs": {
+          "count": 8000,
+          "p50": 1787024.9508100003,
+          "p95": 2323958.572446,
+          "max": 2329579.463591
+        },
+        "settledMs": 2329919.1360400002,
+        "passed": true
+      },
+      {
+        "name": "quota-pilot-wave-2",
+        "wallStart": "2026-10-08T11:12:50.302Z",
+        "count": 2000,
+        "sent": 2000,
+        "sendWindowMs": 86.83336799964309,
+        "finalityMs": {
+          "count": 2000,
+          "p50": 288175.54036099836,
+          "p95": 524340.6696239989,
+          "max": 548346.0985809993
+        },
+        "settledMs": 548370.6582110003,
+        "passed": true
+      }
+    ],
+    "elapsedMs": 3630117.3128970005,
+    "passed": true
+  },
+  "stateBacking": [
+    {
+      "at": {
+        "hash": "0x8c4525fd2c5f61e9198e4cb33cf3f7602150e91ae5c0d8377d208a4c7dbe9ec7",
+        "number": 174453,
+        "parent": "0x0cc4c45c87ffb64b9fc3f613ea28769d67f188393a778547dd91b8ec83efda5d",
+        "hasNewRuntime": false
+      },
+      "held": "4000",
+      "expectedHeld": "4000",
+      "free": "1",
+      "expectedFree": "1"
+    },
+    {
+      "at": {
+        "hash": "0x268f8a81e25d5bc6ecf87383c8d8b960f706b6bc7d019ccb1adb3a410ad5ad46",
+        "number": 174656,
+        "parent": "0x850f1f94fd05cfc252160a6044c3668737e66bb2bf094b4c6a69f7f52c6f9d61",
+        "hasNewRuntime": false
+      },
+      "held": "0",
+      "expectedHeld": "0",
+      "free": "1",
+      "expectedFree": "1"
+    }
+  ],
+  "receiptVerification": "independent-receipt-verification.txt",
+  "workloadVerification": "independent-verification.txt",
+  "limitations": [
+    "10,000 requests are grouped across 10 people, not 10,000 distinct people.",
+    "No real quota period rollover.",
+    "Recovery duration is an observation window, not measured pool drain.",
+    "Receipt evidence checks local saved RPC views, not independent consensus proofs."
+  ]
+}

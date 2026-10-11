@@ -1,0 +1,377 @@
+[
+  {
+    "actor": 1826,
+    "txHash": "0x8a588f57ae1e20446093c814c1eb55400ccf9ef952937259b5864ccb3e6ae7fb",
+    "sentAtMs": 88.61899699829519,
+    "elapsedMs": 1811118.42746,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 56767.42218700051,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 1811118.38373,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 61,
+      "broadcasts": 59,
+      "omittedObservations": 0,
+      "readyMs": 56767.42218700051,
+      "firstBroadcastMs": 56767.487316999584,
+      "lastBroadcastMs": 1788943.6153500006
+    }
+  },
+  {
+    "actor": 4090,
+    "txHash": "0xaa3b5a33ec7ea73bc4d4d37ed6f7ed0970b9565374a57cd3f69d09d9693f5960",
+    "sentAtMs": 209.48392199911177,
+    "elapsedMs": 1810998.5295850001,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 133275.14170399867,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 1810998.4707650002,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 64,
+      "broadcasts": 62,
+      "omittedObservations": 0,
+      "readyMs": 133275.14170399867,
+      "firstBroadcastMs": 133275.19561399892,
+      "lastBroadcastMs": 1596788.9149970002
+    }
+  },
+  {
+    "actor": 4412,
+    "txHash": "0x7e40f514c42eff228d30a60d0c78b4e8e4605956089ece7c1b6e3ce25c31f82e",
+    "sentAtMs": 228.69326099939644,
+    "elapsedMs": 2243048.9837289993,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 143898.4243949987,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2243048.9048989993,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 64,
+      "broadcasts": 62,
+      "omittedObservations": 0,
+      "readyMs": 143898.4243949987,
+      "firstBroadcastMs": 143898.54384499975,
+      "lastBroadcastMs": 1596722.2198699992
+    }
+  },
+  {
+    "actor": 3385,
+    "txHash": "0x1da774fe8149e4161f3356ef6898acc799f4b768b8f21db7dfccd14c732ae4c9",
+    "sentAtMs": 166.0329829994589,
+    "elapsedMs": 2291114.57402,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 109166.18659699894,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2291114.518928999,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 60,
+      "broadcasts": 58,
+      "omittedObservations": 0,
+      "readyMs": 109166.18659699894,
+      "firstBroadcastMs": 109166.29271700047,
+      "lastBroadcastMs": 2248625.192559
+    }
+  },
+  {
+    "actor": 3465,
+    "txHash": "0x4da38a9e724f2ac53afb5699a243db4283f8805e0d4db52e45901e096bb851b4",
+    "sentAtMs": 171.2349529992789,
+    "elapsedMs": 2291109.67598,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 111852.3530409988,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2291109.624839999,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 57,
+      "broadcasts": 55,
+      "omittedObservations": 0,
+      "readyMs": 111852.3530409988,
+      "firstBroadcastMs": 111852.42053099908,
+      "lastBroadcastMs": 2248576.997640999
+    }
+  },
+  {
+    "actor": 4124,
+    "txHash": "0x88a80dad9a9e4725038723ad93d6b15a2ef0527d12c607817534f20eaf3b2bf9",
+    "sentAtMs": 211.73692099936306,
+    "elapsedMs": 2315172.919172,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 134336.61918199994,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2315172.8374229986,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 64,
+      "broadcasts": 62,
+      "omittedObservations": 0,
+      "readyMs": 134336.61918199994,
+      "firstBroadcastMs": 134336.67554199882,
+      "lastBroadcastMs": 1596802.9741969984
+    }
+  },
+  {
+    "actor": 4220,
+    "txHash": "0xec603924690ea39fbeb28beb36aeda4b0b5bdb8caf36933195d4fc87daa026f9",
+    "sentAtMs": 217.85775099880993,
+    "elapsedMs": 2315167.8110230006,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 137382.18761200085,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2315167.7359030005,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 64,
+      "broadcasts": 62,
+      "omittedObservations": 0,
+      "readyMs": 137382.18761200085,
+      "firstBroadcastMs": 137382.26835300028,
+      "lastBroadcastMs": 1596802.4452379998
+    }
+  },
+  {
+    "actor": 3008,
+    "txHash": "0xb649e187585c479aba6447def70a6faeb53d0ef80ed6500752492138e0a9a24f",
+    "sentAtMs": 141.44343499839306,
+    "elapsedMs": 2315244.3220999986,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 96519.34645599872,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2315244.2381289992,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 61,
+      "broadcasts": 59,
+      "omittedObservations": 0,
+      "readyMs": 96519.34645599872,
+      "firstBroadcastMs": 96519.40417599864,
+      "lastBroadcastMs": 2295155.9796709996
+    }
+  },
+  {
+    "actor": 4172,
+    "txHash": "0x206e0c6a996f5f00ca97809ea56c77d6ba295c0a19fe7cbd8da7856ee51a57da",
+    "sentAtMs": 214.8838409986347,
+    "elapsedMs": 2771078.183657998,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 135826.2295339983,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2771078.1342979986,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 70,
+      "broadcasts": 68,
+      "omittedObservations": 0,
+      "readyMs": 135826.2295339983,
+      "firstBroadcastMs": 135826.29943399876,
+      "lastBroadcastMs": 2751805.3368559983
+    }
+  },
+  {
+    "actor": 4594,
+    "txHash": "0xa237e49ac2aedb3ab6fdcbdf5c1c47ae51146570e6f3dc68bd75b4ab2ea5bfc3",
+    "sentAtMs": 238.42969099991024,
+    "elapsedMs": 2819030.4801509995,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 149926.4719059989,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 2819030.4076609984,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 71,
+      "broadcasts": 69,
+      "omittedObservations": 0,
+      "readyMs": 149926.4719059989,
+      "firstBroadcastMs": 149926.55087599903,
+      "lastBroadcastMs": 1669477.3769419994
+    }
+  },
+  {
+    "actor": 5282,
+    "txHash": "0x42a9a2c29d1ca86cb3e2c831b86f46a5c52edbfbf431d120168925c9353f6bcc",
+    "sentAtMs": 277.1178890001029,
+    "elapsedMs": 3251059.057723999,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 172880.8445500005,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 3251058.9857739992,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 78,
+      "broadcasts": 76,
+      "omittedObservations": 0,
+      "readyMs": 172880.8445500005,
+      "firstBroadcastMs": 172880.90916999988,
+      "lastBroadcastMs": 3222777.907926999
+    }
+  },
+  {
+    "actor": 3916,
+    "txHash": "0xc5911cecc7cb5a5f177f89e8c05f9c1917c7ce2ec3706339a6b4e896d705f56d",
+    "sentAtMs": 198.40119199827313,
+    "elapsedMs": 3347117.6234600004,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 127500.42236299999,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 3347117.5750200003,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 78,
+      "broadcasts": 76,
+      "omittedObservations": 0,
+      "readyMs": 127500.42236299999,
+      "firstBroadcastMs": 127500.50236300007,
+      "lastBroadcastMs": 3304259.446226001
+    }
+  },
+  {
+    "actor": 4210,
+    "txHash": "0xd2d5d60c82bd5054da9efb458393ac9f82ebd1cf726cf66946a6f2f559fe0071",
+    "sentAtMs": 217.36530099995434,
+    "elapsedMs": 3467121.273237001,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 137084.71865400113,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 3467121.2218670007,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 81,
+      "broadcasts": 79,
+      "omittedObservations": 0,
+      "readyMs": 137084.71865400113,
+      "firstBroadcastMs": 137084.77840400115,
+      "lastBroadcastMs": 3362384.4991309997
+    }
+  },
+  {
+    "actor": 6187,
+    "txHash": "0x2531fe49f1346d96a1d53f323d68d75386f56d82eba1f378053973b69e90db75",
+    "sentAtMs": 334.6094569992274,
+    "elapsedMs": 4067706.7600950003,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 203654.67988900095,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 4067706.6851349995,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 90,
+      "broadcasts": 88,
+      "omittedObservations": 0,
+      "readyMs": 203654.67988900095,
+      "firstBroadcastMs": 203654.76362000033,
+      "lastBroadcastMs": 3789436.426268
+    }
+  },
+  {
+    "actor": 4706,
+    "txHash": "0x3e460b9d4f754dde529d5fbe0b9f2b00d643f4cf414ad9fcbd96bde4868a057c",
+    "sentAtMs": 244.66264999844134,
+    "elapsedMs": 4067797.207141999,
+    "error": "invalid",
+    "rpcObservations": [
+      {
+        "elapsedMs": 153769.40274499916,
+        "status": "ready"
+      },
+      {
+        "elapsedMs": 4067797.137211999,
+        "status": "invalid"
+      }
+    ],
+    "watchSummary": {
+      "notifications": 81,
+      "broadcasts": 79,
+      "omittedObservations": 0,
+      "readyMs": 153769.40274499916,
+      "firstBroadcastMs": 153769.47381499968,
+      "lastBroadcastMs": 3789495.630856
+    }
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "verifiedAt": "2026-10-03T01:57:01.610584+00:00",
+  "attempt": 2,
+  "artifact": "coinage-recycle-10000-burst-default-pilot-37029048758-2",
+  "requested": 10000,
+  "submitted": 10000,
+  "originalReceiptVerified": 8479,
+  "laterReconciledReceipts": 245,
+  "totalReceiptVerified": 8724,
+  "withoutVerifiedReceipt": 1276,
+  "observedReady": 5002,
+  "unresolvedReadiness": 4998,
+  "readinessCutoff": {
+    "elapsedMs": 247079.45489500003,
+    "at": "0x287b5d1475abd3cca4cbc6cb7bf1be2ae36b4ba45ab02111ac595496d854499c"
+  },
+  "readinessNote": "Observer stopped after incomplete receipt audit; unobserved members are not proven failures. Saved ring pages/status/root checked for each observed member.",
+  "originalFinalityMs": {
+    "count": 8479,
+    "p50": 133680.02700599993,
+    "p95": 217971.12799000007,
+    "max": 229942.26587300003
+  },
+  "finalityPopulation": 8479,
+  "submissionWindowMs": 382.9111930000363,
+  "lastWatchSettledMs": 230083.61931400007,
+  "backing": "20001",
+  "finalBacking": "20001",
+  "recoveryPassed": true
+}

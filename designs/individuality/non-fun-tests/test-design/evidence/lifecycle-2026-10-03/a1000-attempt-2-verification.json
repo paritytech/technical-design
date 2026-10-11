@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-10-03T00:59:50.017447+00:00",
+  "run": 37029048758,
+  "attempt": 2,
+  "case": "a1000",
+  "artifact": "coinage-split-1000-burst-default-pilot-37029048758-2",
+  "verifier": "ci/previewnet/verify-lifecycle-artifact.py --scenario split --expected 1000",
+  "exitCode": 0,
+  "splitReceipts": 1000,
+  "claimReceipts": 1000,
+  "stateActors": 1000,
+  "scope": "Saved raw extrinsic/block/dispatch event and lifecycle state consistency; not cryptographic consensus proof"
+}

@@ -1,0 +1,329 @@
+{
+ "definitions": {
+  "receiptsFile": "Original verified receipts in the run's own <wave>-receipts.json, grouped by block number.",
+  "rawBlocks": "Independent pass over saved raw blocks: extrinsics with System.ExtrinsicSuccess and the expected Coinage unload event. Includes reconciled receipts. Saved blocks only.",
+  "stopReasons": "Collator log 'Prepared block for proposing at N ... end: <reason>; extrinsics_count: K', matched to each saved canonical block by height and extrinsic count (the logged hash is taken before sealing).",
+  "refTimeMs": "ref_time of each successful unload's ExtrinsicSuccess dispatch_info (post-dispatch weight), in milliseconds.",
+  "proofs": "Client proof generation time per proof kind, nearest-rank, from <wave>-proofs.jsonl when present. Generated before release; not part of finality."
+ },
+ "quota-10000-burst-default": {
+  "receiptsFile": {
+   "verified": 8921,
+   "blocks": 392,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 9011,
+   "blocks": 392,
+   "maxPerBlock": 23,
+   "blocksAtMax": 391,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 391,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 10000,
+    "p50": 0.789,
+    "max": 0.946
+   },
+   "recycler": {
+    "count": 10000,
+    "p50": 1.654,
+    "max": 1.845
+   }
+  }
+ },
+ "quota-10000-paced-default-wave-1": {
+  "receiptsFile": {
+   "verified": 8000,
+   "blocks": 348,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 8000,
+   "blocks": 348,
+   "maxPerBlock": 23,
+   "blocksAtMax": 347,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 347,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 8000,
+    "p50": 0.791,
+    "max": 0.967
+   },
+   "recycler": {
+    "count": 8000,
+    "p50": 1.661,
+    "max": 1.882
+   }
+  }
+ },
+ "quota-10000-paced-default-wave-2": {
+  "receiptsFile": {
+   "verified": 2000,
+   "blocks": 87,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 2000,
+   "blocks": 87,
+   "maxPerBlock": 23,
+   "blocksAtMax": 86,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 86,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 2000,
+    "p50": 0.791,
+    "max": 0.915
+   },
+   "recycler": {
+    "count": 2000,
+    "p50": 1.659,
+    "max": 1.845
+   }
+  }
+ },
+ "quota-10000-burst-enlarged": {
+  "receiptsFile": {
+   "verified": 10000,
+   "blocks": 435,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 10000,
+   "blocks": 435,
+   "maxPerBlock": 23,
+   "blocksAtMax": 434,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 434,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 10000,
+    "p50": 0.804,
+    "max": 0.952
+   },
+   "recycler": {
+    "count": 10000,
+    "p50": 1.68,
+    "max": 1.916
+   }
+  }
+ },
+ "quota-20000-burst-enlarged": {
+  "receiptsFile": {
+   "verified": 4823,
+   "blocks": 291,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 19985,
+   "blocks": 870,
+   "maxPerBlock": 23,
+   "blocksAtMax": 868,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 868,
+   "NoMoreTransactions (partial blocks)": 2
+  },
+  "proofs": {
+   "person-token": {
+    "count": 20000,
+    "p50": 0.793,
+    "max": 0.975
+   },
+   "recycler": {
+    "count": 20000,
+    "p50": 1.654,
+    "max": 1.86
+   }
+  }
+ },
+ "offboard-20000-burst-enlarged": {
+  "receiptsFile": {
+   "verified": 4165,
+   "blocks": 295,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 6779,
+   "blocks": 295,
+   "maxPerBlock": 23,
+   "blocksAtMax": 294,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 294,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 20000,
+    "p50": 0.876,
+    "max": 1.026
+   },
+   "recycler": {
+    "count": 20000,
+    "p50": 1.651,
+    "max": 1.87
+   }
+  }
+ },
+ "full-flow-100-payment-unload": {
+  "receiptsFile": {
+   "verified": 100,
+   "blocks": 5,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 100,
+   "blocks": 5,
+   "maxPerBlock": 23,
+   "blocksAtMax": 4,
+   "refTimeMs": [
+    62.988
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 4,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 100,
+    "p50": 0.827,
+    "max": 0.915
+   },
+   "recycler": {
+    "count": 100,
+    "p50": 1.409,
+    "max": 1.52
+   }
+  }
+ },
+ "full-flow-100-offboard": {
+  "receiptsFile": {
+   "verified": 100,
+   "blocks": 5,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 100,
+   "blocks": 5,
+   "maxPerBlock": 23,
+   "blocksAtMax": 4,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 4,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 100,
+    "p50": 0.824,
+    "max": 0.943
+   },
+   "recycler": {
+    "count": 100,
+    "p50": 1.446,
+    "max": 1.574
+   }
+  }
+ },
+ "full-flow-1000-payment-unload": {
+  "receiptsFile": {
+   "verified": 1000,
+   "blocks": 44,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 1000,
+   "blocks": 44,
+   "maxPerBlock": 23,
+   "blocksAtMax": 43,
+   "refTimeMs": [
+    62.988
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 43,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 1000,
+    "p50": 0.877,
+    "max": 1.007
+   },
+   "recycler": {
+    "count": 1000,
+    "p50": 1.646,
+    "max": 1.77
+   }
+  }
+ },
+ "full-flow-1000-offboard": {
+  "receiptsFile": {
+   "verified": 1000,
+   "blocks": 44,
+   "maxPerBlock": 23
+  },
+  "rawBlocks": {
+   "unloadSuccesses": 1000,
+   "blocks": 44,
+   "maxPerBlock": 23,
+   "blocksAtMax": 43,
+   "refTimeMs": [
+    62.924
+   ]
+  },
+  "stopReasons": {
+   "HitBlockWeightLimit (full blocks)": 43,
+   "NoMoreTransactions (partial blocks)": 1
+  },
+  "proofs": {
+   "person-token": {
+    "count": 1000,
+    "p50": 0.879,
+    "max": 1.012
+   },
+   "recycler": {
+    "count": 1000,
+    "p50": 1.638,
+    "max": 1.85
+   }
+  }
+ }
+}
